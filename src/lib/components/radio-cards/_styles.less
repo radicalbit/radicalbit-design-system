@@ -1,0 +1,44 @@
+.c-radio-cards {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: center;
+	flex-wrap: nowrap;
+	gap: 1rem;
+	padding-top: .25rem;
+
+	&__option {
+		padding: .4rem;
+		text-align: center;
+		cursor: pointer;
+		border-radius: .8rem;
+		display: flex;
+		gap: .5rem;
+		flex-direction: column;
+		justify-content: center;
+
+		.c-radio-cards__title {
+			cursor: pointer;
+			font-size: .75rem;
+		}
+
+		.c-radio-cards__card {
+			opacity: .3;
+		}
+
+		&:hover {
+			background-color: #f6fa00;
+			opacity: 1;
+
+			.c-radio-cards__card {
+				opacity: 1;
+			}
+		}
+	}
+
+	&--active {
+		.c-radio-cards__card {
+			opacity: 1;
+		}
+	}
+}

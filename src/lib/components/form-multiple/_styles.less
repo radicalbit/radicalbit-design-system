@@ -1,0 +1,46 @@
+.c-form-multiple {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1rem;
+
+	&--align {
+		&-center {
+			align-items: center;
+		}
+
+		&-flex-start {
+			align-items: flex-start;
+		}
+
+		&-flex-end {
+			align-items: flex-end;
+		}
+	}
+
+	&__content {
+		display: flex;
+		gap: 1rem;
+	}
+
+	&__actions {
+		display: flex;
+		gap: .5rem;
+		justify-content: center;
+		width: 1rem;
+
+		* {
+			cursor: pointer;
+		}
+	}
+
+	&__add {
+		font-size: 1.5rem;
+		color: var(--coo-primary);
+
+		&:hover {
+			color: var(-coo-highlight);
+		}
+	}
+}
+

@@ -1,0 +1,17 @@
+Dockerfile
+Jenkinsfile
+build.sh
+default.conf
+src/demo/*
+demo/*
+!demo/partials/
+dist
+dist
+flow-typed
+jsConfig.json
+node_modules
+readme.md
+package-lock.json
+package.json
+yarn.lock
+docs/build

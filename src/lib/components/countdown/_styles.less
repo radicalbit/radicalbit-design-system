@@ -1,0 +1,46 @@
+.m-countdown {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: .5rem;
+	font-size: 1rem;
+	line-height: 1;
+
+	&__divider {
+		align-self: flex-start;
+	}
+
+	&__element {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&-value {
+			font-family: var(--coo-header-font);
+
+			small {
+				font-weight: normal;
+			}
+		}
+
+		&-label {
+			font-size: .5rem;
+		}
+	}
+
+	&--large {
+		font-size: 1.875rem;
+	}
+
+	&--xlarge {
+		font-size: 2.75rem;
+		line-height: 1.1;
+		font-weight: 700;
+
+		.m-countdown__element-label {
+			font-weight: 300;
+			font-size: .75rem;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.c-spinner {
+	min-width: 1rem;
+
+	&__mask {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__container {
+		height: 100%;
+	}
+
+	> .ant-spin-container {
+		height: 100%;
+	}
+
+	&--centered {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+	}
+
+	&--full-height {
+		height: 100%;
+	}
+
+	&--full-width {
+		width: 100%;
+	}
+
+	&--form-wrapper {
+		.c-spinner__container {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+		}
+	}
+
+	&.ant-spin-nested-loading {
+		div {
+			.ant-spin {
+				max-height: 100%;
+			}
+		}
+	}
+}

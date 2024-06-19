@@ -1,0 +1,115 @@
+.c-alert-legacy {
+	padding: 1rem;
+	position: relative;
+	display: flex;
+	gap: .5rem;
+	font-size: .8rem;
+
+	&__icon {
+		float: left;
+	}
+
+	&--toggle {
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: underline;
+	}
+
+	.ant-badge-status-dot {
+		width: .8rem !important;
+		height: .8rem !important;
+		display: block;
+	}
+
+	.alert-text {
+		background: var(--coo-white);
+		position: absolute;
+		padding: .5rem;
+		border: 1px solid;
+		left: .4rem;
+		top: -1.4rem;
+		transform: translate(-50%, -50%);
+
+		span {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		&::after,
+		&::before {
+			top: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+
+		&::after {
+			border-width: .5rem;
+			margin-left: -.5rem;
+		}
+	}
+
+	&--type-error {
+		background: @rdb-danger-bk;
+		color: @rdb-danger-txt;
+
+		h2 {
+			color: @rdb-danger-txt;
+		}
+
+		.c-alert-legacy--toggle,
+		.c-alert-legacy--icon {
+			color: @rdb-danger-txt !important;
+		}
+	}
+
+	&--type-warning {
+		background: @rdb-warning-bk;
+		color: @rdb-warning-txt;
+
+		h2 {
+			color: @rdb-warning-txt;
+		}
+
+		.c-alert-legacy--toggle,
+		.c-alert-legacy--icon {
+			color: @rdb-warning-txt !important;
+		}
+	}
+
+	&--type-success {
+		background: @rdb-success-bk;
+		color: @rdb-success-txt;
+
+		h2 {
+			color: @rdb-success-txt;
+		}
+
+		.c-alert-legacy--icon {
+			color: @rdb-success-txt !important;
+		}
+	}
+
+	&--type-default {
+		background: var(--coo-secondary-04);
+		color: var(--coo-secondary);
+
+		h2 {
+			color: var(--coo-secondary);
+		}
+
+		.c-alert-legacy--toggle,
+		.c-alert-legacy--icon {
+			color: var(--coo-secondary) !important;
+		}
+	}
+}

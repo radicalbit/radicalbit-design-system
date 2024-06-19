@@ -1,0 +1,60 @@
+import moment from 'moment';
+import Tooltip from '@Components/tooltip';
+import { memo } from 'react';
+
+type Props = {
+  timestamp?: string | number | Date;
+  from?: number;
+  withTooltip?: boolean;
+};
+
+const RelativeUpTime = ({ timestamp, from, withTooltip }: Props) => {
+  if (!timestamp) {
+    return <>--</>;
+  }
+
+  const fromDate = from !== undefined && from !== null ? moment(from) : moment();
+  const diff = moment.duration(fromDate.diff(moment(timestamp)));
+
+  const months = Math.round(diff.months());
+  const weeks = Math.round(diff.weeks());
+  const days = Math.round(diff.days());
+  const hours = Math.round(diff.hours());
+  const minutes = Math.round(diff.minutes());
+
+  const monthsLabel = months ? `${months}M` : '';
+  const weeksLabel = weeks ? `${weeks}w` : '';
+  const daysLabel = days ? `${days}d` : '';
+  const hoursLabel = hours ? `${hours}h` : '';
+  const minutesLabel = minutes ? `${minutes}m` : '';
+
+  const label = `${monthsLabel} ${weeksLabel} ${daysLabel} ${hoursLabel} ${minutesLabel}`;
+  const lableOrElse = label.trim().length === 0 ? '0m' : label;
+
+  if (withTooltip) {
+    const monthsTooltip = months > 1 ? `${months} months` : months === 1 ? `${months} month` : '';
+    const weeksTooltip = weeks > 1 ? `${weeks} weeks` : weeks === 1 ? `${weeks} week` : '';
+    const daysTooltip = days > 1 ? `${days} days` : days === 1 ? `${days} day` : '';
+    const hoursTooltip = hours > 1 ? `${hours} hours` : hours === 1 ? `${hours} hour` : '';
+    const minutesTooltip = minutes > 1
+      ? `${minutes} minutes`
+      : minutes === 1
+        ? `${minutes} minute`
+        : '';
+
+    const title = `${monthsTooltip} ${weeksTooltip} ${daysTooltip} ${hoursTooltip} ${minutesTooltip}`;
+    const titleOrElse = title.trim().length === 0 ? 'less than one minute' : title;
+
+    return (
+      <Tooltip mouseEnterDelay={0.5} title={titleOrElse}>
+        {lableOrElse}
+      </Tooltip>
+    );
+  }
+
+  return <>{lableOrElse}</>;
+};
+
+RelativeUpTime.displayName = 'RelativeDateTime';
+
+export default memo<Props>(RelativeUpTime);

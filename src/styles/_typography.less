@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+:root,
+html body {
+	--coo-body-font: 'Open Sans', sans-serif;
+	--coo-header-font: 'Montserrat', sans-serif;
+	--coo-monospace-font: Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
+	--coo-font-weight-lighter: 200;
+	--coo-font-weight-light: 300;
+	--coo-font-weight-normal: 500;
+	--coo-font-weight-bold: 600;
+	--coo-font-weight-bolder: 700;
+}
+
+@font-family: var(--coo-body-font);
+
+@rdb-font-weight-light: 300;
+@rdb-font-weight-default: 500;
+@rdb-font-weight-bold: 700;
+
+@rdb-font-size-xxl: 2.25rem;
+@rdb-font-size-xl: 1.5rem;
+@rdb-font-size-l: 1.25rem;
+@rdb-font-size-base: 1rem;
+@rdb-font-size-s: .875rem;
+@rdb-font-size-xs: .75rem;
+@rdb-font-size-xxs: .438rem;
+
+@rdb-line-height-xxl: 3;
+@rdb-line-height-xl: 2.5;
+@rdb-line-height-l: 2;
+@rdb-line-height-default: 1.7;
+@rdb-line-height-s: 1.2;
+@rdb-line-height-xs: 1;
+
+
+.typography(@rdb-font-size, @rdb-font-weight: @rdb-font-weight-light) {
+	font-family: var(--coo-body-font);
+	font-size: @rdb-font-size;
+	font-weight: @rdb-font-weight;
+}
+
+.line-height(@rdb-line-height: @rdb-line-height-default) {
+	line-height: @rdb-line-height;
+}
+
+.line-height-xxl {
+	.line-height(@rdb-line-height-xxl);
+}
+
+.line-height-xl {
+	.line-height(@rdb-line-height-xl);
+}
+
+.line-height-l {
+	.line-height(@rdb-line-height-l);
+}
+
+.line-height-default {
+	.line-height(@rdb-line-height-default);
+}
+
+.line-height-s {
+	.line-height(@rdb-line-height-s);
+}
+
+.line-height-xs {
+	.line-height(@rdb-line-height-xs);
+}
+
+.font-xxl,
+.h2,
+h2 {
+	.typography(@rdb-font-size-xxl);
+}
+
+h1,
+.h1,
+.font-xl {
+	font-size: @rdb-font-size-xl;
+	font-weight: var(--coo-font-weight-bold);
+	line-height: 1.7rem;
+
+	input {
+		font-family: var(--coo-header-font);
+		font-size: @rdb-font-size-xl;
+		font-weight: var(--coo-font-weight-bold);
+	}
+}
+
+.font-l,
+.h3,
+h3 {
+	.typography(@rdb-font-size-l, @rdb-font-weight-default);
+}
+
+.font-base,
+p {
+	.typography(@rdb-font-size-base);
+}
+
+.font-s {
+	.typography(@rdb-font-size-s);
+}
+
+.font-xs,
+label {
+	.typography(@rdb-font-size-xs);
+
+	color: var(--coo-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-family: var(--coo-header-font);
+	color: inherit;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+pre {
+	font-family: var(--coo-monospace-font);
+	font-weight: var(--coo-font-weight-lighter);
+	font-size: .8rem;
+}

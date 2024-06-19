@@ -1,0 +1,86 @@
+// mixins are not used anymore
+
+.solidColorMixin (@background, @color, @border-color) {
+	background: @background;
+	color: @color !important;
+	border-color: @border-color;
+}
+
+.neutralColorMixin (@background, @color, @width, @style, @borderColor) {
+	background: @background;
+	color: @color;
+	border: @width @style @borderColor;
+}
+
+.ColorMixin(@normal, @hover) {
+	color: @normal;
+
+	&:hover {
+		color: @hover !important;
+	}
+}
+
+.mix-wrapper(@display: flex, @gap: 1rem, @direction: column, @cols:0) {
+	display: @display;
+	gap: @gap;
+	flex-direction: @direction;
+	grid-template-columns: @cols;
+}
+
+.row-overflow-margin-fix {
+	.ant-row {
+		margin: 0 !important;
+	}
+
+	.ant-row .ant-col:first-child:not(:only-child) {
+		padding-left: 0 !important;
+	}
+
+	.ant-row .ant-col:last-child:not(:only-child) {
+		padding-right: 0 !important;
+	}
+}
+
+.highlight {
+	border-color: var(--coo-highlight);
+	background: var(--coo-highlight);
+	color: var(--coo-primary-dark);
+
+	svg:hover {
+		color: var(--coo-primary-dark);
+	}
+}
+
+.highlight--error {
+	border-color: var(--coo-error);
+	background: var(--coo-error);
+	color: var(--coo-white);
+
+	svg:hover {
+		color: var(--coo-white);
+	}
+}
+
+.shadow--z-5 {
+	box-shadow: .25rem .25rem .5rem rgba(var(--coo-rgb-dark), .15);
+}
+
+.shadow--z-1 {
+	box-shadow: 0 0 .25rem rgba(var(--coo-rgb-dark), .3);
+}
+
+.shadow--z-0 {
+	box-shadow: 0 0 .5rem rgba(var(--coo-rgb-secondary-02), .3);
+}
+
+.noisy {
+	background-color: var(--coo-white-bk);
+	background-image: linear-gradient(135deg, var(--coo-secondary-04) 25%, transparent 25%), linear-gradient(225deg, var(--coo-secondary-04) 25%, transparent 25%), linear-gradient(45deg, var(--coo-secondary-04) 25%, transparent 25%), linear-gradient(315deg, var(--coo-secondary-04) 25%, var(--coo-white-bk) 25%);
+	background-size: .125rem .125rem;
+}
+
+
+.bk-gradient() {
+	background-color: rgba(var(--coo-rgb-secondary), 1);
+	background-image: linear-gradient(24deg, rgba(var(--coo-rgb-primary-dark), 0) 65%, rgba(var(--coo-rgb-primary), .4) 100%);
+}

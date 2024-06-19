@@ -1,0 +1,28 @@
+.l-mini-chart {
+	display: flex;
+	flex-direction: column;
+	gap: .25rem;
+
+	&__header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: baseline;
+		font-size: .8rem;
+		font-weight: var(--coo-font-weight-light);
+
+		&--type {
+			&-bold {
+				font-weight: var(--coo-font-weight-normal);
+			}
+		}
+	}
+
+	&__right {
+		text-align: right;
+	}
+
+	&--reverse {
+		flex-direction: column-reverse;
+	}
+}

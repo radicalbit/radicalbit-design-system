@@ -1,0 +1,34 @@
+.c-editable-input {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-bottom: 1px solid transparent;
+	border-radius: inherit;
+	max-width: 33rem;
+
+	input {
+		border-bottom: 1px solid var(--coo-primary);
+		border-radius: 0;
+		border: 0;
+		color: var(--coo-primary);
+		font-weight: normal !important;
+		min-width: 10rem;
+		padding: 0;
+	}
+
+	div {
+		cursor: pointer;
+		min-width: 10rem;
+		min-height: 1.6rem;
+	}
+
+	&:hover {
+		background: rgba(var(--coo-rgb-white), .15) !important;
+	}
+
+	&:focus {
+		border-bottom: 1px solid var(--coo-primary);
+		box-shadow: none;
+		color: var(--coo-primary);
+	}
+}

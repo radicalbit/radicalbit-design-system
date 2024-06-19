@@ -1,0 +1,236 @@
+.ant-btn-secondary-light {
+	color: var(--coo-secondary);
+	border-color: var(--coo-secondary);
+	opacity: .6;
+
+	&:hover {
+		color: var(--coo-primary);
+		border-color: var(--coo-primary);
+		opacity: 1;
+	}
+}
+
+.m-button,
+.ant-btn {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	font-family: var(--coo-header-font);
+	color: var(--coo-primary);
+	border-color: var(--coo-primary);
+	height: 2rem;
+	min-height: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&--not-clickable {
+		pointer-events: none;
+	}
+
+	&-loading {
+		pointer-events: none;
+	}
+
+	&.is-active {
+		.highlight();
+		.shadow--z-5();
+
+		&:hover {
+			.shadow--z-1();
+		}
+	}
+
+	&--filled {
+		background-color: var(--coo-white);
+	}
+
+	&-sm,
+	&--sm {
+		font-size: .8rem;
+		padding: 0 1rem;
+		height: 1.37rem;
+		min-height: 1.37rem;
+
+		&.ant-btn-circle {
+			height: 1.5rem;
+			min-height: 1.5rem;
+			padding: 0;
+		}
+	}
+
+	&--prefix {
+		margin-right: .5rem;
+	}
+
+	&--suffix {
+		margin-left: .5rem;
+	}
+
+	&--streaming {
+		.highlight();
+
+		&::after {
+			content: " ";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: rgba(var(--coo-rgb-dark), .5);
+			opacity: 0;
+			z-index: 2;
+			pointer-events: none;
+		}
+
+		.is-shown {
+			svg {
+				animation: glitch1 2.5s infinite;
+				animation: flicker .15s infinite;
+			}
+		}
+
+		.is-hidden {
+			display: none;
+		}
+
+		&:hover {
+			.is-hidden {
+				display: block;
+			}
+
+			.is-shown {
+				display: none;
+			}
+		}
+	}
+
+	&:hover {
+		color: var(--coo-primary-dark);
+		border-color: var(--coo-highlight);
+		background: var(--coo-highlight);
+		.shadow--z-5();
+	}
+
+	&.ant-btn-primary {
+		color: var(--coo-white);
+		border-color: var(--coo-primary);
+		background-color: var(--coo-primary);
+
+		&:hover {
+			.highlight();
+			.shadow--z-5();
+		}
+
+		&.is-active {
+			.highlight();
+			.shadow--z-5();
+
+			&:hover {
+				.shadow--z-1();
+			}
+		}
+	}
+
+	&.ant-btn-success {
+		color: @rdb-success;
+		border-color: @rdb-success;
+
+		&:hover {
+			background: fade(@rdb-success, 8%);
+		}
+	}
+
+	&.ant-btn-error {
+		color: var(--coo-white);
+		border-color: var(--coo-error);
+		background-color: var(--coo-error);
+
+		&:hover {
+			color: var(--coo-error);
+			background: rgba(var(--coo-error), .8);
+		}
+	}
+
+	&.ant-btn-error-light {
+		color: var(--coo-error);
+		border-color: var(--coo-error);
+
+		&:hover {
+			color: var(--coo-error);
+			background: rgba(var(--coo-rgb-error), .2);
+		}
+	}
+
+	&.ant-btn-warning {
+		color: var(--coo-white);
+		background-color: var(--coo-warning);
+		border-color: var(--coo-warning);
+
+		&:hover {
+			color: var(--coo-warning);
+			background: rgba(var(--coo-warning), .8);
+		}
+	}
+
+	&.ant-btn-warning-light {
+		color: var(--coo-warning);
+		border-color: var(--coo-warning);
+
+		&:hover {
+			color: var(--coo-warning);
+			background: rgba(var(--coo-rgb-warning), .2);
+		}
+	}
+
+	&.ant-btn-secondary {
+		background-color: var(--coo-secondary);
+		color: var(--coo-white);
+		border-color: var(--coo-secondary);
+
+		&:hover {
+			.highlight();
+		}
+	}
+
+	&.ant-btn-secondary-light {
+		.ant-btn-secondary-light();
+	}
+
+	&.ant-btn-text {
+		color: var(--coo-secondary-01);
+		border-color: transparent;
+
+		&:hover {
+			border-color: transparent;
+			background: transparent;
+			color: var(--coo-primary);
+			box-shadow: none;
+		}
+	}
+
+
+	&[disabled] {
+		background: transparent;
+		border: 1.25px dashed var(--coo-secondary-03);
+		box-sizing: border-box;
+		border-radius: 16px;
+		font-style: italic;
+		color: var(--coo-secondary-03);
+
+		&:hover {
+			border-color: var(--coo-secondary-03);
+			background: inherit;
+			color: var(--coo-secondary-03);
+			box-shadow: none;
+		}
+	}
+
+	.ant-btn-circle {
+		.anticon.anticon-loading.anticon-spin {
+			padding: 0; // Like antd 3.x
+		}
+	}
+}

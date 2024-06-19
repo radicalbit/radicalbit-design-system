@@ -1,0 +1,93 @@
+.c-steps {
+	&.ant-steps {
+		.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title,
+		.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description,
+		.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title,
+		.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description,
+		.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title,
+		.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
+			color: var(--coo-dark);
+		}
+
+		.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+			background-color: var(--coo-secondary-02);
+		}
+
+		.ant-steps-item-wait .ant-steps-item-icon {
+			background-color: var(--coo-white-bk);
+			border-color: var(--coo-dark);
+
+			.ant-steps-icon {
+				color: var(--coo-dark);
+			}
+		}
+
+
+		.ant-steps-item-container {
+			display: flex;
+			align-items: center;
+
+			.ant-steps-item-title {
+				font-size: @rdb-font-size-base;
+				font-weight: var(--coo-font-weight-bold);
+			}
+
+			.ant-steps-item-description {
+				font-size: @rdb-font-size-xs;
+				font-weight: var(--coo-font-weight-normal);
+				white-space: nowrap;
+			}
+
+			.ant-steps-item-icon {
+				font-size: @rdb-font-size-base;
+			}
+
+
+			.ant-steps-item-process {
+				> .ant-steps-item-content {
+					> .ant-steps-item-title {
+						color: var(--coo-secondary);
+					}
+
+					> .ant-steps-item-description {
+						color: var(--coo-secondary);
+					}
+				}
+
+				&.ant-steps-item-icon {
+					background: var(--coo-primary);
+					border-color: var(--coo-primary);
+				}
+			}
+
+			.ant-steps-item-wait {
+				> .ant-steps-item-icon {
+					border: 1px solid var(--coo-secondary-03);
+					background: transparent;
+				}
+			}
+
+			.ant-steps-item-finish {
+				.ant-steps-item-icon {
+					border-color: var(--coo-primary);
+					background: transparent;
+				}
+
+				> .ant-steps-icon {
+					color: var(--coo-primary);
+				}
+			}
+
+			.ant-steps-item-error {
+				.ant-steps-item-icon {
+					background: @error-color;
+					border-color: @error-color;
+
+					.ant-steps-icon {
+						color: var(--coo-white);
+					}
+				}
+			}
+		}
+	}
+}

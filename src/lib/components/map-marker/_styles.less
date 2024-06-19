@@ -1,0 +1,38 @@
+.c-map-marker {
+	background-color: var(--coo-primary);
+	width: 1.5rem;
+	height: 1.5rem;
+	display: block;
+	left: -.5rem;
+	top: -.5rem;
+	position: relative;
+	border-radius: 1.5rem 1.5rem 0;
+	transform: rotate(45deg);
+	border: 1px solid var(--coo-white);
+	color: var(--coo-white);
+	text-align: center;
+	font-size: .8rem;
+	font-family: var(--coo-header-font);
+	font-weight: var(--coo-font-weight-bold);
+	line-height: 1.5rem;
+
+	&__content {
+		transform: rotate(-45deg);
+	}
+
+	&--type {
+		&-cluster {
+			min-width: 2rem;
+			min-height: 2rem;
+			color: var(--coo-white);
+			background: fade(@secondary-color, 40%);
+			border-radius: 50%;
+			text-align: center;
+			font-size: 1.25rem;
+			font-family: var(--coo-header-font);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.c-datepicker {
+	background: transparent;
+
+	&--readonly {
+		input {
+			background-color: inherit;
+			border: 0;
+			color: inherit;
+			cursor: default;
+			padding-left: 0;
+		}
+
+		.ant-calendar-picker-icon,
+		.ant-calendar-picker-clear {
+			display: none;
+		}
+	}
+
+	.ant-calendar-picker-icon,
+	.ant-calendar-picker-clear {
+		width: 1rem !important;
+		height: 1rem !important;
+	}
+}

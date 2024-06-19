@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@Src/*": ["src/*"],
+      "@Resources/*": ["src/lib/resources/*"],
+      "@Lib/*": ["src/lib/*"],
+      "@Components/*": ["src/lib/components/*"],
+      "@Demo/*": ["src/demo/*"],
+      "@Styles/*": ["src/styles/*"],
+      "@Images/*": ["src/lib/resources/images/*"]
+    },
+    "jsx": "react"
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

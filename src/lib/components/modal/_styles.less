@@ -1,0 +1,51 @@
+.c-modal {
+	.ant-modal-close-x {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+
+		.c-modal__top-right-ico {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			&__maximize {
+				padding: 1rem .5rem 1rem 1rem;
+			}
+
+			&__close {
+				padding: 1rem 1rem 1rem .5rem;
+			}
+		}
+	}
+
+	&--maximize {
+		top: 0;
+		margin: 0;
+		height: 100vh;
+		max-width: 100vw;
+
+		.ant-modal-content {
+			display: flex;
+			flex-direction: column;
+			height: inherit;
+			border-radius: 0;
+
+			.ant-modal-body {
+				height: 100%;
+
+				.c-modal__content {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.ant-modal-footer {
+		display: flex;
+		justify-content: flex-end;
+	}
+}

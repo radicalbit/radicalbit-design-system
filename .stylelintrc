@@ -1,0 +1,107 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "ignoreFiles": [
+    "dist/less/**/*.less"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "color-hex-case": "lower",
+    "color-no-invalid-hex": true,
+    "declaration-colon-newline-after": "always-multi-line",
+    "no-descending-specificity": null,
+    "comment-empty-line-before": [
+      "always",
+      {
+        "ignore": [
+          "stylelint-commands",
+          "after-comment"
+        ]
+      }
+    ],
+    "declaration-colon-space-after": "always-single-line",
+    "indentation": [
+      "tab",
+      {
+        "except": [
+          "value"
+        ]
+      }
+    ],
+    "max-empty-lines": 2,
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
+      }
+    ],
+    "unit-whitelist": [
+      [
+        "rem",
+        "em",
+        "%"
+      ],
+      {
+        "ignoreProperties": {
+          "px": [
+            "line-height",
+            "/^border/",
+            "/^box-shadow/",
+            "column-rule",
+            "text-shadow",
+            "transform"
+          ],
+          "%": [
+            "min-height",
+            "min-width",
+            "width",
+            "height",
+            "border-radius",
+            "transform",
+            "top",
+            "right",
+            "bottom",
+            "left",
+            "/^background/",
+            "/^margin/",
+            "flex-basis"
+          ],
+          "vh": [
+            "max-height",
+            "min-height",
+            "height"
+          ],
+          "vw": [
+            "max-width",
+            "min-width",
+            "width"
+          ],
+          "s": [
+            "transition",
+            "animation",
+            "animation-duration",
+            "-webkit-animation"
+          ],
+          "fr": [
+            "grid-template-columns",
+            "grid-template-rows"
+          ],
+          "deg": [
+            "background",
+            "background-image",
+            "transform",
+            "filter"
+          ]
+
+        }
+      }
+    ],
+    "number-leading-zero": "never"
+  }
+}

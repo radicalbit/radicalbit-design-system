@@ -1,0 +1,99 @@
+.c-popconfirm {
+	&[disabled] {
+		opacity: .6;
+		pointer-events: none;
+	}
+
+	.ant-popover-inner-content {
+		max-width: 16rem;
+		line-height: @rdb-line-height-s;
+		padding: @rdb-font-size-base !important;
+		font-weight: var(--coo-font-weight-light) !important;
+	}
+
+	.ant-popover-message {
+		font-weight: var(--coo-font-weight-light);
+
+		.anticon {
+			&.anticon-exclamation-circle {
+				visibility: hidden;
+			}
+		}
+
+		.ant-popover-message-title {
+			font-size: @rdb-font-size-s;
+			display: block;
+			max-width: 25rem;
+			padding: 0;
+			margin: 0 auto;
+			line-height: @rdb-line-height-s;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.ant-popover-buttons {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+		gap: .5rem;
+
+		.ant-btn {
+			margin: 0;
+			margin-top: .5rem;
+			border-radius: 1rem;
+
+			span {
+				text-shadow: 0 0 0;
+			}
+
+			&:first-child {
+				.ant-btn-secondary-light();
+			}
+
+
+			&.ant-btn-sm {
+				max-height: 1.3rem;
+				font-size: @rdb-font-size-s;
+			}
+		}
+	}
+
+	&.c-popconfirm--with-body {
+		.ant-popover-inner-content {
+			max-width: inherit;
+		}
+
+		.ant-popover-message-title {
+			max-height: inherit;
+			max-width: inherit;
+		}
+
+		.ant-popover-buttons {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			gap: 1rem;
+		}
+
+		.c-popconfirm-body {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&--hidden-cancel {
+		.ant-popover-buttons > .ant-btn:first-child {
+			display: none;
+		}
+	}
+
+	&--wrap-title {
+		.ant-popover-message {
+			.ant-popover-message-title {
+				display: -webkit-box;
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+.c-tour {
+	&.reactour__helper {
+		background: var(--coo-white-bk);
+		color: var(--coo-dark);
+		padding-left: 4rem;
+		padding-right: 4rem;
+
+		button[data-tour-elem="left-arrow"],
+		button[data-tour-elem="right-arrow"],
+		.reactour__close {
+			color: var(--coo-dark);
+
+			&:hover {
+				color: var(--coo-dark);
+			}
+		}
+
+		button[data-tour-elem="left-arrow"]:disabled,
+		button[data-tour-elem="right-arrow"]:disabled {
+			display: none;
+		}
+	}
+
+	.reactour__close {
+		color: var(--coo-dark);
+	}
+
+	&__right-arrow {
+		position: absolute;
+		top: 50%;
+		right: 1.5rem;
+		font-size: 3rem;
+	}
+
+	&__left-arrow {
+		position: absolute;
+		top: 50%;
+		left: 1.5rem;
+		font-size: 3rem;
+	}
+
+	h3 {
+		font-weight: var(--coo-font-weight-bold);
+		font-size: 1rem;
+		margin-bottom: .25rem;
+		font-family: var(--coo-body-font);
+	}
+
+	p {
+		font-weight: var(--coo-font-weight-light);
+		font-size: .8rem;
+		margin-bottom: 1rem;
+		line-height: 1.3;
+	}
+}

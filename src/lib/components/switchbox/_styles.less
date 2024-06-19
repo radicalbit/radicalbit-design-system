@@ -1,0 +1,41 @@
+.c-switchbox {
+	display: flex;
+	gap: 1rem;
+	padding: .05rem;
+	width: 100%;
+	cursor: pointer;
+
+	&:hover {
+		color: var(--coo-primary);
+	}
+
+	&--disabled {
+		opacity: .4;
+		cursor: not-allowed;
+	}
+
+	&--readonly {
+		pointer-events: none;
+		cursor: default;
+
+		.ant-switch-disabled {
+			opacity: 1;
+		}
+	}
+
+	&--reverse {
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+	}
+
+	&--list-view {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		line-height: 1.7rem;
+
+		.c-switchbox__label {
+			font-size: 1rem;
+		}
+	}
+}

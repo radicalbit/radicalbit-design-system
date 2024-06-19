@@ -1,0 +1,55 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "declarationDir": "./dist/",
+        "target": "es5",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext",
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@Src/*": [
+                "src/*"
+            ],
+            "@Resources/*": [
+                "src/lib/resources/*"
+            ],
+            "@Lib/*": [
+                "src/lib/*"
+            ],
+            "@Components/*": [
+                "src/lib/components/*"
+            ],
+            "@Demo/*": [
+                "src/demo/*"
+            ],
+            "@Styles/*": [
+                "src/styles/*"
+            ],
+            "@Images/*": [
+                "src/lib/resources/images/*"
+            ]
+        },
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve"
+    },
+    "exclude": [
+        "src/lib/components/**/*.stories.ts",
+        "src/lib/components/**/*.stories.tsx",
+        "src/utils/storybook.ts"
+    ],
+    "include": [
+        "src",
+    ]
+}

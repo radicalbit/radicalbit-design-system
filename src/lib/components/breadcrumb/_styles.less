@@ -1,0 +1,28 @@
+.coo-breadcrumb {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline;
+
+	.ant-breadcrumb-separator {
+		color: var(--coo-dark);
+		margin: 0 .25rem;
+		font-size: @rdb-font-size-xs;
+	}
+
+	&__item {
+		color: var(--coo-dark);
+		font-size: @rdb-font-size-xs;
+		font-weight: var(--coo-font-weight-normal);
+		line-height: @rdb-line-height-default;
+
+		&--clickable {
+			color: var(--coo-primary);
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

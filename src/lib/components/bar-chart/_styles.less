@@ -1,0 +1,109 @@
+.c-bar-chart {
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+
+	&--padding {
+		padding: 1rem;
+	}
+
+	&--reverse {
+		flex-direction: column-reverse;
+	}
+
+	&--animated {
+		.c-bar-chart__value {
+			animation: infinitLoad 5s infinite;
+		}
+	}
+
+	&__bar {
+		height: .6rem;
+		width: 100%;
+		background-color: rgba(var(--coo-rgb-secondary-03), .4);
+		margin: 0 auto;
+		border-radius: 2rem;
+		overflow: hidden;
+
+		.c-bar-chart__value {
+			height: 100%;
+			border-radius: 2rem;
+			background: var(--background, linear-gradient(90deg, var(--coo-primary-02) 40%, var(--coo-primary-dark) 100%));
+		}
+
+		.c-bar-chart__content {
+			color: var(--coo-white);
+			font-family: var(--coo-header-font);
+			font-weight: var(--coo-font-weight-bold);
+			float: right;
+			margin-right: .5rem;
+			line-height: .6rem;
+			font-size: .6rem;
+
+			&--fixed {
+				position: absolute;
+				right: 2.5rem;
+				filter: contrast(.5);
+			}
+
+			&--none {
+				display: none;
+			}
+		}
+
+		&--large {
+			height: 1.2rem;
+
+			.c-bar-chart__content {
+				line-height: 1.2rem;
+				font-size: .8rem;
+			}
+		}
+
+		&--type-secondary {
+			.c-bar-chart__value {
+				background: linear-gradient(90deg, var(--coo-secondary-01) 40%, var(--coo-secondary) 100%);
+			}
+		}
+
+		&--type-red {
+			.c-bar-chart__value {
+				background: linear-gradient(90deg, var(--coo-secondary) 40%, var(--coo-error) 100%);
+			}
+		}
+
+		&--type-error {
+			.c-bar-chart__value {
+				background: var(--coo-error);
+			}
+		}
+
+		&--type-warning {
+			.c-bar-chart__value {
+				background: var(--coo-warning);
+			}
+		}
+
+		&--type-dark {
+			.c-bar-chart__value {
+				background: linear-gradient(90deg, var(--coo-secondary-02) 40%, var(--coo-secondary) 100%);
+			}
+		}
+
+		&--type-primary {
+			.c-bar-chart__value {
+				background: linear-gradient(90deg, var(--coo-primary-02) 40%, var(--coo-primary) 100%);
+			}
+		}
+	}
+
+	&__labels {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.c-bar-chart__label {
+			font-size: @rdb-font-size-xs;
+		}
+	}
+}

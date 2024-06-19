@@ -1,0 +1,46 @@
+.rdb-layout-main-column {
+	.rdb-layout-main-column-header {
+		input {
+			font-size: 1rem;
+		}
+
+		font-size: 1rem;
+		transition: all .2s;
+		padding: 0;
+		position: fixed;
+		left: 0;
+		right: @rdb-right-sidebar-width;
+		z-index: 1;
+		border-bottom: 1px solid var(--coo-secondary-03);
+		background-color: var(--coo-white-bk);
+		color: var(--coo-dark);
+		max-height: @rdb-header-height;
+		min-height: @rdb-header-height;
+	}
+
+	.ant-layout-content {
+		transition: all .2s;
+		margin-top: @rdb-header-height;
+		padding: 0;
+		height: ~"calc(100vh - @{rdb-header-height})";
+		overflow: auto;
+		margin-left: 0;
+		margin-right: 0;
+		background-color: var(--coo-white-bk);
+		color: var(--coo-dark);
+
+		&--no-header {
+			margin-top: 0;
+			height: 100vh;
+		}
+	}
+
+	.hover-area {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		z-index: 9999;
+		width: 100%;
+		height: 6rem;
+	}
+}

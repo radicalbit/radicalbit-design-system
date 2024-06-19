@@ -1,0 +1,30 @@
+.l-ratio-wrapper {
+	width: 100%;
+
+	&__container {
+		position: relative;
+		width: 100%;
+	}
+
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	&--16-9 {
+		.l-ratio-wrapper__container {
+			padding-bottom: 56.25%;
+		}
+	}
+
+	&--9-16 {
+		.l-ratio-wrapper__container {
+			padding-bottom: 177.77%;
+		}
+	}
+}

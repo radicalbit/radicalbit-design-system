@@ -1,0 +1,26 @@
+.c-dropdown {
+	.ant-dropdown-menu {
+		.ant-dropdown-menu-item {
+			color: var(--coo-secondary);
+			font-size: @rdb-font-size-s;
+			padding: @padding-xs @rdb-padding-default;
+			font-weight: var(--coo-font-weight-light);
+
+			&-disabled {
+				opacity: .4;
+				cursor: not-allowed;
+			}
+		}
+	}
+
+	.ant-dropdown-trigger {
+		font-weight: var(--coo-font-weight-normal);
+		font-size: @rdb-font-size-s;
+	}
+
+	&__child {
+		&--clickable {
+			cursor: pointer;
+		}
+	}
+}

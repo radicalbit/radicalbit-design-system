@@ -1,0 +1,126 @@
+.m-pin {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	&__badge {
+		width: 1rem;
+		height: 1rem;
+		border: 2px solid var(--coo-primary);
+		border-radius: 50%;
+		cursor: default;
+		display: flex;
+
+		&--type {
+			&-filled {
+				background: var(--coo-primary);
+			}
+
+			&-success {
+				border: 2px solid var(--coo-success);
+			}
+
+			&-filled-success {
+				background: var(--coo-success);
+				border-color: var(--coo-success);
+			}
+
+			&-error {
+				border: 2px solid var(--coo-error);
+			}
+
+			&-filled-error {
+				background: var(--coo-error);
+				border-color: var(--coo-error);
+			}
+
+			&-warning {
+				border: 2px solid var(--coo-warning);
+			}
+
+			&-filled-warning {
+				background: var(--coo-warning);
+				border: var(--coo-warning);
+			}
+
+			&-animated {
+				box-shadow: var(--coo-primary) 2px -2px 5px inset;
+				width: 1rem;
+				height: 1rem;
+				background: var(--coo-primary);
+				border: 0;
+				border-radius: 50%;
+				position: relative;
+				.fadeIt ();
+
+				&::before {
+					position: absolute;
+					top: -.08rem;
+					left: -.08rem;
+					width: 1rem;
+					height: 1rem;
+					padding: .4rem;
+					float: left;
+					border: 2px solid  var(--coo-primary);
+					border-radius: 50%;
+					-webkit-animation: antstatusprocessing 1.2s infinite ease-in-out;
+					animation: antStatusProcessing 1.2s infinite ease-in-out;
+					content: " ";
+				}
+			}
+
+			&-secondary {
+				border: 2px solid var(--coo-secondary-01);
+			}
+
+			&-filled-secondary {
+				background: var(--coo-secondary);
+				border-color: var(--coo-secondary);
+			}
+		}
+
+		&--hoverable {
+			cursor: pointer;
+
+			&:hover {
+				opacity: .5;
+			}
+		}
+
+		&--size {
+			&-small {
+				width: .8rem;
+				height: .8rem;
+
+				&.m-pin__badge--type-animated {
+					width: .8rem;
+					height: .8rem;
+					position: relative;
+
+					&::before {
+						width: .8rem;
+						height: .8rem;
+						top: -.13rem;
+						left: -.13rem;
+					}
+				}
+			}
+
+			&-micro {
+				width: .5rem;
+				height: .5rem;
+			}
+		}
+	}
+
+	&--justify {
+		&-left {
+			justify-content: left;
+		}
+
+		&-center {
+			justify-content: center;
+		}
+	}
+}
+

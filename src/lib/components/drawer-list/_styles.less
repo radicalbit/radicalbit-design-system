@@ -1,0 +1,35 @@
+.rdb-drawer--transparent-mask {
+	.ant-drawer-mask {
+		background-color: transparent;
+	}
+}
+
+.c-drawer-list {
+	.l-header {
+		height: 5rem;
+	}
+
+	&__wrapper {
+		.ant-drawer-header {
+			background: transparent;
+			border-color: rgba(var(--coo-rgb-secondary-01), .3);
+			padding: 0;
+		}
+
+		.ant-drawer-content {
+			background: var(--coo-white-bk);
+			border-color: rgba(var(--coo-rgb-secondary-01), .3);
+
+			.ant-drawer-body {
+				padding: 0;
+				height: calc(100% - 5rem);
+			}
+		}
+
+		&--dark {
+			.ant-drawer-content {
+				background: linear-gradient(180deg, var(--coo-white-bk) 11.94%, rgba(var(--coo-rgb-primary), .4) 98.65%), var(--coo-white-bk);
+			}
+		}
+	}
+}

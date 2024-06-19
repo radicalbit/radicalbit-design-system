@@ -1,0 +1,56 @@
+
+.l-resizable {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 60% .5% 39.5%;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
+
+	&__top {
+		overflow: auto;
+		position: relative;
+	}
+
+	&__divider {
+		cursor: row-resize;
+		border-bottom: 1px solid var(--coo-secondary-03);
+		user-select: none;
+		position: relative;
+		z-index: 100;
+
+		&:hover {
+			border-bottom: 2px dotted var(--coo-primary);
+		}
+	}
+
+	&__bottom {
+		.l-header {
+			padding: 0 1rem 0 0;
+			border-bottom: 1px solid var(--coo-secondary-03);
+
+			&__details {
+				.ant-btn-sm {
+					margin-top: .25rem;
+					margin-bottom: .25rem;
+				}
+			}
+
+			&__actions {
+				justify-content: center;
+			}
+		}
+
+		.ant-table-empty,
+		.react-codemirror2,
+		.cm-s-material.CodeMirror {
+			margin: 0;
+			border: 0;
+			height: calc(100% - 2rem);
+		}
+	}
+
+	&--bottom-closed {
+		grid-template-rows: 100% 0% 0%;
+	}
+}

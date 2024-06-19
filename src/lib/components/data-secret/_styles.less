@@ -1,0 +1,31 @@
+.m-data-secret {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: .5rem;
+	line-height: 1.7rem;
+	color: var(--coo-dark);
+
+	.m-data-secret__label  {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+	}
+
+	.m-data-secret__data {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+		font-weight: var(--coo-font-weight-bold);
+		font-size: 1rem;
+		font-family: var(--coo-monospace-font);
+
+		svg {
+			cursor: pointer;
+
+			&:hover {
+				color: var(--coo-primary);
+			}
+		}
+	}
+}

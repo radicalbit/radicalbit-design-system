@@ -1,0 +1,64 @@
+import classNames from 'classnames';
+import { Fragment, memo } from 'react';
+
+type Pair = {
+  title: string;
+  value: string | number | boolean;
+};
+
+type Single = {
+  title: string;
+  value: Array<string | number | boolean>;
+};
+
+type Props = {
+  list: Single | Array<Pair>;
+  gridColumnCount?: number;
+  noMargin?: boolean;
+  withBorder?: boolean;
+};
+
+const DescriptionList = ({
+  list,
+  gridColumnCount = 3,
+  withBorder = true,
+  noMargin,
+}: Props) => {
+  const type = Array.isArray(list) ? 'pair' : 'single';
+
+  const css = classNames({
+    [`dl--type-${type}`]: type,
+    'dl--border': withBorder,
+    'dl--no-margin': noMargin,
+  });
+
+  return (
+    <div className="c-description-list">
+      {!Array.isArray(list) && (
+        <dl className={css}>
+          <dt>{list.title}</dt>
+          {list.value.map((value: string | number | boolean, index: number) => (
+            <dd key={index}>{value}</dd>
+          ))}
+        </dl>
+      )}
+
+      <dl
+        className={css}
+        style={{ gridTemplateColumns: `repeat(${gridColumnCount}, 1fr)` }}
+      >
+        {Array.isArray(list)
+          && list.map((pair: Pair, index: number) => (
+            <Fragment key={index}>
+              <dt>{pair.title}</dt>
+              <dd>{pair.value}</dd>
+            </Fragment>
+          ))}
+      </dl>
+    </div>
+  );
+};
+
+DescriptionList.displayName = 'DescriptionList';
+
+export default memo<Props>(DescriptionList);

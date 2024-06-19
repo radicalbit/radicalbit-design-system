@@ -1,0 +1,36 @@
+.rdb-icon {
+	&.rdb-icon-size-xxl,
+	&.rdb-icon-size-xxl * {
+		.icon-size(@rdb-font-size-xxl);
+	}
+
+	&.rdb-icon-size-xl,
+	&.rdb-icon-size-xl * {
+		.icon-size(@rdb-font-size-xl);
+	}
+
+	&.rdb-icon-size-l,
+	&.rdb-icon-size-l * {
+		.icon-size(@rdb-font-size-l);
+	}
+
+	&.rdb-icon-size-base,
+	&.rdb-icon-size-base * {
+		.icon-size(@rdb-font-size-base);
+	}
+
+	&.rdb-icon-size-s,
+	&.rdb-icon-size-s * {
+		.icon-size(@rdb-font-size-s);
+	}
+
+	&.rdb-icon-size-xs,
+	&.rdb-icon-size-xs * {
+		.icon-size(@rdb-font-size-xs);
+	}
+}
+
+.icon-size(@size) {
+	width: @size;
+	height: @size;
+}

@@ -1,0 +1,111 @@
+
+// * * * * COLORS SETUP * * * *
+:root,
+.light {
+	// to use for color effects and less-antd variables es: rgba(var(--coo-white), .8)
+	--coo-rgb-white: 255, 255, 255; // #FFFFFF
+	--coo-rgb-black: 0, 0, 0; // #000000
+	--coo-rgb-dark: 24, 35, 54; // #182336
+	// primaries
+	--coo-rgb-primary-dark: 10, 113, 187; // #0A71BB rgba(10, 113, 187, 1)
+	--coo-rgb-primary: 54, 149, 217; //#3695D9
+	--coo-rgb-primary-01: 115, 178, 224; //#73B2E0 rgba(115, 178, 224, 1)
+	--coo-rgb-primary-02: 200, 228, 249; //#C8E4F9 rgba(200, 228, 249, 1)
+	--coo-rgb-primary-03: 229, 241, 250; //#E5F1FA rgba(229, 241, 250, 1)
+	--coo-rgb-primary-04: 241, 249, 255; //#F1F9FF rgba(241, 249, 255, 1)
+	// secondaries
+	--coo-rgb-secondary-dark: 39, 52, 75; //#3E3E3E rgba(62, 62, 62, 1)
+	--coo-rgb-secondary: 67, 76, 107; //#4B4F54 rgba(75, 79, 84, 1)
+	--coo-rgb-secondary-01: 144, 152, 180; //#9B99A1 rgba(155, 153, 161, 1)
+	--coo-rgb-secondary-02: 205, 207, 226; //#CCC9D4 rgba(204, 201, 212, 1)
+	--coo-rgb-secondary-03: 226, 223, 230; //#DBDBDB rgba(219, 219, 219, 1)
+	--coo-rgb-secondary-04: 250, 250, 252; //#fafafc
+	// colors
+	--coo-rgb-color-01: 77, 182, 148;  // #4DB694
+	--coo-rgb-color-02: 0, 169, 170; // #00A9AA
+	--coo-rgb-color-03: 119, 126, 188; // #777EBC
+	--coo-rgb-color-04: 95, 132, 95; // #5F84C3
+	--coo-rgb-color-05: 50, 141, 205; // #328DCD
+	// semantics
+	--coo-rgb-highlight: 255, 255, 0; // #FFFF00 rgba(255, 255, 0, 1)
+	--coo-rgb-error: 246, 0, 0; // #f60000
+	--coo-rgb-warning: 255, 122, 0; // #ff7a00
+	--coo-rgb-success: 77, 182, 148; // #4db694
+	--coo-rgb-success-bk: 246, 255, 252; // #F6FFFC
+	--coo-rgb-error-bk-dark: 67, 39, 39; // #432727
+	--coo-rgb-error-bk-light: 255, 239, 239; // #ffefef
+	--coo-rgb-alert-bk: 255, 239, 239; // #ffefef
+	--coo-rgb-highlight-bk: 57, 57, 22; // #393916
+	// full
+	--coo-rgb-full-black: 0, 0, 0; // #000000
+	--coo-rgb-full-red: 255, 0, 0; // #ff0000
+	--coo-rgb-full-green: 0, 255, 0; // #00ff00
+	--coo-rgb-full-blue: 0, 0, 255; // #0000ff
+	// specials
+	--coo-rgb-special-blue: 0, 30, 255; // #001eff
+	--coo-rgb-special-green: 94, 255, 0; // #5eff00
+	--coo-rgb-special-dark-grey: 18, 16, 16;// #121010
+
+
+	// * * * * LIGHT MODE COLORS BASE - to use as color variable * * * *
+
+	--coo-white: rgb(var(--coo-rgb-white));
+	--coo-dark: rgb(var(--coo-rgb-dark));
+	// primaries
+	--coo-primary-dark: rgb(var(--coo-rgb-primary-dark));
+	--coo-primary: rgb(var(--coo-rgb-primary));
+	--coo-primary-01: rgb(var(--coo-rgb-primary-01));
+	--coo-primary-02: rgb(var(--coo-rgb-primary-02));
+	--coo-primary-03: rgb(var(--coo-rgb-primary-03));
+	--coo-primary-04: rgb(var(--coo-rgb-primary-04));
+	// secondaries
+	--coo-secondary-dark: rgb(var(--coo-rgb-secondary-dark));
+	--coo-secondary: rgb(var(--coo-rgb-secondary));
+	--coo-secondary-01: rgb(var(--coo-rgb-secondary-01));
+	--coo-secondary-02: rgb(var(--coo-rgb-secondary-02));
+	--coo-secondary-03: rgb(var(--coo-rgb-secondary-03));
+	--coo-secondary-04: rgb(var(--coo-rgb-secondary-04));
+	// colors
+	--coo-color-01: rgb(var(--coo-rgb-color-01));
+	--coo-color-02: rgb(var(--coo-rgb-color-02));
+	--coo-color-03: rgb(var(--coo-rgb-color-03));
+	--coo-color-04: rgb(var(--coo-rgb-color-04));
+	--coo-color-05: rgb(var(--coo-rgb-color-05));
+	--color-active: rgb(var(--coo-rgb-secondary-01));
+	// semantics
+	--coo-highlight: rgb(var(--coo-rgb-highlight));
+	--coo-error: rgb(var(--coo-rgb-error));
+	--coo-warning: rgb(var(--coo-rgb-warning));
+	--coo-success: rgb(var(--coo-rgb-success));
+	--coo-success-bk: rgb(var(--coo-rgb-success-bk));
+	--coo-error-bk-dark: rgb(var(--coo-rgb-error-bk-dark));
+	--coo-error-bk-light: rgb(var(--coo-rgb-error-bk-light));
+	--coo-alert-bk: rgb(var(--coo-rgb-alert-bk));
+	--coo-highlight-bk: rgb(var(--coo-rgb-highlight-bk));
+	--coo-white-bk: rgb(var(--coo-rgb-white));
+
+	.dark {
+		--coo-primary: rgb(var(--coo-rgb-primary-01));
+		--coo-secondary: rgb(var(--coo-rgb-secondary-03));
+		--coo-dark: rgb(var(--coo-rgb-white));
+		--coo-white-bk: rgb(var(--coo-rgb-secondary-dark));
+		--coo-secondary-04: rgb(var(--coo-rgb-dark));
+		--coo-secondary-03: rgb(var(--coo-rgb-secondary));
+	}
+}
+
+
+// LEGACY!!! DO NOT USE!!!
+// * * * * INDICALI * * * *
+@rdb-danger: #FF0000;
+@rdb-danger-10: fade(@rdb-danger, 10%);
+@rdb-danger-40: fade(@rdb-danger,40%);
+@rdb-danger-txt: darken(@rdb-danger, 15%);
+@rdb-danger-bk: lighten(@rdb-danger, 46%);
+@rdb-success: #19D900;
+@rdb-success-txt: darken(@rdb-success, 15%);
+@rdb-success-bk: lighten(@rdb-success, 53%);
+@rdb-warning: #ff9800;
+@rdb-warning-txt: darken(@rdb-warning, 5%);
+@rdb-warning-bk: lighten(@rdb-warning, 47%);
+

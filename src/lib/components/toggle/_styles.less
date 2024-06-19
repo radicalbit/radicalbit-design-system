@@ -1,0 +1,27 @@
+// COLOR DEFINITIONS
+.dark {
+	--text-color-checked: var(--coo-primary);
+	--color-one: var(--coo-primary);
+	--color-two: var(--coo-primary-01);
+}
+
+.light {
+	--text-color-checked: var(--coo-white);
+	--color-one: var(--coo-primary);
+	--color-two: var(--coo-primary-01);
+}
+
+.c-toggle {
+	cursor: pointer;
+
+	&--checked {
+		color: var(--text-color-checked);
+		text-shadow: 0 0 .5rem 0 var(--color-one) inset;
+		filter: drop-shadow(0 0 .5rem var(--color-one)) drop-shadow(0 0 .15rem var(--color-two));
+	}
+
+	&--unchecked {
+		opacity: .3;
+	}
+}
+

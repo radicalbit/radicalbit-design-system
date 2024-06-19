@@ -1,0 +1,43 @@
+.c-description-list {
+	dl {
+		display: grid;
+		line-height: 2;
+
+		&.dl--type-single {
+			grid-template-columns: 1fr;
+		}
+
+		&.dl--type-pair {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&.dl--border {
+			dd {
+				border-bottom: 1px dotted var(--coo-secondary-03);
+			}
+
+			dt {
+				border-bottom: 1px dotted var(--coo-secondary-03);
+			}
+		}
+
+		&.dl--no-margin {
+			margin: 0;
+		}
+
+
+		dd {
+			font-weight: var(--coo-font-weight-bold);
+			margin: 0;
+			padding: 0 1rem;
+			white-space: nowrap;
+		}
+
+		dt {
+			font-weight: var(--coo-font-weight-light);
+			margin: 0;
+			padding: 0 1rem;
+			white-space: nowrap;
+		}
+	}
+}

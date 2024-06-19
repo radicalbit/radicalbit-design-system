@@ -1,0 +1,84 @@
+.c-input {
+	background: var(--coo-white-bk);
+	color: var(--coo-dark);
+	height: 2rem;
+
+	&&--readonly {
+		background-color: inherit;
+		color: inherit;
+		cursor: default;
+		padding-left: 0;
+		border: 0;
+	}
+
+	&--shape-round {
+		.ant-input {
+			border-radius: 1rem;
+		}
+	}
+
+	&--borders-dashed {
+		border-style: dashed;
+	}
+
+	&&--blank {
+		background-color: inherit;
+		color: inherit;
+		cursor: default;
+		border-style: dashed;
+		border-color: rgba(var(--coo-rgb-secondary-02));
+	}
+}
+
+.c-text-area {
+	&--readonly {
+		background-color: inherit;
+		color: inherit;
+		cursor: default;
+		padding-left: 0;
+		border: 0;
+	}
+}
+
+.rdb-search {
+	&.ant-input-search {
+		.ant-input-group {
+			.ant-input-affix-wrapper {
+				height: 2rem;
+				background: transparent;
+				border-radius: 0;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				border: 0;
+
+				.ant-input {
+					border-radius: 0;
+					border: 0;
+					color: var(--coo-dark);
+					background: rgba(var(--coo-rgb-white), .15) !important;
+					padding-left: 1rem;
+					cursor: pointer !important;
+
+					&[value=""] {
+						+ span {
+							.ant-input-search-icon {
+								display: block !important;
+							}
+						}
+					}
+				}
+			}
+
+			.ant-input-group-addon {
+				background-color: transparent;
+				left: 0;
+
+				button {
+					height: 2rem;
+					border: 0;
+					border-radius: 0 !important;
+				}
+			}
+		}
+	}
+}

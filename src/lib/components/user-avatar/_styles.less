@@ -1,0 +1,60 @@
+.l-user-avatar {
+	display: flex;
+	flex-direction: row;
+
+	&__name {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: @rdb-font-size-s;
+		line-height: @rdb-line-height-s;
+		padding-left: @rdb-padding-small/2;
+
+		strong,
+		span {
+			width: 11rem;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			float: left;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: .5rem;
+
+		* > {
+			width: 100%;
+		}
+	}
+}
+
+.l-rbit-avatar {
+	display: flex;
+	flex-direction: row;
+
+	&__name {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: @rdb-font-size-s;
+		line-height: @rdb-line-height-s;
+		padding-left: @rdb-padding-small/2;
+
+		strong,
+		span {
+			width: 11rem;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			float: left;
+		}
+	}
+
+	&--clickable {
+		cursor: pointer;
+	}
+}

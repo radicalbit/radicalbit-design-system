@@ -1,0 +1,286 @@
+@import "./left-column/_styles";
+@import "./secondary-column/_styles";
+@import "./main-column/_styles";
+@import "./right-column/_styles";
+@import "./overall-top/_styles";
+
+.rdb-layout,
+.cona-theme {
+	.ant-layout {
+		background: var(--coo-dark) !important;
+	}
+
+	// general antd classes
+	.ant-layout-header {
+		height: @rdb-header-height;
+		min-height: @rdb-header-height;
+		overflow: hidden;
+		padding: 0;
+		left: 0;
+		right: 0;
+		line-height: @rdb-line-height-default;
+	}
+
+	.ant-layout-sider {
+		overflow: auto;
+		min-height: 100vh;
+		z-index: 100;
+		position: fixed;
+
+		.ant-layout-sider-trigger {
+			transition: width .2s;
+			background-color: transparent;
+			border-right: 1px solid var(--coo-secondary-03);
+			border-top: 0;
+			height: @rdb-sidebar-trigger-height;
+			width: inherit !important;
+			color: var(--coo-secondary);
+
+			&:hover {
+				color: var(--coo-primary);
+			}
+		}
+
+		&.ant-layout-sider-collapsed {
+			width: @rdb-sidebar-collapsed-width !important;
+			min-width: @rdb-sidebar-collapsed-width !important;
+
+			.ant-layout-sider-trigger {
+				width: @rdb-sidebar-collapsed-width !important;
+			}
+
+			.l-user-avatar__name {
+				display: none;
+			}
+
+			.l-rbit-avatar__name {
+				display: none;
+			}
+
+			&.rdb-layout-secondary-column {
+				width: @rdb-secondary-sidebar-collapsed-width !important;
+				min-width: @rdb-secondary-sidebar-collapsed-width !important;
+				border-right: 1px solid var(--coo-secondary-03);
+
+				.ant-layout-sider-trigger {
+					width: @rdb-secondary-sidebar-collapsed-width !important;
+				}
+			}
+		}
+	}
+
+	/* Left and secondary columns layout management */
+	.rdb-layout-secondary-column,
+	.cona-l-sider,
+	.rdb-layout-right-column {
+		display: none;
+	}
+
+	.SecondaryColumnCollapsed {
+		.ant-layout-content {
+			margin-left: @rdb-secondary-sidebar-collapsed-width;
+		}
+
+		.ant-layout-header {
+			left: @rdb-secondary-sidebar-collapsed-width;
+		}
+	}
+
+	.SecondaryColumn {
+		.rdb-layout-secondary-column {
+			display: block;
+		}
+
+		.ant-layout-content {
+			margin-left: @rdb-layout-secondary-column-width;
+		}
+
+		.ant-layout-header {
+			left: @rdb-layout-secondary-column-width;
+		}
+	}
+
+	.LeftColumn {
+		.cona-l-sider {
+			display: block;
+		}
+
+		.ant-layout-content {
+			margin-left: @rdb-left-sidebar-width;
+		}
+
+		.ant-layout-header {
+			left: @rdb-left-sidebar-width;
+		}
+	}
+
+	.LeftColumnAndSecondary {
+		.rdb-layout-secondary-column {
+			left: @rdb-left-sidebar-width;
+		}
+
+		.ant-layout-content {
+			margin-left: @rdb-left-sidebar-width + @rdb-layout-secondary-column-width;
+		}
+
+		.ant-layout-header {
+			left: @rdb-left-sidebar-width + @rdb-layout-secondary-column-width;
+		}
+	}
+
+	.LeftColumnAndSecondaryColumnCollapsed {
+		.ant-layout-content {
+			margin-left: @rdb-left-sidebar-width + @rdb-secondary-sidebar-collapsed-width;
+		}
+
+		.ant-layout-header {
+			left: @rdb-left-sidebar-width + @rdb-secondary-sidebar-collapsed-width;
+		}
+	}
+
+	.LeftColumnCollapsed {
+		.ant-layout-content {
+			margin-left: @rdb-sidebar-collapsed-width;
+		}
+
+		.ant-layout-header {
+			left: @rdb-sidebar-collapsed-width;
+		}
+	}
+
+	.LeftColumnCollapsedAndSecondary {
+		.ant-layout-content {
+			margin-left: @rdb-sidebar-collapsed-width + @rdb-layout-secondary-column-width;
+		}
+
+		.ant-layout-header {
+			left: @rdb-sidebar-collapsed-width + @rdb-layout-secondary-column-width;
+		}
+
+		.rdb-layout-secondary-column {
+			left: @rdb-sidebar-collapsed-width;
+		}
+	}
+
+	.LeftColumnCollapsedAndSecondaryCollapsed {
+		.ant-layout-content {
+			margin-left: @rdb-sidebar-collapsed-width + @rdb-secondary-sidebar-collapsed-width;
+		}
+
+		.ant-layout-header {
+			left: @rdb-sidebar-collapsed-width + @rdb-secondary-sidebar-collapsed-width;
+		}
+	}
+
+	.RightColumn {
+		.rdb-layout-right-column {
+			display: block;
+		}
+
+		.ant-layout-header {
+			right: @rdb-right-sidebar-width;
+			width: ~"calc(100% - @{@rdb-right-sidebar-width})";
+		}
+
+		.ant-layout-content {
+			margin-right: @rdb-right-sidebar-width;
+		}
+	}
+
+	.RightColumnCollapsed {
+		.ant-layout-header {
+			right: @rdb-sidebar-collapsed-width;
+		}
+
+		.ant-layout-content {
+			margin-right: @rdb-sidebar-collapsed-width;
+		}
+	}
+
+	.OverallTop {
+		.rdb-layout-main-column {
+			.ant-layout-content {
+				height: ~"calc(100vh - @{rdb-header-height} - @{rdb-overall-top-height})";
+			}
+		}
+
+		.cona-l-sider__content {
+			height: ~"calc(100vh - @{rdb-header-height} - @{rdb-sidebar-trigger-height} - @{rdb-overall-top-height})";
+			min-height: ~"calc(100vh - @{rdb-header-height} - @{rdb-sidebar-trigger-height} - @{rdb-overall-top-height})";
+		}
+
+		.rdb-layout-right-column {
+			.rdb-layout-right-column-content  {
+				height: ~"calc(100vh - @{rdb-header-height} - @{rdb-overall-top-height})";
+				min-height: ~"calc(100vh - @{rdb-header-height} - @{rdb-overall-top-height})";
+			}
+		}
+
+		.rdb-layout-secondary-column {
+			.rdb-layout-secondary-column-content {
+				height: ~"calc(100vh  - @{rdb-header-height} - @{rdb-sidebar-trigger-height} - @{rdb-overall-top-height})";
+				min-height: ~"calc(100vh  - @{rdb-header-height} - @{rdb-sidebar-trigger-height} - @{rdb-overall-top-height})";
+			}
+		}
+	}
+
+	&.has-secondary-column {
+		.SecondaryColumn();
+
+		&.is-secondary-column-collapsed {
+			.SecondaryColumnCollapsed();
+		}
+	}
+
+	&.has-overall-top {
+		.OverallTop();
+	}
+
+	&.has-left-column {
+		.LeftColumn();
+
+		&.has-secondary-column {
+			.LeftColumnAndSecondary();
+
+			&.is-secondary-column-collapsed {
+				.LeftColumnAndSecondaryColumnCollapsed();
+			}
+		}
+
+		&.is-left-column-collapsed {
+			.LeftColumnCollapsed();
+
+			&.has-secondary-column {
+				.LeftColumnCollapsedAndSecondary();
+
+				&.is-secondary-column-collapsed {
+					.LeftColumnCollapsedAndSecondaryCollapsed();
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: @rdb-layout-right-column-visible-above) {
+		&.has-right-column {
+			.RightColumn();
+
+			&.is-right-column-collapsed {
+				.RightColumnCollapsed();
+			}
+		}
+	}
+}
+
+.l-card-list {
+	position: relative;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+	padding: 1rem;
+	width: 100%;
+	overflow: auto;
+
+	&-medium {
+		grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+	}
+}

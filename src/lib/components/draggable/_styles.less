@@ -1,0 +1,15 @@
+.m-draggable {
+	user-select: none;
+	cursor: grab;
+	width: fit-content;
+	position: absolute;
+	z-index: 10;
+
+	&--focus {
+		z-index: 1000;
+	}
+
+	&:active {
+		cursor: grabbing;
+	}
+}

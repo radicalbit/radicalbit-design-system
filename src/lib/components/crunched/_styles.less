@@ -1,0 +1,132 @@
+
+.rdb-crunched {
+	position: relative;
+
+	.ant-badge-status-dot {
+		width: .4rem !important;
+		height: .4rem !important;
+	}
+
+	.rdb-crunched-text {
+		background: var(--coo-white);
+		position: absolute;
+		z-index: 100;
+		padding: @padding-xs / 4 @padding-xs;
+		border: 1px solid;
+		left: .2rem;
+		top: -.7rem;
+		transform: translate(-@rdb-half, -@rdb-half);
+		line-height: 1.5;
+		display: none !important;
+
+		span {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		&::after,
+		&::before {
+			top: @rdb-full;
+			left: @rdb-half;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+
+		&::after {
+			border-width: .5rem;
+			margin-left: -.5rem;
+		}
+	}
+
+	&.rdb-crunched-error {
+		.rdb-crunched-text {
+			border-color: @rdb-danger-txt;
+			background-color: @rdb-danger-bk;
+
+			&::after {
+				border-top-color: @rdb-danger-txt;
+			}
+
+			span {
+				color: @rdb-danger-txt;
+			}
+		}
+
+		.ant-badge-status-dot {
+			background-color: @rdb-danger;
+		}
+	}
+
+	&.rdb-crunched-warning {
+		.rdb-crunched-text {
+			border-color: @rdb-warning-txt;
+			background-color: @rdb-warning-bk;
+
+
+			&::after {
+				border-top-color: @rdb-warning-txt;
+			}
+
+			span {
+				color: @rdb-warning-txt;
+			}
+		}
+
+		.ant-badge-status-dot {
+			background-color: @rdb-warning;
+		}
+	}
+
+	&.rdb-crunched-success,
+	&.rdb-crunched-processing {
+		.rdb-crunched-text {
+			border-color: @rdb-success-txt;
+			background-color: @rdb-success-bk;
+
+
+			&::after {
+				border-top-color: @rdb-success-txt;
+			}
+
+			span {
+				color: @rdb-success-txt;
+			}
+		}
+
+		.ant-badge-status-dot {
+			background-color: @rdb-success;
+		}
+	}
+
+	&.rdb-crunched-default {
+		.rdb-crunched-text {
+			border-color: var(--coo-secondary);
+			background-color: var(--coo-secondary-04);
+
+			&::after {
+				border-top-color: var(--coo-secondary);
+			}
+
+			span {
+				color: var(--coo-secondary);
+			}
+		}
+
+		.ant-badge-status-dot {
+			background-color: var(--coo-dark);
+		}
+	}
+
+	.ant-badge-status-processing {
+		box-shadow: @rdb-success 2px -2px 5px inset;
+		background-color: @rdb-success;
+
+		.ant-badge-status-dot {
+			background-color: @rdb-success;
+		}
+	}
+}

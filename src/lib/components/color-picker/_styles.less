@@ -1,0 +1,53 @@
+.c-color-picker {
+	width: 100%;
+
+	&__swatch {
+		background: var(--coo-white);
+		cursor: pointer;
+		width: 100%;
+		display: flex;
+		gap: .5rem;
+
+		&-badge {
+			.ant-badge-status-dot {
+				width: 1rem;
+				height: 1rem;
+			}
+		}
+	}
+
+	&__picker {
+		position: absolute;
+		z-index: 2;
+
+		&-cover {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	&--placement {
+		&-top {
+			.c-color-picker__picker {
+				bottom: 3rem;
+			}
+		}
+
+		&-right {
+			.c-color-picker__picker {
+				right: -85%;
+				top: -135%;
+			}
+		}
+
+		&-left {
+			.c-color-picker__picker {
+				left: -85%;
+				top: -135%;
+			}
+		}
+	}
+}

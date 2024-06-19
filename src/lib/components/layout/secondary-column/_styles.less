@@ -1,0 +1,107 @@
+.rdb-layout-secondary-column {
+	background-color: var(--coo-secondary-04);
+	color: var(--coo-secondary);
+	left: 0;
+	max-width: @rdb-layout-secondary-column-width !important;
+	min-width: @rdb-layout-secondary-column-width !important;
+	width: @rdb-layout-secondary-column-width !important;
+
+	.l-data-table {
+		.ant-table {
+			tbody {
+				tr {
+					td {
+						max-width: 12.5rem;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+		}
+	}
+
+	&.dark {
+		background-color: var(--coo-white-bk);
+	}
+
+	.rdb-search {
+		input {
+			border: 0;
+		}
+	}
+
+	.ant-menu-inline {
+		border-right: 0;
+
+		& > .ant-menu-item {
+			height: 3rem;
+			line-height: 3rem;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	.ant-layout-sider-trigger {
+		width: @rdb-layout-secondary-column-width !important;
+	}
+
+	> .anticon {
+		color: var(--coo-secondary-dark);
+	}
+
+	.page-title {
+		height: @rdb-header-height !important;
+		padding: @padding-xs @rdb-padding-default;
+		border-bottom: 1px solid var(--coo-secondary-03);
+
+		.page-title-content {
+			.font-s();
+		}
+	}
+
+	.rdb-layout-secondary-column-content {
+		height: ~"calc(100vh  - @{rdb-header-height} - @{rdb-sidebar-trigger-height})";
+		min-height: ~"calc(100vh  - @{rdb-header-height} - @{rdb-sidebar-trigger-height})";
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	&.ant-layout-sider-collapsed {
+		.l-secondary-column__header,
+		.rdb-search,
+		.rdb-layout-secondary-column-content {
+			display: none !important;
+			opacity: 0;
+		}
+	}
+
+	.l-secondary-column {
+		&__header {
+			height: 5rem;
+			border-bottom: 1px solid var(--coo-secondary-03);
+			border-right: 1px solid var(--coo-secondary-03);
+		}
+
+		&__body {
+			border-right: 1px solid var(--coo-secondary-03);
+
+			.ant-input-search {
+				.ant-input {
+					border: 0;
+					border-bottom: .06rem solid var(--coo-secondary-03);
+					border-radius: 0;
+				}
+			}
+
+			&.rdb-layout-secondary-column-content {
+				-ms-overflow-style: none;  /* Hide scrollbar but keep functionality - IE and Edge */
+				scrollbar-width: none;  /* Hide scrollbar but keep functionality - Firefox */
+
+				&::-webkit-scrollbar {
+					display: none; /* Hide scrollbar but keep functionality - Chrome, Safari and Opera */
+				}
+			}
+		}
+	}
+}

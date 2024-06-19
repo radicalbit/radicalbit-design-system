@@ -1,0 +1,276 @@
+.c-chat-message {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	border-radius: 1rem;
+	background: var(--coo-secondary-04);
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		word-wrap: break-word;
+		font-size: .9rem;
+	}
+
+	&__name {
+		display: flex;
+		flex-direction: row;
+		gap: .5rem;
+		font-weight: var(--coo-font-weight-bold);
+		line-height: 1rem;
+		margin-bottom: .25rem;
+
+		time {
+			font-weight: var(--coo-font-weight-light);
+		}
+	}
+
+	&__message {
+		font-weight: var(--coo-font-weight-light);
+		line-height: 1.2rem;
+		overflow-wrap: anywhere;
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: flex-end;
+		gap: .5rem;
+
+		> * {
+			opacity: 0;
+		}
+
+		.svg-inline--fa {
+			font-size: 1.5rem;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		.c-chat-message__actions > * {
+			opacity: 1;
+			color: var(--coo-secondary-dark);
+
+			&:hover {
+				color: var(--coo-primary);
+			}
+		}
+	}
+
+	&--type {
+		&-secondary {
+			background: linear-gradient(90deg, rgba(var(--coo-rgb-secondary-dark), .6) 30%, rgba(var(--coo-rgb-secondary-dark), .3) 60%, rgba(var(--coo-rgb-secondary-dark), 0) 90%);
+			color: var(--coo-white);
+
+			.c-chat-message__actions > * {
+				&:hover {
+					color: var(--coo-primary);
+				}
+			}
+
+			.m-quote {
+				&::before {
+					background: var(--coo-white);
+				}
+			}
+		}
+
+		&-primary {
+			background: var(--coo-primary);
+			color: var(--coo-white);
+
+			&:hover {
+				.c-chat-message__actions > * {
+					color: rgba(var(--coo-rgb-white), .5);
+
+					&:hover {
+						color: var(--coo-white);
+					}
+				}
+			}
+
+			.m-quote {
+				&::before {
+					background: var(--coo-white);
+				}
+			}
+
+			&.c-chat-message--small {
+				background: linear-gradient(90deg, rgba(var(--coo-rgb-primary), .8) 30%, rgba(var(--coo-rgb-primary), .6) 60%, rgba(var(--coo-rgb-primary), 0) 90%);
+
+				.c-chat-message__content {
+					margin-right: 2rem;
+				}
+			}
+
+			&.c-chat-message--status-unactive {
+				opacity: .4;
+			}
+		}
+	}
+
+	&--status {
+		&-unactive {
+			opacity: .6;
+
+			.c-chat-message {
+				&__name {
+					font-style: italic;
+				}
+
+				&__message {
+					font-style: italic;
+				}
+			}
+		}
+
+		&-activeOnHover {
+			opacity: .6;
+
+			.c-chat-message {
+				&__name {
+					font-style: italic;
+				}
+
+				&__message {
+					font-style: italic;
+				}
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&--small {
+		padding: .6rem 2rem .6rem .8rem;
+		border-radius: .8rem;
+
+		.c-chat-message__content {
+			font-size: .8rem;
+		}
+
+		&:hover {
+			.c-chat-message__actions > * {
+				&:hover {
+					color: var(--coo-primary);
+				}
+			}
+		}
+
+		.m-quote {
+			&::before {
+				background: var(--coo-white);
+			}
+		}
+	}
+
+	&--replied {
+		position: relative;
+
+		.c-chat-message {
+			&__content {
+				padding-left: .75rem;
+			}
+
+			&__replied-icon {
+				color: var(--coo-secondary);
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: .25rem;
+			height: calc(100% - 2rem);
+			background: var(--coo-secondary);
+			border-radius: 1rem;
+		}
+
+		&.c-chat-message {
+			&--small {
+				&::before {
+					height: calc(100% - 1.2rem);
+				}
+			}
+
+			&--type {
+				&-secondary,
+				&-primary {
+					&::before {
+						background: var(--coo-white);
+					}
+
+					.c-chat-message__replied-icon {
+						color: var(--coo-white);
+					}
+				}
+			}
+		}
+	}
+}
+
+.m-quote {
+	position: relative;
+	font-size: .6rem;
+	line-height: .8rem;
+	margin-bottom: .75rem;
+
+	&__name {
+		font-weight: var(--coo-font-weight-bold);
+		padding-left: .75rem;
+		margin-bottom: .2rem;
+	}
+
+	&__message {
+		font-weight: var(--coo-font-weight-light);
+		font-size: .6rem;
+		padding-left: .75rem;
+		overflow-wrap: anywhere;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: .25rem;
+		height: 100%;
+		background: var(--coo-secondary);
+		border-radius: 1rem;
+	}
+
+	&--type-primary {
+		&::before {
+			background: var(--coo-primary);
+		}
+	}
+}
+
+.m-chat-input {
+	width: 100%;
+
+	.ant-input {
+		border-radius: 1rem;
+		background: var(--coo-white);
+		padding-right: 2rem;
+
+		&:focus {
+			box-shadow: none;
+		}
+	}
+
+	&__button {
+		position: relative;
+		width: 1.25rem;
+		height: 1.25rem;
+		margin-left: -2rem;
+		cursor: pointer;
+		bottom: .15rem;
+		color: var(--coo-secondary);
+
+		&:hover {
+			color: var(--coo-primary);
+		}
+	}
+}
