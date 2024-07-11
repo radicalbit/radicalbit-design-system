@@ -35,7 +35,7 @@
 
 	.ant-table-row {
 		td {
-			background: inherit !important;
+			background: inherit;
 		}
 
 		&:hover {
@@ -52,7 +52,7 @@
 				white-space: nowrap;
 				font-weight: var(--coo-font-weight-light);
 				font-size: @rdb-font-size-s;
-				background-color: transparent !important;
+				background-color: transparent;
 				border-bottom: 1px solid var(--coo-secondary-03);
 				padding: .5rem;
 
@@ -92,6 +92,8 @@
 				}
 
 				&.ant-table-column-sort {
+					background:transparent;
+					
 					.ant-table-column-sorters {
 						color: var(--coo-primary);
 						font-weight: var(--coo-font-weight-normal);
