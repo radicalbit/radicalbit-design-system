@@ -6,6 +6,7 @@ export type MainProps = {
   contentDark?: boolean | null;
   hasLeftColumnCollapsed?: boolean | null;
   mainNavAltContent?: React.ReactNode;
+  mainNavSecondaryAltContent?: React.ReactNode;
   menu?: MenuType;
   bottomMenu?: React.ReactNode;
   headerContent?: React.ReactNode;
@@ -44,6 +45,7 @@ function MainNav({
   contentDark,
   hasLeftColumnCollapsed,
   mainNavAltContent,
+  mainNavSecondaryAltContent,
   menu,
   bottomMenu,
 }: MainProps) {
@@ -53,6 +55,10 @@ function MainNav({
 
       {mainNavAltContent && (
         <div className="cona-c-main-nav-alt-content">{mainNavAltContent}</div>
+      )}
+
+      {mainNavSecondaryAltContent && (
+        <div className="cona-c-main-nav-secondary-alt-content">{mainNavSecondaryAltContent}</div>
       )}
 
       {/* MENU */}
