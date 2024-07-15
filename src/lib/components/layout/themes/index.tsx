@@ -38,6 +38,7 @@ export default ({
     hasLeftContentDark,
     leftColumnHeaderAltContent,
     leftColumnHeaderSecondaryContent,
+    leftColumnHeaderTertiaryContent,
     leftContent,
     mainMenu,
     onLeftColumnCollapse,
@@ -92,6 +93,7 @@ export default ({
           headerAltContent={leftColumnHeaderAltContent}
           headerContentDark={hasHeaderLeftContentDark}
           headerSecondaryContent={leftColumnHeaderSecondaryContent}
+          headerTertiaryContent={leftColumnHeaderTertiaryContent}
           menu={mainMenu}
           onCollapse={onLeftColumnCollapse}
         />

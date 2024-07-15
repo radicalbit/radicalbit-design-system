@@ -11,6 +11,7 @@ export type LeftProps = Omit<LayoutProps, 'content'> &
     headerAltContent?: React.ReactNode;
     headerContentDark?: React.ReactNode;
     headerSecondaryContent?: React.ReactNode;
+    headerTertiaryContent?: React.ReactNode;
     menu?: MenuType;
     bottomMenu?: React.ReactNode;
     backgroundImage?: string;
@@ -21,6 +22,7 @@ export type LeftProps = Omit<LayoutProps, 'content'> &
     hasLeftContentDark?: boolean;
     leftColumnHeaderAltContent?: React.ReactNode;
     leftColumnHeaderSecondaryContent?: React.ReactNode;
+    leftColumnHeaderTertiaryContent?: React.ReactNode;
     leftContent?: React.ReactNode;
     mainMenu?: MenuType;
     onLeftColumnCollapse?: (v: boolean) => void;
@@ -40,6 +42,7 @@ const LeftColumn = (props: LeftProps) => {
     headerAltContent,
     headerContentDark,
     headerSecondaryContent,
+    headerTertiaryContent,
     menu,
     onCollapse,
   } = props;
@@ -85,6 +88,7 @@ const LeftColumn = (props: LeftProps) => {
           contentDark={contentDark}
           hasLeftColumnCollapsed={collapsed}
           mainNavAltContent={headerSecondaryContent}
+          mainNavSecondaryAltContent={headerTertiaryContent}
           menu={menu}
           bottomMenu={bottomMenu}
         />
