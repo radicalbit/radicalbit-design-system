@@ -1,5 +1,6 @@
 import AntdTooltip from 'antd/lib/tooltip';
 import type { TooltipProps } from 'antd/lib/tooltip';
+import TooltipTitle from './tooltip-title';
 
 const Tooltip = ({ children, ...others }: TooltipProps) => (
   <AntdTooltip mouseEnterDelay={0.5} {...others}>
@@ -8,5 +9,6 @@ const Tooltip = ({ children, ...others }: TooltipProps) => (
 );
 
 Tooltip.displayName = 'Tooltip';
+Tooltip.TooltipTitle = TooltipTitle;
 
 export default Tooltip;
