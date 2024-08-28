@@ -27,8 +27,8 @@ const RelativeUpTime = ({ timestamp, from, withTooltip }: Props) => {
   const daysLabel = days ? `${days}d` : '';
   const hoursLabel = hours ? `${hours}h` : '';
   const minutesLabel = minutes ? `${minutes}m` : '';
-
-  const label = `${monthsLabel} ${weeksLabel} ${daysLabel} ${hoursLabel} ${minutesLabel}`;
+  
+  const label = getLabel(monthsLabel, weeksLabel, daysLabel, hoursLabel, minutesLabel);
   const lableOrElse = label.trim().length === 0 ? '0m' : label;
 
   if (withTooltip) {
@@ -53,6 +53,18 @@ const RelativeUpTime = ({ timestamp, from, withTooltip }: Props) => {
   }
 
   return <>{lableOrElse}</>;
+};
+
+const getLabel = (monthsLabel: string, weeksLabel: string, daysLabel: string, hoursLabel: string, minutesLabel: string): string => {
+  if (monthsLabel) {
+    return `${monthsLabel} ${weeksLabel} ${daysLabel} `;
+  }
+
+  if (weeksLabel) {
+    return `${weeksLabel} ${daysLabel} ${hoursLabel}`;
+  }
+
+  return `${daysLabel} ${hoursLabel} ${minutesLabel}`;
 };
 
 RelativeUpTime.displayName = 'RelativeDateTime';
