@@ -6,7 +6,7 @@ type Props = SliderBaseProps & {
 };
 
 function Slider({
-  modifier,
+  modifier = '',
   readOnly = false,
   ...props
 }: Props) {
