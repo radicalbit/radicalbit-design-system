@@ -27,7 +27,7 @@ type Props = {
     | 'unactive'
     | 'disabled'
     | 'in-evidence';
-  type?: 'primary' | 'primary-light' | 'secondary' | 'secondary-medium' | 'rounded' | 'add-new';
+  type?: 'primary' | 'primary-light' | 'secondary' | 'secondary-medium' | 'error' | 'rounded' | 'add-new';
   width?: string;
 };
 
