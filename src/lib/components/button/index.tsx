@@ -32,13 +32,14 @@ const Button = (props: Props): ReactElement<typeof AntdButton> => {
     children,
     modifier = '',
     type,
+    href,
     onClick,
     ...other
   } = props;
 
   const css = classNames({
     'm-button--filled': filled,
-    'm-button--not-clickable': !onClick,
+    'm-button--not-clickable': !onClick && !href,
   });
 
   return (
@@ -47,6 +48,7 @@ const Button = (props: Props): ReactElement<typeof AntdButton> => {
       // TODO Miguel: other types such as secondary-light does not exist on Antd button
       type={type as ButtonProps['type']}
       onClick={onClick}
+      href={href}
       {...other}
     >
       {prefix && <span className="m-button--prefix">{prefix}</span>}
