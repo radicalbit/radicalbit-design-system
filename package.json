@@ -2,7 +2,7 @@
   "name": "@radicalbit/radicalbit-design-system",
   "version": "1.2.0",
   "main": "dist/index.js",
-  "repository": "https://github.com/radicalbit/formbit",
+  "repository": "https://github.com/radicalbit/radicalbit-design-system",
   "author": "https://github.com/radicalbit",
   "license": "MIT",
   "scripts": {
