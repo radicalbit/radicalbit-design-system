@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/radicalbit/radicalbit-design-system/compare/v1.2.0...v1.2.1) (2024-10-08)
+
+
+### Bug Fixes
+
+* add css to manage background dataTable row correctly, update repo name in package.json ([#14](https://github.com/radicalbit/radicalbit-design-system/issues/14)) ([92fc745](https://github.com/radicalbit/radicalbit-design-system/commit/92fc7451070fe71709c9f2babad0e7f68c0edbbe))
+* add not-clickable if href or onClick is missing ([#12](https://github.com/radicalbit/radicalbit-design-system/issues/12)) ([f65e093](https://github.com/radicalbit/radicalbit-design-system/commit/f65e093438b71457a169f501cd7ff0d99f52ad88))
+
 ## [1.2.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.1.0...v1.2.0) (2024-09-30)
 
 
