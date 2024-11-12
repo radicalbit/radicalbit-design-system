@@ -12,6 +12,7 @@ export interface DataTableProps<T extends Record<string, unknown>>
   noHead?: boolean;
   clickable?: boolean;
   hasFixedColumn?: boolean;
+  dark?: boolean;
 }
 
 type Render<T> = ColumnType<T>['render'];
@@ -36,6 +37,7 @@ const DataTable = <T extends Record<string, unknown>>({
   onRow,
   clickable,
   hasFixedColumn,
+  dark = false,
   ...otherProps
 }: DataTableProps<T>) => {
   const enrichedColumns = columns?.map((c) => {
@@ -67,6 +69,7 @@ const DataTable = <T extends Record<string, unknown>>({
   const css = classNames({
     'l-data-table--no-head': noHead,
     'l-data-table--clickable': clickable,
+    dark,
   });
 
   return (

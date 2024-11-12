@@ -13,6 +13,7 @@ type Props = CollapseProps & {
   modifier?: string;
   scroll?: 'horizontal' | 'vertical';
   type?: 'minimal' | 'no-border' | 'transparent' | 'error' | 'secondary-medium' | 'primary-light';
+  dark?:boolean
 };
 
 const Collapse = ({
@@ -21,11 +22,13 @@ const Collapse = ({
   modifier = '',
   scroll,
   type,
+  dark = false,
   ...other
 }: Props) => {
   const css = className({
     [`c-collapse--${scroll}_scroll`]: scroll,
     [`c-collapse--${type}`]: type,
+    dark,
   });
 
   return (

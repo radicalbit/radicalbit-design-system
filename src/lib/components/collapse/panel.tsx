@@ -11,6 +11,7 @@ export type PropsPanel = {
   onHover?: () => void;
   isActive?: boolean;
   key: string | number
+  dark?:boolean
 };
 
 type PropsHoverable = {
@@ -27,10 +28,12 @@ const CollapsePanel = ({
   header,
   noBody,
   onHover,
+  dark = false,
   ...others
 }: PropsPanel) => {
   const css = classNames({
     'c-collapse__panel--no-body': noBody,
+    dark,
   });
 
   return (

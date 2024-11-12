@@ -8,6 +8,7 @@ type Props = Omit<TabsProps, 'size'> & {
   maximize?: boolean;
   size?: 'default' | 'large';
   paddedContent?: boolean;
+  dark?: boolean;
 };
 
 const Tabs = ({
@@ -20,6 +21,7 @@ const Tabs = ({
   maximize = false,
   size = 'default',
   paddedContent = false,
+  dark = false,
   ...other
 }: Props) => {
   const css = classNames({
@@ -29,6 +31,7 @@ const Tabs = ({
     'c-tabs--maximize': maximize,
     [`c-tabs--size-${size}`]: size,
     'c-tabs--padded-content': paddedContent,
+    dark,
   });
 
   return (

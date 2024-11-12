@@ -19,6 +19,7 @@ export type Props = SelectProps & {
     blur: () => void;
     scrollTo: ScrollTo;
   }>;
+  dark?: boolean
 };
 
 const Select = ({
@@ -37,12 +38,14 @@ const Select = ({
   ref,
   removeIcon,
   skeleton,
+  dark = false,
   ...others
 }: Props) => {
   const css = classNames({
     'c-select--readonly': readOnly,
     'c-select--as-tag': asTag,
     'c-select--no-border': noBorder,
+    dark,
   });
 
   const valueOrElse = readOnly ? value ?? '--' : value;
