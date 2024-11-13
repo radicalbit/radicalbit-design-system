@@ -5,16 +5,19 @@ type Props = MenuProps & {
   className?: string;
   modifier?: string;
   alignment?: 'centered';
+  dark?: boolean
 };
 
 const Menu = ({
   className = '',
   modifier = '',
   alignment,
+  dark = false,
   ...others
 }: Props) => {
   const css = classNames({
     [`c-menu--alignment-${alignment}`]: alignment,
+    dark,
   });
 
   return (
