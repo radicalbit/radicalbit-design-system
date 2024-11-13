@@ -12,7 +12,7 @@
 	}
 
 	&.ant-collapse {
-		background-color: var(--coo-white);
+		background: transparent;
 		border: none;
 		font-size: 1rem;
 		border-radius: 0;
@@ -38,10 +38,11 @@
 				border-top: none;
 				color: var(--coo-dark);
 				font-weight: var(--coo-font-weight-light);
+				background: transparent;
 
 				.ant-collapse-content-box {
 					overflow-x: auto;
-					padding: 0 0 .75rem 2.25rem;
+					padding: 0 1rem 1rem 1rem;
 				}
 
 				pre {
@@ -55,6 +56,7 @@
 				font-weight: var(--coo-font-weight-bolder);
 				padding-right: 1rem;
 				display: flex;
+
 
 				.ant-collapse-extra {
 					margin-left: auto;
@@ -79,6 +81,11 @@
 			.ant-collapse-header {
 				border-radius: 0;
 			}
+		}
+
+
+		&-position-end > .ant-collapse-item > .ant-collapse-header {
+			padding: 1rem;
 		}
 	}
 
@@ -172,11 +179,11 @@
 		&.ant-collapse {
 			.ant-collapse-item {
 				.ant-collapse-header {
-					background-color: var(--coo-secondary-04);
+					background-color: var(--coo-rgb-primary, .1);
 				}
 
 				.ant-collapse-content {
-					background-color: var(--coo-secondary-04);
+					background-color: var(--coo-rgb-primary, .1);
 				}
 			}
 		}
@@ -186,11 +193,11 @@
 		&.ant-collapse {
 			.ant-collapse-item {
 				.ant-collapse-header {
-					background-color: var(--coo-primary-04);
+					background-color: var(--coo-rgb-primary, .1);
 				}
 
 				.ant-collapse-content {
-					background-color: var(--coo-primary-04);
+					background-color: var(--coo-rgb-primary, .1);
 				}
 			}
 		}

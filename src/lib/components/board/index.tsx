@@ -5,6 +5,7 @@ type Props = {
   backgroundImage?: string;
   borderType?: 'light' | 'none';
   buttonPosition?: 'vertical' | 'adaptive';
+  dark?:boolean,
   footer?: ReactNode;
   header?: ReactNode;
   height?: string;
@@ -36,6 +37,7 @@ function Board({
   borderType,
   buttonPosition,
   footer,
+  dark = false,
   header,
   height = undefined,
   main,
@@ -65,6 +67,7 @@ function Board({
     [`l-board--border-type-${borderType}`]: borderType,
     'l-board--no-background': noBackground,
     'l-board--clickable': onClick,
+    dark,
   });
 
   const cssMode = classNames({

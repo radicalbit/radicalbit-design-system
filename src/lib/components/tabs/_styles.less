@@ -34,7 +34,6 @@
 		}
 	}
 
-
 	&.ant-tabs {
 		.ant-tabs-content,
 		.ant-tabs-tabpane-active {
@@ -77,7 +76,6 @@
 			margin: 0;
 		}
 	}
-
 
 	&--size-large {
 		> .ant-tabs-nav .ant-tabs-nav-wrap {
@@ -126,5 +124,12 @@
 		div.ant-tabs-nav::before {
 			border-bottom: 0;
 		}
+	}
+
+	.ant-tabs-top > .ant-tabs-nav::before,
+	.ant-tabs-bottom > .ant-tabs-nav::before,
+	.ant-tabs-top > div > .ant-tabs-nav::before,
+	.ant-tabs-bottom > div > .ant-tabs-nav::before {
+		border-color: var(--coo-secondary-03);
 	}
 }

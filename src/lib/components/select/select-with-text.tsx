@@ -17,6 +17,7 @@ type Props = SelectProps & {
   textPlaceholder?: string;
   caseSensitive?: boolean;
   width?: number;
+  dark?: boolean
 };
 
 function SelectWithText({
@@ -31,6 +32,7 @@ function SelectWithText({
   value = undefined,
   defaultActiveFirstOption = false,
   width,
+  dark = false,
   ...others
 }: Props) {
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -81,6 +83,7 @@ function SelectWithText({
 
   const dropdownCss = classNames({
     'c-select-with-text__dropdown--reverse': reverse,
+    dark,
   });
 
   return (

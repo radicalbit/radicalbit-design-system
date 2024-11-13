@@ -64,7 +64,7 @@
 	&__hide-expand-icon {
 		.ant-menu-submenu-title {
 			.ant-menu-submenu-arrow {
-				display: none;
+				display: block;
 			}
 		}
 	}
@@ -80,3 +80,15 @@
 	}
 }
 
+.ant-menu {
+	background: transparent;
+}
+
+.ant-menu-sub.ant-menu-inline {
+	background: var(--coo-secondary-04);
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+	background-color: rgba(var(--coo-rgb-primary), .1);
+	font-weight: bolder;
+}
