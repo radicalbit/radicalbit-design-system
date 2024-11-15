@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.3.0...v1.4.0) (2024-11-15)
+
+
+### Features
+
+* add modifierContent to &lt;FormField /&gt; ([#16](https://github.com/radicalbit/radicalbit-design-system/issues/16)) ([5ca0fd0](https://github.com/radicalbit/radicalbit-design-system/commit/5ca0fd07c7756516a70490693a566d88ed4086f8))
+* change bg color ([#17](https://github.com/radicalbit/radicalbit-design-system/issues/17)) ([195cb00](https://github.com/radicalbit/radicalbit-design-system/commit/195cb00ead4f728c51464505b0a42e74a7534d1b))
+
 ## [1.3.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.2.0...v1.3.0) (2024-11-13)
 
 
