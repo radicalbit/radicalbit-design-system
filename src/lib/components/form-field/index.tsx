@@ -8,23 +8,27 @@ import classNames from 'classnames';
 import React, { memo } from 'react';
 
 type Props = {
+  className?: string,
   children?: React.ReactNode;
   description?: string;
   flexColumn?: boolean;
   label?: string | React.ReactNode;
   message?: string | React.ReactNode;
   modifier?: string;
+  modifierContent?: string;
   required?: boolean;
   messageColor?: 'warning' | 'success' | 'error';
 };
 
 const FormField = ({
   children,
+  className = '',
   flexColumn,
   description,
   label,
   message,
   modifier = '',
+  modifierContent = '',
   required,
   messageColor = 'error',
 }: Props) => {
@@ -33,7 +37,7 @@ const FormField = ({
   });
 
   return (
-    <div className={`c-form-field ${modifier}`}>
+    <div className={`c-form-field ${className} ${modifier}`}>
       {label && (
         <div className="c-form-field__label">
           <label>
@@ -49,7 +53,7 @@ const FormField = ({
         </div>
       )}
 
-      <div className={`c-form-field__content ${cssContent}`}>{children}</div>
+      <div className={`c-form-field__content ${modifierContent} ${cssContent}`}>{children}</div>
 
       {message && (
         <span
