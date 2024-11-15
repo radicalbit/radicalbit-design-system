@@ -1,6 +1,5 @@
 import { DataTable } from '@Components/data-table';
 import Drawer from '@Components/drawer';
-import Spin from '@Components/spin';
 import classNames from 'classnames';
 import { memo } from 'react';
 
