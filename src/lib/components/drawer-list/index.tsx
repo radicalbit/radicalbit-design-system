@@ -46,7 +46,7 @@ const DrawerList = <T extends Record<string, unknown>, >({
       modifier={`c-drawer-list__wrapper ${
         !mask ? 'c-drawer--transparent-mask' : ''
       } ${modifier} ${mode} ${css}`}
-      title={<Spin spinning={loading}>{header}</Spin>}
+      title={header}
       open={open}
       onClose={onClose}
       closable={false}
