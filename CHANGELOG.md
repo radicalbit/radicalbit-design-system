@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.4.0...v1.5.0) (2024-11-18)
+
+
+### Features
+
+* revert bg color of &lt;Board type="error" /&gt; ([#19](https://github.com/radicalbit/radicalbit-design-system/issues/19)) ([814247b](https://github.com/radicalbit/radicalbit-design-system/commit/814247bc5c04bd6ef5890c96e5682c0b6a9d8f74))
+
 ## [1.4.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.3.0...v1.4.0) (2024-11-15)
 
 
