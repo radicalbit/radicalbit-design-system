@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.5.0...v1.6.0) (2024-11-18)
+
+
+### Features
+
+* handle justify-content for &lt;DataTableAction /&gt; and remove margin-right for <Tag /> ([#21](https://github.com/radicalbit/radicalbit-design-system/issues/21)) ([bfe9c21](https://github.com/radicalbit/radicalbit-design-system/commit/bfe9c2172f4c7acc03e4e142a34cd892eb89ef93))
+
 ## [1.5.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.4.0...v1.5.0) (2024-11-18)
 
 
