@@ -3,6 +3,7 @@ import classNames from 'classnames';
 const DataTableAction = ({
   children,
   noHide,
+  ...other
 }: {
     children: React.ReactNode;
     noHide?: string;
@@ -21,6 +22,7 @@ const DataTableAction = ({
       role="presentation"
       className={`l-data-table__action ${css}`}
       onClick={handleOnClick}
+      {...other}
     >
       {children}
     </div>
