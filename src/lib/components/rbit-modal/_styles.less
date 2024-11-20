@@ -2,83 +2,9 @@
 	border-radius: 1rem;
 }
 
-.rdb-modal {
-	&.ant-modal {
-		max-height: 40rem;
-		overflow: auto;
-
-		&.rdb-modal-small {
-			text-align: center;
-
-			.modal-schema-uploader {
-				padding: 1.5rem 0 0 0;
-				text-align: center;
-
-				.schema-uploader-buttons {
-					text-align: center;
-				}
-			}
-		}
-
-		.ant-modal-content {
-			border-radius: 1rem;
-
-			.ant-modal-header {
-				border-bottom: none;
-			}
-
-			.ant-modal-footer {
-				border-top: none;
-
-
-				div {
-					margin-bottom: @rdb-font-size-xl;
-				}
-			}
-
-			.ant-modal-body {
-				text-align: center;
-				margin-top: 0;
-				padding-top: 1.5rem;
-
-				.ant-spin {
-					position: static;
-					margin: @rdb-font-size-base auto;
-				}
-
-				.ant-row {
-					margin-top: .5rem;
-					text-align: left;
-				}
-
-				h2 {
-					color: var(--coo-primary-01);
-				}
-
-				.ant-switch {
-					margin: .5rem 0;
-				}
-
-				.rdb-modal-row-actions {
-					text-align: right !important;
-					margin-top: 3rem !important;
-
-					button {
-						margin-left: @rdb-margin-xs;
-					}
-				}
-
-				.c-steps {
-					margin-top: 2.2rem;
-				}
-			}
-		}
-	}
-}
-
-
 .c-rbit-modal {
 	padding-bottom: 0;
+	color: var(--coo-dark);
 
 	&--no-padding {
 		.ant-modal-body {
