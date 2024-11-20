@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/radicalbit/radicalbit-design-system/compare/v1.6.0...v1.6.1) (2024-11-20)
+
+
+### Bug Fixes
+
+* add color var(--coo-dark) ([#23](https://github.com/radicalbit/radicalbit-design-system/issues/23)) ([a0fc546](https://github.com/radicalbit/radicalbit-design-system/commit/a0fc54680311045c03490d39051b7bce58031771))
+
 ## [1.6.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.5.0...v1.6.0) (2024-11-18)
 
 
