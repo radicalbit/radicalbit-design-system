@@ -2,6 +2,8 @@ import './styles/index.less';
 export { default as AbbreviatedNumber } from './lib/components/abbreviated-number';
 export { default as Affix } from './lib/components/affix';
 export { default as Alert } from './lib/components/alert';
+export { default as Anchor } from './lib/components/anchor';
+export { default as CustomLink } from './lib/components/anchor/anchor-link';
 export { default as AlertLegacy } from './lib/components/alert-legacy';
 export { default as AutoComplete } from './lib/components/auto-complete';
 export { default as Avatar } from './lib/components/avatar';
