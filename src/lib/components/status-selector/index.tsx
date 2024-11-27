@@ -14,6 +14,7 @@ export type Status = {
   items?: Array<Item>;
 };
 type Props = {
+  disabled?: boolean,
   badge?: React.ReactNode;
   modifier?: string;
   onChange?: (value: Value) => void;
@@ -35,6 +36,7 @@ type SelectStatusProps = {
 };
 
 const StatusSelector = ({
+  disabled,
   minWidth,
   modifier = '',
   onChange,
@@ -56,6 +58,7 @@ const StatusSelector = ({
     'm-detail--reverse': reverse,
     [`m-detail--${whiteSpace}`]: whiteSpace,
     [`m-detail--align-${align}`]: align,
+    'm-detail--disabled': disabled,
   });
 
   const cssLabel = classNames({
