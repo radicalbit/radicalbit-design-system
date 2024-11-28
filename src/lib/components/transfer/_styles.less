@@ -12,7 +12,7 @@
 	&__right {
 		&-secondary {
 			.ant-transfer-operation + .ant-transfer-list {
-				background-color: rgba(var(--coo-rgb-secondary-03), .4);
+				background-color: rgba(var(--coo-rgb-secondary-03), .2);
 			}
 		}
 	}
@@ -46,3 +46,25 @@
 	}
 }
 
+.ant-transfer-list-header {
+	color: var(--coo-dark);
+}
+
+.ant-transfer {
+	color: var(--coo-dark);
+}
+
+.ant-transfer-list-content-item:not(.ant-transfer-list-content-item-disabled):hover {
+	background-color: var(--coo-secondary-03);
+	color: var(--coo-dark);
+	border-radius: var(--coo-border-radius-small);
+}
+
+.ant-transfer-list-content-item:not(.ant-transfer-list-content-item-disabled).ant-transfer-list-content-item-checked:hover {
+	background-color: var(--coo-white-bk);
+}
+
+.ant-transfer-list-content-item-checked {
+	background-color: var(--coo-secondary-03);
+	color: var(--coo-dark);
+}
