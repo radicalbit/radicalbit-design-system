@@ -4,11 +4,29 @@
 		width: 100%;
 		flex-direction: column;
 		align-items: stretch;
+
+		.ant-upload-drag {
+			.c-upload-drag {
+				border: 0;
+				border-radius: 1rem;
+				background-color: var(--coo-secondary-04);
+			}
+		}
 	}
+
+	.ant-upload-list {
+		color: var(--coo-dark);
+	}
+
 
 	.ant-upload-list-item {
 		min-height: 1.5rem;
 		margin-top: 0;
+
+		.ant-upload-list-item-info .anticon-loading .anticon,
+		.ant-upload-list-item-info .ant-upload-text-icon .anticon {
+			color: var(--coo-dark);
+		}
 
 		&:hover {
 			.ant-upload-list-item-info {
@@ -56,10 +74,4 @@
 			cursor: pointer;
 		}
 	}
-}
-
-.ant-upload.ant-upload-drag.c-upload-drag {
-	border: 0;
-	border-radius: 1rem;
-	background-color: var(--coo-secondary-04);
 }

@@ -122,6 +122,15 @@
 					opacity: 1;
 					transform: @ease-base-in;
 				}
+
+				&.l-data-table__row {
+					&--error {
+						th,
+						td {
+							background-color: rgba(var(--coo-rgb-error), .1) !important;
+						}
+					}
+				}
 			}
 
 			&:nth-child {
@@ -221,8 +230,8 @@
 					th,
 					td {
 						background-color: rgba(var(--coo-rgb-error), .05) !important;
-						color: var(--coo-error);
-						border-bottom: 1px solid var(--coo-white);
+						color: var(--coo-dark);
+						border-bottom: 1px solid var(--coo-secondary-03);
 					}
 
 					&:hover {
