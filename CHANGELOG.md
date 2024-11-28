@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.7.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.6.1...v1.7.0) (2024-11-28)
+
+
+### Features
+
+* add anchor component ([#26](https://github.com/radicalbit/radicalbit-design-system/issues/26)) ([89f256e](https://github.com/radicalbit/radicalbit-design-system/commit/89f256edae53da27f051a8045a5658cf012c31c4))
+* Add disable prop to &lt;StatusSelector /&gt; ([#25](https://github.com/radicalbit/radicalbit-design-system/issues/25)) ([643f11f](https://github.com/radicalbit/radicalbit-design-system/commit/643f11f3f02753a2a4a72445d8e21244af952837))
+* add new styles ([#28](https://github.com/radicalbit/radicalbit-design-system/issues/28)) ([973cb9e](https://github.com/radicalbit/radicalbit-design-system/commit/973cb9eb7a0d1d26d821559ab7e633967a6bbb42))
+
 ## [1.6.1](https://github.com/radicalbit/radicalbit-design-system/compare/v1.6.0...v1.6.1) (2024-11-20)
 
 
