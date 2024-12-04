@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/radicalbit/radicalbit-design-system/compare/v1.7.0...v1.7.1) (2024-12-04)
+
+
+### Bug Fixes
+
+* reduce gap on &lt;Pin/&gt; component ([#29](https://github.com/radicalbit/radicalbit-design-system/issues/29)) ([8fcd1d7](https://github.com/radicalbit/radicalbit-design-system/commit/8fcd1d7fedd17f89792066c77d186dfeac965d22))
+
 ## [1.7.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.6.1...v1.7.0) (2024-11-28)
 
 
