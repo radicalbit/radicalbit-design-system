@@ -3,16 +3,15 @@ import { UploadProps, UploadType } from 'antd/lib/upload/interface';
 import { ReactNode } from 'react';
 
 type Props = UploadProps & {
-  className?: string;
+  children?: ReactNode;
   modifier?: string;
   type?: UploadType;
-  children?: ReactNode;
 };
 
 const Dragger = ({
+  children,
   className = '',
   modifier = '',
-  children,
   ...others
 }: Props) => (
   <AntdUpload.Dragger

@@ -1,20 +1,26 @@
 import classNames from 'classnames';
 import React from 'react';
 
-type TooltipTitleProps = {
-  alignItems?: string,
-  children: React.ReactNode,
+export interface Props {
+  alignItems: boolean,
+  children:React.ReactNode;
+  className?: string;
+  modifier?: string;
 }
-
-function TooltipTitle({ alignItems, children }: TooltipTitleProps) {
+function TooltipTitle({
+  alignItems,
+  children,
+  className = '',
+  modifier = '',
+}: Props) {
   const css = classNames({
     'c-tooltip-title--align-item-custom': alignItems,
   });
 
-  const style = { '--c-tooltip-title-align-item': alignItems } as React.CSSProperties;
+  const styles = { '--c-tooltip-title-align-item': alignItems } as React.CSSProperties;
   
   return (
-    <div className={`c-tooltip-title ${css}`} style={style}>
+    <div className={`c-tooltip-title ${css} ${modifier} ${className}`} style={styles}>
       {children}
     </div>
   );

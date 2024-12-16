@@ -6,22 +6,22 @@ import classNames from 'classnames';
   
 export type GroupProps = RadioGroupProps &
   React.RefAttributes<HTMLDivElement> & {
+    groupJustify?: 'center';
     modifier?: string;
+    radioAlign?: 'top';
     readOnly?: boolean;
     reverse?: boolean;
-    radioAlign?: 'top';
-    groupJustify?: 'center';
     tabsLook?: boolean;
   };
 
 const Group = ({
   className = '',
   disabled,
+  groupJustify,
   modifier = '',
+  radioAlign,
   readOnly,
   reverse,
-  radioAlign,
-  groupJustify,
   tabsLook = false,
   ...others
 }: GroupProps) => {

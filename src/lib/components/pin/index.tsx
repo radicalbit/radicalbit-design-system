@@ -2,12 +2,15 @@ import classnames from 'classnames';
 import { memo } from 'react';
 
 export type Props = {
+  className?: string;
   color?: string;
+  justify?: 'left' | 'center';
   label?: string | React.ReactNode;
   modifier?: string;
   noMargins?: boolean;
   onClick?: () => void;
   size?: 'small' | 'micro';
+  style?: Record<string, unknown>,
   type?:
     | 'animated'
     | 'error'
@@ -19,18 +22,19 @@ export type Props = {
     | 'secondary'
     | 'success'
     | 'warning';
-  justify?: 'left' | 'center';
 };
 
 const Pin = ({
+  className = '',
   color,
+  justify = 'center',
   label,
   modifier = '',
   noMargins,
   onClick,
   size,
+  style = {},
   type,
-  justify = 'center',
   ...others
 }: Props) => {
   const hoverable = onClick ? 'm-pin__badge--hoverable' : '';
@@ -45,15 +49,15 @@ const Pin = ({
     'no-margin': noMargins,
   });
 
-  const style = color ? { background: color, border: 'none' } : {};
+  const pinStyle = color ? { ...style, background: color, border: 'none' } : style;
 
   const pin = (
     <a
       {...others}
-      className={`m-pin__badge ${hoverable} ${cssBadge} ${modifier}`}
+      className={`m-pin__badge ${hoverable} ${cssBadge} ${modifier} ${className}`}
       onClick={onClick}
       role="presentation"
-      style={style}
+      style={pinStyle}
     >
       &nbsp;
     </a>

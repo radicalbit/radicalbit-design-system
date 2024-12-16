@@ -12,12 +12,12 @@ type Props = ModalProps & {
   actions?: React.ReactNode;
   background?: 'secondary-04';
   dark?: boolean;
+  defaultMaximize?: boolean;
   header?: React.ReactNode;
   headerType?: 'bold';
-  defaultMaximize?: boolean;
   icoActions?: React.ReactNode;
-  maximize?: boolean;
   maximizable?: boolean;
+  maximize?: boolean;
   modifier?: string;
   noPadding?: boolean;
   onMaximize?: (p: boolean) => void;
@@ -26,15 +26,15 @@ type Props = ModalProps & {
 const RbitModal = ({
   actions,
   background,
+  children,
   className = '',
   dark,
-  children,
+  defaultMaximize = false,
   header = false,
   headerType = 'bold',
-  defaultMaximize = false,
   icoActions,
-  maximize,
   maximizable,
+  maximize,
   modifier = '',
   noPadding = false,
   onMaximize,

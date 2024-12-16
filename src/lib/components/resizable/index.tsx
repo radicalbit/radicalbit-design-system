@@ -5,6 +5,7 @@ import reactIs from 'react-is';
 import DraggableDivider from './DraggableDivider';
 
 type Props = {
+  className?: string;
   bottom?: ReactElement;
   modifier?: string;
   top?: ReactElement;

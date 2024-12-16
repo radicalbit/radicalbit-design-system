@@ -2,23 +2,23 @@ import classNames from 'classnames';
 import { ReactNode, useState } from 'react';
 
 type Props = {
+  checked?: boolean;
   children?: ReactNode;
   className?: string;
   defaultValue?: boolean;
-  modifier?: string;
   mode?: string;
+  modifier?: string;
   onClick?: (value?: boolean) => void;
-  checked?: boolean;
 };
 
 function Toggle({
+  checked: controlled,
   children,
   className = '',
   defaultValue,
-  modifier = '',
   mode = 'dark',
+  modifier = '',
   onClick,
-  checked: controlled,
   ...others
 }: Props) {
   const [uncontrolled, setUncontrolled] = useState(defaultValue);
@@ -44,7 +44,7 @@ function Toggle({
 
   return (
     <div
-      className={`c-toggle ${css} ${mode} ${className} ${modifier}`}
+      className={`c-toggle ${css} ${mode} ${modifier} ${className}`}
       onClick={handleOnClick}
       role="presentation"
       {...others}

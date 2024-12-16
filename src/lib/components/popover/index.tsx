@@ -9,22 +9,19 @@ type Props = PopoverProps & {
   noPadding?: boolean;
 };
 
-const Popover = (props: Props) => {
-  const {
-    children,
-    content,
-    hideArrow = false,
-    maxHeight,
-    minWidth = 0,
-    modifier = '',
-    overlayClassName,
-    placement = 'leftTop',
-    title,
-    trigger,
-    noPadding,
-    ...otherProps
-  } = props;
-
+const Popover = ({
+  children,
+  className = '',
+  hideArrow = false,
+  maxHeight,
+  minWidth = 0,
+  modifier = '',
+  noPadding,
+  overlayClassName,
+  placement = 'leftTop',
+  trigger,
+  ...otherProps
+}: Props) => {
   const css = classNames({
     'c-popover--hidden-arrow': hideArrow,
     'c-popover--noPadding': noPadding,
@@ -37,11 +34,7 @@ const Popover = (props: Props) => {
   return (
     <AntdPopover
       placement={placement}
-      title={title}
-      content={content}
-      overlayClassName={`${
-        overlayClassName || ''
-      } c-popover ${css} ${modifier}`}
+      overlayClassName={`${overlayClassName || ''} c-popover ${css} ${modifier} ${className}`}
       overlayStyle={{
         minWidth: minWidth ? `${minWidth}px` : 'auto',
         maxHeight: maxHeight ? `${maxHeight}px` : 'auto',

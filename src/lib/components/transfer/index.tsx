@@ -2,19 +2,20 @@ import AntdTransfer, { TransferItem, TransferProps } from 'antd/lib/transfer';
 import classNames from 'classnames';
 
 export interface Props<T extends TransferItem> extends TransferProps<T>{
-    modifier?: string
-    wideMode?: boolean
-    type?: 'right-secondary' | ''
-    headerType?: 'light'
     alignOperation?: 'flex-start'
+    headerType?: 'light'
+    modifier?: string
+    type?: 'right-secondary' | ''
+    wideMode?: boolean
 }
 
 const Transfer = <T extends TransferItem>({
   alignOperation,
-  modifier = '',
-  wideMode = true,
-  type,
+  className = '',
   headerType,
+  modifier = '',
+  type,
+  wideMode = true,
   ...otherProps
 }: Props<T>) => {
   const cssClass = classNames({
@@ -26,7 +27,7 @@ const Transfer = <T extends TransferItem>({
 
   return (
     <AntdTransfer
-      className={`c-transfert ${cssClass} ${modifier} `}
+      className={`c-transfert ${cssClass} ${modifier} ${className}`}
       {...otherProps}
     />
   );

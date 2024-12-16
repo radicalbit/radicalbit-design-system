@@ -6,6 +6,7 @@ type Props = TagProps & {
   animated?: 'default' | 'onHover';
   disabled?: boolean;
   fullWidth?: boolean;
+  mode?: 'text'; // will be replace type="text"
   modifier?: string;
   size?: 'small' | 'large' | 'xl' | 'xxl';
   suffix?: string | ReactNode;
@@ -26,14 +27,15 @@ type Props = TagProps & {
     | 'warning-light'
     | 'warning';
   uppercase?: boolean;
-  mode?: 'text'; // will be replace type="text"
 };
 
 const Tag = ({
   animated,
   children,
+  className = '',
   disabled = false,
   fullWidth = false,
+  mode,
   modifier = '',
   onClick,
   prefix,
@@ -41,7 +43,6 @@ const Tag = ({
   suffix,
   suffixWithLink = false,
   type,
-  mode,
   uppercase = false,
   ...others
 }: Props) => {
@@ -63,7 +64,7 @@ const Tag = ({
     */
   const props = {
     ...others,
-    className: `c-tag ${css} ${modifier}`,
+    className: `c-tag ${css} ${modifier} ${className}`,
   };
 
   return (

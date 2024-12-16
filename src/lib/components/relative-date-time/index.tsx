@@ -5,13 +5,15 @@ import { memo } from 'react';
 type Granularity = 'seconds' | 'days';
 
 type Props = {
+  className?: string;
   format?: string;
   formatTooltip?: string;
-  mouseEnterDelay?: number;
-  timestamp: string | number | Date;
-  threshold?: number;
-  withTooltip?: boolean;
   minGranularity?: Granularity;
+  modifier?: string;
+  mouseEnterDelay?: number;
+  threshold?: number;
+  timestamp: string | number | Date;
+  withTooltip?: boolean;
 };
 
 const dateFormatter = (dateFormat: string, timestamp: string | number | Date) => moment(new Date(timestamp)).format(dateFormat).toString();
@@ -47,13 +49,15 @@ const getRelativeDate = (timestamp: string | number | Date, minGranularity: Gran
 };
 
 const RelativeDateTime = ({
+  className = '',
   format = 'DD MMM YYYY',
   formatTooltip = 'DD MMM YYYY HH:mm',
-  mouseEnterDelay,
-  timestamp,
-  threshold = 3,
-  withTooltip,
   minGranularity = 'seconds',
+  modifier = '',
+  mouseEnterDelay,
+  threshold = 3,
+  timestamp,
+  withTooltip,
 }: Props) => {
   const difference = moment().diff(timestamp, 'days');
   const tooltipDate = dateFormatter(formatTooltip, timestamp);
@@ -64,10 +68,14 @@ const RelativeDateTime = ({
 
   return withTooltip ? (
     <Tooltip title={tooltipDate} mouseEnterDelay={mouseEnterDelay}>
-      {dateToShow}
+      <div className={`m-relative-date-time ${modifier} ${className}`}>
+        {dateToShow}
+      </div>
     </Tooltip>
   ) : (
-    <>{dateToShow}</>
+    <div className={`m-relative-date-time ${modifier} ${className}`}>
+      {dateToShow}
+    </div>
   );
 };
 

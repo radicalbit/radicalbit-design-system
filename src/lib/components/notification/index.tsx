@@ -5,21 +5,22 @@ const DEFAULT_DURATION = 12;
 
 export type NotificationConfig = Omit<ConfigProps, 'duration'> &
   Omit<ArgsProps, 'type'> & {
-    type?: 'running' | 'completed' | 'success' | 'error';
-    onClick?: () => void;
-    modifier?: string;
-    iconWithBorder?: boolean;
     duration?: number | null;
+    iconWithBorder?: boolean;
+    modifier?: string;
+    onClick?: () => void;
+    type?: 'running' | 'completed' | 'success' | 'error';
   };
 
 export default {
   ...notification,
   open: ({
-    modifier = '',
-    type,
-    onClick,
+    className = '',
     duration = DEFAULT_DURATION,
     iconWithBorder = true,
+    modifier = '',
+    onClick,
+    type,
     ...others
   }: NotificationConfig) => {
     const css = classNames({
@@ -30,7 +31,7 @@ export default {
     notification.open({
       ...others,
       onClick,
-      className: `c-notification ${css} ${modifier}`,
+      className: `c-notification ${css} ${modifier} ${className}`,
       duration,
     });
   },

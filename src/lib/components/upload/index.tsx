@@ -5,19 +5,18 @@ import { UploadProps, UploadType } from 'antd/lib/upload/interface';
 import Dragger from './dragger';
 
 type Props = UploadProps & {
-  className?: string;
-  modifier?: string;
   behavior?: 'hide-button';
-  type?: UploadType;
   children?: ReactNode;
+  modifier?: string;
+  type?: UploadType;
 };
 
 const Upload = ({
+  behavior,
+  children,
   className = '',
   modifier = '',
-  behavior,
   type,
-  children,
   ...others
 }: Props) => {
   const css = classNames({

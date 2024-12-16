@@ -4,6 +4,7 @@ import classNames from 'classnames';
 type Props = {
   actions?: ReactNode | ReactNode[];
   actionsModifier?: string;
+  className?: string;
   description?: ReactNode;
   direction?: 'horizontal';
   glitched?: boolean;
@@ -17,6 +18,7 @@ type Props = {
 const Void = ({
   actions,
   actionsModifier = '',
+  className = '',
   description,
   direction,
   glitched = false,
@@ -38,7 +40,7 @@ const Void = ({
   });
 
   return (
-    <div className={`c-void ${modifier} ${css} ${cssMode}`} {...others}>
+    <div className={`c-void ${modifier} ${css} ${cssMode} ${className}`} {...others}>
       {image && <div className="c-void__img">{image}</div>}
 
       {(description || title) && (

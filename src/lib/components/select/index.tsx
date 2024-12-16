@@ -7,38 +7,38 @@ import { ScrollTo } from 'rc-tree/lib/interface';
 
 export type Props = SelectProps & {
   asTag?: boolean;
+  dark?: boolean
+  minWidth?: number | string;
   modifier?: string;
   noBorder?: boolean;
   readOnly?: boolean;
-  skeleton?: boolean,
-  suffixIcon?: React.ReactNode;
-  value?: string;
-  minWidth?: number | string;
   ref?: React.RefObject<{
     focus: () => void;
     blur: () => void;
     scrollTo: ScrollTo;
   }>;
-  dark?: boolean
+  skeleton?: boolean,
+  suffixIcon?: React.ReactNode;
+  value?: string;
 };
 
 const Select = ({
   asTag,
   children,
   className = '',
+  dark = false,
   disabled,
+  minWidth,
   modifier = '',
   noBorder = false,
   readOnly,
+  ref,
+  removeIcon,
+  skeleton,
   suffixIcon = (
     <FontAwesomeIcon icon={faAngleDown} className="c-select-arrow" />
   ),
   value,
-  minWidth,
-  ref,
-  removeIcon,
-  skeleton,
-  dark = false,
   ...others
 }: Props) => {
   const css = classNames({
