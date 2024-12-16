@@ -1,17 +1,25 @@
 import { ReactNode, memo } from 'react';
 
 type Props = {
-  header?: ReactNode;
-  right?: ReactNode;
-  main?: ReactNode;
-  left?: ReactNode;
+  className?: string;
   footer?: ReactNode;
+  header?: ReactNode;
+  left?: ReactNode;
+  main?: ReactNode;
+  modifier?: string;
+  right?: ReactNode;
 };
 
 const Inspector = ({
-  header, right, main, left, footer,
+  className = '',
+  footer,
+  header,
+  left,
+  main,
+  modifier = '',
+  right,
 }: Props) => (
-  <div className="l-inspector">
+  <div className={`l-inspector ${modifier} ${className}`}>
     {header && <div className="l-inspector__header">{header}</div>}
 
     <div className="l-inspector__body">

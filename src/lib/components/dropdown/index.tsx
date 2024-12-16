@@ -1,17 +1,26 @@
 import AntdDropdown, { DropdownProps } from 'antd/lib/dropdown';
 import classNames from 'classnames';
 
-type Props = DropdownProps & {
-  trigger?: string;
-};
+export interface Props extends DropdownProps {
+  modifier?: string;
+}
 
-const Dropdown = (props: Props) => {
-  const {
-    overlay, placement, disabled, children, trigger, ...others
-  } = props;
-
+const Dropdown = ({
+  className = '',
+  modifier = '',
+  overlay,
+  placement,
+  disabled,
+  children,
+  trigger,
+  ...others
+}: Props) => {
+  const clickable = Array.isArray(trigger)
+    ? trigger.includes('click')
+    : trigger === 'click';
+  
   const cssChild = classNames({
-    'c-dropdown__child--clickable': trigger === 'click',
+    'c-dropdown__child--clickable': clickable,
   });
 
   return (
@@ -19,7 +28,7 @@ const Dropdown = (props: Props) => {
       overlay={overlay}
       placement={placement}
       disabled={disabled}
-      overlayClassName="c-dropdown"
+      overlayClassName={`c-dropdown ${modifier} ${className}`}
       trigger={trigger}
       {...others}
     >

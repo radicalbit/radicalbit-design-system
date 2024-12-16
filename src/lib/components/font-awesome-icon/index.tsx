@@ -8,12 +8,14 @@ import { MouseEventHandler } from 'react';
 interface Props extends FontAwesomeIconProps {
   className?: string;
   enableColorMode?: boolean;
+  modifier?: string;
   onClick?: MouseEventHandler<SVGElement>;
   type?: 'primary' | 'secondary' | 'secondary-light' | 'success' | 'warning' | 'error';
 }
 
 const FontAwesomeIcon = ({
   className = '',
+  modifier = '',
   enableColorMode = false,
   onClick,
   type,
@@ -29,7 +31,7 @@ const FontAwesomeIcon = ({
   return (
     <LibraryIcon
       icon={icon}
-      className={`c-font-awesome-icon ${css} ${className}`}
+      className={`c-font-awesome-icon ${css} ${modifier} ${className}`}
       onClick={onClick}
       {...others}
     />

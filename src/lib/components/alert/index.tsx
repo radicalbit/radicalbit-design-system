@@ -5,6 +5,7 @@ import React from 'react';
 type AlertPropsOmitted = Omit<AlertProps, 'type'>;
 
 export interface Props extends AlertPropsOmitted {
+  className?: string,
   modifier?: string;
   mode?: 'light' | 'dark';
   alignment?: 'vertical-centered';
@@ -12,6 +13,7 @@ export interface Props extends AlertPropsOmitted {
 }
 
 const Alert = ({
+  className,
   modifier,
   mode,
   alignment,
@@ -24,7 +26,7 @@ const Alert = ({
     [`${mode}`]: mode,
   });
 
-  return <AntdAlert className={`c-alert ${modifier} ${css}`} {...other} />;
+  return <AntdAlert className={`c-alert ${modifier} ${css} ${className}`} {...other} />;
 };
 
 Alert.displayName = 'Alert';

@@ -2,21 +2,23 @@ import classNames from 'classnames';
 import { ReactNode } from 'react';
 
 export type Props = {
-  left?: ReactNode;
-  right?: ReactNode;
   chart?: ReactNode;
+  className?: string;
+  headerType?: 'bold';
+  left?: ReactNode;
   modifier?: string;
   reverse?: boolean;
-  headerType?: 'bold';
+  right?: ReactNode;
 };
 
 const MiniChart = ({
-  left,
-  right,
   chart,
+  className = '',
+  headerType,
+  left,
   modifier = '',
   reverse = false,
-  headerType,
+  right,
 }: Props) => {
   const css = classNames({
     'l-mini-chart--reverse': reverse,
@@ -27,7 +29,7 @@ const MiniChart = ({
   });
 
   return (
-    <div className={`l-mini-chart ${modifier} ${css}`}>
+    <div className={`l-mini-chart ${modifier} ${css} ${className}`}>
       <div className={`l-mini-chart__header ${cssHeader}`}>
         <div className="l-mini-chart__left">{left}</div>
         <div className="l-mini-chart__right">{right}</div>

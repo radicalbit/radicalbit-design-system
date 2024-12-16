@@ -9,8 +9,13 @@ type Props = OmittedMarkdownOptions & {
   value: string;
 };
 
-const MarkdownRender = ({ modifier = '', value, ...other }: Props) => (
-  <div className={`c-markdown ${modifier}`}>
+const MarkdownRender = ({
+  className = '',
+  modifier = '',
+  value,
+  ...other
+}: Props) => (
+  <div className={`c-markdown ${modifier} ${className}`}>
     <ReactMarkdown remarkPlugins={[gfm]} {...other}>
       {value}
     </ReactMarkdown>

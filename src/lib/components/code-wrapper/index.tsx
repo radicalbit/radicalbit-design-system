@@ -1,17 +1,19 @@
 type Props = {
-  header?: React.ReactNode;
+  className?: string;
   editor?: React.ReactNode;
-  readOnly?: boolean;
+  header?: React.ReactNode;
   modifier?: string;
+  readOnly?: boolean;
 };
 
 const CodeWrapper = ({
-  header,
+  className = '',
   editor,
+  header,
   modifier = '',
   readOnly = false,
 }: Props) => (
-  <div className={`c-code-wrapper ${modifier}`}>
+  <div className={`c-code-wrapper ${modifier} ${className}`}>
     {header && <div className="c-code-wrapper__header">{header}</div>}
 
     {editor && (

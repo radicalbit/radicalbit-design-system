@@ -1,16 +1,12 @@
 import { CSSProperties, memo, useState } from 'react';
 
-type Sizes = 'small' | 'medium' | 'large';
 type Props = {
-  /** Style properties of icon, like fontSize and color */
+  className?: string;
+  modifier?: string;
   style?: CSSProperties;
-  /** Set image size */
-  size?: Sizes;
-  /** The path to the image */
+  size?: 'small' | 'medium' | 'large';
   src?: string;
-  /** Image alternate text */
   alt?: string;
-  /** Image error message or custom component */
   error?: string | React.ReactNode;
 };
 
@@ -21,7 +17,13 @@ const SIZES = {
 };
 
 const Image = ({
-  src, alt, style, size = 'small', error,
+  alt,
+  className = '',
+  error,
+  modifier = '',
+  size = 'small',
+  src,
+  style,
 }: Props) => {
   const [isError, setIsError] = useState(false);
 
@@ -31,7 +33,7 @@ const Image = ({
 
   return !isError ? (
     <img
-      className={`m-image ${SIZES[size]}`}
+      className={`m-image ${SIZES[size]} ${modifier} ${className}`}
       style={style}
       src={src}
       onError={() => setIsError(true)}

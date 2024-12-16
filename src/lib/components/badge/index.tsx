@@ -1,8 +1,19 @@
 import AntBadge, { BadgeProps } from 'antd/lib/badge';
 
+export interface Props extends BadgeProps {
+  className?: string,
+  modifier?: string;
+  onMouseLeave?: () => void;
+  onMouseEnter?: () => void
+}
+
 const Badge = (
-  props: BadgeProps & { onMouseLeave?: () => void; onMouseEnter?: () => void }
-) => <AntBadge {...props} />;
+  {
+    className = '',
+    modifier = '',
+    ...other
+  }: Props
+) => <AntBadge className={`c-badge ${modifier} ${className}`} {...other} />;
 
 Badge.displayName = 'Badge';
 

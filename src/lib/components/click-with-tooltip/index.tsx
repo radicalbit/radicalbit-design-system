@@ -1,14 +1,22 @@
 import Tooltip from '@Components/tooltip';
 
 type Props = {
-  handleOnClick?: () => void;
-  tooltipTitle?: string;
   children?: React.ReactNode;
+  className?: string;
+  handleOnClick?: () => void;
+  modifier?: string;
+  tooltipTitle?: string;
 };
 
-const ClickWithTooltip = ({ handleOnClick, tooltipTitle, children }: Props) => (
+const ClickWithTooltip = ({
+  children,
+  className = '',
+  handleOnClick,
+  modifier = '',
+  tooltipTitle,
+}: Props) => (
   <Tooltip title={tooltipTitle}>
-    <span className="c-click-with-tooltip">
+    <span className={`c-click-with-tooltip ${modifier} ${className}`}>
       <a role="presentation" onClick={handleOnClick}>
         {children}
       </a>

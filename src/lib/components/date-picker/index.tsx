@@ -10,6 +10,7 @@ type Props = DatePickerProps & {
 };
 
 const DatePicker = ({
+  className = '',
   modifier = '',
   readOnly = false,
   skeleton,
@@ -27,7 +28,7 @@ const DatePicker = ({
   if (readOnly) {
     return (
       <AntdDatePicker
-        className={`c-datepicker ${css} ${modifier}`}
+        className={`c-datepicker ${css} ${modifier} ${className}`}
         value={value}
         open={false}
         {...others}

@@ -5,6 +5,11 @@ import classNames from 'classnames';
 import { ReactElement, ReactNode } from 'react';
 
 export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
+  children?: ReactNode;
+  filled?: boolean;
+  modifier?: string;
+  prefix?: ReactNode;
+  suffix?: ReactNode;
   type?:
     | ButtonProps['type']
     | 'secondary-light'
@@ -15,25 +20,19 @@ export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
     | 'warning'
     | 'warning-light'
     ;
-  className?: string;
-  prefix?: ReactNode;
-  suffix?: ReactNode;
-  filled?: boolean;
-  children?: ReactNode;
-  modifier?: string;
 }
 
 const Button = (props: Props): ReactElement<typeof AntdButton> => {
   const {
+    children,
     className = '', // Needed when <Button /> is used as other Antd component child
+    filled = false,
+    href,
+    modifier = '',
+    onClick,
     prefix,
     suffix,
-    filled = false,
-    children,
-    modifier = '',
     type,
-    href,
-    onClick,
     ...other
   } = props;
 

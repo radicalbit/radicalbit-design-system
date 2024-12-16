@@ -7,33 +7,35 @@ import { ReactNode } from 'react';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 type Props = {
+  actions?: ReactNode[];
+  className?: string;
+  isReplied?: boolean;
+  message: ReactNode;
   modifier?: string;
   name: ReactNode;
-  message: ReactNode;
-  replyName?: ReactNode;
   replyMessage?: ReactNode;
+  replyName?: ReactNode;
+  small?: boolean;
+  status: 'unactive' | 'activeOnHover';
   tagContent?: string;
   time?: string;
-  actions?: ReactNode[];
   type?: 'secondary' | 'primary';
-  status: 'unactive' | 'activeOnHover';
-  small?: boolean;
-  isReplied?: boolean;
 };
 
 const ChatMessage = ({
+  actions,
+  className = '',
+  isReplied = false,
+  message,
   modifier = '',
   name,
-  message,
-  replyName,
   replyMessage,
+  replyName,
+  small = false,
+  status,
   tagContent,
   time,
-  actions,
-  small = false,
-  isReplied = false,
   type,
-  status,
 }: Props) => {
   const css = classNames({
     [`c-chat-message--type-${type}`]: type,
@@ -43,7 +45,7 @@ const ChatMessage = ({
   });
 
   return (
-    <div className={`c-chat-message ${modifier} ${css}`}>
+    <div className={`c-chat-message ${modifier} ${css} ${className}`}>
       <div className="c-chat-message__content">
         {replyName && replyMessage && (
           <Quote name={replyName} message={replyMessage} />

@@ -5,7 +5,7 @@ const Helmet = ({ title }: { title: string }) => {
     window.document.title = title;
   }, [title]);
 
-  return <div />;
+  return <></>;
 };
 
 export default memo(Helmet);

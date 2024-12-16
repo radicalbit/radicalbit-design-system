@@ -5,6 +5,7 @@ import {
 } from 'react';
 
 type Props = {
+  className?: string,
   data: string,
   label?: ReactNode,
   modifier?: string,
@@ -12,6 +13,7 @@ type Props = {
 };
 
 const DataSecret = ({
+  className = '',
   data,
   label,
   modifier = '',
@@ -31,7 +33,7 @@ const DataSecret = ({
   };
 
   return (
-    <div className={`m-data-secret ${modifier}`}>
+    <div className={`m-data-secret ${modifier} ${className}`}>
       {label && (
         <div className="m-data-secret__label">
           {label}

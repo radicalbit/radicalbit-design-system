@@ -7,10 +7,11 @@ import { useState } from 'react';
 type Props = {
   actionHint?: string;
   children?: React.ReactNode;
+  className?: string;
   icon?: IconProp;
   link: string;
-  onCopied?: () => void;
   modifier?: string;
+  onCopied?: () => void;
 };
 
 const COPIED = 'Copied!';
@@ -18,10 +19,11 @@ const COPIED = 'Copied!';
 const CopyToClipboard = ({
   actionHint = 'Click to copy',
   children,
+  className = '',
   icon = faCopy,
   link,
-  onCopied,
   modifier = '',
+  onCopied,
 }: Props) => {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -44,7 +46,7 @@ const CopyToClipboard = ({
         <div
           onClick={handleOnCopy}
           role="presentation"
-          className={`m-copy-to-clipboard ${modifier}`}
+          className={`m-copy-to-clipboard ${modifier} ${className}`}
         >
           {children}
         </div>

@@ -17,19 +17,18 @@ type Props = ModalProps & {
   onMaximize?: (p: boolean) => void;
 };
 
-function Modal(props: Props): React.ReactElement<typeof AntModal> {
-  const {
-    children,
-    className = '',
-    dark,
-    defaultMaximize = false,
-    maximize,
-    maximizable,
-    modifier = '',
-    onMaximize,
-    width,
-    ...rest
-  } = props;
+function Modal({
+  children,
+  className = '',
+  dark,
+  defaultMaximize = false,
+  maximize,
+  maximizable,
+  modifier = '',
+  onMaximize,
+  width,
+  ...rest
+}: Props): React.ReactElement<typeof AntModal> {
   const [isMaximize, setIsMaximize] = useState<boolean>(defaultMaximize);
 
   // Controlled if maximize is not undefined, Uncontroller otherwise
