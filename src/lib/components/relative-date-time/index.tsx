@@ -68,14 +68,14 @@ const RelativeDateTime = ({
 
   return withTooltip ? (
     <Tooltip title={tooltipDate} mouseEnterDelay={mouseEnterDelay}>
-      <div className={`m-relative-date-time ${modifier} ${className}`}>
+      <span className={`m-relative-date-time ${modifier} ${className}`}>
         {dateToShow}
-      </div>
+      </span>
     </Tooltip>
   ) : (
-    <div className={`m-relative-date-time ${modifier} ${className}`}>
+    <span className={`m-relative-date-time ${modifier} ${className}`}>
       {dateToShow}
-    </div>
+    </span>
   );
 };
 
