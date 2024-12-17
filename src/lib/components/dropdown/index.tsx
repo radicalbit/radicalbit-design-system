@@ -8,9 +8,6 @@ export interface Props extends DropdownProps {
 const Dropdown = ({
   className = '',
   modifier = '',
-  overlay,
-  placement,
-  disabled,
   children,
   trigger,
   ...others
@@ -25,9 +22,6 @@ const Dropdown = ({
 
   return (
     <AntdDropdown
-      overlay={overlay}
-      placement={placement}
-      disabled={disabled}
       overlayClassName={`c-dropdown ${modifier} ${className}`}
       trigger={trigger}
       {...others}

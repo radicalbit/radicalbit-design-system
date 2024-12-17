@@ -1,7 +1,6 @@
 import AntBadge, { BadgeProps } from 'antd/lib/badge';
 
 export interface Props extends BadgeProps {
-  className?: string,
   modifier?: string;
   onMouseLeave?: () => void;
   onMouseEnter?: () => void
