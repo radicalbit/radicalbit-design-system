@@ -1,8 +1,18 @@
 import AntdAvatar, { AvatarProps } from 'antd/lib/avatar';
 
-const Avatar = ({ children, className, ...others }: AvatarProps) => (
+export interface Props extends AvatarProps {
+  className?: string,
+  modifier?: string;
+}
+
+const Avatar = ({
+  children,
+  className = '',
+  modifier = '',
+  ...others
+}: Props) => (
   <AntdAvatar
-    className={`c-avatar ${className}`}
+    className={`c-avatar ${modifier} ${className}`}
     {...others}
   >
     {children}

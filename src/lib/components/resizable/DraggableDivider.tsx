@@ -3,17 +3,21 @@ import { MutableRefObject, ReactElement, useEffect } from 'react';
 type DraggableDividerProps = {
     bottom?: ReactElement;
     bottomRef?: MutableRefObject<HTMLDivElement | null>;
+    className?: string;
+    modifier?: string;
+    resizableRef: MutableRefObject<HTMLDivElement | null>;
     top?: ReactElement;
     topRef?: MutableRefObject<HTMLDivElement | null>;
-    resizableRef: MutableRefObject<HTMLDivElement | null>;
   };
 
 function DraggableDivider({
   bottom,
   bottomRef,
+  className = '',
+  modifier = '',
+  resizableRef,
   top,
   topRef,
-  resizableRef,
 }: DraggableDividerProps) {
   useEffect(() => {
     if (!resizableRef?.current) return;
@@ -25,7 +29,7 @@ function DraggableDivider({
   return bottom && top ? (
     <div
       role="presentation"
-      className="l-resizable__divider"
+      className={`l-resizable__divider ${modifier} ${className}`}
       onMouseDown={({ clientY: initClientY }) => {
         if (!topRef?.current || !bottomRef?.current) {
           return;

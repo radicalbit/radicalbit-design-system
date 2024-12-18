@@ -5,8 +5,10 @@ import {
 
 type Props = {
   children: React.ReactNode;
+  className?: string,
   containerClassName?: string;
   containerRef: React.RefObject<HTMLDivElement>;
+  modifier?: string,
   onBlur?: (e: React.FocusEvent<HTMLDivElement>) => void;
   onMouseDown?: (e: React.MouseEvent<HTMLDivElement>) => void;
 };
@@ -45,8 +47,10 @@ const handleDragOver = (event: Event) => {
 
 const Draggable = ({
   children,
+  className = '',
   containerClassName,
   containerRef,
+  modifier = '',
   onBlur,
   onMouseDown,
   ...others
@@ -86,7 +90,7 @@ const Draggable = ({
     <div
       ref={ref}
       draggable
-      className={`m-draggable ${css}`}
+      className={`m-draggable ${css} ${modifier} ${className}`}
       onDragStart={handleDragStart}
       onMouseDown={handleOnMouseDown}
       tabIndex={-1}

@@ -2,26 +2,28 @@ import classNames from 'classnames';
 import { memo } from 'react';
 
 type Props = {
-  children: React.ReactNode;
-  modifier?: string;
   add?: React.ReactNode;
-  remove?: React.ReactNode;
   align?: 'center' | 'flex-start' | 'flex-end';
+  children: React.ReactNode;
+  className?: string;
+  modifier?: string;
+  remove?: React.ReactNode;
 };
 
 const FormMultiple = ({
   add,
+  align = 'center',
   children,
+  className = '',
   modifier = '',
   remove,
-  align = 'center',
 }: Props) => {
   const css = classNames({
     [`c-form-multiple--align-${align}`]: align,
   });
 
   return (
-    <div className={`c-form-multiple ${modifier} ${css}`}>
+    <div className={`c-form-multiple ${modifier} ${css} ${className}`}>
       <div className="c-form-multiple__content">{children}</div>
 
       <div className="c-form-multiple__actions">

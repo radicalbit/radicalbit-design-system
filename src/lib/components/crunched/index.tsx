@@ -2,11 +2,18 @@ import Badge from '@Components/badge';
 import { useState } from 'react';
 
 export type CrunchedProps = {
-  type: 'success' | 'processing' | 'default' | 'error' | 'warning';
+  className?: string;
+  modifier?: string;
   text?: string;
+  type: 'success' | 'processing' | 'default' | 'error' | 'warning';
 };
 
-const Crunched = ({ type, text }: CrunchedProps) => {
+const Crunched = ({
+  className = '',
+  modifier = '',
+  type,
+  text,
+}: CrunchedProps) => {
   const [messageIsVisible, setMessageVisible] = useState(false);
 
   const hideMessage = () => {
@@ -18,7 +25,7 @@ const Crunched = ({ type, text }: CrunchedProps) => {
   };
 
   return (
-    <div className={`rdb-crunched rdb-crunched-${type}`}>
+    <div className={`rdb-crunched rdb-crunched-${type} ${modifier} ${className}`}>
       {messageIsVisible && text !== undefined && (
         <div className="rdb-crunched-text">
           <span>{text}</span>

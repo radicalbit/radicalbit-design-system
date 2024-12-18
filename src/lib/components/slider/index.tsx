@@ -6,11 +6,17 @@ type Props = SliderBaseProps & {
 };
 
 function Slider({
+  className = '',
   modifier = '',
   readOnly = false,
   ...props
 }: Props) {
-  return <AntdSlider className={`c-slider ${modifier} ${readOnly && 'readonly'}`} {...props} />;
+  return (
+    <AntdSlider
+      className={`c-slider ${modifier} ${readOnly && 'readonly'} ${className}`}
+      {...props}
+    />
+  );
 }
 
 export default Slider;

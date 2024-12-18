@@ -1,8 +1,10 @@
 export type CountdownProps = {
+  className?: string,
   date: number;
   label?: string;
-  type?: 'inline' | 'labels';
+  modifier?: string,
   size?: 'large' | 'xlarge';
+  type?: 'inline' | 'labels';
 };
 
 export type InnerProps = Omit<CountdownProps, 'size'>;

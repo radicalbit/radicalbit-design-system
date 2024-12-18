@@ -3,14 +3,18 @@ import classNames from 'classnames';
 import { ReactNode } from 'react';
 
 type Props = TagProps & {
+  animated?: 'default' | 'onHover';
   disabled?: boolean;
   fullWidth?: boolean;
+  mode?: 'text'; // will be replace type="text"
   modifier?: string;
   size?: 'small' | 'large' | 'xl' | 'xxl';
   suffix?: string | ReactNode;
+  /**
+   * @deprecated This property will be removed
+   */
   suffixWithLink?: boolean;
   type?:
-    | 'animated'
     | 'dashed-secondary'
     | 'dashed'
     | 'error-light'
@@ -23,13 +27,15 @@ type Props = TagProps & {
     | 'warning-light'
     | 'warning';
   uppercase?: boolean;
-  mode?:'text' // will be replace type="text"
 };
 
 const Tag = ({
+  animated,
   children,
+  className = '',
   disabled = false,
   fullWidth = false,
+  mode,
   modifier = '',
   onClick,
   prefix,
@@ -37,11 +43,11 @@ const Tag = ({
   suffix,
   suffixWithLink = false,
   type,
-  mode,
   uppercase = false,
   ...others
 }: Props) => {
   const css = classNames({
+    [`c-tag--animated-${animated}`]: animated,
     'c-tag--clickable': onClick,
     [`c-tag--${size}`]: size,
     [`c-tag--${type}`]: type,
@@ -58,7 +64,7 @@ const Tag = ({
     */
   const props = {
     ...others,
-    className: `c-tag ${css} ${modifier}`,
+    className: `c-tag ${css} ${modifier} ${className}`,
   };
 
   return (

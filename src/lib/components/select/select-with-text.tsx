@@ -8,31 +8,34 @@ import isEmpty from 'lodash/isEmpty';
 import React, { useState, useRef } from 'react';
 
 type Props = SelectProps & {
+  caseSensitive?: boolean;
+  dark?: boolean
   items: { label: string; value: string }[];
-  notAllowEmptyText?: boolean;
+  modifier?: string;
   notAllowDuplication?: boolean;
+  notAllowEmptyText?: boolean;
   onSelectChange: (v: string) => void;
   onTextChange: (v: string) => void;
   reverse?: boolean;
   textPlaceholder?: string;
-  caseSensitive?: boolean;
   width?: number;
-  dark?: boolean
 };
 
 function SelectWithText({
+  caseSensitive = false,
+  className = '',
+  dark = false,
+  defaultActiveFirstOption = false,
   items,
-  notAllowEmptyText,
+  modifier = '',
   notAllowDuplication,
+  notAllowEmptyText,
   onSelectChange,
   onTextChange,
   reverse,
   textPlaceholder,
-  caseSensitive = false,
   value = undefined,
-  defaultActiveFirstOption = false,
   width,
-  dark = false,
   ...others
 }: Props) {
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -88,7 +91,7 @@ function SelectWithText({
 
   return (
     <Select
-      className="c-select-with-text"
+      className={`c-select-with-text ${className}`}
       dropdownRender={(menu) => (
         <div className={`c-select-with-text__dropdown ${dropdownCss}`}>
           <div
@@ -120,6 +123,7 @@ function SelectWithText({
           </div>
         </div>
       )}
+      modifier={modifier}
       onChange={handleSelectOnChange}
       onDropdownVisibleChange={handleOnVisibleChange}
       open={open}

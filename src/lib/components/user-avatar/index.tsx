@@ -6,8 +6,12 @@ import { PopoverProps } from 'antd';
 import { AvatarProps } from 'antd/lib/skeleton/Avatar';
 
 type Props = {
+  actions?: { one?: ReactNode; two?: ReactNode };
+  className?: string;
   content?: ReactNode;
+  modifier?: string;
   placement?: PopoverProps['placement'];
+  popoverWidth?: number;
   size?: AvatarProps['size'];
   title?: ReactNode;
   trigger?: string | string[];
@@ -15,14 +19,14 @@ type Props = {
   userAvatarPath?: string;
   userClassification?: string;
   userName?: string;
-  popoverWidth?: number;
-  modifier?: string;
-  actions?: { one?: ReactNode; two?: ReactNode };
 };
 
 const UserAvatar = ({
+  className = '',
   content,
+  modifier = '',
   placement,
+  popoverWidth = 300,
   size,
   title,
   trigger = 'hover',
@@ -30,15 +34,13 @@ const UserAvatar = ({
   userAvatarPath,
   userClassification,
   userName,
-  popoverWidth = 300,
-  modifier = '',
 }: Props) => {
   const popoverContent = (
     <div className="l-user-avatar__content">{content}</div>
   );
 
   return (
-    <div className={`l-user-avatar ${modifier}`}>
+    <div className={`l-user-avatar ${modifier} ${className}`}>
       <div className="l-user-avatar__badge">
         <Popover
           noPadding

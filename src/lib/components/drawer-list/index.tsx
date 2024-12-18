@@ -12,28 +12,28 @@ export type List<T extends Record<string, unknown>> = {
 };
 
 type Props<T extends Record<string, unknown>> = {
+  className?: string;
   header: React.ReactNode;
   list: List<T>;
   loading: boolean;
   mask: boolean;
+  mode?: 'light' | 'dark';
+  modifier?: string;
   onClose: (e: React.MouseEvent | React.KeyboardEvent) => void;
   open: boolean;
   width?: number;
-  /** Additional css classes */
-  modifier?: string;
-  mode?: 'light' | 'dark';
 };
 
 const DrawerList = <T extends Record<string, unknown>, >({
+  className = '',
   header,
-  open = false,
-  loading = false,
-  width = 520,
-  mode = 'light',
-  mask = false,
-  onClose,
   list: { onRowClick, ...dataTableProps },
+  loading = false,
+  mask = false,
+  mode = 'light',
   modifier = '',
+  open = false,
+  width = 520,
   ...others
 }: Props<T>) => {
   const css = classNames({
@@ -44,10 +44,9 @@ const DrawerList = <T extends Record<string, unknown>, >({
     <Drawer
       modifier={`c-drawer-list__wrapper ${
         !mask ? 'c-drawer--transparent-mask' : ''
-      } ${modifier} ${mode} ${css}`}
+      } ${modifier} ${mode} ${css} ${className}`}
       title={header}
       open={open}
-      onClose={onClose}
       closable={false}
       width={width}
       {...others}

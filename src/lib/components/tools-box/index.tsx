@@ -11,23 +11,24 @@ type Body = {
 };
 
 type Props = InputProps & {
-  top?: ReactNode | ReactNode[];
-  header?: ReactNode | ReactNode[];
   body?: Body[];
   footer?: ReactNode;
+  header?: ReactNode | ReactNode[];
   modifier?: string;
   onSearch?: (v: ChangeEvent) => void;
+  top?: ReactNode | ReactNode[];
 };
 
 const ToolsBox = ({
   body,
+  className = '',
   footer,
   header,
   modifier = '',
   onSearch,
   top,
 }: Props) => (
-  <div className={`c-tools-box ${modifier}`}>
+  <div className={`c-tools-box ${modifier} ${className}`}>
     {top && <div className="c-tools-box__top dragger-box">{top}</div>}
 
     {onSearch && (

@@ -46,13 +46,18 @@ function getDataSource<T extends Record<string, unknown>>(dataSource: DataTableP
 }
 
 const DynamicTable = <T extends Record<string, unknown>>(
-  props: DataTableProps<T>
+  {
+    className = '',
+    dataSource,
+    pagination,
+    ...otherProps
+  }: DataTableProps<T>
 ) => {
-  const { dataSource, pagination, ...otherProps } = props;
   const items = isArray(dataSource) ? dataSource : [dataSource];
+
   return (
     <DataTable
-      className="table-responsive"
+      className={`c-table-responsive ${className}`}
       pagination={pagination}
       columns={getColumnsFromKeys(items)}
       dataSource={getDataSource(items)}

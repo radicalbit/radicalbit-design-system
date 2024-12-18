@@ -8,44 +8,45 @@ export type Counter = {
 };
 
 type Props = {
+  align?: 'center' | 'right';
+  className?: string;
+  hoverable?: boolean;
   icon?: React.ReactNode;
   iconAlign?: 'start' | 'end' | 'center';
   modifier?: string;
   onClick?: () => void;
+  propsEllipsis?: boolean;
+  reverse?: boolean;
+  size?: 'small' | 'medium' | 'large' | 'xlarge';
   subtitle?: React.ReactNode;
   title?: React.ReactNode;
-  titleSuffix?: React.ReactNode;
-  wrapTitle?: boolean;
-  propsEllipsis?: boolean;
-  type?: 'one-line';
-  size?: 'small' | 'medium' | 'large' | 'xlarge';
-  titleWeight?: 'light' | 'normal' | 'bold';
   titleColor?: 'primary';
-  align?: 'center' | 'right';
-  reverse?: boolean;
-  hoverable?: boolean;
+  titleSuffix?: React.ReactNode;
+  titleWeight?: 'light' | 'normal' | 'bold';
+  type?: 'one-line';
+  wrapTitle?: boolean;
 };
 
-const SectionTitle = (props: Props) => {
-  const {
-    align,
-    hoverable = false,
-    icon,
-    iconAlign,
-    modifier = '',
-    onClick,
-    propsEllipsis = false,
-    reverse = false,
-    size,
-    subtitle,
-    title,
-    titleSuffix,
-    titleWeight,
-    titleColor,
-    type,
-    wrapTitle = false,
-    ...others
-  } = props;
+const SectionTitle = ({
+  align,
+  className = '',
+  hoverable = false,
+  icon,
+  iconAlign,
+  modifier = '',
+  onClick,
+  propsEllipsis = false,
+  reverse = false,
+  size,
+  subtitle,
+  title,
+  titleColor,
+  titleSuffix,
+  titleWeight,
+  type,
+  wrapTitle = false,
+  ...others
+}: Props) => {
   const css = classNames({
     'c-section-title--clickable': !!onClick,
     [`c-section-title--size-${size}`]: size,
@@ -78,7 +79,7 @@ const SectionTitle = (props: Props) => {
 
   return (
     <div
-      className={`c-section-title ${css} ${modifier}`}
+      className={`c-section-title ${css} ${modifier} ${className}`}
       onClick={onClick}
       role="presentation"
       {...others}

@@ -5,27 +5,28 @@ import {
   faChevronDown,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
-import className from 'classnames';
+import classNames from 'classnames';
 import { CollapseProps } from 'antd/lib/collapse/Collapse';
 import Panel from './panel';
 
 type Props = CollapseProps & {
+  dark?:boolean
   modifier?: string;
   scroll?: 'horizontal' | 'vertical';
   type?: 'minimal' | 'no-border' | 'transparent' | 'error' | 'secondary-medium' | 'primary-light';
-  dark?:boolean
 };
 
 const Collapse = ({
   children,
+  className = '',
+  dark = false,
   expandIconPosition = 'left',
   modifier = '',
   scroll,
   type,
-  dark = false,
   ...other
 }: Props) => {
-  const css = className({
+  const css = classNames({
     [`c-collapse--${scroll}_scroll`]: scroll,
     [`c-collapse--${type}`]: type,
     dark,
@@ -45,7 +46,7 @@ const Collapse = ({
             }
           />
         ) as React.ReactNode)}
-      className={`c-collapse ${modifier} ${css}`}
+      className={`c-collapse ${modifier} ${css} ${className}`}
       {...other}
     >
       {children}

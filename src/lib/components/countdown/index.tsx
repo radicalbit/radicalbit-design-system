@@ -8,10 +8,12 @@ import {
 } from './types';
 
 function Countdown({
+  className = '',
   date,
   label,
-  type = 'inline',
+  modifier = '',
   size,
+  type = 'inline',
 }: CountdownProps) {
   const expired = date - Date.now() <= 0;
 
@@ -21,7 +23,7 @@ function Countdown({
 
   if (expired) {
     return (
-      <div className={`m-countdown ${css}`}>
+      <div className={`m-countdown ${css} ${modifier} ${className}`}>
         <div className="m-countdown__element">
           <div className="m-countdown__element-value">Expired</div>
         </div>
@@ -30,7 +32,7 @@ function Countdown({
   }
 
   return (
-    <div className={`m-countdown ${css}`}>
+    <div className={`m-countdown ${css} ${modifier} ${className}`}>
       <Inner date={date} label={label} type={type} />
     </div>
   );

@@ -6,21 +6,23 @@ import classNames from 'classnames';
 import Badge from 'antd/lib/badge';
 
 export type Props = {
+  className?: string,
   color?: string;
+  modifier?: string;
   onChangeHex?: (color?: string) => void;
   onChangeRgba?: (color?: RGBColor) => void;
   placement?: 'top' | 'right' | 'left';
   type?: 'chrome' | 'block';
-  modifier?: string;
 };
 
 const ColorPicker = ({
+  className = '',
   color = '',
+  modifier = '',
   onChangeHex,
   onChangeRgba,
   placement,
   type = 'chrome',
-  modifier = '',
   ...others
 }: Props) => {
   const [isPickerVisible, setIsPickerVisible] = useState(false);
@@ -44,7 +46,7 @@ const ColorPicker = ({
   };
 
   return (
-    <div className={`c-color-picker ${css} ${modifier}`}>
+    <div className={`c-color-picker ${css} ${modifier} ${className}`}>
       <div
         role="presentation"
         className="c-color-picker__swatch ant-input"

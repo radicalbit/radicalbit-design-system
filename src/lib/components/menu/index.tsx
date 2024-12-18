@@ -2,17 +2,16 @@ import AntdMenu, { MenuProps } from 'antd/lib/menu';
 import classNames from 'classnames';
 
 type Props = MenuProps & {
-  className?: string;
-  modifier?: string;
   alignment?: 'centered';
   dark?: boolean
+  modifier?: string;
 };
 
 const Menu = ({
-  className = '',
-  modifier = '',
   alignment,
+  className = '',
   dark = false,
+  modifier = '',
   ...others
 }: Props) => {
   const css = classNames({

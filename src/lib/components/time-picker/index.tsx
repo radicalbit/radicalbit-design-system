@@ -8,7 +8,11 @@ type Props = TimePickerProps & {
 };
 
 const TimePicker = ({
-  modifier = '', readOnly, value, ...others
+  className = '',
+  modifier = '',
+  readOnly,
+  value,
+  ...others
 }: Props) => {
   const css = classNames({
     'c-input--readonly': readOnly,
@@ -18,7 +22,7 @@ const TimePicker = ({
 
   return (
     <AntdTimePicker
-      className={`c-timepicker ${css} ${modifier}`}
+      className={`c-timepicker ${css} ${modifier} ${className}`}
       value={valueOrElse}
       {...others}
     />

@@ -1,21 +1,21 @@
 import Button, { Props as ButtonProps } from '@Components/button';
 import { memo, useState } from 'react';
 
-type Props = {
-  className?: string;
+export interface Props extends ButtonProps {
   icon?: React.ReactNode;
   link: string;
+  modifier?: string,
   onCopied?: () => void;
   successText?: string;
   text?: string;
-  type?: ButtonProps['type'];
-};
+}
 
 const COPIED = 'Copied!';
 
 const CopyToClipboardButton = ({
   className = '',
   link,
+  modifier = '',
   onCopied,
   successText = COPIED,
   text = 'Click to Copy',
@@ -36,7 +36,7 @@ const CopyToClipboardButton = ({
 
   return (
     <Button
-      className={`m-copy-to-clipboard-button ${className}`}
+      className={`m-copy-to-clipboard-button ${modifier} ${className}`}
       onClick={handleOnCopy}
       type={type}
       {...others}

@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 
 export type Props = {
   animated?: boolean;
+  className?: string;
   content?: ReactNode;
   labels?: ReactNode[];
   large?: boolean;
@@ -21,6 +22,7 @@ export type Props = {
 
 const BarChart = ({
   animated = false,
+  className = '',
   content,
   contentFixed = false,
   contentType,
@@ -51,7 +53,7 @@ const BarChart = ({
   });
 
   return (
-    <div className={`c-bar-chart ${css}`} style={{ width }}>
+    <div className={`c-bar-chart ${css} ${className}`} style={{ width }}>
       {prefix && (
         <div className="c-bar-chart__labels">
           {prefix.map((label: string | ReactNode, index: number) => (

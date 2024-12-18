@@ -5,6 +5,7 @@ type Props = {
   backgroundImage?: string;
   borderType?: 'light' | 'none';
   buttonPosition?: 'vertical' | 'adaptive';
+  className?: string,
   dark?:boolean,
   footer?: ReactNode;
   header?: ReactNode;
@@ -36,14 +37,18 @@ function Board({
   backgroundImage = undefined,
   borderType,
   buttonPosition,
-  footer,
+  className = '',
   dark = false,
+  footer,
   header,
   height = undefined,
+  hoverType,
   main,
   mainType,
   mode,
   modifier = '',
+  noBackground = false,
+  onClick,
   primaryColor = undefined,
   secondary,
   secondaryType,
@@ -51,9 +56,6 @@ function Board({
   status,
   type,
   width = undefined,
-  noBackground = false,
-  hoverType,
-  onClick,
 }: Props) {
   const [isHover, setIsHover] = useState(false);
 
@@ -107,7 +109,7 @@ function Board({
   return (
     <div
       style={boardStyle}
-      className={`l-board ${presetModifiers} ${modifier} ${cssMode}`}
+      className={`l-board ${presetModifiers} ${modifier} ${cssMode} ${className}`}
       onClick={onClick}
       role="presentation"
       onMouseEnter={handleOnMouseEnter}

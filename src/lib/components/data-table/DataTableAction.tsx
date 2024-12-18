@@ -1,13 +1,18 @@
 import classNames from 'classnames';
 
+export type Props = {
+  children: React.ReactNode;
+  className: string,
+  modifier: string,
+  noHide?: string;
+}
 const DataTableAction = ({
   children,
+  className = '',
+  modifier = '',
   noHide,
   ...other
-}: {
-    children: React.ReactNode;
-    noHide?: string;
-  }) => {
+}:Props) => {
   const css = classNames({
     'l-data-table__action--noHide': noHide,
   });
@@ -20,7 +25,7 @@ const DataTableAction = ({
   return (
     <div
       role="presentation"
-      className={`l-data-table__action ${css}`}
+      className={`l-data-table__action ${css} ${modifier} ${className}`}
       onClick={handleOnClick}
       {...other}
     >

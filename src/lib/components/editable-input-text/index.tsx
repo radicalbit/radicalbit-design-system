@@ -3,18 +3,22 @@ import { memo, useEffect, useState } from 'react';
 
 type Props = {
   autoFocus?: boolean;
-  title?: string;
-  placeholder?: string;
+  className?: string,
+  modifier?: string,
   onBlur?: (v: string) => void;
   onPressEnter?: (v: string) => void;
+  placeholder?: string;
+  title?: string;
 };
 
 function EditableInputText({
   autoFocus = false,
-  title = '',
-  onPressEnter,
+  className = '',
+  modifier = '',
   onBlur,
+  onPressEnter,
   placeholder = 'Untitled*',
+  title = '',
 }: Props) {
   const [value, setValue] = useState(title);
   const [isOnFocus, setOnFocus] = useState(autoFocus);
@@ -49,7 +53,7 @@ function EditableInputText({
   };
 
   return (
-    <div className="c-editable-input">
+    <div className={`c-editable-input ${modifier} ${className}`}>
       {isOnFocus ? (
         <Input
           autoFocus

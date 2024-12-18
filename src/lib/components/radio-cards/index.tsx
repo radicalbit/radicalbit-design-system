@@ -1,11 +1,11 @@
 import { memo } from 'react';
 
 type Props = {
-  value: string;
-  options: Option[];
-  onChange: (value: string) => void;
-  /** Additional css classes */
+  className?: string,
   modifier?: string;
+  onChange: (value: string) => void;
+  options: Option[];
+  value: string;
 };
 
 type Option = {
@@ -15,9 +15,13 @@ type Option = {
 };
 
 const RadioCards = ({
-  options, value, onChange, modifier = '',
+  className = '',
+  modifier = '',
+  onChange,
+  options,
+  value,
 }: Props) => (
-  <div className={`c-radio-cards ${modifier}`}>
+  <div className={`c-radio-cards ${modifier} ${className}`}>
     {options.map((option: Option, i: number) => {
       const handleOnChange = () => {
         if (onChange) {

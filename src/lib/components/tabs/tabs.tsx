@@ -2,26 +2,27 @@ import AntdTabs, { TabsProps } from 'antd/lib/tabs';
 import classNames from 'classnames';
 
 type Props = Omit<TabsProps, 'size'> & {
-  modifier?: string;
-  fullHeight?: boolean;
-  noBorder?: boolean;
-  maximize?: boolean;
-  size?: 'default' | 'large';
-  paddedContent?: boolean;
   dark?: boolean;
+  fullHeight?: boolean;
+  maximize?: boolean;
+  modifier?: string;
+  noBorder?: boolean;
+  paddedContent?: boolean;
+  size?: 'default' | 'large';
 };
 
 const Tabs = ({
-  children,
-  modifier = '',
   animated = false,
   centered = false,
-  fullHeight = false,
-  noBorder = false,
-  maximize = false,
-  size = 'default',
-  paddedContent = false,
+  children,
+  className = '',
   dark = false,
+  fullHeight = false,
+  maximize = false,
+  modifier = '',
+  noBorder = false,
+  paddedContent = false,
+  size = 'default',
   ...other
 }: Props) => {
   const css = classNames({
@@ -38,7 +39,7 @@ const Tabs = ({
     <AntdTabs
       {...other}
       animated={animated}
-      className={`rdb-tabs c-tabs ${modifier} ${css}`}
+      className={`rdb-tabs c-tabs ${modifier} ${css} ${className}`}
     >
       {children}
     </AntdTabs>

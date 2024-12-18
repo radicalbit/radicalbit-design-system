@@ -2,18 +2,20 @@ import classNames from 'classnames';
 import { ReactNode } from 'react';
 
 export type Props = {
-  modifier?: string;
   children?: ReactNode;
-  type?: 'cluster';
+  className?: string;
   height?: string | null;
+  modifier?: string;
+  type?: 'cluster';
   width?: string | null;
 };
 
 const MapMarker = ({
   children,
+  className = '',
+  height = null,
   modifier = '',
   type,
-  height = null,
   width = null,
 }: Props) => {
   const css = classNames({
@@ -29,7 +31,7 @@ const MapMarker = ({
   );
 
   return (
-    <div style={style} className={`c-map-marker ${modifier} ${css}`}>
+    <div style={style} className={`c-map-marker ${modifier} ${css} ${className}`}>
       <div className="c-map-marker__content">{children}</div>
     </div>
   );

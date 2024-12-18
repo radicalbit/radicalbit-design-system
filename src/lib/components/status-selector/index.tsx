@@ -13,9 +13,13 @@ export type Status = {
   current: string;
   items?: Array<Item>;
 };
+
 type Props = {
-  disabled?: boolean,
+  align?: 'center' | 'right';
   badge?: React.ReactNode;
+  className?: string,
+  disabled?: boolean,
+  minWidth?: number;
   modifier?: string;
   onChange?: (value: Value) => void;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
@@ -24,9 +28,7 @@ type Props = {
   style?: CSSProperties;
   title: string;
   whiteSpace?: string;
-  minWidth?: number;
   withBackground?: string;
-  align?: 'center' | 'right';
 };
 
 type SelectStatusProps = {
@@ -36,19 +38,20 @@ type SelectStatusProps = {
 };
 
 const StatusSelector = ({
+  align,
+  badge,
+  className = '',
   disabled,
   minWidth,
   modifier = '',
   onChange,
   onClick,
   reverse = false,
-  badge,
-  style = {},
   status: { current, items },
+  style = {},
   title,
   whiteSpace = '',
   withBackground,
-  align,
   ...others
 }: Props) => {
   const hasOption = items && items.length;
@@ -73,7 +76,7 @@ const StatusSelector = ({
   return (
     <div
       role="presentation"
-      className={`m-detail ${modifier} ${clickable} ${css}`}
+      className={`m-detail ${modifier} ${clickable} ${css} ${className}`}
       onClick={onClick}
       style={cssStyle}
       {...others}

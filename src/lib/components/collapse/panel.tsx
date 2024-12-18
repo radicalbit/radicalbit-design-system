@@ -5,13 +5,14 @@ import { ReactNode } from 'react';
 export type PropsPanel = {
   children?: ReactNode;
   className?: string;
+  dark?:boolean
   extra?: ReactNode;
   header?: ReactNode;
-  noBody?: boolean;
-  onHover?: () => void;
   isActive?: boolean;
   key: string | number
-  dark?:boolean
+  modifier?: string;
+  noBody?: boolean;
+  onHover?: () => void;
 };
 
 type PropsHoverable = {
@@ -24,11 +25,12 @@ const AntdPanel = AntdCollapse.Panel;
 const CollapsePanel = ({
   children,
   className = '',
+  dark = false,
   extra,
   header,
+  modifier = '',
   noBody,
   onHover,
-  dark = false,
   ...others
 }: PropsPanel) => {
   const css = classNames({
@@ -38,7 +40,7 @@ const CollapsePanel = ({
 
   return (
     <AntdPanel
-      className={`c-collapse__panel ${css} ${className}`}
+      className={`c-collapse__panel ${modifier} ${css} ${className}`}
       extra={onHover ? <Hoverable onHover={onHover} body={extra} /> : extra}
       header={onHover ? <Hoverable onHover={onHover} body={header} /> : header}
       {...others}

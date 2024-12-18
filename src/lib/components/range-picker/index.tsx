@@ -17,6 +17,7 @@ type Props = RangePickerProps<Moment> & {
 
 const RangePicker = ({
   allowClear = true,
+  className = '',
   dateFormat = 'DD-MM-YYYY',
   modifier = '',
   openOnHover = false,
@@ -52,7 +53,7 @@ const RangePicker = ({
   
   return (
     <AntdRangePicker
-      className={`c-range-picker ${css} ${modifier}`}
+      className={`c-range-picker ${css} ${modifier} ${className}`}
       allowClear={allowClear}
       onMouseEnter={inputMouseEnter}
       onMouseLeave={inputMouseLeave}

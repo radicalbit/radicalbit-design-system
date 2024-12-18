@@ -2,21 +2,23 @@ import classNames from 'classnames';
 import { memo } from 'react';
 
 export type Props = {
-  topRight?: React.ReactNode;
-  topLeft?: React.ReactNode;
-  bottomRight?: React.ReactNode;
+  actions?: string;
   bottomLeft?: React.ReactNode;
+  bottomRight?: React.ReactNode;
+  className?: string;
   content?: React.ReactNode;
   label?: React.ReactNode;
   modifier?: string;
   style?: React.CSSProperties;
+  topLeft?: React.ReactNode;
+  topRight?: React.ReactNode;
   type?: 'error' | 'highlight-default' | 'highlight-error' | 'spotlighted';
-  actions?: string;
 };
 
 const Node = ({
   bottomLeft,
   bottomRight,
+  className = '',
   content,
   label,
   modifier = '',
@@ -30,7 +32,7 @@ const Node = ({
   });
 
   return (
-    <div className={`m-node ${modifier} ${css}`} style={style}>
+    <div className={`m-node ${modifier} ${css} ${className}`} style={style}>
       {topRight && (
         <div className="m-node__actions m-node__actions--topRight">
           {topRight}

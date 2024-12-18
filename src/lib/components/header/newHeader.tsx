@@ -15,35 +15,35 @@ export type Details = {
 };
 
 type Props = {
-  actionsPosition?: 'start' | 'end';
   actions?: Actions;
+  actionsPosition?: 'start' | 'end';
+  alignment?: 'left-centered' | 'default-centered' | 'flex-start';
+  className?: string;
   details?: Details;
+  mode?: 'light' | 'dark';
   modifier?: string;
   /** @deprecated DEPRECATED: remove that from all the projects */
   noPadding?: boolean;
   padding?: 'all' | 'vertical' | 'horizontal' | 'none';
-  mode?: 'light' | 'dark';
   prefix?: ReactNode;
   title: ReactNode;
   titleMaxWidth?: string;
-  alignment?: 'left-centered' | 'default-centered' | 'flex-start';
 };
 
-const NewHeader = (props: Props) => {
-  const {
-    actionsPosition = 'end',
-    actions,
-    details,
-    modifier = '',
-    noPadding = false,
-    padding = 'all',
-    mode = '',
-    title,
-    titleMaxWidth = '100%',
-    prefix,
-    alignment,
-  } = props;
-
+const NewHeader = ({
+  actions,
+  actionsPosition = 'end',
+  alignment,
+  className = '',
+  details,
+  mode,
+  modifier = '',
+  noPadding = false,
+  padding = 'all',
+  prefix,
+  title,
+  titleMaxWidth = '100%',
+}: Props) => {
   const css = classNames({
     [`l-header--alignment-${alignment}`]: alignment,
     'l-header--no-padding': noPadding,
@@ -59,7 +59,7 @@ const NewHeader = (props: Props) => {
   });
 
   return (
-    <div className={`l-header ${modifier} ${css} ${cssMode}`}>
+    <div className={`l-header ${modifier} ${css} ${cssMode} ${className}`}>
       {prefix && <div className="l-header__prefix">{prefix}</div>}
 
       <div className="l-header__title" style={{ maxWidth: titleMaxWidth }}>

@@ -11,7 +11,12 @@ type Props = ReactourProps & {
   mode?: 'light' | 'dark';
 };
 
-const Tour = ({ modifier = '', mode = 'light', ...other }: Props) => {
+const Tour = ({
+  className = '',
+  modifier = '',
+  mode = 'light',
+  ...other
+}: Props) => {
   const css = classNames({
     dark: mode === 'dark',
   });
@@ -19,7 +24,7 @@ const Tour = ({ modifier = '', mode = 'light', ...other }: Props) => {
   return (
     <ReactTour
       rounded={16}
-      className={`c-tour ${css} ${modifier}`}
+      className={`c-tour ${css} ${modifier} ${className}`}
       showNumber={false}
       accentColor="var(--coo-dark)"
       nextButton={(

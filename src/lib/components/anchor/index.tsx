@@ -1,9 +1,19 @@
 import AntdAnchor, { AnchorProps } from 'antd/lib/anchor';
 
-const Anchor = ({ children, className = '', ...others }: AnchorProps) => (
+export interface Props extends AnchorProps {
+  className?: string,
+  modifier?: string;
+}
+
+const Anchor = ({
+  children,
+  className = '',
+  modifier = '',
+  ...others
+}: Props) => (
 
   <AntdAnchor
-    className={`c-anchor ${className}`}
+    className={`c-anchor ${modifier} ${className}`}
     {...others}
   >
     {children}

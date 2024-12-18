@@ -2,6 +2,7 @@ import { memo } from 'react';
 
 type Props = {
   children: React.ReactNode;
+  className?: string;
   modifier?: string;
   minWidth?: number;
   maxWidth?: number;
@@ -9,6 +10,7 @@ type Props = {
 
 const RatioWrapper = ({
   children,
+  className = '',
   modifier = '',
   maxWidth,
   minWidth,
@@ -19,7 +21,7 @@ const RatioWrapper = ({
   };
 
   return (
-    <div style={style} className={`l-ratio-wrapper ${modifier}`}>
+    <div style={style} className={`l-ratio-wrapper ${modifier} ${className}`}>
       <div className="l-ratio-wrapper__container">
         <div className="l-ratio-wrapper__content">{children}</div>
       </div>

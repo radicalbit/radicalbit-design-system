@@ -7,14 +7,16 @@ import { Ref, forwardRef } from 'react';
 const { TextArea: AntdTextArea } = AntdInput;
 
 type Props = TextAreaProps & {
+  modifier?: string,
   skeleton?: boolean
 }
 
 const TextArea = forwardRef(({
   className = '',
-  value,
+  modifier = '',
   readOnly,
   skeleton,
+  value,
   ...rest
 }: Props, ref: Ref<TextAreaRef>) => {
   const css = classNames({
@@ -32,7 +34,7 @@ const TextArea = forwardRef(({
   return (
     <AntdTextArea
       readOnly={readOnly}
-      className={`c-text-area ${className} ${css}`}
+      className={`c-text-area ${modifier} ${css} ${className}`}
       value={valueOrElse}
       ref={ref}
       {...rest}

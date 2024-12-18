@@ -1,6 +1,19 @@
-import LibAutocomplete, { AutoCompleteProps } from 'antd/lib/auto-complete';
+import AntdAutocomplete, { AutoCompleteProps } from 'antd/lib/auto-complete';
 
-const AutoComplete = (props: AutoCompleteProps) => <LibAutocomplete {...props} />;
+export interface Props extends AutoCompleteProps {
+    modifier?: string;
+}
+  
+const AutoComplete = ({
+  className = '',
+  modifier = '',
+  ...other
+}: Props) => (
+  <AntdAutocomplete
+    className={`c-autocomplete ${modifier} ${className}`}
+    {...other}
+  />
+);
 
 AutoComplete.displayName = 'AutoComplete';
 

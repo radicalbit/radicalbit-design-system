@@ -3,28 +3,28 @@ import { ReactNode } from 'react';
 import Popover from '@Components/popover';
 
 type Props = {
-  modifier?: string;
   children: ReactNode;
+  className?: string;
   highlighted?: boolean;
+  hoverable?: boolean;
+  modifier?: string;
+  onClick?: () => void;
   width?: number | string;
   withPreview?: boolean;
-  hoverable?: boolean;
-  onClick?: () => void;
-  className?: string;
 };
 
 const MOUSE_ENTER_DELAY = 0.3;
 const MAX_PREVIEW_HEIGHT = 200;
 
 const Thumbnail = ({
-  modifier = '',
   children,
+  className = '',
   highlighted = false,
+  hoverable = false,
+  modifier = '',
+  onClick,
   width = 80,
   withPreview = false,
-  hoverable = false,
-  onClick,
-  className = '',
   ...others
 }: Props) => {
   const css = classNames({

@@ -45,6 +45,7 @@ const rowTarget: DropTargetSpec<RowPropsType, DragObject, void> = {
 };
 
 const DraggableDataTable = <T extends Record<string, unknown>>({
+  className = '',
   modifier = '',
   dataSource,
   onMoveRowCallback,
@@ -123,7 +124,7 @@ const DraggableDataTable = <T extends Record<string, unknown>>({
   return (
     <DndProvider backend={HTML5Backend}>
       <DataTable
-        modifier={`l-data-table--draggable ${modifier}`}
+        modifier={`l-data-table--draggable ${modifier} ${className}`}
         onRow={onRow}
         dataSource={dataSource}
         components={components}

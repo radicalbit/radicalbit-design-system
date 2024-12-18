@@ -1,37 +1,49 @@
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconDefinition, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import {
   MouseEventHandler, ReactNode, memo, useState,
 } from 'react';
+import CopyToClipboard, { Props as CopyToClipboardProps } from '@Components/copy-to-clipboard';
+import FontAwesomeIcon from '@Components/font-awesome-icon';
+import { Props as TooltipProps } from '@Components/tooltip';
 
 type Props = {
+  className?: string,
   data: string,
   label?: ReactNode,
   modifier?: string,
   show?: boolean
+  tooltipHide?: TooltipProps,
+  tooltipReveal?: TooltipProps,
+  copyToClipboard?: CopyToClipboardProps,
 };
 
 const DataSecret = ({
+  className = '',
   data,
   label,
   modifier = '',
   show,
+  tooltipReveal,
+  tooltipHide,
+  copyToClipboard,
 }: Props) => {
   const [visible, setVisible] = useState(false);
+
+  const copyToClipboardValue: CopyToClipboardProps | undefined = copyToClipboard ? { ...copyToClipboard, link: data } : undefined;
 
   const hiddenData = '*'.repeat(data ? data.length : 0);
   const handleSetVisible: MouseEventHandler<SVGSVGElement> = (e) => {
     e.stopPropagation();
     setVisible(true);
   };
-
+  
   const handleSetHidden: MouseEventHandler<SVGSVGElement> = (e) => {
     e.stopPropagation();
     setVisible(false);
   };
-
+  
   return (
-    <div className={`m-data-secret ${modifier}`}>
+    <div className={`m-data-secret ${modifier} ${className}`}>
       {label && (
         <div className="m-data-secret__label">
           {label}
@@ -41,14 +53,16 @@ const DataSecret = ({
       {show
         ? (
           <div className="m-data-secret__data">
-            <span>{data}</span>
+            {copyToClipboard
+              ? <Data data={data} icon={faEyeSlash} tooltip={tooltipHide} copyToClipboard={copyToClipboardValue} />
+              : <Data data={data} icon={faEyeSlash} tooltip={tooltipHide} />}
           </div>
         )
         : (
           <div className="m-data-secret__data">
             {visible
-              ? <Visible data={data} onClick={handleSetHidden} />
-              : <Hidden data={hiddenData} onClick={handleSetVisible} />}
+              ? <Data data={data} icon={faEyeSlash} onClick={handleSetHidden} tooltip={tooltipHide} copyToClipboard={copyToClipboardValue} />
+              : <Data data={hiddenData} icon={faEye} onClick={handleSetVisible} tooltip={tooltipReveal} copyToClipboard={copyToClipboardValue} />}
           </div>
         )}
     </div>
@@ -56,23 +70,32 @@ const DataSecret = ({
 };
 
 type DataProps = {
-  data: string,
-  onClick: MouseEventHandler<SVGSVGElement>
+    data: string,
+    icon: IconDefinition,
+    onClick?: MouseEventHandler<SVGSVGElement>,
+    tooltip?: TooltipProps,
+    copyToClipboard?: CopyToClipboardProps,
 };
 
-const Visible = ({ data, onClick }: DataProps) => (
-  <>
-    <span>{data}</span>
-    <FontAwesomeIcon icon={faEye} onClick={onClick} />
-  </>
-);
+function Data({
+  data, onClick, icon, tooltip, copyToClipboard,
+}: DataProps) {
+  if (copyToClipboard) {
+    return (
+      <>
+        <CopyToClipboard {...copyToClipboard}>{data}</CopyToClipboard>
+        {onClick && <FontAwesomeIcon icon={icon} onClick={onClick} tooltip={tooltip} />}
+      </>
+    );
+  }
 
-const Hidden = ({ data, onClick }: DataProps) => (
-  <>
-    <span>{data}</span>
-    <FontAwesomeIcon icon={faEyeSlash} onClick={onClick} />
-  </>
-);
+  return (
+    <>
+      <span>{data}</span>
+      {onClick && <FontAwesomeIcon icon={icon} onClick={onClick} tooltip={tooltip} />}
+    </>
+  );
+}
 
 DataSecret.displayName = 'DataSecret';
 

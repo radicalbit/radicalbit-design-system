@@ -3,27 +3,29 @@ import { SearchProps } from 'antd/lib/input/Search';
 import { ChangeEventHandler } from 'react';
 
 type Props = SearchProps & {
+  modifier?: string,
   placeholder?: string,
   onSearch?: (s: string) => void,
   onChange?: ChangeEventHandler<HTMLInputElement>
 }
 
-const Search = (props: Props) => {
-  const {
-    placeholder, onSearch, onChange, ...otherProps
-  } = props;
-
-  return (
-    <InputSearch
-      placeholder={placeholder || 'Search'}
-      onSearch={onSearch}
-      onChange={onChange}
-      className="rdb-search"
-      allowClear
-      {...otherProps}
-    />
-  );
-};
+const Search = ({
+  className = '',
+  modifier = '',
+  placeholder,
+  onSearch,
+  onChange,
+  ...otherProps
+}: Props) => (
+  <InputSearch
+    placeholder={placeholder || 'Search'}
+    onSearch={onSearch}
+    onChange={onChange}
+    className={`rdb-search ${modifier} ${className}`}
+    allowClear
+    {...otherProps}
+  />
+);
 
 Search.displayName = 'Search';
 

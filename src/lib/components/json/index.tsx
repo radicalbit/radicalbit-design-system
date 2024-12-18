@@ -16,10 +16,12 @@ import {
 import React, { memo } from 'react';
 
 type Props<T> = {
+  className?: string;
   data: T;
-  itemStringMaxFields?: number;
-  expandUntil?: number;
   expandCollapseAll?: ExpandCollapseAll;
+  expandUntil?: number;
+  itemStringMaxFields?: number;
+  modifier?: string;
 };
 
 function getItemString<T>(
@@ -155,16 +157,18 @@ const defaultExpandCollapseAll = (expandUntil: number): ExpandCollapseAll => ({
 });
 
 function Json<T>({
+  className = '',
   data,
-  itemStringMaxFields = 7,
-  expandUntil = Number.MAX_SAFE_INTEGER,
   expandCollapseAll,
+  expandUntil = Number.MAX_SAFE_INTEGER,
+  itemStringMaxFields = 7,
+  modifier = '',
   ...others
 }: Props<T>) {
   const shouldExpandNodeInitially = (_: unknown, __: unknown, level: number) => level <= expandUntil;
 
   return (
-    <div className="c-json">
+    <div className={`c-json ${modifier} ${className}`}>
       <JSONTree
         collectionLimit={100}
         data={data}

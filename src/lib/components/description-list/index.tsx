@@ -12,17 +12,22 @@ type Single = {
 };
 
 type Props = {
-  list: Single | Array<Pair>;
+  className?: string,
   gridColumnCount?: number;
+  list: Single | Array<Pair>;
+  modifier?: string,
   noMargin?: boolean;
   withBorder?: boolean;
 };
 
 const DescriptionList = ({
-  list,
+  className = '',
   gridColumnCount = 3,
-  withBorder = true,
+  list,
+  modifier = '',
   noMargin,
+  withBorder = true,
+  ...other
 }: Props) => {
   const type = Array.isArray(list) ? 'pair' : 'single';
 
@@ -33,7 +38,7 @@ const DescriptionList = ({
   });
 
   return (
-    <div className="c-description-list">
+    <div className={`c-description-list ${modifier} ${className}`} {...other}>
       {!Array.isArray(list) && (
         <dl className={css}>
           <dt>{list.title}</dt>

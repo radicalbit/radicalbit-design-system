@@ -10,8 +10,8 @@ type Props = {
   label?: string;
   modifier?: string;
   onChange?: (value: boolean) => void;
-  skeleton?: boolean,
   readOnly?: string;
+  skeleton?: boolean,
 };
 
 const Switchbox = ({

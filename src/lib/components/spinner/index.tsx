@@ -3,34 +3,32 @@ import AntdSpin, { SpinProps } from 'antd/lib/spin';
 import classNames from 'classnames';
 
 type Props = SpinProps & {
-  error?: ReactNode;
-  isError?: boolean;
-  isFormWrapper?: boolean;
-  hideChildren?: boolean;
-  modifier?: string;
+  centered?: boolean;
   containerModifier?: string;
+  error?: ReactNode;
   fullHeight?: boolean;
   fullWidth?: boolean;
-  centered?: boolean;
+  hideChildren?: boolean;
+  isError?: boolean;
+  isFormWrapper?: boolean;
+  modifier?: string;
 };
 
-const Spinner = (props: Props) => {
-  const {
-    children,
-    className = '',
-    error,
-    isError,
-    isFormWrapper,
-    modifier = '',
-    centered,
-    containerModifier = '',
-    spinning,
-    hideChildren,
-    fullHeight = true,
-    fullWidth = true,
-    ...otherProps
-  } = props;
-
+const Spinner = ({
+  children,
+  className = '',
+  error,
+  isError,
+  isFormWrapper,
+  modifier = '',
+  centered,
+  containerModifier = '',
+  spinning,
+  hideChildren,
+  fullHeight = true,
+  fullWidth = true,
+  ...otherProps
+}: Props) => {
   const isSpinning = spinning === undefined ? false : spinning;
 
   const css = classNames({
