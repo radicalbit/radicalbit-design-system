@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.2](https://github.com/radicalbit/radicalbit-design-system/compare/v1.7.1...v1.7.2) (2024-12-18)
+
+
+### Bug Fixes
+
+* forward className to the underneath Antd component ([#31](https://github.com/radicalbit/radicalbit-design-system/issues/31)) ([6028824](https://github.com/radicalbit/radicalbit-design-system/commit/602882473a4395b63a03188b19595d2adfb7ef93))
+
 ## [1.7.1](https://github.com/radicalbit/radicalbit-design-system/compare/v1.7.0...v1.7.1) (2024-12-04)
 
 
