@@ -1,13 +1,11 @@
 import { memo, useState } from 'react';
-import AntdDatePicker from 'antd/lib/date-picker';
+import AntdDatePicker, { RangePickerProps } from 'antd/lib/date-picker';
 import classNames from 'classnames';
-import { RangePickerProps } from 'antd/lib/date-picker/generatePicker';
-import { Moment } from 'moment';
 import { Skeleton } from 'antd';
 
 const { RangePicker: AntdRangePicker } = AntdDatePicker;
-type Props = RangePickerProps<Moment> & {
-  allowClear?: boolean;
+
+type Props = RangePickerProps & {
   dateFormat?: string;
   modifier?: string;
   openOnHover?: boolean;
