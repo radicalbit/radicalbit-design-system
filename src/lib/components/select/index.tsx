@@ -3,7 +3,6 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import Skeleton from '@Components/skeleton';
-import { ScrollTo } from 'rc-tree/lib/interface';
 
 export type Props = SelectProps & {
   asTag?: boolean;
@@ -12,11 +11,6 @@ export type Props = SelectProps & {
   modifier?: string;
   noBorder?: boolean;
   readOnly?: boolean;
-  ref?: React.RefObject<{
-    focus: () => void;
-    blur: () => void;
-    scrollTo: ScrollTo;
-  }>;
   skeleton?: boolean,
   suffixIcon?: React.ReactNode;
   value?: string;
@@ -32,7 +26,6 @@ const Select = ({
   modifier = '',
   noBorder = false,
   readOnly,
-  ref,
   removeIcon,
   skeleton,
   suffixIcon = (
@@ -60,7 +53,6 @@ const Select = ({
 
   return (
     <AntdSelect
-      ref={ref}
       disabled={disabled}
       className={`c-select ${css} ${modifier} ${className}`}
       suffixIcon={suffixIcon}
