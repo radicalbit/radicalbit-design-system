@@ -66,7 +66,7 @@ const LeftColumn = (props: LeftProps) => {
     }
     : {};
 
-  const colorBackgroundStyle = { backgroundColor } ?? {};
+  const colorBackgroundStyle = backgroundColor ? { backgroundColor } : {};
 
   const customStyles = { ...colorBackgroundStyle, ...imgBackgroundStyle };
 

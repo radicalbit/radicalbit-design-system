@@ -1,4 +1,4 @@
-import { faChevronLeft, faChevronRight, } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import ReactTour, { ReactourProps } from 'reactour';

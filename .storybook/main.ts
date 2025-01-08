@@ -1,29 +1,29 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const path = require('path');
 const config = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
 
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-onboarding",
-    "@storybook/addon-interactions",
-    "@storybook/addon-styling-webpack",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-onboarding',
+    '@storybook/addon-interactions',
+    '@storybook/addon-styling-webpack',
     ({
-      name: "@storybook/addon-styling-webpack",
+      name: '@storybook/addon-styling-webpack',
 
       options: {
         rules: [{
           test: /\.(less)$/,
           sideEffects: true,
           use: [
-            require.resolve("style-loader"),
+            require.resolve('style-loader'),
             {
-              loader: require.resolve("css-loader"),
+              loader: require.resolve('css-loader'),
               options: {},
             },
             {
-              loader: require.resolve("less-loader"),
+              loader: require.resolve('less-loader'),
               options: {
                 lessOptions: {
                   javascriptEnabled: true,
@@ -35,25 +35,25 @@ const config = {
               },
             },
           ],
-        },],
-      }
+        }],
+      },
     }),
     '@storybook/addon-webpack5-compiler-swc',
-    '@chromatic-com/storybook'
+    '@chromatic-com/storybook',
   ],
 
   swc: () => ({
     jsc: {
       transform: {
         react: {
-          runtime: 'automatic'
-        }
-      }
-    }
+          runtime: 'automatic',
+        },
+      },
+    },
   }),
   
   framework: {
-    name: "@storybook/react-webpack5",
+    name: '@storybook/react-webpack5',
     options: {
       builder: {},
     },
@@ -67,7 +67,7 @@ const config = {
         esModuleInterop: false,
       },
       shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) => prop.name.includes('aria') ? false : true,
+      propFilter: (prop) => !prop.name.includes('aria'),
     },
   },
 
@@ -83,15 +83,14 @@ const config = {
       '@Images': path.resolve(__dirname, '../src/lib/resources/images/'),
     };
 
-    const fileLoaderRule = config.module.rules.find(rule => rule.test && rule.test.test('.svg'));
-    fileLoaderRule.exclude = /\.svg$/;  
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/;
 
     config.module.rules.push({
       test: /\.svg$/i,
       type: 'asset',
       resourceQuery: /url/, // *.svg?url
     });
-    
 
     config.module.rules.push({
       test: /\.svg$/i,
