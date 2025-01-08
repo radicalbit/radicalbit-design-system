@@ -37,7 +37,9 @@ const config = {
           ],
         },],
       }
-    })
+    }),
+    '@storybook/addon-webpack5-compiler-swc',
+    '@chromatic-com/storybook'
   ],
 
   swc: () => ({
@@ -53,9 +55,7 @@ const config = {
   framework: {
     name: "@storybook/react-webpack5",
     options: {
-      builder: {
-        useSWC: true,
-      },
+      builder: {},
     },
   },
 
@@ -103,9 +103,7 @@ const config = {
     return config;
   },
   
-  docs: {
-    autodocs: "tag",
-  },
+  docs: {},
 };
 
 export default config;
