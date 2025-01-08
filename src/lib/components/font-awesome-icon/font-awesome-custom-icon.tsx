@@ -32,7 +32,7 @@ const FontAwesomeCustomIcon = ({
     [`c-font-awesome-custom-icon--${type}`]: type,
   });
 
-  const elementAttributes = { className : `c-font-awesome-custom-icon svg-inline--fa ${modifier} ${className} ${css}`, onClick, ...other }
+  const elementAttributes = { className: `c-font-awesome-custom-icon svg-inline--fa ${modifier} ${className} ${css}`, onClick, ...other };
 
   return cloneElement(
     children,

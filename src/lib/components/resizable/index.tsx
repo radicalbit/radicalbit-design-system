@@ -1,6 +1,8 @@
 import usePersistScrollPosition from '@Src/hooks/usePersistScrollPosition';
 import classNames from 'classnames';
-import React, { ReactElement, ReactNode, memo, useRef } from 'react';
+import React, {
+  ReactElement, ReactNode, memo, useRef,
+} from 'react';
 import reactIs from 'react-is';
 import DraggableDivider from './DraggableDivider';
 
@@ -22,7 +24,7 @@ const Resizable = ({ bottom, modifier = '', top }: Props) => {
   */
   const css = classNames({
     'l-resizable--bottom-closed':
-      !bottom || (reactIs.isFragment(bottom) && !(bottom?.props as any)?.children), 
+      !bottom || (reactIs.isFragment(bottom) && !(bottom?.props as any)?.children),
   });
 
   usePersistScrollPosition(topRef, [top, bottom]);
