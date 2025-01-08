@@ -25,7 +25,7 @@ const handleDragStart: React.DragEventHandler = (event) => {
   );
 };
 
-const handleDrop = (event: DragEvent, ref: React.RefObject<HTMLDivElement>) => {
+const handleDrop = (event: DragEvent, ref: React.RefObject<HTMLDivElement | null>) => {
   if (!event.dataTransfer) { return false; }
 
   const [left, top] = event.dataTransfer.getData('text/plain').split(',');

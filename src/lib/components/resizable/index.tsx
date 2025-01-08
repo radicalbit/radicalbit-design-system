@@ -1,6 +1,6 @@
 import usePersistScrollPosition from '@Src/hooks/usePersistScrollPosition';
 import classNames from 'classnames';
-import React, { ReactElement, memo, useRef } from 'react';
+import React, { ReactElement, ReactNode, memo, useRef } from 'react';
 import reactIs from 'react-is';
 import DraggableDivider from './DraggableDivider';
 
@@ -16,9 +16,13 @@ const Resizable = ({ bottom, modifier = '', top }: Props) => {
   const bottomRef = useRef(null);
   const resizableRef = useRef(null);
 
+  /*
+  * "as any" cast is a workaround to use children prop.
+  * if you not cast it the props to be casted as unknown and get error
+  */
   const css = classNames({
     'l-resizable--bottom-closed':
-      !bottom || (reactIs.isFragment(bottom) && !bottom?.props?.children),
+      !bottom || (reactIs.isFragment(bottom) && !(bottom?.props as any)?.children), 
   });
 
   usePersistScrollPosition(topRef, [top, bottom]);
