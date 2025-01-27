@@ -57,7 +57,7 @@ const Pin = ({
       className={`m-pin__badge ${hoverable} ${cssBadge} ${modifier} ${className}`}
       onClick={onClick}
       role="presentation"
-      style={style}
+      style={pinStyle}
     >
       &nbsp;
     </a>
