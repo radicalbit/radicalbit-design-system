@@ -1,12 +1,13 @@
-import AntdSpin, { SpinProps } from 'antd/lib/spin';
+import AntdSpin, { SpinProps } from 'antd/es/spin';
 import { memo } from 'react';
 
-export interface Props extends SpinProps {
+interface Props extends SpinProps {
   modifier?: string;
 }
 
 const Spin = ({
   className = '',
+  delay,
   modifier = '',
   spinning,
   ...otherProps
@@ -16,6 +17,7 @@ const Spin = ({
   return (
     <AntdSpin
       spinning={showSpinner}
+      delay={delay}
       className={`rdb-spin ${modifier} ${className}`}
       {...otherProps}
     />

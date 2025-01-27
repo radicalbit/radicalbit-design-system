@@ -3,7 +3,7 @@ import Avatar from '@Components/avatar';
 import Popover from '@Components/popover';
 import Tooltip from '@Components/tooltip';
 import { PopoverProps } from 'antd';
-import { AvatarProps } from 'antd/lib/skeleton/Avatar';
+import { AvatarProps } from 'antd/es/skeleton/Avatar';
 
 type Props = {
   actions?: { one?: ReactNode; two?: ReactNode };
@@ -14,27 +14,27 @@ type Props = {
   popoverWidth?: number;
   size?: AvatarProps['size'];
   title?: ReactNode;
-  trigger?: string | string[];
-  userAbbreviation?: string;
-  userAvatarPath?: string;
+  userAbbreviation: string;
+  userAvatarPath: string;
   userClassification?: string;
   userName?: string;
+  popoverProps?: PopoverProps
 };
 
 const UserAvatar = ({
   className = '',
   content,
   modifier = '',
-  placement,
-  popoverWidth = 300,
   size,
-  title,
-  trigger = 'hover',
   userAbbreviation,
   userAvatarPath,
   userClassification,
   userName,
+  popoverProps,
+  popoverWidth = 300,
 }: Props) => {
+  const trigger = popoverProps?.trigger || 'hover';
+
   const popoverContent = (
     <div className="l-user-avatar__content">{content}</div>
   );
@@ -46,9 +46,8 @@ const UserAvatar = ({
           noPadding
           minWidth={popoverWidth}
           content={popoverContent}
-          title={title}
           trigger={trigger}
-          placement={placement}
+          {...popoverProps}
         >
           <Avatar size={size} src={userAvatarPath}>
             {userAbbreviation}
@@ -75,7 +74,6 @@ const UserAvatar = ({
 
 UserAvatar.defaultProps = {
   placement: 'rightBottom',
-  trigger: 'hover',
 };
 
 UserAvatar.displayName = 'UserAvatar';

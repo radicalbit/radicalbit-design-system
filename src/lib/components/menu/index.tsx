@@ -1,4 +1,4 @@
-import AntdMenu, { MenuProps } from 'antd/lib/menu';
+import AntdMenu, { MenuProps } from 'antd/es/menu';
 import classNames from 'classnames';
 
 type Props = MenuProps & {

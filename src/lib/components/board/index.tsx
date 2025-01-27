@@ -5,9 +5,9 @@ type Props = {
   backgroundImage?: string;
   borderType?: 'light' | 'none';
   buttonPosition?: 'vertical' | 'adaptive';
-  className?: string,
-  dark?:boolean,
+  className?: string;
   footer?: ReactNode;
+  dark?: boolean,
   header?: ReactNode;
   height?: string;
   hoverType?: 'primary' | 'secondary' | 'rounded' | 'add-new';
@@ -38,17 +38,14 @@ function Board({
   borderType,
   buttonPosition,
   className = '',
-  dark = false,
   footer,
   header,
+  dark = false,
   height = undefined,
-  hoverType,
   main,
   mainType,
   mode,
   modifier = '',
-  noBackground = false,
-  onClick,
   primaryColor = undefined,
   secondary,
   secondaryType,
@@ -56,6 +53,9 @@ function Board({
   status,
   type,
   width = undefined,
+  noBackground = false,
+  hoverType,
+  onClick,
 }: Props) {
   const [isHover, setIsHover] = useState(false);
 

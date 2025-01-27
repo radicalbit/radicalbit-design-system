@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import AntdTimePicker, { TimePickerProps } from 'antd/lib/time-picker';
+import AntdTimePicker, { TimePickerProps } from 'antd/es/time-picker';
 import classNames from 'classnames';
 
 type Props = TimePickerProps & {

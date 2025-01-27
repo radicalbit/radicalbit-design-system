@@ -1,6 +1,7 @@
 .rdb-tabs,
 .c-tabs {
 	color: var(--coo-dark);
+	font-family: var(--coo-header-font);
 
 	.ant-tabs-tab-disabled {
 		opacity: .4;
@@ -13,19 +14,23 @@
 		}
 	}
 
+	.ant-tabs-tab {
+		color: var(--coo-dark);
+	}
+
 	.ant-tabs {
 		&-nav {
 			margin: 0;
 
 			.ant-tabs-tab {
-				margin: 0 2rem 0 0;
-				padding: .5rem 1rem;
-				font-size: 1rem;
-				line-height: 1.15;
-				border-bottom: 1px solid var(--coo-secondary-03);
-
 				&-active {
+					color: var(--coo-primary);
 					font-weight: var(--coo-font-weight-bold);
+
+					.ant-tabs-tab-btn {
+						color: var(--coo-primary);
+						font-weight: var(--coo-font-weight-bold);
+					}
 				}
 			}
 		}
@@ -34,6 +39,7 @@
 			margin: 0;
 		}
 	}
+
 
 	&.ant-tabs {
 		.ant-tabs-content,
@@ -77,6 +83,7 @@
 			margin: 0;
 		}
 	}
+
 
 	&--size-large {
 		> .ant-tabs-nav .ant-tabs-nav-wrap {
@@ -125,5 +132,12 @@
 		div.ant-tabs-nav::before {
 			border-bottom: 0;
 		}
+	}
+
+	.ant-tabs-top > .ant-tabs-nav::before,
+	.ant-tabs-bottom > .ant-tabs-nav::before,
+	.ant-tabs-top > div > .ant-tabs-nav::before,
+	.ant-tabs-bottom > div > .ant-tabs-nav::before {
+		border-color: var(--coo-secondary-03);
 	}
 }

@@ -49,15 +49,16 @@ const DynamicTable = <T extends Record<string, unknown>>(
   {
     className = '',
     dataSource,
+    modifier = '',
     pagination,
     ...otherProps
-  }: DataTableProps<T>
-) => {
+  }: DataTableProps<T>) => {
   const items = isArray(dataSource) ? dataSource : [dataSource];
 
   return (
     <DataTable
       className={`c-table-responsive ${className}`}
+      modifier={modifier}
       pagination={pagination}
       columns={getColumnsFromKeys(items)}
       dataSource={getDataSource(items)}

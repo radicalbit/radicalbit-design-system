@@ -1,4 +1,4 @@
-import AntdAlert, { AlertProps } from 'antd/lib/alert';
+import AntdAlert, { AlertProps } from 'antd/es/alert';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -13,7 +13,7 @@ export interface Props extends AlertPropsOmitted {
 }
 
 const Alert = ({
-  className,
+  className = '',
   modifier,
   mode,
   alignment,

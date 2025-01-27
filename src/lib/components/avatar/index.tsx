@@ -1,4 +1,4 @@
-import AntdAvatar, { AvatarProps } from 'antd/lib/avatar';
+import AntdAvatar, { AvatarProps } from 'antd/es/avatar';
 
 export interface Props extends AvatarProps {
   className?: string,

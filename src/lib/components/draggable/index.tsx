@@ -62,11 +62,12 @@ const Draggable = ({
   });
 
   const ref = useRef(null);
-
+    
   useEffect(() => {
     const target = containerRef && containerRef.current ? containerRef.current : window.document;
     target.ondrop = (e: DragEvent) => handleDrop(e, ref);
     target.ondragover = handleDragOver;
+
     if (containerRef?.current && containerClassName) {
       containerRef.current.className = `${containerRef.current.className} ${containerClassName}`;
     }

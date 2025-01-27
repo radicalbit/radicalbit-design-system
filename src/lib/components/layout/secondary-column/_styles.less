@@ -53,7 +53,7 @@
 
 	.page-title {
 		height: @rdb-header-height !important;
-		padding: @padding-xs @rdb-padding-default;
+		padding: .5rem 1rem;
 		border-bottom: 1px solid var(--coo-secondary-03);
 
 		.page-title-content {
@@ -93,6 +93,10 @@
 					border-bottom: .06rem solid var(--coo-secondary-03);
 					border-radius: 0;
 				}
+			}
+
+			.ant-menu-item-selected {
+				background-color: rgba(var(--coo-rgb-primary), .4);
 			}
 
 			&.rdb-layout-secondary-column-content {

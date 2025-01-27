@@ -1,7 +1,7 @@
 import {
   Button as AntRadioButton,
-} from 'antd/lib/radio';
-import { RadioButtonProps } from 'antd/lib/radio/radioButton';
+} from 'antd/es/radio';
+import { RadioButtonProps } from 'antd/es/radio/radioButton';
   
 const Button = (props: RadioButtonProps) => <AntRadioButton {...props} />;
   

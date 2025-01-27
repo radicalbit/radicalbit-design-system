@@ -25,8 +25,8 @@ export type Props = {
 };
 
 const Pin = ({
-  className = '',
   color,
+  className = '',
   justify = 'center',
   label,
   modifier = '',
@@ -57,7 +57,7 @@ const Pin = ({
       className={`m-pin__badge ${hoverable} ${cssBadge} ${modifier} ${className}`}
       onClick={onClick}
       role="presentation"
-      style={pinStyle}
+      style={style}
     >
       &nbsp;
     </a>

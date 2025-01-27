@@ -1,4 +1,4 @@
-import AntdProgress, { ProgressProps } from 'antd/lib/progress';
+import AntdProgress, { ProgressProps } from 'antd/es/progress';
 
 const Progress = (props: ProgressProps) => <AntdProgress {...props} />;
 

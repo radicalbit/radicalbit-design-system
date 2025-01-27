@@ -25,6 +25,7 @@ type Story = StoryObj<typeof RbitModal>;
 export const Default: Story = {
   args: {
     dark: false,
+    maximize: false,
     closable: true,
   },
   render: (props) => {

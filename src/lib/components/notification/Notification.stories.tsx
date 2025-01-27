@@ -50,7 +50,7 @@ export const Default: Story = {
   args: {
     ...commonArgs,
   },
-
+  
   render: (props) => {
     const handleClick = () => {
       notification.open(props);

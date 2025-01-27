@@ -1,9 +1,9 @@
-import AntdDropdown, { DropdownProps } from 'antd/lib/dropdown';
+import AntdDropdown, { DropdownProps } from 'antd/es/dropdown';
 import classNames from 'classnames';
 
-export interface Props extends DropdownProps {
+type Props = DropdownProps & {
   modifier?: string;
-}
+};
 
 const Dropdown = ({
   className = '',
@@ -15,7 +15,7 @@ const Dropdown = ({
   const clickable = Array.isArray(trigger)
     ? trigger.includes('click')
     : trigger === 'click';
-  
+    
   const cssChild = classNames({
     'c-dropdown__child--clickable': clickable,
   });

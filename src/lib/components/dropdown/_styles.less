@@ -1,10 +1,16 @@
-.c-dropdown {
+.c-dropdown.ant-dropdown {
 	.ant-dropdown-menu {
 		.ant-dropdown-menu-item {
 			color: var(--coo-secondary);
-			font-size: @rdb-font-size-s;
-			padding: @padding-xs @rdb-padding-default;
 			font-weight: var(--coo-font-weight-light);
+
+			&.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled) {
+				color: var(--coo-error);
+
+				&:hover {
+					background: rgba(var(--coo-rgb-primary-02), .2);
+				}
+			}
 
 			&-disabled {
 				opacity: .4;
@@ -15,7 +21,7 @@
 
 	.ant-dropdown-trigger {
 		font-weight: var(--coo-font-weight-normal);
-		font-size: @rdb-font-size-s;
+		font-size: .8rem;
 	}
 
 	&__child {

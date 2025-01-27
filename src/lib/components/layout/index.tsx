@@ -1,19 +1,23 @@
 import classNames from 'classnames';
-import AntdLayout from 'antd/lib/layout';
-
+import AntdLayout from 'antd/es/layout';
 import Theme, { ThemeProps } from '@Components/layout/themes';
 import OverallTop, { OverallTopProps } from '@Components/layout/overall-top';
 import { memo } from 'react';
+import { ConfigProvider } from 'antd';
+import { ConfigProviderProps } from 'antd/lib';
 
 type Props = ThemeProps & {
   overallTop?: {
     overallTopContent?: OverallTopProps['content'];
     hasContentDark?: OverallTopProps['contentDark'];
   };
+  configProviderOptions?: ConfigProviderProps;
   hasOverallTop?: boolean;
 };
 
-const Layout = ({ overallTop, hasOverallTop, ...others }: Props) => {
+const Layout = ({
+  overallTop, hasOverallTop, configProviderOptions, ...others
+}: Props) => {
   const css = classNames({
     'rdb-layout': true,
     'has-overall-top': hasOverallTop,
@@ -32,8 +36,21 @@ const Layout = ({ overallTop, hasOverallTop, ...others }: Props) => {
   const overallTopContent = overallTop?.overallTopContent;
   const hasContentDark = overallTop?.hasContentDark;
 
+  const defaultConfigProviderOptions : ConfigProviderProps = {
+    theme: {
+      hashed: false,
+    },
+    wave: {
+      disabled: true,
+    },
+  };
+
+  const providerConfiguration = configProviderOptions ?? defaultConfigProviderOptions;
+
   return (
-    <>
+    <ConfigProvider
+      {...providerConfiguration}
+    >
       {hasOverallTop && (
         <OverallTop content={overallTopContent} contentDark={hasContentDark} />
       )}
@@ -41,7 +58,7 @@ const Layout = ({ overallTop, hasOverallTop, ...others }: Props) => {
       <AntdLayout className={css}>
         <Theme {...others} />
       </AntdLayout>
-    </>
+    </ConfigProvider>
   );
 };
 

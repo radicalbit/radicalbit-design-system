@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
 import { memo, useState } from 'react';
-import AntdModal, { ModalProps } from 'antd/lib/modal';
+import AntdModal, { ModalProps } from 'antd/es/modal';
 
 type Props = ModalProps & {
   actions?: React.ReactNode;

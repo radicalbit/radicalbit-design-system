@@ -1,13 +1,13 @@
 import { Skeleton } from 'antd';
-import AntdInput, { TextAreaProps } from 'antd/lib/input';
-import { TextAreaRef } from 'antd/lib/input/TextArea';
+import AntdInput, { TextAreaProps } from 'antd/es/input';
+import { TextAreaRef } from 'antd/es/input/TextArea';
 import classNames from 'classnames';
 import { Ref, forwardRef } from 'react';
 
 const { TextArea: AntdTextArea } = AntdInput;
 
 type Props = TextAreaProps & {
-  modifier?: string,
+  modifier?: string;
   skeleton?: boolean
 }
 
@@ -34,7 +34,7 @@ const TextArea = forwardRef(({
   return (
     <AntdTextArea
       readOnly={readOnly}
-      className={`c-text-area ${modifier} ${css} ${className}`}
+      className={`c-text-area ${className} ${modifier} ${css}`}
       value={valueOrElse}
       ref={ref}
       {...rest}

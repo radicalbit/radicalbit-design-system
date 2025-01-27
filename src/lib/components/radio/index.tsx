@@ -1,4 +1,4 @@
-import AntdRadio, { RadioProps } from 'antd/lib/radio';
+import AntdRadio, { RadioProps } from 'antd/es/radio';
 import Button from './button';
 import Group from './group';
 

@@ -1,5 +1,5 @@
 import { Search as InputSearch } from '@Components/input';
-import { SearchProps } from 'antd/lib/input/Search';
+import { SearchProps } from 'antd/es/input/Search';
 import { ChangeEventHandler } from 'react';
 
 type Props = SearchProps & {

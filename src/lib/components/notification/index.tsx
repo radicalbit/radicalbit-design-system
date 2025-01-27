@@ -1,15 +1,15 @@
-import notification, { ConfigProps, ArgsProps } from 'antd/lib/notification';
+import { ArgsProps } from 'antd/es/notification';
+import notification from 'antd/lib/notification';
+import { GlobalConfigProps } from 'antd/lib/notification/interface';
 import classNames from 'classnames';
 
 const DEFAULT_DURATION = 12;
 
-export type NotificationConfig = Omit<ConfigProps, 'duration'> &
+export type NotificationConfig = GlobalConfigProps &
   Omit<ArgsProps, 'type'> & {
-    duration?: number | null;
     iconWithBorder?: boolean;
     modifier?: string;
-    onClick?: () => void;
-    type?: 'running' | 'completed' | 'success' | 'error';
+    type?: ArgsProps['type'] | 'running' | 'completed' | 'success' | 'error';
   };
 
 export default {
@@ -19,18 +19,16 @@ export default {
     duration = DEFAULT_DURATION,
     iconWithBorder = true,
     modifier = '',
-    onClick,
     type,
     ...others
   }: NotificationConfig) => {
     const css = classNames({
-      'c-notification--clickable': !!onClick,
+      'c-notification--clickable': !!others.onClick,
       [`c-notification--type-${type}`]: type,
       'c-notification--icon-with-border': iconWithBorder,
     });
     notification.open({
       ...others,
-      onClick,
       className: `c-notification ${css} ${modifier} ${className}`,
       duration,
     });

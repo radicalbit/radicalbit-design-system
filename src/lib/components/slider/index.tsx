@@ -1,4 +1,4 @@
-import AntdSlider, { SliderBaseProps } from 'antd/lib/slider';
+import AntdSlider, { SliderBaseProps } from 'antd/es/slider';
 
 type Props = SliderBaseProps & {
   modifier?: string;

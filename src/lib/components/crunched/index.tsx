@@ -4,15 +4,12 @@ import { useState } from 'react';
 export type CrunchedProps = {
   className?: string;
   modifier?: string;
-  text?: string;
   type: 'success' | 'processing' | 'default' | 'error' | 'warning';
+  text?: string;
 };
 
 const Crunched = ({
-  className = '',
-  modifier = '',
-  type,
-  text,
+  className = '', modifier = '', type, text,
 }: CrunchedProps) => {
   const [messageIsVisible, setMessageVisible] = useState(false);
 

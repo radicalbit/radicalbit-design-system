@@ -1,4 +1,4 @@
-import AntdLayout from 'antd/lib/layout';
+import AntdLayout from 'antd/es/layout';
 import classNames from 'classnames';
 import { CSSProperties, ReactNode, memo } from 'react';
 

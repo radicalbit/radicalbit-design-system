@@ -7,6 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 type Props = ReactourProps & {
+  className?: string;
   modifier?: string;
   mode?: 'light' | 'dark';
 };

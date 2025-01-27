@@ -1,3 +1,3 @@
-import Col from 'antd/lib/col';
+import Col from 'antd/es/col';
 
 export default Col;

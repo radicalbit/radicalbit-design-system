@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 type Props = {
-  className?: string,
+  className?: string;
   modifier?: string;
   onChange: (value: string) => void;
   options: Option[];

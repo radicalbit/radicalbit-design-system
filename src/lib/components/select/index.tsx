@@ -3,42 +3,35 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import Skeleton from '@Components/skeleton';
-import { ScrollTo } from 'rc-tree/lib/interface';
 
 export type Props = SelectProps & {
   asTag?: boolean;
-  dark?: boolean
-  minWidth?: number | string;
   modifier?: string;
   noBorder?: boolean;
   readOnly?: boolean;
-  ref?: React.RefObject<{
-    focus: () => void;
-    blur: () => void;
-    scrollTo: ScrollTo;
-  }>;
   skeleton?: boolean,
   suffixIcon?: React.ReactNode;
   value?: string;
+  minWidth?: number | string;
+  dark?: boolean
 };
 
-const Select = ({
+const SelectComponent = ({
   asTag,
   children,
   className = '',
-  dark = false,
   disabled,
-  minWidth,
   modifier = '',
   noBorder = false,
   readOnly,
-  ref,
-  removeIcon,
-  skeleton,
   suffixIcon = (
     <FontAwesomeIcon icon={faAngleDown} className="c-select-arrow" />
   ),
   value,
+  minWidth,
+  removeIcon,
+  skeleton,
+  dark = false,
   ...others
 }: Props) => {
   const css = classNames({
@@ -60,7 +53,6 @@ const Select = ({
 
   return (
     <AntdSelect
-      ref={ref}
       disabled={disabled}
       className={`c-select ${css} ${modifier} ${className}`}
       suffixIcon={suffixIcon}
@@ -76,8 +68,11 @@ const Select = ({
 
 const { Option } = AntdSelect;
 
-Select.displayName = 'Select';
+type TSelectComponent = typeof SelectComponent & {
+  Option: typeof Option;
+};
 
+const Select = SelectComponent as TSelectComponent;
 Select.Option = Option;
 
 export { Option };

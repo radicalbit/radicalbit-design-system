@@ -1,14 +1,16 @@
 import Button, { Props as ButtonProps } from '@Components/button';
 import { memo, useState } from 'react';
 
-export interface Props extends ButtonProps {
+type Props = {
+  className?: string;
   icon?: React.ReactNode;
   link: string;
-  modifier?: string,
+  modifier?: string;
   onCopied?: () => void;
   successText?: string;
   text?: string;
-}
+  type?: ButtonProps['type'];
+};
 
 const COPIED = 'Copied!';
 

@@ -1,4 +1,4 @@
-import AntdInput, { InputProps, InputRef } from 'antd/lib/input';
+import AntdInput, { InputProps, InputRef } from 'antd/es/input';
 import classNames from 'classnames';
 import { Ref, forwardRef } from 'react';
 import Skeleton from '@Components/skeleton';

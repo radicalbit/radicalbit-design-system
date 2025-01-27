@@ -1,4 +1,4 @@
-import LibDivider, { DividerProps } from 'antd/lib/divider';
+import LibDivider, { DividerProps } from 'antd/es/divider';
 
 const Divider = (props: DividerProps) => <LibDivider {...props} />;
 

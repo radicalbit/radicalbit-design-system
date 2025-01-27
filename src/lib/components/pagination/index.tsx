@@ -1,11 +1,11 @@
 import { PropsWithChildren, ReactNode } from 'react';
-import AntdPagination, { PaginationProps } from 'antd/lib/pagination';
+import AntdPagination, { PaginationProps } from 'antd/es/pagination';
 
 export interface Props extends PropsWithChildren<PaginationProps> {
   children?: ReactNode;
   current?: number;
   defaultCurrent?: number;
-  modifier?: string;
+  modifier?: string,
   onChange?: (page: number) => void;
   onShowSizeChange?: (current: number, size: number) => void;
   showSizeChanger?: boolean;
@@ -14,12 +14,12 @@ export interface Props extends PropsWithChildren<PaginationProps> {
 
 const Pagination = ({
   className = '',
-  modifier = '',
-  showSizeChanger,
-  onShowSizeChange,
-  onChange,
   current,
   defaultCurrent,
+  modifier = '',
+  onChange,
+  onShowSizeChange,
+  showSizeChanger,
   total,
   ...others
 }: Props) => (

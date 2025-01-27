@@ -1,4 +1,4 @@
-import AntdTransfer, { TransferItem, TransferProps } from 'antd/lib/transfer';
+import AntdTransfer, { TransferItem, TransferProps } from 'antd/es/transfer';
 import classNames from 'classnames';
 
 export interface Props<T extends TransferItem> extends TransferProps<T>{

@@ -1,4 +1,4 @@
-import LibraryAffix, { AffixProps } from 'antd/lib/affix';
+import LibraryAffix, { AffixProps } from 'antd/es/affix';
 
 const Affix = (props: AffixProps) => <LibraryAffix {...props} />;
 

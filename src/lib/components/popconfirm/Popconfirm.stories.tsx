@@ -10,9 +10,9 @@ const meta: Meta<typeof Popconfirm> = {
   parameters: {
     layout: 'centered',
   },
-
+  
   tags: ['autodocs'],
-
+ 
   argTypes: {
     ...mapReactNodeArgsTypes(['title']),
     icon: {
@@ -29,7 +29,7 @@ type Story = StoryObj<typeof Popconfirm>;
 
 export const Default: Story = {
   args: { label: 'Click me' },
-
+  
 };
 
 export default meta;

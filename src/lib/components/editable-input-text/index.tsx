@@ -2,9 +2,9 @@ import { Input } from '@Components/input';
 import { memo, useEffect, useState } from 'react';
 
 type Props = {
+  className?: string;
   autoFocus?: boolean;
-  className?: string,
-  modifier?: string,
+  modifier?: string;
   onBlur?: (v: string) => void;
   onPressEnter?: (v: string) => void;
   placeholder?: string;

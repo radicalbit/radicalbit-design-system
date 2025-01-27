@@ -1,7 +1,7 @@
 import {
   Group as AntRadioGroup,
   RadioGroupProps,
-} from 'antd/lib/radio';
+} from 'antd/es/radio';
 import classNames from 'classnames';
   
 export type GroupProps = RadioGroupProps &

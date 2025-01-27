@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { InputProps } from 'antd';
 
 type Body = {
-  key: string;
   content: ReactNode;
+  key: string;
   suffix: ReactNode;
 };
 
@@ -20,8 +20,8 @@ type Props = InputProps & {
 };
 
 const ToolsBox = ({
-  body,
   className = '',
+  body,
   footer,
   header,
   modifier = '',

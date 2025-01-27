@@ -1,6 +1,7 @@
 .l-board {
 	display: flex;
 	flex-direction: column;
+	border-radius: var(--coo-border-radius-small);
 	background-color: var(--coo-white-bk);
 	color: var(--coo-dark);
 	padding: 1.5rem;
@@ -8,14 +9,12 @@
 	line-height: 1.2;
 	position: relative;
 	border: 1px solid var(--coo-secondary-03);
-	border-radius: var(--coo-border-radius-small);
 	min-height: 0;
 
 	&:hover {
 		.l-header {
 			&__actions {
 				opacity: 1;
-				transition: @ease-base-in;
 			}
 		}
 	}
@@ -27,7 +26,6 @@
 
 			&__actions {
 				opacity: 0;
-				transition: @ease-base-out;
 				font-size: 1rem;
 				flex-direction: row;
 				gap: .8rem;
@@ -62,10 +60,6 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 			line-height: 1.3rem;
-		}
-
-		p {
-			margin-bottom: 0;
 		}
 
 		&--type-wide-center {
@@ -303,7 +297,7 @@
 
 		&-error {
 			color: var(--coo-error);
-			background-color: var(--coo-alert-bk);
+			background-color: rgb(255 5 5 / 3%);
 		}
 	}
 

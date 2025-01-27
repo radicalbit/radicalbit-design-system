@@ -1,4 +1,4 @@
-import AntModal, { ModalProps } from 'antd/lib/modal';
+import AntModal, { ModalProps } from 'antd/es/modal';
 import classNames from 'classnames';
 import { MouseEventHandler, useState } from 'react';
 import FontAwesomeIcon from '@Components/font-awesome-icon';
@@ -17,18 +17,19 @@ type Props = ModalProps & {
   onMaximize?: (p: boolean) => void;
 };
 
-function Modal({
-  children,
-  className = '',
-  dark,
-  defaultMaximize = false,
-  maximize,
-  maximizable,
-  modifier = '',
-  onMaximize,
-  width,
-  ...rest
-}: Props): React.ReactElement<typeof AntModal> {
+function Modal(props: Props): React.ReactElement<typeof AntModal> {
+  const {
+    children,
+    className = '',
+    dark,
+    defaultMaximize = false,
+    maximize,
+    maximizable,
+    modifier = '',
+    onMaximize,
+    width,
+    ...rest
+  } = props;
   const [isMaximize, setIsMaximize] = useState<boolean>(defaultMaximize);
 
   // Controlled if maximize is not undefined, Uncontroller otherwise
@@ -69,7 +70,7 @@ function Modal({
           )}
 
           <FontAwesomeIcon
-            className="c-modal__top-right-ico__close c-font-awesome-icon--clickable"
+            className="c-font-awesome-icon--clickable"
             icon={faClose}
             enableColorMode
           />

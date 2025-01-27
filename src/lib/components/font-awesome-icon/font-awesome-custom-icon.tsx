@@ -3,8 +3,8 @@ import { MouseEventHandler, ReactElement, cloneElement } from 'react';
 import * as FontAwesomeSvgCore from '@fortawesome/fontawesome-svg-core';
 
 interface Props {
-  children: ReactElement
   className?: string;
+  children: ReactElement
   enableColorMode?: boolean;
   modifier?: string;
   onClick?: MouseEventHandler<HTMLDivElement>;
@@ -12,8 +12,8 @@ interface Props {
 }
 
 const FontAwesomeCustomIcon = ({
-  children,
   className = '',
+  children,
   enableColorMode = false,
   modifier = '',
   onClick,

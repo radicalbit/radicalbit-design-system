@@ -1,13 +1,11 @@
-import {
-  faExpand, faMinimize,
-} from '@fortawesome/free-solid-svg-icons';
+import { faExpand, faMinimize } from '@fortawesome/free-solid-svg-icons';
 import { MouseEventHandler, memo, useState } from 'react';
 import FontAwesomeIcon from '@Components/font-awesome-icon';
 
 type Props = {
   className?: string;
   modifier?: string;
-  toggleFullScreen?: MouseEventHandler<SVGElement>
+  toggleFullScreen?: MouseEventHandler<SVGElement>;
 };
 
 const IcoFullScreen = ({

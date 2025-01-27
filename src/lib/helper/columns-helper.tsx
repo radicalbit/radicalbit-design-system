@@ -1,7 +1,7 @@
 import * as React from 'react';
 import moment from 'moment';
 import Tooltip from '@Components/tooltip';
-import { ColumnFilterItem, FilterValue, SortOrder } from 'antd/lib/table/interface';
+import { ColumnFilterItem, FilterValue, SortOrder } from 'antd/es/table/interface';
 import { fromTimestamp } from '@Src/utils/fromTimestamp';
 
 const numberOfDaysToUseRelativeDate = 3;

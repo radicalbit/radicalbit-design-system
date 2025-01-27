@@ -1,8 +1,8 @@
 import { ReactNode, isValidElement } from 'react';
-import AntdPopconfirm, { PopconfirmProps } from 'antd/lib/popconfirm';
+import AntdPopconfirm, { PopconfirmProps } from 'antd/es/popconfirm';
 import classNames from 'classnames';
 
- interface Props extends PopconfirmProps {
+interface Props extends PopconfirmProps {
   hideCancel?: boolean,
   icon?: ReactNode,
   label: ReactNode,
@@ -18,7 +18,7 @@ const Popconfirm = ({
   cancelText,
   className = '',
   hideCancel = false,
-  icon,
+  icon = false,
   label,
   modifier = '',
   okText,
@@ -36,7 +36,7 @@ const Popconfirm = ({
     'c-popconfirm--wrap-title': wrapTitle,
     'c-popconfirm--with-body': withBody,
   });
-
+  
   return (
     <AntdPopconfirm
       overlayStyle={{ width }}

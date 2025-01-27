@@ -12,6 +12,7 @@
 
 .m-button,
 .ant-btn {
+	background: transparent;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -107,17 +108,22 @@
 		}
 	}
 
-	&:hover {
-		color: var(--coo-primary-dark);
-		border-color: var(--coo-highlight);
-		background: var(--coo-highlight);
-		.shadow--z-5();
+
+	&.ant-btn-default {
+		&:hover {
+			color: var(--coo-primary-dark);
+			border-color: var(--coo-highlight);
+			background: var(--coo-highlight);
+			.shadow--z-5();
+		}
 	}
 
-	&.ant-btn-primary {
+	&.ant-btn-primary,
+	.ant-btn-color-primary {
 		color: var(--coo-white);
 		border-color: var(--coo-primary);
 		background-color: var(--coo-primary);
+		box-shadow: none;
 
 		&:hover {
 			.highlight();
@@ -135,11 +141,11 @@
 	}
 
 	&.ant-btn-success {
-		color: @rdb-success;
-		border-color: @rdb-success;
+		color: var(--coo-success);
+		border-color: var(--coo-success);
 
 		&:hover {
-			background: fade(@rdb-success, 8%);
+			background: rgba(var(--coo-rgb-success), .8);
 		}
 	}
 
@@ -150,6 +156,7 @@
 
 		&:hover {
 			color: var(--coo-error);
+			border-color: var(--coo-error);
 			background: rgba(var(--coo-error), .8);
 		}
 	}
@@ -215,7 +222,6 @@
 	&[disabled] {
 		background: transparent;
 		border: 1.25px dashed var(--coo-secondary-03);
-		border-radius: inherit;
 		color: var(--coo-secondary-01);
 		box-sizing: border-box;
 		font-style: italic;
@@ -234,4 +240,3 @@
 		}
 	}
 }
-
