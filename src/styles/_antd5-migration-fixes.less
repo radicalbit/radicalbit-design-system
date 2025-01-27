@@ -109,6 +109,12 @@ html body {
 		color: var(--coo-primary-dark);
 	}
 
+
+	.ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled),
+	.ant-select-outlined.ant-select-multiple .ant-select-selection-item {
+		background-color: var(--coo-primary);
+	}
+
 	.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:hover,
 	.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item:hover,
 	.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title:hover,
@@ -123,5 +129,17 @@ html body {
 	::selection,
 	input::placeholder {
 		color: var(--coo-white) !important;
+	}
+
+	.ant-slider .ant-slider-handle::after {
+		box-shadow: 0 0 0 2px var(--coo-primary);
+	}
+
+	.ant-select .ant-select-selection-placeholder {
+		color: rgba(var(--coo-white), .25);
+	}
+
+	.ant-select-outlined.ant-select-multiple .ant-select-selection-item {
+		border: 1px solid transparent;
 	}
 }
