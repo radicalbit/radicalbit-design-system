@@ -1,6 +1,5 @@
-import { ArgsProps } from 'antd/es/notification';
-import notification from 'antd/lib/notification';
-import { GlobalConfigProps } from 'antd/lib/notification/interface';
+import notification, { ArgsProps } from 'antd/es/notification';
+import { GlobalConfigProps } from 'antd/es/notification/interface';
 import classNames from 'classnames';
 
 const DEFAULT_DURATION = 12;

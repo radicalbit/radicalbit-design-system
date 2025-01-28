@@ -1,4 +1,4 @@
-import AntdAnchor, { AnchorProps } from 'antd/lib/anchor';
+import AntdAnchor, { AnchorProps } from 'antd/es/anchor';
 
 export interface Props extends AnchorProps {
   className?: string,

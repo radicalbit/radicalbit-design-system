@@ -3,8 +3,7 @@ import AntdLayout from 'antd/es/layout';
 import Theme, { ThemeProps } from '@Components/layout/themes';
 import OverallTop, { OverallTopProps } from '@Components/layout/overall-top';
 import { memo } from 'react';
-import { ConfigProvider } from 'antd';
-import { ConfigProviderProps } from 'antd/lib';
+import { ConfigProvider, ConfigProviderProps } from 'antd';
 
 type Props = ThemeProps & {
   overallTop?: {

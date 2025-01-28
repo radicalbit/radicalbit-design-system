@@ -1,7 +1,6 @@
 import { memo, useState } from 'react';
-import AntdDatePicker, { RangePickerProps } from 'antd/lib/date-picker';
+import AntdDatePicker, { RangePickerProps } from 'antd/es/date-picker';
 import classNames from 'classnames';
-import { Moment } from 'moment';
 import { Skeleton } from 'antd';
 
 const { RangePicker: AntdRangePicker } = AntdDatePicker;

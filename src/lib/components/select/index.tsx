@@ -1,4 +1,4 @@
-import AntdSelect, { SelectProps } from 'antd/lib/select';
+import AntdSelect, { SelectProps } from 'antd/es/select';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';

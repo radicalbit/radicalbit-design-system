@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 export type Props = {
   children?: ReactNode;
-  classname?: string;
+  className?: string;
   height?: string | null;
   modifier?: string;
   type?: 'cluster';
@@ -12,7 +12,7 @@ export type Props = {
 
 const MapMarker = ({
   children,
-  classname = '',
+  className = '',
   height = null,
   modifier = '',
   type,
@@ -31,7 +31,7 @@ const MapMarker = ({
   );
 
   return (
-    <div style={style} className={`c-map-marker ${modifier} ${css} ${classNames}`}>
+    <div style={style} className={`c-map-marker ${modifier} ${css} ${className}`}>
       <div className="c-map-marker__content">{children}</div>
     </div>
   );
