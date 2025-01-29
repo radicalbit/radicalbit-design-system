@@ -10,7 +10,11 @@ html body {
 	.ant-steps .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon,
 	.ant-breadcrumb li:last-child,
 	.ant-table-wrapper .ant-table-column-sorter-up.active,
-	.ant-table-wrapper .ant-table-column-sorter-down.active {
+	.ant-table-wrapper .ant-table-column-sorter-down.active,
+	.ant-steps .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process) > .ant-steps-item-container[role='button']:hover .ant-steps-item-icon .ant-steps-icon,
+	.ant-steps .ant-steps-item:not(.ant-steps-item-active) > .ant-steps-item-container[role='button']:hover .ant-steps-item-title,
+	:where(.css-dev-only-do-not-override-1htoz2s).ant-steps .ant-steps-item:not(.ant-steps-item-active) > .ant-steps-item-container[role='button']:hover .ant-steps-item-subtitle,
+	:where(.css-dev-only-do-not-override-1htoz2s).ant-steps .ant-steps-item:not(.ant-steps-item-active) > .ant-steps-item-container[role='button']:hover .ant-steps-item-description {
 		color: var(--coo-primary);
 	}
 
@@ -111,7 +115,8 @@ html body {
 
 
 	.ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled),
-	.ant-select-outlined.ant-select-multiple .ant-select-selection-item {
+	.ant-select-outlined.ant-select-multiple .ant-select-selection-item,
+	.ant-steps .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
 		background-color: var(--coo-primary);
 	}
 
@@ -140,5 +145,22 @@ html body {
 	.ant-slider .ant-slider-handle:focus::after,
 	.ant-slider:hover .ant-slider-handle::after {
 		box-shadow: 0 0 0 2px var(--coo-primary-01);
+	}
+
+	.ant-select .ant-select-selection-placeholder {
+		color: rgba(var(--coo-white-bk), .25);
+	}
+
+	.ant-select-outlined.ant-select-multiple .ant-select-selection-item {
+		border: 1px solid transparent;
+	}
+
+	.ant-steps .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process) > .ant-steps-item-container[role='button']:hover .ant-steps-item-icon {
+		border-color: var(--coo-primary);
+	}
+
+
+	.ant-steps .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+		background-color: var(--coo-secondary-02);
 	}
 }
