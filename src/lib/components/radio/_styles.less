@@ -4,6 +4,7 @@
 			line-height: 2rem;
 			color: var(--coo-primary);
 
+
 			&:not(.ant-radio-button-wrapper-disabled) {
 				color: var(--coo-primary);
 				border-color: var(--coo-primary);
@@ -190,4 +191,9 @@
 			}
 		}
 	}
+}
+
+[class^="ant-radio-button"],
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+	background: transparent;
 }

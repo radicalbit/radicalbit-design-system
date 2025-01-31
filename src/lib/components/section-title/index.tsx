@@ -9,7 +9,7 @@ export type Counter = {
 
 type Props = {
   align?: 'center' | 'right';
-  className?: string;
+  className?: string,
   hoverable?: boolean;
   icon?: React.ReactNode;
   iconAlign?: 'start' | 'end' | 'center';
@@ -27,26 +27,27 @@ type Props = {
   wrapTitle?: boolean;
 };
 
-const SectionTitle = ({
-  align,
-  className = '',
-  hoverable = false,
-  icon,
-  iconAlign,
-  modifier = '',
-  onClick,
-  propsEllipsis = false,
-  reverse = false,
-  size,
-  subtitle,
-  title,
-  titleColor,
-  titleSuffix,
-  titleWeight,
-  type,
-  wrapTitle = false,
-  ...others
-}: Props) => {
+const SectionTitle = (props: Props) => {
+  const {
+    align,
+    className = '',
+    hoverable = false,
+    icon,
+    iconAlign,
+    modifier = '',
+    onClick,
+    propsEllipsis = false,
+    reverse = false,
+    size,
+    subtitle,
+    title,
+    titleColor,
+    titleSuffix,
+    titleWeight,
+    type,
+    wrapTitle = false,
+    ...others
+  } = props;
   const css = classNames({
     'c-section-title--clickable': !!onClick,
     [`c-section-title--size-${size}`]: size,
@@ -101,8 +102,8 @@ const SectionTitle = ({
       </div>
 
       {subtitle && (
-        <div className={`c-section-title__props ${cssProps}`}>
-          <span className={`${cssEllipsis} ${cssText}`}>{subtitle}</span>
+        <div className={`c-section-title__props ${cssProps} ${cssEllipsis} ${cssText}`}>
+          {subtitle}
         </div>
       )}
     </div>

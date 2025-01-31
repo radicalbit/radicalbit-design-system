@@ -1,4 +1,4 @@
-import AntdSwitch, { SwitchProps } from 'antd/lib/switch';
+import AntdSwitch, { SwitchProps } from 'antd/es/switch';
 
 type Props = SwitchProps;
 

@@ -1,4 +1,4 @@
-.l-data-table {
+.ant-table-wrapper.l-data-table {
 	tr {
 		td,
 		th {
@@ -21,15 +21,17 @@
 		}
 	}
 
-	&__action {
-		opacity: 0;
-		gap: 1rem;
-		display: flex;
-		flex-direction: row;
-		justify-content: var(--data-table-action-justify-content, flex-end);
+	.ant-table-cell {
+		.l-data-table__action {
+			opacity: 0;
+			gap: 1rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: var(--data-table-action-justify-content, flex-end);
 
-		&--noHide {
-			opacity: 1;
+			&--noHide {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -45,16 +47,24 @@
 		}
 	}
 
-	thead {
+	thead.ant-table-thead {
 		tr {
 			th {
 				overflow-x: hidden;
 				white-space: nowrap;
 				font-weight: var(--coo-font-weight-light);
-				font-size: @rdb-font-size-s;
+				font-size: var(--coo-font-size-s);
 				background-color: transparent;
 				border-bottom: 1px solid var(--coo-secondary-03);
 				padding: .5rem;
+
+				&::before {
+					background-color: transparent !important;
+				}
+
+				&:hover {
+					background-color: transparent;
+				}
 
 				&:first-child > {
 					padding-left: 1rem;
@@ -73,10 +83,11 @@
 
 				.ant-table-column-sorter {
 					vertical-align: 0;
+					color: var(--coo-secondary);
 				}
 
 				div {
-					font-size: @rdb-font-size-s;
+					font-size: var(--coo-font-size-s);
 				}
 
 
@@ -106,7 +117,7 @@
 	tbody {
 		tr {
 			font-weight: var(--coo-font-weight-light);
-			font-size: @rdb-font-size-s;
+			font-size: var(--coo-font-size-s);
 			background: transparent;
 			border-left: .3rem solid transparent;
 			height: 2.95rem;
@@ -120,7 +131,7 @@
 
 				.w-action {
 					opacity: 1;
-					transform: @ease-base-in;
+					transform: cubic-bezier(.9, 0, .3, .7);
 				}
 
 				&.l-data-table__row {
@@ -136,13 +147,13 @@
 			&:nth-child {
 				background: transparent;
 				font-weight: var(--coo-font-weight-light);
-				font-size: @rdb-font-size-s;
+				font-size: var(--coo-font-size-s);
 			}
 
 
 			.rdb-row-with-actions-content {
-				padding-bottom: @padding-xs;
-				font-size: @rdb-font-size-base;
+				padding-bottom: .5rem;
+				font-size: var(--coo-font-size-base);
 
 				a {
 					font-weight: var(--coo-font-weight-normal) !important;
@@ -151,12 +162,11 @@
 
 			td {
 				vertical-align: middle;
-				padding: @rdb-padding-xs;
 				position: relative !important;
 				font-size: 1rem;
 
 				.rdb-row-with-actions .rdb-row-with-actions-action a {
-					font-size: @rdb-font-size-s;
+					font-size: var(--coo-font-size-s);
 					font-weight: var(--coo-font-weight-normal);
 				}
 
@@ -206,7 +216,7 @@
 							box-shadow: 0 0;
 
 							p {
-								font-size: @rdb-font-size-xs;
+								font-size: var(--coo-font-size-xs);
 								font-weight: var(--coo-font-weight-normal);
 							}
 						}
@@ -321,7 +331,7 @@
 	}
 
 	.ant-table {
-		line-height: @rdb-line-height-s;
+		line-height: var(--coo-line-height-s);
 		background: transparent;
 
 
@@ -393,7 +403,6 @@
 html body {
 	.datatable-no-row-actions {
 		.l-data-table .ant-table tbody tr td:first-child {
-			padding: @rdb-padding-xs @rdb-padding-xs;
 			vertical-align: middle;
 		}
 	}
@@ -405,7 +414,7 @@ html body {
 	}
 
 	.rdb-list-box-content-missing {
-		padding: @rdb-padding-default;
+		padding: 1rem;
 	}
 }
 

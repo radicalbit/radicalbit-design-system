@@ -1,15 +1,15 @@
-import AntdAutocomplete, { AutoCompleteProps } from 'antd/lib/auto-complete';
+import LibAutocomplete, { AutoCompleteProps } from 'antd/es/auto-complete';
 
 export interface Props extends AutoCompleteProps {
-    modifier?: string;
+  modifier?: string;
 }
-  
+
 const AutoComplete = ({
   className = '',
   modifier = '',
   ...other
 }: Props) => (
-  <AntdAutocomplete
+  <LibAutocomplete
     className={`c-autocomplete ${modifier} ${className}`}
     {...other}
   />

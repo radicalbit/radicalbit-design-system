@@ -1,9 +1,10 @@
-import AntdUpload from 'antd/lib/upload';
-import { UploadProps, UploadType } from 'antd/lib/upload/interface';
+import AntdUpload from 'antd/es/upload';
+import { UploadProps, UploadType } from 'antd/es/upload/interface';
 import { ReactNode } from 'react';
 
 type Props = UploadProps & {
   children?: ReactNode;
+  className?: string;
   modifier?: string;
   type?: UploadType;
 };

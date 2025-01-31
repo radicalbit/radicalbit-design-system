@@ -15,34 +15,34 @@ export type Details = {
 };
 
 type Props = {
-  actions?: Actions;
-  actionsPosition?: 'start' | 'end';
-  alignment?: 'left-centered' | 'default-centered' | 'flex-start';
   className?: string;
+  actionsPosition?: 'start' | 'end';
+  actions?: Actions;
   details?: Details;
-  mode?: 'light' | 'dark';
   modifier?: string;
   /** @deprecated DEPRECATED: remove that from all the projects */
   noPadding?: boolean;
   padding?: 'all' | 'vertical' | 'horizontal' | 'none';
+  mode?: 'light' | 'dark';
   prefix?: ReactNode;
   title: ReactNode;
   titleMaxWidth?: string;
+  alignment?: 'left-centered' | 'default-centered' | 'flex-start';
 };
 
 const NewHeader = ({
-  actions,
   actionsPosition = 'end',
-  alignment,
+  actions,
   className = '',
   details,
-  mode,
   modifier = '',
   noPadding = false,
   padding = 'all',
-  prefix,
+  mode,
   title,
   titleMaxWidth = '100%',
+  prefix,
+  alignment,
 }: Props) => {
   const css = classNames({
     [`l-header--alignment-${alignment}`]: alignment,

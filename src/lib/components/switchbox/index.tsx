@@ -53,6 +53,7 @@ const Switchbox = ({
         disabled={disabled || !!readOnly}
         checked={checked}
         onChange={onChange}
+        title={label}
         {...others}
       />
     </div>

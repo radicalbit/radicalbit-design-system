@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
-import AntdUpload from 'antd/lib/upload';
+import AntdUpload from 'antd/es/upload';
 import classNames from 'classnames';
-import { UploadProps, UploadType } from 'antd/lib/upload/interface';
+import { UploadProps, UploadType } from 'antd/es/upload/interface';
 import Dragger from './dragger';
 
 type Props = UploadProps & {

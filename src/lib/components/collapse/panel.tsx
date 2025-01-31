@@ -1,16 +1,16 @@
-import AntdCollapse from 'antd/lib/collapse';
+import AntdCollapse from 'antd/es/collapse';
 import classNames from 'classnames';
 import { ReactNode } from 'react';
 
 export type PropsPanel = {
   children?: ReactNode;
   className?: string;
-  dark?:boolean
+  dark?: boolean
   extra?: ReactNode;
   header?: ReactNode;
   isActive?: boolean;
-  key: string | number
   modifier?: string;
+  key: string | number
   noBody?: boolean;
   onHover?: () => void;
 };
@@ -40,7 +40,7 @@ const CollapsePanel = ({
 
   return (
     <AntdPanel
-      className={`c-collapse__panel ${modifier} ${css} ${className}`}
+      className={`c-collapse__panel ${css} ${modifier} ${className}`}
       extra={onHover ? <Hoverable onHover={onHover} body={extra} /> : extra}
       header={onHover ? <Hoverable onHover={onHover} body={header} /> : header}
       {...others}

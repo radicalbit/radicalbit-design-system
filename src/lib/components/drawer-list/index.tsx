@@ -12,7 +12,7 @@ export type List<T extends Record<string, unknown>> = {
 };
 
 type Props<T extends Record<string, unknown>> = {
-  className?: string;
+  className?: string,
   header: React.ReactNode;
   list: List<T>;
   loading: boolean;
@@ -32,6 +32,7 @@ const DrawerList = <T extends Record<string, unknown>, >({
   mask = false,
   mode = 'light',
   modifier = '',
+  onClose,
   open = false,
   width = 520,
   ...others
@@ -42,11 +43,11 @@ const DrawerList = <T extends Record<string, unknown>, >({
 
   return (
     <Drawer
-      modifier={`c-drawer-list__wrapper ${
-        !mask ? 'c-drawer--transparent-mask' : ''
-      } ${modifier} ${mode} ${css} ${className}`}
+      modifier={`c-drawer-list__wrapper ${!mask ? 'c-drawer--transparent-mask' : ''} ${modifier} ${mode} ${css}`}
+      className={className}
       title={header}
       open={open}
+      onClose={onClose}
       closable={false}
       width={width}
       {...others}

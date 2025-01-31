@@ -16,12 +16,12 @@ import {
 import React, { memo } from 'react';
 
 type Props<T> = {
-  className?: string;
+  className?: string,
   data: T;
   expandCollapseAll?: ExpandCollapseAll;
   expandUntil?: number;
   itemStringMaxFields?: number;
-  modifier?: string;
+  modifier?: string,
 };
 
 function getItemString<T>(

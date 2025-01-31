@@ -1,4 +1,4 @@
-import AntdList, { ListProps } from 'antd/lib/list';
+import AntdList, { ListProps } from 'antd/es/list';
 import classNames from 'classnames';
 
 type Props<T> = ListProps<T> & {
@@ -10,13 +10,14 @@ type Props<T> = ListProps<T> & {
 function List<T>({
   className = '',
   modifier = '',
-  type, ...other
+  type,
+  ...other
 }: Props<T>) {
   const css = classNames({
     [`l-list--type-${type}`]: type,
   });
 
-  return <AntdList className={`l-list ${modifier} ${css} ${className}`} {...other} />;
+  return <AntdList className={`l-list ${css} ${modifier} ${className}`} {...other} />;
 }
 
 List.Item = AntdList.Item;

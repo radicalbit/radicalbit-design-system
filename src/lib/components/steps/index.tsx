@@ -1,7 +1,6 @@
-import AntdSteps, { StepsProps } from 'antd/lib/steps';
+import AntdSteps, { StepsProps } from 'antd/es/steps';
 
 const { Step } = AntdSteps;
-
 type Props = StepsProps & {
   modifier?: string;
 };

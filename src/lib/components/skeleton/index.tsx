@@ -1,4 +1,4 @@
-import AntdSkeleton, { SkeletonProps } from 'antd/lib/skeleton';
+import AntdSkeleton, { SkeletonProps } from 'antd/es/skeleton';
 const {
   Button, Avatar, Input, Image, Node,
 } = AntdSkeleton;

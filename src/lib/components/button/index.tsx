@@ -1,15 +1,10 @@
-import AntdButton from 'antd/lib/button';
-import ButtonGroup from 'antd/lib/button/button-group';
-import { ButtonProps } from 'antd/lib/button/button';
+import AntdButton from 'antd/es/button';
+import ButtonGroup from 'antd/es/button/button-group';
+import { ButtonProps } from 'antd/es/button/button';
 import classNames from 'classnames';
 import { ReactElement, ReactNode } from 'react';
 
 export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
-  children?: ReactNode;
-  filled?: boolean;
-  modifier?: string;
-  prefix?: ReactNode;
-  suffix?: ReactNode;
   type?:
     | ButtonProps['type']
     | 'secondary-light'
@@ -20,19 +15,24 @@ export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
     | 'warning'
     | 'warning-light'
     ;
+  prefix?: ReactNode;
+  suffix?: ReactNode;
+  filled?: boolean;
+  children?: ReactNode;
+  modifier?: string;
 }
 
 const Button = (props: Props): ReactElement<typeof AntdButton> => {
   const {
-    children,
     className = '', // Needed when <Button /> is used as other Antd component child
-    filled = false,
-    href,
-    modifier = '',
-    onClick,
     prefix,
     suffix,
+    filled = false,
+    children,
+    modifier = '',
     type,
+    href,
+    onClick,
     ...other
   } = props;
 
@@ -46,8 +46,8 @@ const Button = (props: Props): ReactElement<typeof AntdButton> => {
       className={`m-button ${css} ${modifier} ${className}`}
       // TODO Miguel: other types such as secondary-light does not exist on Antd button
       type={type as ButtonProps['type']}
-      onClick={onClick}
       href={href}
+      onClick={onClick}
       {...other}
     >
       {prefix && <span className="m-button--prefix">{prefix}</span>}

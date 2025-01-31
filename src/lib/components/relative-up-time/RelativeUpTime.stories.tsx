@@ -12,6 +12,8 @@ const meta: Meta<typeof RelativeUpTime> = {
 
   argTypes: {
     timestamp: { control: 'date' },
+    className: { defaultValue: '', control: 'text' },
+    modifier: { defaultValue: '', control: 'text' },
   },
 };
 

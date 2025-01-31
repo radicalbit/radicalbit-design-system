@@ -1,5 +1,5 @@
 import { ReactNode, memo } from 'react';
-import AntdSpin, { SpinProps } from 'antd/lib/spin';
+import AntdSpin, { SpinProps } from 'antd/es/spin';
 import classNames from 'classnames';
 
 type Props = SpinProps & {

@@ -1,4 +1,4 @@
-import AntdTabs, { TabsProps } from 'antd/lib/tabs';
+import AntdTabs, { TabsProps } from 'antd/es/tabs';
 import classNames from 'classnames';
 
 type Props = Omit<TabsProps, 'size'> & {

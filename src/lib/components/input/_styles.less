@@ -1,12 +1,10 @@
 .c-input {
-	background: var(--coo-white-bk);
 	border-color: var(--coo-secondary-03);
 	color: var(--coo-dark);
 	height: 2rem;
 
 	&&--readonly {
-		background-color: inherit;
-		color: inherit;
+		color: var(--coo-dark);
 		cursor: default;
 		padding-left: 0;
 		border: 0;
@@ -23,8 +21,6 @@
 	}
 
 	&&--blank {
-		background-color: inherit;
-		color: inherit;
 		cursor: default;
 		border-style: dashed;
 		border-color: rgba(var(--coo-rgb-secondary-02));
@@ -33,8 +29,6 @@
 
 .c-text-area {
 	&--readonly {
-		background-color: inherit;
-		color: inherit;
 		cursor: default;
 		padding-left: 0;
 		border: 0;

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faAbacus } from '@fortawesome/free-solid-svg-icons';
 import Menu from './index';
 import FontAwesomeIcon from '../font-awesome-icon';
 
@@ -15,7 +15,7 @@ const meta: Meta<typeof Menu> = {
   tags: ['autodocs'],
 
   argTypes: {
-
+  
   },
 };
 
@@ -27,7 +27,7 @@ export const Default: Story = {
       title: 'Menu',
       label: 'Menu',
       key: 'menu',
-      icon: <FontAwesomeIcon icon={faBars} />,
+      icon: <FontAwesomeIcon icon={faAbacus} />,
     }],
   },
 

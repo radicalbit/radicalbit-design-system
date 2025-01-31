@@ -3,10 +3,10 @@ import {
 } from 'react-color';
 import { useState } from 'react';
 import classNames from 'classnames';
-import Badge from 'antd/lib/badge';
+import Badge from 'antd/es/badge';
 
 export type Props = {
-  className?: string,
+  className?: string;
   color?: string;
   modifier?: string;
   onChangeHex?: (color?: string) => void;

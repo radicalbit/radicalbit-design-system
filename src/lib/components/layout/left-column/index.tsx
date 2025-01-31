@@ -1,5 +1,5 @@
 import * as React from 'react';
-import AntdLayout, { LayoutProps, SiderProps } from 'antd/lib/layout';
+import AntdLayout, { LayoutProps, SiderProps } from 'antd/es/layout';
 import classNames from 'classnames';
 import LayoutMainNav from '@Components/layout/main-nav';
 import { MenuType } from '@Src/lib/types/global';
@@ -66,7 +66,7 @@ const LeftColumn = (props: LeftProps) => {
     }
     : {};
 
-  const colorBackgroundStyle = { backgroundColor } ?? {};
+  const colorBackgroundStyle = (backgroundColor) ? { backgroundColor } : {};
 
   const customStyles = { ...colorBackgroundStyle, ...imgBackgroundStyle };
 
@@ -87,8 +87,8 @@ const LeftColumn = (props: LeftProps) => {
           content={content}
           contentDark={contentDark}
           hasLeftColumnCollapsed={collapsed}
-          mainNavAltContent={headerSecondaryContent}
           mainNavSecondaryAltContent={headerTertiaryContent}
+          mainNavAltContent={headerSecondaryContent}
           menu={menu}
           bottomMenu={bottomMenu}
         />

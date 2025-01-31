@@ -2,14 +2,14 @@ import { TextArea } from '@Components/input';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { MouseEventHandler, Ref, memo } from 'react';
-import { TextAreaRef } from 'antd/lib/input/TextArea';
+import { TextAreaRef } from 'antd/es/input/TextArea';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type Props = {
   className?: string;
   icon?: IconProp;
-  maxRows?: number;
   minRows?: number;
+  maxRows?: number;
   modifier?: string;
   onSend?: MouseEventHandler<SVGSVGElement>;
   textAreaRef?: Ref<TextAreaRef>;
@@ -18,8 +18,8 @@ type Props = {
 const ChatInput = ({
   className = '',
   icon = faPaperPlane,
-  maxRows = 4,
   minRows = 1,
+  maxRows = 4,
   modifier = '',
   onSend,
   textAreaRef,

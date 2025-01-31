@@ -1,4 +1,4 @@
-import AntdLayout from 'antd/lib/layout';
+import AntdLayout from 'antd/es/layout';
 import Header from '@Components/header/newHeader';
 import classNames from 'classnames';
 

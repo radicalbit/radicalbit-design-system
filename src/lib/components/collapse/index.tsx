@@ -1,4 +1,4 @@
-import AntdCollapse from 'antd/lib/collapse';
+import AntdCollapse from 'antd/es/collapse';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronLeft,
@@ -6,11 +6,12 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
-import { CollapseProps } from 'antd/lib/collapse/Collapse';
+import { CollapseProps } from 'antd/es/collapse/Collapse';
 import Panel from './panel';
 
 type Props = CollapseProps & {
-  dark?:boolean
+  className?: string;
+  dark?: boolean
   modifier?: string;
   scroll?: 'horizontal' | 'vertical';
   type?: 'minimal' | 'no-border' | 'transparent' | 'error' | 'secondary-medium' | 'primary-light';
@@ -20,7 +21,7 @@ const Collapse = ({
   children,
   className = '',
   dark = false,
-  expandIconPosition = 'left',
+  expandIconPosition = 'start',
   modifier = '',
   scroll,
   type,
@@ -45,7 +46,7 @@ const Collapse = ({
                 : faChevronRight
             }
           />
-        ) as React.ReactNode)}
+            ) as React.ReactNode)}
       className={`c-collapse ${modifier} ${css} ${className}`}
       {...other}
     >

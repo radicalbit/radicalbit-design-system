@@ -11,13 +11,8 @@
 		background: var(--coo-white);
 		position: absolute;
 		z-index: 100;
-		padding: @padding-xs / 4 @padding-xs;
 		border: 1px solid;
-		left: .2rem;
-		top: -.7rem;
-		transform: translate(-@rdb-half, -@rdb-half);
 		line-height: 1.5;
-		display: none !important;
 
 		span {
 			white-space: nowrap;
@@ -44,61 +39,61 @@
 
 	&.rdb-crunched-error {
 		.rdb-crunched-text {
-			border-color: @rdb-danger-txt;
-			background-color: @rdb-danger-bk;
+			border-color: var(--coo-error);
+			background-color: var(--coo-error-bk-light);
 
 			&::after {
-				border-top-color: @rdb-danger-txt;
+				border-top-color: var(--coo-error);
 			}
 
 			span {
-				color: @rdb-danger-txt;
+				color: var(--coo-error);
 			}
 		}
 
 		.ant-badge-status-dot {
-			background-color: @rdb-danger;
+			background-color: var(--coo-error);
 		}
 	}
 
 	&.rdb-crunched-warning {
 		.rdb-crunched-text {
-			border-color: @rdb-warning-txt;
-			background-color: @rdb-warning-bk;
+			border-color: var(--coo-warning);
+			background-color: var(--coo-warning-bk);
 
 
 			&::after {
-				border-top-color: @rdb-warning-txt;
+				border-top-color: var(--coo-warning);
 			}
 
 			span {
-				color: @rdb-warning-txt;
+				color: var(--coo-warning);
 			}
 		}
 
 		.ant-badge-status-dot {
-			background-color: @rdb-warning;
+			background-color: var(--coo-warning);
 		}
 	}
 
 	&.rdb-crunched-success,
 	&.rdb-crunched-processing {
 		.rdb-crunched-text {
-			border-color: @rdb-success-txt;
-			background-color: @rdb-success-bk;
+			border-color: var(--coo-success);
+			background-color: var(--coo-success-bk);
 
 
 			&::after {
-				border-top-color: @rdb-success-txt;
+				border-top-color: var(--coo-success);
 			}
 
 			span {
-				color: @rdb-success-txt;
+				color: var(--coo-success);
 			}
 		}
 
 		.ant-badge-status-dot {
-			background-color: @rdb-success;
+			background-color: var(--coo-success);
 		}
 	}
 
@@ -122,11 +117,11 @@
 	}
 
 	.ant-badge-status-processing {
-		box-shadow: @rdb-success 2px -2px 5px inset;
-		background-color: @rdb-success;
+		box-shadow: var(--coo-success) 2px -2px 5px inset;
+		background-color: var(--coo-success);
 
 		.ant-badge-status-dot {
-			background-color: @rdb-success;
+			background-color: var(--coo-success);
 		}
 	}
 }

@@ -55,7 +55,9 @@ const RelativeUpTime = ({
 
     return (
       <Tooltip mouseEnterDelay={0.5} title={titleOrElse}>
-        {lableOrElse}
+        <div className={`m-relative-up-time ${modifier} ${className}`}>
+          {lableOrElse}
+        </div>
       </Tooltip>
     );
   }

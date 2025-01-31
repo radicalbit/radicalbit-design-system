@@ -1,9 +1,9 @@
-import AntdTooltip, { TooltipProps } from 'antd/lib/tooltip';
+import AntdTooltip, { TooltipProps } from 'antd/es/tooltip';
 import TooltipTitle from './tooltip-title';
 
 export type Props = TooltipProps & {
-  modifier?: string,
-}
+  modifier?: string;
+};
 
 function Tooltip({
   className = '',
@@ -12,7 +12,11 @@ function Tooltip({
   ...others
 }: Props) {
   return (
-    <AntdTooltip mouseEnterDelay={0.5} className={`m-tooltip ${modifier} ${className}`} {...others}>
+    <AntdTooltip
+      mouseEnterDelay={0.5}
+      className={`m-tooltip ${modifier} ${className}`}
+      {...others}
+    >
       {children}
     </AntdTooltip>
   );

@@ -5,13 +5,15 @@ import reactIs from 'react-is';
 import DraggableDivider from './DraggableDivider';
 
 type Props = {
-  className?: string;
   bottom?: ReactElement;
+  className?: string;
   modifier?: string;
   top?: ReactElement;
 };
 
-const Resizable = ({ bottom, modifier = '', top }: Props) => {
+const Resizable = ({
+  bottom, className = '', modifier = '', top,
+}: Props) => {
   const topRef = useRef(null);
   const bottomRef = useRef(null);
   const resizableRef = useRef(null);
@@ -24,7 +26,7 @@ const Resizable = ({ bottom, modifier = '', top }: Props) => {
   usePersistScrollPosition(topRef, [top, bottom]);
 
   return (
-    <div ref={resizableRef} className={`l-resizable ${css} ${modifier}`}>
+    <div ref={resizableRef} className={`l-resizable ${css} ${modifier} ${className}`}>
       {top && (
         <div className="l-resizable__top" ref={topRef}>
           {top}

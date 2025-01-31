@@ -1,18 +1,17 @@
 import classNames from 'classnames';
 
-export type Props = {
-  children: React.ReactNode;
-  className: string,
-  modifier: string,
-  noHide?: string;
-}
 const DataTableAction = ({
-  children,
   className = '',
+  children,
   modifier = '',
   noHide,
   ...other
-}:Props) => {
+}: {
+    className?: string
+    children: React.ReactNode;
+    modifier?: string;
+    noHide?: string;
+  }) => {
   const css = classNames({
     'l-data-table__action--noHide': noHide,
   });

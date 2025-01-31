@@ -46,8 +46,8 @@ const rowTarget: DropTargetSpec<RowPropsType, DragObject, void> = {
 
 const DraggableDataTable = <T extends Record<string, unknown>>({
   className = '',
-  modifier = '',
   dataSource,
+  modifier = '',
   onMoveRowCallback,
   ...otherProps
 }: Props<T>) => {

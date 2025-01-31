@@ -1,8 +1,10 @@
 import Badge from '@Components/badge';
-import AntdTable, { TableProps } from 'antd/lib/table';
+import AntdTable, { TableProps } from 'antd/es/table';
 import classNames from 'classnames';
 import { ColumnType } from 'rc-table/lib/interface';
-import { isValidElement, useEffect, useRef } from 'react';
+import {
+  Fragment, ReactNode, isValidElement, useEffect, useRef,
+} from 'react';
 
 export interface DataTableProps<T extends Record<string, unknown>>
   extends TableProps<T> {
@@ -36,11 +38,11 @@ const DataTable = <T extends Record<string, unknown>>({
   noHead = false,
   onRow,
   clickable,
-  hasFixedColumn,
   dark = false,
+  hasFixedColumn,
   ...otherProps
 }: DataTableProps<T>) => {
-  const enrichedColumns = columns?.map((c) => {
+  const enrichedColumns = columns?.map((c, i) => {
     const dataIndex = 'dataIndex' in c ? c.dataIndex : null;
     const enrichedRender: Render<T> = c.render
       ? (el, record, index) => {
@@ -48,17 +50,21 @@ const DataTable = <T extends Record<string, unknown>>({
         const isValid = isValidElement(badge);
 
         return (
-          <>
-            {c?.render?.(el, record, index)}
+          <Fragment key={i}>
+            {c?.render?.(el, record, index) as ReactNode}
             {isValid && <Badge count={badge} />}
-          </>
+          </Fragment>
         );
       }
       : (el, record) => {
         const badge = record[`${dataIndex}-badge`];
         const isValid = isValidElement(badge);
 
-        return isValid ? <Badge count={badge}>{el}</Badge> : el;
+        return isValid ? <Badge count={badge} key={i}>{el}</Badge> : (
+          <Fragment key={i}>
+            {el}
+          </Fragment>
+        );
       };
 
     return { ...c, render: enrichedRender };

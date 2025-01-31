@@ -1,13 +1,13 @@
 import { CSSProperties, memo, useState } from 'react';
 
 type Props = {
+  alt?: string;
   className?: string;
+  error?: string | React.ReactNode;
   modifier?: string;
-  style?: CSSProperties;
   size?: 'small' | 'medium' | 'large';
   src?: string;
-  alt?: string;
-  error?: string | React.ReactNode;
+  style?: CSSProperties;
 };
 
 const SIZES = {
@@ -33,7 +33,7 @@ const Image = ({
 
   return !isError ? (
     <img
-      className={`m-image ${SIZES[size]} ${modifier} ${className}`}
+      className={`m-image ${SIZES[size]} ${className} ${modifier}`}
       style={style}
       src={src}
       onError={() => setIsError(true)}

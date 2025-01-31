@@ -1,5 +1,5 @@
 import { ReactNode, memo, useState } from 'react';
-import AntdLayout from 'antd/lib/layout';
+import AntdLayout from 'antd/es/layout';
 import Drawer from '@Components/drawer/index';
 
 type MainProps = {

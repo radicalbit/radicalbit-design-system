@@ -1,9 +1,10 @@
-import AntdDatePicker, { DatePickerProps } from 'antd/lib/date-picker';
+import AntdDatePicker, { DatePickerProps } from 'antd/es/date-picker';
 import classNames from 'classnames';
 import Skeleton from '@Components/skeleton';
 import { memo } from 'react';
 
 type Props = DatePickerProps & {
+  className?: string;
   modifier?: string;
   readOnly?: boolean;
   skeleton?: boolean,

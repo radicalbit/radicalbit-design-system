@@ -1,5 +1,6 @@
 import Menu from '@Components/menu';
 import type { MenuItem, MenuType } from '@Src/lib/types/global';
+import { Fragment } from 'react';
 
 export type MainProps = {
   content?: React.ReactNode;
@@ -20,19 +21,19 @@ export type MainProps = {
   showBottomDrawerOnHover?: string;
 };
 
-const createMenuItem = (route: MenuItem) => {
+const createMenuItem = (route: MenuItem, index: number) => {
   const className = `${route.className || ''}${
     route.isLimitedToPremium ? ' premium' : ''
   }`;
 
   return {
     label: (
-      <>
-        {route.icon && <span className="anticon">{route.icon}</span>}
+      <Fragment key={`key: ${index}`}>
         {route.title && <span>{route.title}</span>}
         {route.link}
-      </>
+      </Fragment>
     ),
+    icon: route.icon,
     key: route.position.toString(),
     disabled: route.disabled,
     title: route.title,
@@ -56,7 +57,7 @@ function MainNav({
       {mainNavAltContent && (
         <div className="cona-c-main-nav-alt-content">{mainNavAltContent}</div>
       )}
-
+      
       {mainNavSecondaryAltContent && (
         <div className="cona-c-main-nav-secondary-alt-content">{mainNavSecondaryAltContent}</div>
       )}

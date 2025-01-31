@@ -1,4 +1,4 @@
-import AntdInput from 'antd/lib/input';
+import AntdInput from 'antd/es/input';
 import Input from './input';
 import TextArea from './textArea';
 

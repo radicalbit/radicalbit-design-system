@@ -27,7 +27,7 @@ const DescriptionList = ({
   modifier = '',
   noMargin,
   withBorder = true,
-  ...other
+  ...others
 }: Props) => {
   const type = Array.isArray(list) ? 'pair' : 'single';
 
@@ -38,7 +38,7 @@ const DescriptionList = ({
   });
 
   return (
-    <div className={`c-description-list ${modifier} ${className}`} {...other}>
+    <div className={`c-description-list ${modifier} ${className}`} {...others}>
       {!Array.isArray(list) && (
         <dl className={css}>
           <dt>{list.title}</dt>

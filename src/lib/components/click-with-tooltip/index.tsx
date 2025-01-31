@@ -1,16 +1,16 @@
 import Tooltip from '@Components/tooltip';
 
 type Props = {
-  children?: React.ReactNode;
   className?: string;
+  children?: React.ReactNode;
   handleOnClick?: () => void;
   modifier?: string;
   tooltipTitle?: string;
 };
 
 const ClickWithTooltip = ({
-  children,
   className = '',
+  children,
   handleOnClick,
   modifier = '',
   tooltipTitle,

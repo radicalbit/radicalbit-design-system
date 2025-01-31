@@ -44,7 +44,7 @@ function Toggle({
 
   return (
     <div
-      className={`c-toggle ${css} ${mode} ${modifier} ${className}`}
+      className={`c-toggle ${css} ${mode} ${className} ${modifier}`}
       onClick={handleOnClick}
       role="presentation"
       {...others}

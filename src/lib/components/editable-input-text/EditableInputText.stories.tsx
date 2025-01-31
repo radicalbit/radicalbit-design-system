@@ -25,7 +25,7 @@ export const Default: Story = {
       onBlur={(value) => console.debug(`value '${value}'`)}
       onPressEnter={(e) => console.log(e)}
       autoFocus
-
+      
     />
   ),
 };

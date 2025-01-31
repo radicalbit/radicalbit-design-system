@@ -1,4 +1,4 @@
-import AntdAnchor, { AnchorLinkProps } from 'antd/lib/anchor';
+import AntdAnchor, { AnchorLinkProps } from 'antd/es/anchor';
 
 const { Link } = AntdAnchor;
 

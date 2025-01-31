@@ -17,7 +17,7 @@ export type Status = {
 type Props = {
   align?: 'center' | 'right';
   badge?: React.ReactNode;
-  className?: string,
+  className?: string;
   disabled?: boolean,
   minWidth?: number;
   modifier?: string;

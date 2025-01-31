@@ -25,8 +25,8 @@ export type Props = {
 };
 
 const Pin = ({
-  className = '',
   color,
+  className = '',
   justify = 'center',
   label,
   modifier = '',

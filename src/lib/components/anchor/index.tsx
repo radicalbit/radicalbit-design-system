@@ -1,4 +1,4 @@
-import AntdAnchor, { AnchorProps } from 'antd/lib/anchor';
+import AntdAnchor, { AnchorProps } from 'antd/es/anchor';
 
 export interface Props extends AnchorProps {
   className?: string,
@@ -6,7 +6,6 @@ export interface Props extends AnchorProps {
 }
 
 const Anchor = ({
-  children,
   className = '',
   modifier = '',
   ...others
@@ -16,7 +15,6 @@ const Anchor = ({
     className={`c-anchor ${modifier} ${className}`}
     {...others}
   >
-    {children}
   </AntdAnchor>
 
 );

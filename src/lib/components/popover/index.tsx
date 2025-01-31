@@ -1,4 +1,4 @@
-import AntdPopover, { PopoverProps } from 'antd/lib/popover';
+import AntdPopover, { PopoverProps } from 'antd/es/popover';
 import classNames from 'classnames';
 
 type Props = PopoverProps & {
@@ -39,7 +39,6 @@ const Popover = ({
         minWidth: minWidth ? `${minWidth}px` : 'auto',
         maxHeight: maxHeight ? `${maxHeight}px` : 'auto',
       }}
-      trigger={trigger}
       {...otherProps}
     >
       <div className={`c-popover__child ${cssChild}`}>{children}</div>

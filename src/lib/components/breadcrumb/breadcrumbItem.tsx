@@ -1,4 +1,4 @@
-import AntdBreadcrumb, { BreadcrumbItemProps } from 'antd/lib/breadcrumb';
+import AntdBreadcrumb, { BreadcrumbItemProps } from 'antd/es/breadcrumb';
 import classNames from 'classnames';
 
 const AntdBreadcrumbItem = AntdBreadcrumb.Item;

@@ -12,8 +12,8 @@ function Countdown({
   date,
   label,
   modifier = '',
-  size,
   type = 'inline',
+  size,
 }: CountdownProps) {
   const expired = date - Date.now() <= 0;
 

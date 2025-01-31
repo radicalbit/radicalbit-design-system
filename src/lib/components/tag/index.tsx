@@ -1,15 +1,16 @@
-import AntdTag, { TagProps } from 'antd/lib/tag';
+import AntdTag, { TagProps } from 'antd/es/tag';
 import classNames from 'classnames';
 import { ReactNode } from 'react';
 
 type Props = TagProps & {
-  animated?: 'default' | 'onHover';
+  animated?: 'default' | 'onHover',
   disabled?: boolean;
   fullWidth?: boolean;
-  mode?: 'text'; // will be replace type="text"
+  mode?:'text' // will be replace type="text"
   modifier?: string;
   size?: 'small' | 'large' | 'xl' | 'xxl';
   suffix?: string | ReactNode;
+  uppercase?: boolean;
   /**
    * @deprecated This property will be removed
    */
@@ -26,7 +27,6 @@ type Props = TagProps & {
     | 'text'
     | 'warning-light'
     | 'warning';
-  uppercase?: boolean;
 };
 
 const Tag = ({

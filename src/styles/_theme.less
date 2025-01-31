@@ -22,7 +22,7 @@ a {
 	cursor: pointer;
 
 	svg {
-		fill: var(--coo-primary);
+		fill: var(--coo-dark);
 	}
 }
 
@@ -86,45 +86,6 @@ a:hover {
 	}
 }
 
-.ant-menu .ant-menu-submenu {
-	&-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow {
-		&::before {
-			background: linear-gradient(to right, var(--coo-primary), var(--coo-primary));
-		}
-
-		&::after {
-			background: linear-gradient(to right, var(--coo-primary), var(--coo-primary));
-		}
-	}
-
-	&-title:hover {
-		color: var(--coo-primary);
-	}
-}
-
-.ant-menu-item:active,
-.ant-menu-submenu-title:active {
-	background-color: var(--coo-primary-04);
-}
-
-.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open {
-	color: var(--coo-primary);
-}
-
-.ant-menu-item {
-	&:hover {
-		color: var(--coo-primary);
-	}
-
-	& a:hover {
-		color: var(--coo-primary);
-	}
-}
-
-.ant-menu-light .ant-menu-item:hover,
-.ant-menu-light .ant-menu-item-active {
-	color: var(--coo-primary);
-}
 
 .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector,
 .ant-select-selector:focus,
@@ -138,8 +99,17 @@ a:hover {
 	color: var(--coo-primary);
 }
 
-.ant-btn {
+.ant-menu-dark .ant-menu-submenu-selected > .ant-menu-submenu-title,
+.ant-menu-dark > .ant-menu .ant-menu-submenu-selected > .ant-menu-submenu-title {
+	color: var(--coo-dark);
+}
+
+.m-button.ant-btn {
 	border-radius: var(--coo-border-radius-small);
+
+	&.ant-btn-circle {
+		border-radius: var(--coo-border-radius-small);
+	}
 
 	&:focus {
 		color: var(--coo-primary-03);
@@ -439,7 +409,6 @@ a:hover {
 	color: var(--coo-primary);
 }
 
-
 @rdb-left-sidebar-width: 15rem;
 @rdb-right-sidebar-width: var(--right-column-width, 15rem);
 @rdb-header-height: 5rem;
@@ -450,14 +419,6 @@ a:hover {
 @rdb-layout-secondary-column-width: 15rem;
 
 @rdb-layout-right-column-visible-above: 992px;
-
-@rdb-padding-default: @padding-md; // default padding
-@rdb-padding-small: @padding-sm; // left and right sidebar and padding for small elements
-@rdb-padding-xs: @padding-xs;
-
-@rdb-margin-default: @padding-md; // default margin
-@rdb-margin-small: @padding-sm; // left and right sidebar and padding for small elements
-@rdb-margin-xs: @padding-xs;
 
 @rdb-full: 100%;
 @rdb-half: 50%;

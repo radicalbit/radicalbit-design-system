@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 :root,
-html body {
+html body,
+.ant-layout {
 	--coo-body-font: 'Open Sans', sans-serif;
 	--coo-header-font: 'Open Sans', sans-serif;
 	--coo-monospace-font: Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
@@ -11,80 +12,67 @@ html body {
 	--coo-font-weight-bold: 600;
 	--coo-font-weight-bolder: 700;
 	--coo-border-radius-small: .3rem;
+	--coo-font-size-xxl: 2.25rem;
+	--coo-font-size-xl: 1.5rem;
+	--coo-font-size-l: 1.25rem;
+	--coo-font-size-base: 1rem;
+	--coo-font-size-s: .875rem;
+	--coo-font-size-xs: .75rem;
+	--coo-font-size-xxs: .438rem;
+	--coo-line-height-xxl: 3;
+	--coo-line-height-xl: 2.5;
+	--coo-line-height-l: 2;
+	--coo-line-height-default: 1.7;
+	--coo-line-height-s: 1.2;
+	--coo-line-height-xs: 1;
 }
 
-@font-family: var(--coo-body-font);
-
-@rdb-font-weight-light: 300;
-@rdb-font-weight-default: 500;
-@rdb-font-weight-bold: 700;
-
-@rdb-font-size-xxl: 2.25rem;
-@rdb-font-size-xl: 1.5rem;
-@rdb-font-size-l: 1.25rem;
-@rdb-font-size-base: 1rem;
-@rdb-font-size-s: .875rem;
-@rdb-font-size-xs: .8rem;
-@rdb-font-size-xxs: .438rem;
-
-@rdb-line-height-xxl: 3;
-@rdb-line-height-xl: 2.5;
-@rdb-line-height-l: 2;
-@rdb-line-height-default: 1.7;
-@rdb-line-height-s: 1.2;
-@rdb-line-height-xs: 1;
-
-
-.typography(@rdb-font-size, @rdb-font-weight: @rdb-font-weight-light) {
+html body .ant-layout {
 	font-family: var(--coo-body-font);
-	font-size: @rdb-font-size;
-	font-weight: @rdb-font-weight;
+	// all classes written here will replace the antd token values
 }
 
-.line-height(@rdb-line-height: @rdb-line-height-default) {
-	line-height: @rdb-line-height;
-}
 
 .line-height-xxl {
-	.line-height(@rdb-line-height-xxl);
+	line-height: var(--coo-line-height-xxl);
 }
 
 .line-height-xl {
-	.line-height(@rdb-line-height-xl);
+	line-height: var(--coo-line-height-xl);
 }
 
 .line-height-l {
-	.line-height(@rdb-line-height-l);
+	line-height: var(--coo-line-height-l);
 }
 
 .line-height-default {
-	.line-height(@rdb-line-height-default);
+	line-height: var(--coo-line-height-default);
 }
 
 .line-height-s {
-	.line-height(@rdb-line-height-s);
+	line-height: var(--coo-line-height-s);
 }
 
 .line-height-xs {
-	.line-height(@rdb-line-height-xs);
+	line-height: var(--coo-line-height-xs);
 }
 
 .font-xxl,
 .h2,
 h2 {
-	.typography(@rdb-font-size-xxl);
+	font-size: var(--coo-font-size-xxl);
 }
 
 h1,
 .h1,
 .font-xl {
-	font-size: @rdb-font-size-xl;
+	font-size: var(--coo-font-size-xl);
 	font-weight: var(--coo-font-weight-bold);
 	line-height: 1.7rem;
 
 	input {
 		font-family: var(--coo-header-font);
-		font-size: @rdb-font-size-xl;
+		font-size: var(--coo-font-size-xl);
 		font-weight: var(--coo-font-weight-bold);
 	}
 }
@@ -92,22 +80,21 @@ h1,
 .font-l,
 .h3,
 h3 {
-	.typography(@rdb-font-size-l, @rdb-font-weight-default);
+	font-size: var(--coo-font-size-l);
 }
 
 .font-base,
 p {
-	.typography(@rdb-font-size-base);
+	font-size: var(--coob-font-size-base);
 }
 
 .font-s {
-	.typography(@rdb-font-size-s);
+	font-size: var(--coo-font-size-s);
 }
 
 .font-xs,
 label {
-	.typography(@rdb-font-size-xs);
-
+	font-size: var(--coo-font-size-xs);
 	color: var(--coo-dark);
 }
 

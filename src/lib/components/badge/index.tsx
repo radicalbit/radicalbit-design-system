@@ -1,4 +1,4 @@
-import AntBadge, { BadgeProps } from 'antd/lib/badge';
+import AntBadge, { BadgeProps } from 'antd/es/badge';
 
 export interface Props extends BadgeProps {
   modifier?: string;
