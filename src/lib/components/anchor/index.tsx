@@ -6,7 +6,6 @@ export interface Props extends AnchorProps {
 }
 
 const Anchor = ({
-  children,
   className = '',
   modifier = '',
   ...others
@@ -16,7 +15,6 @@ const Anchor = ({
     className={`c-anchor ${modifier} ${className}`}
     {...others}
   >
-    {children}
   </AntdAnchor>
 
 );
