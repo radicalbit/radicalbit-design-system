@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.7.2...v2.0.0) (2025-01-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* switch from Antd v4 to Antd v5 ([#33](https://github.com/radicalbit/radicalbit-design-system/issues/33))
+
+### Features
+
+* switch from Antd v4 to Antd v5 ([#33](https://github.com/radicalbit/radicalbit-design-system/issues/33)) ([83a184c](https://github.com/radicalbit/radicalbit-design-system/commit/83a184ce4d9dda4ec259f9ec8373ac7cc119dc71))
+
 ## [1.7.2](https://github.com/radicalbit/radicalbit-design-system/compare/v1.7.1...v1.7.2) (2024-12-18)
 
 
