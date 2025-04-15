@@ -173,5 +173,6 @@ DataTable.ROW_SELECTED_HIGHLIGHT_SECONDARY = 'l-data-table__row--selected-highli
 DataTable.ROW_SELECTED_BOLD = 'l-data-table__row--selected-bold';
 DataTable.ROW_DISABLED = 'l-data-table__row--disabled';
 DataTable.HIDE_ROW = 'l-data-table__row--hide';
+DataTable.ROW_LIGHT = 'l-data-table__row--light';
 
 export default DataTable;
