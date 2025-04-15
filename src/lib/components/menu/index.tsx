@@ -1,7 +1,7 @@
 import AntdMenu, { MenuProps } from 'antd/es/menu';
 import classNames from 'classnames';
 
-type Props = MenuProps & {
+export type Props = MenuProps & {
   alignment?: 'centered';
   dark?: boolean
   modifier?: string;

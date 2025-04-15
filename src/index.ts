@@ -59,6 +59,7 @@ export { default as LocaleProvider, enUS, itIT } from './lib/components/locale-p
 export { default as MapMarker } from './lib/components/map-marker';
 export { default as MarkdownRender } from './lib/components/markdown-render';
 export { default as Menu } from './lib/components/menu';
+export { default as MenuInlineOnce } from './lib/components/menu/menu-inline-once';
 export { default as Message } from './lib/components/message';
 export { default as MiniChart } from './lib/components/mini-chart';
 export { default as Modal } from './lib/components/modal';
