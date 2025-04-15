@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.1.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.0.0...v2.1.0) (2025-04-15)
+
+
+### Features
+
+* data table row light ([#40](https://github.com/radicalbit/radicalbit-design-system/issues/40)) ([69f1658](https://github.com/radicalbit/radicalbit-design-system/commit/69f165845f8efdeb831494a586bc1ccd2df66d8b))
+* forward other ([#38](https://github.com/radicalbit/radicalbit-design-system/issues/38)) ([d577cb9](https://github.com/radicalbit/radicalbit-design-system/commit/d577cb9ec4b87814459fbfae7f45bcb0be97c1ae))
+* implement menu inline once ([#37](https://github.com/radicalbit/radicalbit-design-system/issues/37)) ([4007f3a](https://github.com/radicalbit/radicalbit-design-system/commit/4007f3a87b100b88800e1c4a35faa4e446bff213))
+* tooltip truncate ([#39](https://github.com/radicalbit/radicalbit-design-system/issues/39)) ([e743372](https://github.com/radicalbit/radicalbit-design-system/commit/e743372ac6a218d675b11c898e8f753536547c85))
+
+
+### Bug Fixes
+
+* tabs and font family ([#35](https://github.com/radicalbit/radicalbit-design-system/issues/35)) ([2d06204](https://github.com/radicalbit/radicalbit-design-system/commit/2d0620449ca4f9e0d351dac33e298045b9dada2a))
+
 ## [2.0.0](https://github.com/radicalbit/radicalbit-design-system/compare/v1.7.2...v2.0.0) (2025-01-31)
 
 
