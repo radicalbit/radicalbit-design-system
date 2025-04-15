@@ -31,13 +31,14 @@ const FormField = ({
   modifierContent = '',
   required,
   messageColor = 'error',
+  ...other
 }: Props) => {
   const cssContent = classNames({
     'c-form-field__content--flex-column': flexColumn,
   });
 
   return (
-    <div className={`c-form-field ${className} ${modifier}`}>
+    <div className={`c-form-field ${className} ${modifier}`} {...other}>
       {label && (
         <div className="c-form-field__label">
           <label>
