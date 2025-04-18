@@ -49,11 +49,10 @@ export const Default: Story = {
     layout: 'centered',
   },
   args: {
-    modifier: 'ciao',
     treeData: mockData,
   },
 
-  render: ({ modifier, treeData }) => {
+  render: ({ treeData }) => {
     const onSelect: TreeProps['onSelect'] = (selectedKeys, info) => {
       console.log('selected', selectedKeys, info);
     };
