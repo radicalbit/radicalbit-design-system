@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.1.0...v2.2.0) (2025-04-18)
+
+
+### Features
+
+* add &lt;Tree /&gt; component ([#41](https://github.com/radicalbit/radicalbit-design-system/issues/41)) ([fbf45ae](https://github.com/radicalbit/radicalbit-design-system/commit/fbf45ae9c055e90d3170a33e7c7f765a5b9942a9))
+
 ## [2.1.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.0.0...v2.1.0) (2025-04-15)
 
 
