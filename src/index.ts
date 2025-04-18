@@ -104,6 +104,7 @@ export { default as Tooltip } from './lib/components/tooltip';
 export { default as Toggle } from './lib/components/toggle';
 export { default as Tour } from './lib/components/tour';
 export { default as Transfer } from './lib/components/transfer';
+export { default as Tree } from './lib/components/tree';
 export { default as Truncate } from './lib/components/truncate';
 export { default as Upload } from './lib/components/upload';
 export { default as UserAvatar } from './lib/components/user-avatar';
