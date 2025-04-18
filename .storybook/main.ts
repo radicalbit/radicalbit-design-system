@@ -1,57 +1,65 @@
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
-const path = require('path');
+
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Convert import.meta.url to a file path
+const filename = fileURLToPath(import.meta.url);
+// Get directory name like __dirname
+const dirname = path.dirname(filename);
+
 const config = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
 
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-onboarding",
-    "@storybook/addon-interactions",
-    "@storybook/addon-styling-webpack",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-onboarding',
+    '@storybook/addon-interactions',
+    '@storybook/addon-styling-webpack',
     ({
-      name: "@storybook/addon-styling-webpack",
+      name: '@storybook/addon-styling-webpack',
 
       options: {
         rules: [{
           test: /\.(less)$/,
           sideEffects: true,
           use: [
-            require.resolve("style-loader"),
+            'style-loader',
             {
-              loader: require.resolve("css-loader"),
+              loader: 'css-loader',
               options: {},
             },
             {
-              loader: require.resolve("less-loader"),
+              loader: 'less-loader',
               options: {
                 lessOptions: {
                   javascriptEnabled: true,
                   paths: [
-                    path.resolve(__dirname, './node_modules'),
+                    path.resolve(dirname, './node_modules'),
                     path.resolve('./src/lib/components'),
                   ],
                 },
               },
             },
           ],
-        },],
-      }
-    })
+        }],
+      },
+    }),
   ],
 
   swc: () => ({
     jsc: {
       transform: {
         react: {
-          runtime: 'automatic'
-        }
-      }
-    }
+          runtime: 'automatic',
+        },
+      },
+    },
   }),
   
   framework: {
-    name: "@storybook/react-webpack5",
+    name: '@storybook/react-webpack5',
     options: {
       builder: {
         useSWC: true,
@@ -67,31 +75,30 @@ const config = {
         esModuleInterop: false,
       },
       shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) => prop.name.includes('aria') ? false : true,
+      propFilter: (prop) => !prop.name.includes('aria'),
     },
   },
 
   webpackFinal: async (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@Src': path.resolve(__dirname, '../src/'),
-      '@Resources': path.resolve(__dirname, '../src/lib/resources/'),
-      '@Lib': path.resolve(__dirname, '../src/lib/'),
-      '@Components': path.resolve(__dirname, '../src/lib/components/'),
-      '@Demo': path.resolve(__dirname, '../src/demo/'),
-      '@Styles': path.resolve(__dirname, '../src/styles/'),
-      '@Images': path.resolve(__dirname, '../src/lib/resources/images/'),
+      '@Src': path.resolve(dirname, '../src/'),
+      '@Resources': path.resolve(dirname, '../src/lib/resources/'),
+      '@Lib': path.resolve(dirname, '../src/lib/'),
+      '@Components': path.resolve(dirname, '../src/lib/components/'),
+      '@Demo': path.resolve(dirname, '../src/demo/'),
+      '@Styles': path.resolve(dirname, '../src/styles/'),
+      '@Images': path.resolve(dirname, '../src/lib/resources/images/'),
     };
 
-    const fileLoaderRule = config.module.rules.find(rule => rule.test && rule.test.test('.svg'));
-    fileLoaderRule.exclude = /\.svg$/;  
+    const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/;
 
     config.module.rules.push({
       test: /\.svg$/i,
       type: 'asset',
       resourceQuery: /url/, // *.svg?url
     });
-    
 
     config.module.rules.push({
       test: /\.svg$/i,
@@ -103,8 +110,12 @@ const config = {
     return config;
   },
   
+  core: {
+    disableTelemetry: true,
+  },
+  
   docs: {
-    autodocs: "tag",
+    autodocs: 'tag',
   },
 };
 
