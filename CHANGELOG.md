@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.2.0...v2.2.1) (2025-05-28)
+
+
+### Bug Fixes
+
+* install new deps and fix TS ([#43](https://github.com/radicalbit/radicalbit-design-system/issues/43)) ([9a0c426](https://github.com/radicalbit/radicalbit-design-system/commit/9a0c426e6a298909543a64d1110ffc62092d7187))
+
 ## [2.2.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.1.0...v2.2.0) (2025-04-18)
 
 
