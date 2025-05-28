@@ -33,7 +33,7 @@ const FontAwesomeCustomIcon = ({
   });
 
   return cloneElement(
-    children,
+    children as React.ReactElement<{ className?: string; onClick?: MouseEventHandler<HTMLDivElement> }>,
     { className: `c-font-awesome-custom-icon svg-inline--fa ${modifier} ${className} ${css}`, onClick, ...other }
   );
 };

@@ -61,11 +61,12 @@ const Draggable = ({
     'm-draggable--focus': onFocus,
   });
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
     
   useEffect(() => {
     const target = containerRef && containerRef.current ? containerRef.current : window.document;
-    target.ondrop = (e: DragEvent) => handleDrop(e, ref);
+    target.ondrop = (e: DragEvent) => handleDrop(e, ref as React.RefObject<HTMLDivElement>);
+
     target.ondragover = handleDragOver;
 
     if (containerRef?.current && containerClassName) {
