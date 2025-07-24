@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.3.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.2.1...v2.3.0) (2025-07-24)
+
+
+### Features
+
+* add width to form field ([#45](https://github.com/radicalbit/radicalbit-design-system/issues/45)) ([4873db5](https://github.com/radicalbit/radicalbit-design-system/commit/4873db5cf8c6cec2c1ca7f705ff963a40db3d71d))
+
+
+### Bug Fixes
+
+* change node version ([#47](https://github.com/radicalbit/radicalbit-design-system/issues/47)) ([74ea31b](https://github.com/radicalbit/radicalbit-design-system/commit/74ea31be60f2054c8acb5dfe25f1b5b81558f5c8))
+
 ## [2.2.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.2.0...v2.2.1) (2025-05-28)
 
 
