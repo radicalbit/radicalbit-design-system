@@ -18,7 +18,16 @@ type Props = {
   modifierContent?: string;
   required?: boolean;
   messageColor?: 'warning' | 'success' | 'error';
+  width?: number | string;
 };
+
+function formatWidth(width?: number | string): string | undefined {
+  if (typeof width === 'number') {
+    return `${width}px`;
+  }
+
+  return width;
+}
 
 const FormField = ({
   children,
@@ -31,14 +40,17 @@ const FormField = ({
   modifierContent = '',
   required,
   messageColor = 'error',
+  width,
   ...other
 }: Props) => {
   const cssContent = classNames({
     'c-form-field__content--flex-column': flexColumn,
   });
 
+  const widthStyles = formatWidth(width);
+
   return (
-    <div className={`c-form-field ${className} ${modifier}`} {...other}>
+    <div className={`c-form-field ${className} ${modifier}`} {...other} style={{ width: widthStyles }}>
       {label && (
         <div className="c-form-field__label">
           <label>
