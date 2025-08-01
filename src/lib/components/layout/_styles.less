@@ -50,11 +50,11 @@
 		}
 
 		&.ant-layout-sider-collapsed {
-			width: @rdb-sidebar-collapsed-width !important;
-			min-width: @rdb-sidebar-collapsed-width !important;
+			width: var(--coo-sidebar-collapsed-width) !important;
+			min-width: var(--coo-sidebar-collapsed-width) !important;
 
 			.ant-layout-sider-trigger {
-				width: @rdb-sidebar-collapsed-width !important;
+				width: var(--coo-sidebar-collapsed-width) !important;
 			}
 
 			.l-user-avatar__name {
@@ -66,12 +66,12 @@
 			}
 
 			&.rdb-layout-secondary-column {
-				width: @rdb-secondary-sidebar-collapsed-width !important;
-				min-width: @rdb-secondary-sidebar-collapsed-width !important;
+				width: var(--coo-secondary-sidebar-collapsed-width) !important;
+				min-width: var(--coo-secondary-sidebar-collapsed-width) !important;
 				border-right: 1px solid var(--coo-secondary-03);
 
 				.ant-layout-sider-trigger {
-					width: @rdb-secondary-sidebar-collapsed-width !important;
+					width: var(--coo-secondary-sidebar-collapsed-width) !important;
 				}
 			}
 		}
@@ -86,11 +86,11 @@
 
 	.SecondaryColumnCollapsed {
 		.ant-layout-content {
-			margin-left: @rdb-secondary-sidebar-collapsed-width;
+			margin-left: var(--coo-secondary-sidebar-collapsed-width);
 		}
 
 		.ant-layout-header {
-			left: @rdb-secondary-sidebar-collapsed-width;
+			left: var(--coo-secondary-sidebar-collapsed-width);
 		}
 	}
 
@@ -100,11 +100,11 @@
 		}
 
 		.ant-layout-content {
-			margin-left: @rdb-layout-secondary-column-width;
+			margin-left: var(--coo-layout-secondary-column-width);
 		}
 
 		.ant-layout-header {
-			left: @rdb-layout-secondary-column-width;
+			left: var(--coo-layout-secondary-column-width);
 		}
 	}
 
@@ -114,69 +114,69 @@
 		}
 
 		.ant-layout-content {
-			margin-left: @rdb-left-sidebar-width;
+			margin-left: var(--coo-left-sidebar-width);
 		}
 
 		.ant-layout-header {
-			left: @rdb-left-sidebar-width;
+			left: var(--coo-left-sidebar-width);
 		}
 	}
 
 	.LeftColumnAndSecondary {
 		.rdb-layout-secondary-column {
-			left: @rdb-left-sidebar-width;
+			left: var(--coo-left-sidebar-width);
 		}
 
 		.ant-layout-content {
-			margin-left: @rdb-left-sidebar-width + @rdb-layout-secondary-column-width;
+			margin-left: calc(var(--coo-left-sidebar-width) + var(--coo-layout-secondary-column-width));
 		}
 
 		.ant-layout-header {
-			left: @rdb-left-sidebar-width + @rdb-layout-secondary-column-width;
+			left: calc(var(--coo-left-sidebar-width) + var(--coo-layout-secondary-column-width));
 		}
 	}
 
 	.LeftColumnAndSecondaryColumnCollapsed {
 		.ant-layout-content {
-			margin-left: @rdb-left-sidebar-width + @rdb-secondary-sidebar-collapsed-width;
+			margin-left: calc(var(--coo-left-sidebar-width) + var(--coo-secondary-sidebar-collapsed-width));
 		}
 
 		.ant-layout-header {
-			left: @rdb-left-sidebar-width + @rdb-secondary-sidebar-collapsed-width;
+			left: calc(var(--coo-left-sidebar-width) + var(--coo-secondary-sidebar-collapsed-width));
 		}
 	}
 
 	.LeftColumnCollapsed {
 		.ant-layout-content {
-			margin-left: @rdb-sidebar-collapsed-width;
+			margin-left: var(--coo-sidebar-collapsed-width);
 		}
 
 		.ant-layout-header {
-			left: @rdb-sidebar-collapsed-width;
+			left: var(--coo-sidebar-collapsed-width);
 		}
 	}
 
 	.LeftColumnCollapsedAndSecondary {
 		.ant-layout-content {
-			margin-left: @rdb-sidebar-collapsed-width + @rdb-layout-secondary-column-width;
+			margin-left: calc(var(--coo-sidebar-collapsed-width) + var(--coo-layout-secondary-column-width));
 		}
 
 		.ant-layout-header {
-			left: @rdb-sidebar-collapsed-width + @rdb-layout-secondary-column-width;
+			left: calc(var(--coo-sidebar-collapsed-width) + var(--coo-layout-secondary-column-width));
 		}
 
 		.rdb-layout-secondary-column {
-			left: @rdb-sidebar-collapsed-width;
+			left: var(--coo-sidebar-collapsed-width);
 		}
 	}
 
 	.LeftColumnCollapsedAndSecondaryCollapsed {
 		.ant-layout-content {
-			margin-left: @rdb-sidebar-collapsed-width + @rdb-secondary-sidebar-collapsed-width;
+			margin-left: calc(var(--coo-sidebar-collapsed-width) + var(--coo-secondary-sidebar-collapsed-width));
 		}
 
 		.ant-layout-header {
-			left: @rdb-sidebar-collapsed-width + @rdb-secondary-sidebar-collapsed-width;
+			left: calc(var(--coo-sidebar-collapsed-width) + var(--coo-secondary-sidebar-collapsed-width));
 		}
 	}
 
@@ -197,11 +197,11 @@
 
 	.RightColumnCollapsed {
 		.ant-layout-header {
-			right: @rdb-sidebar-collapsed-width;
+			right: var(--coo-sidebar-collapsed-width);
 		}
 
 		.ant-layout-content {
-			margin-right: @rdb-sidebar-collapsed-width;
+			margin-right: var(--coo-sidebar-collapsed-width);
 		}
 	}
 

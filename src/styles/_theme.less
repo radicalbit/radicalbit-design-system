@@ -15,6 +15,10 @@
 /* Ant Colors Override */
 html {
 	--antd-wave-shadow-color: var(--coo-primary);
+	--coo-layout-secondary-column-width: 15rem;
+	--coo-left-sidebar-width: 15rem;
+	--coo-secondary-sidebar-collapsed-width: 1.618rem;
+	--coo-sidebar-collapsed-width: 5rem;
 }
 
 a {
@@ -32,6 +36,11 @@ a:hover {
 	svg {
 		fill: var(--coo-primary-01);
 	}
+}
+
+textarea::placeholder {
+	color: var(--coo-dark) !important;
+	opacity: .5;
 }
 
 ::selection {
@@ -409,14 +418,10 @@ a:hover {
 	color: var(--coo-primary);
 }
 
-@rdb-left-sidebar-width: 15rem;
 @rdb-right-sidebar-width: var(--right-column-width, 15rem);
 @rdb-header-height: 5rem;
 @rdb-sidebar-trigger-height: 3rem;
 @rdb-overall-top-height: 7rem;
-@rdb-sidebar-collapsed-width: 5rem;
-@rdb-secondary-sidebar-collapsed-width: 1.618rem;
-@rdb-layout-secondary-column-width: 15rem;
 
 @rdb-layout-right-column-visible-above: 992px;
 
