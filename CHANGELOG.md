@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.4.0...v2.5.0) (2025-08-04)
+
+
+### Features
+
+* migrate right column ([#50](https://github.com/radicalbit/radicalbit-design-system/issues/50)) ([3febe7a](https://github.com/radicalbit/radicalbit-design-system/commit/3febe7af33726d6b34b5de3e784c782c705d53f7))
+
 ## [2.4.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.3.0...v2.4.0) (2025-08-01)
 
 
