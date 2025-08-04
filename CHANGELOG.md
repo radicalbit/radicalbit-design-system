@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.5.0...v2.6.0) (2025-08-04)
+
+
+### Features
+
+* remove old right column widh logic ([#52](https://github.com/radicalbit/radicalbit-design-system/issues/52)) ([577dd5d](https://github.com/radicalbit/radicalbit-design-system/commit/577dd5d6909d37eb02717cef335c39e6254d8cc9))
+
 ## [2.5.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.4.0...v2.5.0) (2025-08-04)
 
 
