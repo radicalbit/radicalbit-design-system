@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.6.0...v2.6.1) (2025-08-04)
+
+
+### Bug Fixes
+
+* read min-width and max-width from css var for right column ([#54](https://github.com/radicalbit/radicalbit-design-system/issues/54)) ([248a9b8](https://github.com/radicalbit/radicalbit-design-system/commit/248a9b8eb8f0abfd5e45d989b17f913bf1aff22f))
+
 ## [2.6.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.5.0...v2.6.0) (2025-08-04)
 
 
