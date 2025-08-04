@@ -12,7 +12,6 @@ type MainProps = {
   headerContentDark?: ReactNode;
   showBottomDrawerOnHover?: ReactNode;
   mainClassName?: string;
-  rightColumnWidth?: number | string;
 };
 
 const { Header, Content } = AntdLayout;
@@ -20,13 +19,6 @@ const { Header, Content } = AntdLayout;
 const MemoLayout = memo(AntdLayout);
 const MemoHeader = memo(Header);
 const MemoContent = memo(Content);
-
-const getRightColumnWidthValue = (value: string | number) => {
-  if (typeof value === 'number') {
-    return `${value}px`;
-  }
-  return value;
-};
 
 const MainColumn = (props: MainProps) => {
   const {
@@ -39,7 +31,6 @@ const MainColumn = (props: MainProps) => {
     headerContentDark,
     showBottomDrawerOnHover,
     mainClassName = '',
-    rightColumnWidth,
   } = props;
 
   const [bottomDrawerIsOpen, setBottomDrawerIsOpen] = useState(false);
@@ -54,14 +45,9 @@ const MainColumn = (props: MainProps) => {
     }, 1000);
   };
 
-  const style : Record<string, string| number> | undefined = rightColumnWidth ? {
-    '--right-column-width': getRightColumnWidthValue(rightColumnWidth),
-  } : undefined;
-
   return (
     <MemoLayout
       className="rdb-layout-main-column"
-      style={style}
     >
       {headerContent && (
         <MemoHeader
