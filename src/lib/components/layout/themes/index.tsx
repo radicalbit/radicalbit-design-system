@@ -63,7 +63,6 @@ export default ({
     onRightColumnCollapse,
     rightColumnCollapsible,
     rightColumnHeaderAltContent,
-    rightColumnWidth = '15rem',
     rightContent,
   } = right;
 
@@ -122,7 +121,6 @@ export default ({
           headerContentDark={hasHeaderRightContentDark}
           onCollapse={onRightColumnCollapse}
           styles={rightColumnStyles}
-          width={rightColumnWidth}
         />
       )}
 
@@ -136,7 +134,6 @@ export default ({
           headerContent={hasHeader && headerContent}
           headerContentDark={hasHeaderContentDark}
           mainClassName={mainClassName}
-          rightColumnWidth={hasRightColumn ? rightColumnWidth : undefined}
           showBottomDrawerOnHover={showBottomDrawerOnHover}
         />
       )}

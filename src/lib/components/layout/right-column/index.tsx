@@ -18,10 +18,8 @@ export type RightProps = {
   onRightColumnCollapse?: () => void;
   rightColumnCollapsible?: boolean;
   rightColumnHeaderAltContent?: ReactNode;
-  rightColumnWidth?: number | string;
   rightContent?: ReactNode;
   styles?: CSSProperties;
-  width?: number | string;
 };
 
 const { Sider, Header } = AntdLayout;
@@ -38,7 +36,6 @@ const RightColumn = (props: RightProps) => {
     headerContentDark,
     onCollapse,
     styles,
-    width,
   } = props;
 
   const cssSider = classNames({
@@ -75,7 +72,6 @@ const RightColumn = (props: RightProps) => {
       onCollapse={onCollapse}
       reverseArrow
       style={customStyles}
-      width={width}
     >
       <Header className={cssHeader}>{headerAltContent}</Header>
 
