@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.7.0...v2.7.1) (2025-08-06)
+
+
+### Bug Fixes
+
+* type border-bottmo ([#58](https://github.com/radicalbit/radicalbit-design-system/issues/58)) ([ecf8113](https://github.com/radicalbit/radicalbit-design-system/commit/ecf8113fd26673a079ac68d54c3321f1d95620eb))
+
 ## [2.7.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.6.1...v2.7.0) (2025-08-06)
 
 
