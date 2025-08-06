@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.6.1...v2.7.0) (2025-08-06)
+
+
+### Features
+
+* Add type="border-bottom" for &lt;Collapse /&gt; ([#56](https://github.com/radicalbit/radicalbit-design-system/issues/56)) ([8a988ee](https://github.com/radicalbit/radicalbit-design-system/commit/8a988ee0ff035765221a8a727bc4f267944428a1))
+
 ## [2.6.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.6.0...v2.6.1) (2025-08-04)
 
 
