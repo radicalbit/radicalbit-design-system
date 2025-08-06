@@ -14,7 +14,7 @@ type Props = CollapseProps & {
   dark?: boolean
   modifier?: string;
   scroll?: 'horizontal' | 'vertical';
-  type?: 'minimal' | 'no-border' | 'transparent' | 'error' | 'secondary-medium' | 'primary-light';
+  type?: 'minimal' | 'no-border' | 'border-bottom' | 'transparent' | 'error' | 'secondary-medium' | 'primary-light';
 };
 
 const Collapse = ({
