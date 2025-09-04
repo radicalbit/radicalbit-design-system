@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.8.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.8.2...v2.8.3) (2025-09-04)
+
+
+### Bug Fixes
+
+* bkg color ([#66](https://github.com/radicalbit/radicalbit-design-system/issues/66)) ([fe2a103](https://github.com/radicalbit/radicalbit-design-system/commit/fe2a103bb3e520cc40a3ed870a55291be26e236d))
+* modal and right resizer ([#68](https://github.com/radicalbit/radicalbit-design-system/issues/68)) ([2a41459](https://github.com/radicalbit/radicalbit-design-system/commit/2a414590fee0496b78f08826e2d85d7f3a2d8911))
+
 ## [2.8.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.8.1...v2.8.2) (2025-09-04)
 
 
