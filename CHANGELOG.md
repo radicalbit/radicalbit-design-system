@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.8.0...v2.8.1) (2025-09-04)
+
+
+### Bug Fixes
+
+* dark mode font color for popover and popconfirm ([#62](https://github.com/radicalbit/radicalbit-design-system/issues/62)) ([d2da3db](https://github.com/radicalbit/radicalbit-design-system/commit/d2da3dbef90e88dff841e0c0ef2db11405be2182))
+
 ## [2.8.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.7.1...v2.8.0) (2025-09-04)
 
 
