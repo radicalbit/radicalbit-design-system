@@ -6,7 +6,7 @@ import React, {
 const MIN_WIDTH = 300;
 const MAX_WIDTH = 1000;
 
-function RightColumnResizer() : JSX.Element {
+function RightColumnResizer(props: React.HTMLAttributes<HTMLDivElement>) : JSX.Element {
   const parentRef = useRef<HTMLDivElement | null>(null);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -61,14 +61,14 @@ function RightColumnResizer() : JSX.Element {
         height: '100vh',
         width: '20px',
         cursor: 'col-resize',
-        zIndex: 9999,
+        zIndex: 1000,
         userSelect: isDragging ? 'none' : 'auto',
         backgroundColor: 'transparent',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
       }}
-      title="Drag to resize sidebar width"
+      {...props}
     >
       <div
         style={{
