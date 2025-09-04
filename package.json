@@ -1,6 +1,6 @@
 {
   "name": "@radicalbit/radicalbit-design-system",
-  "version": "2.8.0",
+  "version": "2.8.1",
   "main": "dist/index.js",
   "repository": "https://github.com/radicalbit/radicalbit-design-system",
   "author": "https://github.com/radicalbit",
