@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.8.1...v2.8.2) (2025-09-04)
+
+
+### Bug Fixes
+
+* modal less ([#64](https://github.com/radicalbit/radicalbit-design-system/issues/64)) ([d94c268](https://github.com/radicalbit/radicalbit-design-system/commit/d94c268de17acdc4f498d744757f337423e021be))
+
 ## [2.8.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.8.0...v2.8.1) (2025-09-04)
 
 
