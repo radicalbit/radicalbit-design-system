@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.7.1...v2.8.0) (2025-09-04)
+
+
+### Features
+
+* right column resizer ([#60](https://github.com/radicalbit/radicalbit-design-system/issues/60)) ([e0920c5](https://github.com/radicalbit/radicalbit-design-system/commit/e0920c57fd8ddeb2f42719d19f18f518677db098))
+
 ## [2.7.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.7.0...v2.7.1) (2025-08-06)
 
 
