@@ -1,4 +1,6 @@
 .c-popover {
+	color: var(--coo-dark);
+
 	.ant-popover-inner {
 		background-color: var(--coo-white-bk);
 
@@ -41,6 +43,10 @@
 	&.ant-popover {
 		font-size: var(--coo-font-size-s);
 		min-width: 12rem;
+
+		.ant-popover-arrow::before {
+			background: var(--coo-white-bk);
+		}
 
 		.ant-popover-bottom-margin {
 			display: block;
