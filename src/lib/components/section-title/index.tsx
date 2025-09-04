@@ -20,7 +20,7 @@ type Props = {
   size?: 'small' | 'medium' | 'large' | 'xlarge';
   subtitle?: React.ReactNode;
   title?: React.ReactNode;
-  titleColor?: 'primary';
+  titleColor?: 'primary' | 'error';
   titleSuffix?: React.ReactNode;
   titleWeight?: 'light' | 'normal' | 'bold';
   type?: 'one-line';

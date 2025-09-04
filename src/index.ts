@@ -77,6 +77,7 @@ export { default as RangePicker } from './lib/components/range-picker';
 export { default as RatioWrapper } from './lib/components/ratio-wrapper';
 export { default as RelativeDateTime } from './lib/components/relative-date-time';
 export { default as RelativeUpTime } from './lib/components/relative-up-time';
+export { default as RightColumnResizer } from './lib/components/layout/right-column/right-column-resizer';
 export { default as RbitAvatar } from './lib/components/user-avatar/rbit-avatar';
 export { default as RbitModal } from './lib/components/rbit-modal';
 export { default as Resizable } from './lib/components/resizable';
