@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.8.3...v2.9.0) (2025-09-10)
+
+
+### Features
+
+* add layout wide ([#69](https://github.com/radicalbit/radicalbit-design-system/issues/69)) ([47a3c57](https://github.com/radicalbit/radicalbit-design-system/commit/47a3c57ad57546fffe26dfbe93d848c363b8eff1))
+
 ## [2.8.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.8.2...v2.8.3) (2025-09-04)
 
 
