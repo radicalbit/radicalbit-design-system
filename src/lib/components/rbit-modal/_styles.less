@@ -33,9 +33,22 @@
 	}
 
 	&__actions {
-		display: flex;
-		gap: 1rem;
-		justify-content: flex-end;
+		&--layout  {
+			&-default {
+				display: flex;
+				gap: 1rem;
+				justify-content: flex-end;
+			}
+
+			&-wide {
+				display: flex;
+				gap: 1rem;
+
+				* > {
+					flex: 1;
+				}
+			}
+		}
 	}
 
 	&--maximize {
