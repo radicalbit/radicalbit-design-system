@@ -10,6 +10,7 @@ import AntdModal, { ModalProps } from 'antd/es/modal';
 
 type Props = ModalProps & {
   actions?: React.ReactNode;
+  actionsLayout?: 'default' | 'wide';
   background?: 'secondary-04';
   dark?: boolean;
   defaultMaximize?: boolean;
@@ -25,6 +26,7 @@ type Props = ModalProps & {
 
 const RbitModal = ({
   actions,
+  actionsLayout = 'default',
   background,
   children,
   className = '',
@@ -66,6 +68,11 @@ const RbitModal = ({
       onMaximize(!cModalMaximized);
     }
   };
+
+  const cssActions = classNames({
+    dark,
+    [`c-rbit-modal__actions--layout-${actionsLayout}`]: actionsLayout,
+  });
 
   return (
     <AntdModal
@@ -112,7 +119,7 @@ const RbitModal = ({
 
           <div className="c-rbit-modal__body">{children}</div>
 
-          <div className="c-rbit-modal__actions">{actions}</div>
+          <div className={`c-rbit-modal__actions ${cssActions}`}>{actions}</div>
         </div>
       </>
     </AntdModal>
