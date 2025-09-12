@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.0...v2.9.1) (2025-09-12)
+
+
+### Bug Fixes
+
+* menu bkg color and font color ([#72](https://github.com/radicalbit/radicalbit-design-system/issues/72)) ([7efab9e](https://github.com/radicalbit/radicalbit-design-system/commit/7efab9e5b5756d718a93ef84ae17c0e70d53e3bf))
+
 ## [2.9.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.8.3...v2.9.0) (2025-09-10)
 
 
