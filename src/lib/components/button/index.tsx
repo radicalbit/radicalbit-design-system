@@ -24,7 +24,7 @@ export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
 
 const Button = (props: Props): ReactElement<typeof AntdButton> => {
   const {
-    className = '', // Needed when <Button /> is used as other Antd component child
+    className = '', // Needed when <Button /> is used as other Antd component child.
     prefix,
     suffix,
     filled = false,
