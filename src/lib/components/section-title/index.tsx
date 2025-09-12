@@ -21,6 +21,7 @@ type Props = {
   subtitle?: React.ReactNode;
   title?: React.ReactNode;
   titleColor?: 'primary' | 'error';
+  titlePrefix?: React.ReactNode;
   titleSuffix?: React.ReactNode;
   titleWeight?: 'light' | 'normal' | 'bold';
   type?: 'one-line';
@@ -42,6 +43,7 @@ const SectionTitle = (props: Props) => {
     subtitle,
     title,
     titleColor,
+    titlePrefix,
     titleSuffix,
     titleWeight,
     type,
@@ -86,6 +88,10 @@ const SectionTitle = (props: Props) => {
       {...others}
     >
       <div className={`c-section-title__title ${cssTitle}`}>
+        {titlePrefix && (
+          <div className="c-section-title__title-prefix">{titlePrefix}</div>
+        )}
+        
         <div
           className={`c-section-title__title-text ${cssEllipsis} ${cssText}`}
         >
