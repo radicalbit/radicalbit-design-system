@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.1...v2.9.2) (2025-09-12)
+
+
+### Bug Fixes
+
+* fake pr to trigger the release ([#75](https://github.com/radicalbit/radicalbit-design-system/issues/75)) ([3dbdb53](https://github.com/radicalbit/radicalbit-design-system/commit/3dbdb53feb0b31929a5de6f2044f299353df9403))
+
 ## [2.9.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.0...v2.9.1) (2025-09-12)
 
 
