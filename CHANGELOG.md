@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.2...v2.9.3) (2025-09-16)
+
+
+### Bug Fixes
+
+* manu dark mode ([#77](https://github.com/radicalbit/radicalbit-design-system/issues/77)) ([132db09](https://github.com/radicalbit/radicalbit-design-system/commit/132db09f3c2ab0c1bc3fc70d272859d853c72234))
+
 ## [2.9.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.1...v2.9.2) (2025-09-12)
 
 
