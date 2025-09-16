@@ -10,5 +10,35 @@
 		.ant-menu-item-divider {
 			background-color: var(--coo-secondary-03);
 		}
+
+		.ant-menu-item.ant-menu-item-selected {
+			background-color: var(--coo-primary-04);
+		}
+
+		.ant-menu-item.ant-menu-item-active {
+			background-color: var(--coo-secondary-04);
+		}
+
+		.ant-menu-item:not(.ant-menu-item-selected).ant-menu-item-active {
+			background-color: var(--coo-secondary-04);
+		}
+	}
+}
+
+.dark {
+	.c-menu {
+		&.ant-menu {
+			.ant-menu-item.ant-menu-item-selected {
+				background-color: var(--coo-secondary-04);
+			}
+
+			.ant-menu-item.ant-menu-item-active {
+				background-color: var(--coo-secondary-03);
+			}
+
+			.ant-menu-item:not(.ant-menu-item-selected).ant-menu-item-active {
+				background-color: var(--coo-secondary-03);
+			}
+		}
 	}
 }
