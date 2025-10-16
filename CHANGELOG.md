@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.9.4](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.3...v2.9.4) (2025-10-16)
+
+
+### Bug Fixes
+
+* collapse bkg ([#81](https://github.com/radicalbit/radicalbit-design-system/issues/81)) ([e091758](https://github.com/radicalbit/radicalbit-design-system/commit/e0917585f038d3748ff887a8cd8d37355d30be15))
+* datepicker ([#79](https://github.com/radicalbit/radicalbit-design-system/issues/79)) ([3b87eaa](https://github.com/radicalbit/radicalbit-design-system/commit/3b87eaa59249806744a7867b9684fe8472b9b353))
+
 ## [2.9.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.2...v2.9.3) (2025-09-16)
 
 
