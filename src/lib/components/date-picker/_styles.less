@@ -1,5 +1,48 @@
-.c-datepicker {
+.c-datepicker.ant-picker {
 	background: transparent;
+
+	&.ant-picker-outlined {
+		background: transparent;
+
+		&.ant-picker-status-error {
+			border-color: var(--coo-error);
+		}
+
+		&:hover {
+			background: transparent;
+		}
+
+		&:focus-within {
+			background: transparent;
+		}
+	}
+
+	&:hover {
+		background: transparent;
+	}
+
+	&:focus-within {
+		background: transparent;
+	}
+
+	.ant-picker-input  {
+		color: var(--coo-dark);
+
+		&.ant-picker-input-placeholder {
+			input {
+				opacity: .3;
+				color: var(--coo-dark);
+			}
+		}
+
+		.ant-picker-suffix {
+			color: var(--coo-dark);
+		}
+
+		.ant-picker-clear {
+			color: var(--coo-dark);
+		}
+	}
 
 	&--readonly {
 		input {
@@ -20,5 +63,182 @@
 	.ant-calendar-picker-clear {
 		width: 1rem !important;
 		height: 1rem !important;
+	}
+}
+
+.ant-picker-dropdown {
+	.ant-picker-panel {
+		.ant-picker-year-panel,
+		.ant-picker-month-panel {
+			background: var(--coo-white-bk);
+			color: var(--coo-dark);
+
+			.ant-picker-header {
+				color: var(--coo-dark);
+
+				button {
+					color: var(--coo-dark);
+				}
+			}
+
+			.ant-picker-body {
+				.ant-picker-cell {
+					color: var(--coo-dark);
+
+					&.ant-picker-cell-selected {
+						.ant-picker-cell-inner {
+							background-color: var(--coo-primary);
+							border: 1px solid var(--coo-primary);
+						}
+					}
+
+					&:not(.ant-picker-cell-selected) {
+						&:hover {
+							.ant-picker-cell-inner {
+								background-color: var(--coo-secondary-04) !important;
+							}
+						}
+					}
+
+					&.ant-picker-cell-disabled {
+						opacity: .3;
+
+						&::before {
+							opacity: .1;
+							background-color: var(--coo-secondary);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.ant-picker-datetime-panel {
+		background: var(--coo-white-bk);
+		color: var(--coo-dark);
+
+		.ant-picker-date-panel {
+			.ant-picker-header {
+				color: var(--coo-dark);
+
+				button {
+					color: var(--coo-dark);
+				}
+			}
+
+			.ant-picker-body {
+				.ant-picker-content {
+					th {
+						color: var(--coo-dark);
+					}
+
+					.ant-picker-cell {
+						opacity: .3;
+						color: var(--coo-dark);
+
+						&.ant-picker-cell-in-view {
+							opacity: 1;
+
+							&.ant-picker-cell-selected {
+								.ant-picker-cell-inner {
+									background-color: var(--coo-primary);
+									border: 1px solid var(--coo-primary);
+								}
+							}
+
+							&:not(.ant-picker-cell-selected) {
+								&:hover {
+									&.ant-picker-cell-hover {
+										.ant-picker-cell-inner {
+											background-color: var(--coo-secondary-04) !important;
+										}
+									}
+								}
+							}
+
+							&.ant-picker-cell-today {
+								.ant-picker-cell-inner {
+									border: 1px solid var(--coo-primary);
+
+									&::before {
+										border: none;
+									}
+								}
+							}
+						}
+
+						&.ant-picker-cell-disabled {
+							color: var(--coo-dark);
+							opacity: .3;
+
+							&::before {
+								opacity: .1;
+								background-color: var(--coo-secondary);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.ant-picker-time-panel  {
+			.ant-picker-header {
+				color: var(--coo-dark);
+
+				.ant-picker-header-view {
+					color: var(--coo-dark);
+				}
+			}
+
+
+			.ant-picker-time-panel-column {
+				.ant-picker-time-panel-cell {
+					&:not(.ant-picker-time-panel-cell-selected) {
+						&:hover {
+							.ant-picker-time-panel-cell-inner {
+								background-color: var(--coo-secondary-04) !important;
+							}
+						}
+					}
+
+					&.ant-picker-time-panel-cell-selected {
+						border-radius: 1rem;
+
+						.ant-picker-time-panel-cell-inner {
+							color: var(--coo-white);
+							background-color: var(--coo-primary);
+							border: 1px solid var(--coo-primary);
+						}
+					}
+
+					.ant-picker-time-panel-cell-inner {
+						color: var(--coo-dark);
+					}
+				}
+			}
+		}
+	}
+
+	.ant-picker-footer {
+		background: var(--coo-white-bk);
+		color: var(--coo-dark);
+
+		.ant-picker-now-btn {
+			padding: .5rem;
+			font-size: .8rem;
+			border-radius: .5rem;
+			color: var(--coo-dark);
+
+			&:hover {
+				background-color: var(--coo-secondary-04);
+			}
+		}
+
+		.ant-picker-ok {
+			button {
+				font-size: .8rem;
+				padding: .8rem;
+			}
+		}
 	}
 }
