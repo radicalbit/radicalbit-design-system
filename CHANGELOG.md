@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.5](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.4...v2.9.5) (2025-10-20)
+
+
+### Bug Fixes
+
+* import font weight 700 ([#82](https://github.com/radicalbit/radicalbit-design-system/issues/82)) ([ef38a5c](https://github.com/radicalbit/radicalbit-design-system/commit/ef38a5c52d1cbaaf8a342ee11809085e0772ad3c))
+
 ## [2.9.4](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.3...v2.9.4) (2025-10-16)
 
 
