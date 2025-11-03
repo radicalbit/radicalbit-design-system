@@ -1,4 +1,6 @@
-.c-range-picker {
+.c-range-picker.ant-picker {
+	background: transparent;
+
 	&.ant-picker-focused {
 		box-shadow: 0 0 0 2px var(--coo-primary-04);
 	}
@@ -18,29 +20,31 @@
 		align-items: center;
 	}
 
-	.ant-picker-clear {
+	.ant-picker-input {
 		color: var(--coo-dark);
-		background-color: var(--coo-white-bk);
 
-		svg {
-			color: var(--coo-dark);
-		}
-
-		&:hover {
-			color: var(--coo-primary);
-
-			svg {
-				color: var(--coo-primary);
+		&.ant-picker-input-placeholder {
+			input {
+				opacity: .3;
+				color: var(--coo-dark);
 			}
 		}
 	}
 
 	.ant-picker-suffix {
-		pointer-events: auto;
+		color: var(--coo-dark);
+	}
+
+	.ant-picker-clear {
+		color: var(--coo-dark);
 	}
 }
 
 .ant-picker-dropdown {
+	.ant-picker-presets {
+		background: var(--coo-white-bk);
+	}
+
 	.ant-picker-cell-selected,
 	.ant-picker-cell-range-start-single,
 	.ant-picker-cell-range-end-single,
