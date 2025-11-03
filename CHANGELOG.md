@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.6](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.5...v2.9.6) (2025-11-03)
+
+
+### Bug Fixes
+
+* range picker dark mode (preset) ([#84](https://github.com/radicalbit/radicalbit-design-system/issues/84)) ([b6d32f8](https://github.com/radicalbit/radicalbit-design-system/commit/b6d32f8dc586d9020363cd8250d730115f989153))
+
 ## [2.9.5](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.4...v2.9.5) (2025-10-20)
 
 
