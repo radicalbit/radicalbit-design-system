@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.7](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.6...v2.9.7) (2025-11-04)
+
+
+### Bug Fixes
+
+* range picker hours background ([#86](https://github.com/radicalbit/radicalbit-design-system/issues/86)) ([5410974](https://github.com/radicalbit/radicalbit-design-system/commit/541097424c01b416006593751aa411461f509593))
+
 ## [2.9.6](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.5...v2.9.6) (2025-11-03)
 
 
