@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.9](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.8...v2.9.9) (2025-11-05)
+
+
+### Bug Fixes
+
+* popver child classname ([#90](https://github.com/radicalbit/radicalbit-design-system/issues/90)) ([9ffc206](https://github.com/radicalbit/radicalbit-design-system/commit/9ffc206798091fbeea9c5a3e59de5b8872ebca63))
+
 ## [2.9.8](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.7...v2.9.8) (2025-11-05)
 
 
