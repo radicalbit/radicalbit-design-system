@@ -1,27 +1,33 @@
-.c-menu {
-	&.ant-menu {
-		background-color: var(--coo-white-bk);
-
-		.ant-menu-title-content {
-			color: var(--coo-secondary);
-			font-weight: var(--coo-font-weight-light);
+.ant-menu.c-menu {
+	&--background {
+		&-default {
+			background-color: var(--coo-white-bk);
 		}
 
-		.ant-menu-item-divider {
-			background-color: var(--coo-secondary-03);
+		&-transparent {
+			background-color: transparent;
 		}
+	}
 
-		.ant-menu-item.ant-menu-item-selected {
-			background-color: var(--coo-primary-04);
-		}
+	.ant-menu-title-content {
+		color: var(--coo-secondary);
+		font-weight: var(--coo-font-weight-light);
+	}
 
-		.ant-menu-item.ant-menu-item-active {
-			background-color: var(--coo-secondary-04);
-		}
+	.ant-menu-item-divider {
+		background-color: var(--coo-secondary-03);
+	}
 
-		.ant-menu-item:not(.ant-menu-item-selected).ant-menu-item-active {
-			background-color: var(--coo-secondary-04);
-		}
+	.ant-menu-item.ant-menu-item-selected {
+		background-color: var(--coo-primary-04);
+	}
+
+	.ant-menu-item.ant-menu-item-active {
+		background-color: var(--coo-secondary-04);
+	}
+
+	.ant-menu-item:not(.ant-menu-item-selected).ant-menu-item-active {
+		background-color: var(--coo-secondary-04);
 	}
 }
 
