@@ -7,6 +7,7 @@ type Props = PopoverProps & {
   minWidth?: number;
   modifier?: string;
   noPadding?: boolean;
+  childClassName?: string;
 };
 
 const Popover = ({
@@ -17,13 +18,19 @@ const Popover = ({
   minWidth = 0,
   modifier = '',
   noPadding,
+  childClassName = '',
   overlayClassName,
   placement = 'leftTop',
+  trigger,
   ...otherProps
 }: Props) => {
   const css = classNames({
     'c-popover--hidden-arrow': hideArrow,
     'c-popover--noPadding': noPadding,
+  });
+
+  const cssChild = classNames(childClassName, {
+    'c-popover__child--clickable': trigger,
   });
 
   return (
@@ -36,7 +43,7 @@ const Popover = ({
       }}
       {...otherProps}
     >
-      {children}
+      <div className={`c-popover__child ${cssChild}`}>{children}</div>
     </AntdPopover>
   );
 };
