@@ -29,14 +29,19 @@
 		}
 
 		.l-data-table__action {
+			cursor: pointer;
 			opacity: 0;
 			gap: 1rem;
 			display: flex;
 			flex-direction: row;
 			justify-content: var(--data-table-action-justify-content, flex-end);
 
-			&--noHide {
+			&--no-hide {
 				opacity: 1;
+			}
+
+			&--no-clickable {
+				cursor: default;
 			}
 		}
 	}

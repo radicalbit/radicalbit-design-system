@@ -5,10 +5,12 @@ export type Props = MenuProps & {
   alignment?: 'centered';
   dark?: boolean
   modifier?: string;
+  background?: 'default' | 'transparent';
 };
 
 const Menu = ({
   alignment,
+  background = 'default',
   className = '',
   dark = false,
   modifier = '',
@@ -16,6 +18,7 @@ const Menu = ({
 }: Props) => {
   const css = classNames({
     [`c-menu--alignment-${alignment}`]: alignment,
+    [`c-menu--background-${background}`]: background,
     dark,
   });
 

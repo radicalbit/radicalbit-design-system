@@ -19,16 +19,11 @@ const Popover = ({
   noPadding,
   overlayClassName,
   placement = 'leftTop',
-  trigger,
   ...otherProps
 }: Props) => {
   const css = classNames({
     'c-popover--hidden-arrow': hideArrow,
     'c-popover--noPadding': noPadding,
-  });
-
-  const cssChild = classNames({
-    'c-popover__child--clickable': trigger,
   });
 
   return (
@@ -41,7 +36,7 @@ const Popover = ({
       }}
       {...otherProps}
     >
-      <div className={`c-popover__child ${cssChild}`}>{children}</div>
+      {children}
     </AntdPopover>
   );
 };

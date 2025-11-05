@@ -66,6 +66,7 @@ function MainNav({
       {menu ? (
         <div className="cona-l-menu cona-l-menu--top">
           <Menu
+            background="transparent"
             selectedKeys={[
               menu.selectedItem ? menu.selectedItem.toString() : '',
             ]}
