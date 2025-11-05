@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.8](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.7...v2.9.8) (2025-11-05)
+
+
+### Bug Fixes
+
+* menu bkg and popover classname ([#88](https://github.com/radicalbit/radicalbit-design-system/issues/88)) ([b0a6f18](https://github.com/radicalbit/radicalbit-design-system/commit/b0a6f184bb64c30d4da14c02430f58660f3b5ec2))
+
 ## [2.9.7](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.6...v2.9.7) (2025-11-04)
 
 
