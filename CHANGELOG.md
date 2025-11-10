@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.10](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.9...v2.9.10) (2025-11-10)
+
+
+### Bug Fixes
+
+* trigger release ([#93](https://github.com/radicalbit/radicalbit-design-system/issues/93)) ([f6450ea](https://github.com/radicalbit/radicalbit-design-system/commit/f6450ea3b07a417a43198304d1f6f5aa9ae47fcf))
+
 ## [2.9.9](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.8...v2.9.9) (2025-11-05)
 
 
