@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.0...v2.10.1) (2025-11-18)
+
+
+### Bug Fixes
+
+* dark mode on sider ([#97](https://github.com/radicalbit/radicalbit-design-system/issues/97)) ([4258204](https://github.com/radicalbit/radicalbit-design-system/commit/425820442e9f4c3674aa3bbfd9d8489c05e1fa89))
+
 ## [2.10.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.10...v2.10.0) (2025-11-18)
 
 
