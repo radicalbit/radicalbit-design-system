@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.10...v2.10.0) (2025-11-18)
+
+
+### Features
+
+* Change color palette ([#95](https://github.com/radicalbit/radicalbit-design-system/issues/95)) ([2dee50f](https://github.com/radicalbit/radicalbit-design-system/commit/2dee50f576312a195d57bbf9ceb72f5b12895c6c))
+
 ## [2.9.10](https://github.com/radicalbit/radicalbit-design-system/compare/v2.9.9...v2.9.10) (2025-11-10)
 
 
