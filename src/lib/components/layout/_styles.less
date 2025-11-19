@@ -9,6 +9,10 @@
 	.cona-l-sider {
 		background-color: var(--coo-secondary-02);
 
+		&.dark {
+			background: var(--coo-black);
+		}
+		
 		&__header {
 			border-bottom: 0;
 		}
@@ -34,10 +38,6 @@
 		min-height: 100vh;
 		z-index: 100;
 		position: fixed;
-
-		&.dark {
-			background: var(--coo-black);
-		}
 
 		.ant-layout-sider-trigger {
 			transition: width .2s;
