@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.2...v2.10.3) (2025-11-19)
+
+
+### Bug Fixes
+
+* color less ([#101](https://github.com/radicalbit/radicalbit-design-system/issues/101)) ([3c52639](https://github.com/radicalbit/radicalbit-design-system/commit/3c5263997a9f26395cd31413f8d11a6e1b7d38ed))
+
 ## [2.10.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.1...v2.10.2) (2025-11-19)
 
 
