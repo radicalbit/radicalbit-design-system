@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.1...v2.10.2) (2025-11-19)
+
+
+### Bug Fixes
+
+* new palette and new font ([#99](https://github.com/radicalbit/radicalbit-design-system/issues/99)) ([1469fcf](https://github.com/radicalbit/radicalbit-design-system/commit/1469fcf70c4b6d5ca0dceaa0ce083351ec67aa43))
+
 ## [2.10.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.0...v2.10.1) (2025-11-18)
 
 
