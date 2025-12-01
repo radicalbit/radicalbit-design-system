@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.4](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.3...v2.10.4) (2025-12-01)
+
+
+### Bug Fixes
+
+* border color select active and menu active font color ([#103](https://github.com/radicalbit/radicalbit-design-system/issues/103)) ([d14d8c0](https://github.com/radicalbit/radicalbit-design-system/commit/d14d8c0d0c512714931cb9b22579d8ac2ec02e73))
+
 ## [2.10.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.2...v2.10.3) (2025-11-19)
 
 
