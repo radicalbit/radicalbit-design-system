@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.5](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.4...v2.10.5) (2025-12-01)
+
+
+### Bug Fixes
+
+* antd select on hover ([#105](https://github.com/radicalbit/radicalbit-design-system/issues/105)) ([ba59f25](https://github.com/radicalbit/radicalbit-design-system/commit/ba59f25ad6fd1f21a0b0a2582dade727ab847963))
+
 ## [2.10.4](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.3...v2.10.4) (2025-12-01)
 
 
