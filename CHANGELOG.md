@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.11.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.5...v2.11.0) (2025-12-09)
+
+
+### Features
+
+* manage dark for coo-secondary-04 ([#107](https://github.com/radicalbit/radicalbit-design-system/issues/107)) ([3bce46a](https://github.com/radicalbit/radicalbit-design-system/commit/3bce46a20bc76fd471d761752b54d9178984b91a))
+
 ## [2.10.5](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.4...v2.10.5) (2025-12-01)
 
 
