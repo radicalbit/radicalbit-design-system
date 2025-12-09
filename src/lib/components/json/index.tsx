@@ -13,7 +13,7 @@ import {
   GetItemString,
   JSONTree,
 } from '@lucataglia/react-json-tree';
-import React, { memo } from 'react';
+import React, { CSSProperties, memo } from 'react';
 
 type Props<T> = {
   className?: string,
@@ -22,6 +22,7 @@ type Props<T> = {
   expandUntil?: number;
   itemStringMaxFields?: number;
   modifier?: string,
+  styles?: CSSProperties,
 };
 
 function getItemString<T>(
@@ -163,12 +164,13 @@ function Json<T>({
   expandUntil = Number.MAX_SAFE_INTEGER,
   itemStringMaxFields = 7,
   modifier = '',
+  styles,
   ...others
 }: Props<T>) {
   const shouldExpandNodeInitially = (_: unknown, __: unknown, level: number) => level <= expandUntil;
 
   return (
-    <div className={`c-json ${modifier} ${className}`}>
+    <div className={`c-json ${modifier} ${className}`} style={styles}>
       <JSONTree
         collectionLimit={100}
         data={data}
@@ -183,6 +185,7 @@ function Json<T>({
           base00: 'var(--coo-secondary-04)',
           extend: 'theme',
           tree: {
+            border: '1px solid var(--coo-secondary-03)',
             fontFamily: 'var(--coo-monospace-font)',
             padding: '1rem',
             cursor: 'default',
