@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.11.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.11.0...v2.11.1) (2025-12-11)
+
+
+### Bug Fixes
+
+* ul color in alert-legacy error ([#109](https://github.com/radicalbit/radicalbit-design-system/issues/109)) ([b1962cd](https://github.com/radicalbit/radicalbit-design-system/commit/b1962cd70f1490f5c8500672d8a0897a1116032d))
+
 ## [2.11.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.10.5...v2.11.0) (2025-12-09)
 
 
