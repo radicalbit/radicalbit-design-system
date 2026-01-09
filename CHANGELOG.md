@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.11.1...v2.12.0) (2026-01-09)
+
+
+### Features
+
+* change border radius ([#111](https://github.com/radicalbit/radicalbit-design-system/issues/111)) ([8ce95da](https://github.com/radicalbit/radicalbit-design-system/commit/8ce95da03c2c931a1720089dc4f7efee287192b5))
+
 ## [2.11.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.11.0...v2.11.1) (2025-12-11)
 
 
