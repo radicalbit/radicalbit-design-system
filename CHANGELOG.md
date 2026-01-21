@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.12.0...v2.12.1) (2026-01-21)
+
+
+### Bug Fixes
+
+* menu active background ([#113](https://github.com/radicalbit/radicalbit-design-system/issues/113)) ([77a80d9](https://github.com/radicalbit/radicalbit-design-system/commit/77a80d95ea5b1a5556de6932f84c5bdad690821c))
+
 ## [2.12.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.11.1...v2.12.0) (2026-01-09)
 
 
