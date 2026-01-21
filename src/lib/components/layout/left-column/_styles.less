@@ -101,6 +101,10 @@
 								box-shadow: var(--coo-primary-dark) 0 0 .5rem inset, var(--coo-primary) 0 0 .05rem;
 								opacity: .95;
 
+								.ant-menu-title-content {
+									color: var(--coo-white) !important;
+								}
+
 								&:hover {
 									background-color: var(--coo-primary) !important;
 									color: var(--coo-white) !important;
@@ -119,8 +123,10 @@
 								}
 							}
 
-							.ant-menu-title-content .anticon {
-								font-size: 1.5rem;
+							.ant-menu-title-content {
+								.anticon {
+									font-size: 1.5rem;
+								}
 							}
 
 							&:hover {
