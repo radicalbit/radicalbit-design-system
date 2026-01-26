@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.12.1...v2.13.0) (2026-01-26)
+
+
+### Features
+
+* add sticky tabs ([#115](https://github.com/radicalbit/radicalbit-design-system/issues/115)) ([858e784](https://github.com/radicalbit/radicalbit-design-system/commit/858e784f6157ccb1574a239abaab097fb7ec255d))
+
 ## [2.12.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.12.0...v2.12.1) (2026-01-21)
 
 
