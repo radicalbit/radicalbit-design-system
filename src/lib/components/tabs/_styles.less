@@ -63,6 +63,13 @@
 		}
 	}
 
+	&--sticky {
+		position: sticky;
+		top: var(--tabs-sticky-top, 0);
+		z-index: var(--tabs-sticky-z-index, 100);
+		background: var(--coo-white-bk);
+	}
+
 	&--size-default {
 		> .ant-tabs-nav {
 			margin: 0;

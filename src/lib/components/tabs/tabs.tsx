@@ -8,6 +8,7 @@ type Props = Omit<TabsProps, 'size'> & {
   modifier?: string;
   noBorder?: boolean;
   paddedContent?: boolean;
+  sticky?: boolean;
   size?: 'default' | 'large';
 };
 
@@ -22,6 +23,7 @@ const Tabs = ({
   modifier = '',
   noBorder = false,
   paddedContent = false,
+  sticky = false,
   size = 'default',
   ...other
 }: Props) => {
@@ -30,6 +32,7 @@ const Tabs = ({
     'c-tabs--full-height': fullHeight,
     'c-tabs--no-border': noBorder,
     'c-tabs--maximize': maximize,
+    'c-tabs--sticky': sticky,
     [`c-tabs--size-${size}`]: size,
     'c-tabs--padded-content': paddedContent,
     dark,
