@@ -1,5 +1,7 @@
 import AntdInput, { InputRef } from 'antd/es/input';
 import { SearchProps } from 'antd/es/input/Search';
+import FontAwesomeIcon from '@Components/font-awesome-icon';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
 import { forwardRef, Ref } from 'react';
 
@@ -13,6 +15,7 @@ const Search = forwardRef(({
   className = '',
   modifier = '',
   onSearch,
+  allowClear,
   ...others
 }: Props, ref: Ref<InputRef>) => {
   const css = classNames('c-search', {
@@ -23,6 +26,7 @@ const Search = forwardRef(({
     <AntdSearch
       ref={ref}
       onSearch={onSearch}
+      allowClear={allowClear === true ? { clearIcon: <FontAwesomeIcon icon={faSearch} /> } : allowClear}
       {...others}
       className={css}
     />
