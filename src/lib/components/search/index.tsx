@@ -1,4 +1,6 @@
 import { Search as InputSearch } from '@Components/input';
+import FontAwesomeIcon from '@Components/font-awesome-icon';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { SearchProps } from 'antd/es/input/Search';
 import { ChangeEventHandler } from 'react';
 
@@ -15,6 +17,7 @@ const Search = ({
   placeholder,
   onSearch,
   onChange,
+  allowClear,
   ...otherProps
 }: Props) => (
   <InputSearch
@@ -22,7 +25,7 @@ const Search = ({
     onSearch={onSearch}
     onChange={onChange}
     className={`rdb-search ${modifier} ${className}`}
-    allowClear
+    allowClear={allowClear === true ? { clearIcon: <FontAwesomeIcon icon={faSearch} /> } : allowClear}
     {...otherProps}
   />
 );

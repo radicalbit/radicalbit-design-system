@@ -1,28 +1,15 @@
 .c-datepicker.ant-picker {
-	background: transparent;
-
-	&.ant-picker-outlined {
-		background: transparent;
-
-		&.ant-picker-status-error {
-			border-color: var(--coo-error);
-		}
-
-		&:hover {
-			background: transparent;
-		}
-
-		&:focus-within {
-			background: transparent;
-		}
-	}
-
-	&:hover {
+	&,
+	&:hover,
+	&:focus-within,
+	&.ant-picker-outlined,
+	&.ant-picker-outlined:hover,
+	&.ant-picker-outlined:focus-within {
 		background: transparent;
 	}
 
-	&:focus-within {
-		background: transparent;
+	&.ant-picker-outlined.ant-picker-status-error {
+		border-color: var(--coo-error);
 	}
 
 	.ant-picker-input  {
@@ -139,10 +126,26 @@
 						&.ant-picker-cell-in-view {
 							opacity: 1;
 
+							&.ant-picker-cell-range-start,
+							&.ant-picker-cell-range-end,
 							&.ant-picker-cell-selected {
+								&::before {
+									background: var(--coo-secondary-03);
+								}
+
 								.ant-picker-cell-inner {
 									background-color: var(--coo-primary);
 									border: 1px solid var(--coo-primary);
+								}
+							}
+
+							&.ant-picker-cell-in-range {
+								&::before {
+									background: var(--coo-secondary-03);
+								}
+
+								.ant-picker-cell-inner {
+									background-color: transparent;
 								}
 							}
 
@@ -243,4 +246,3 @@
 		}
 	}
 }
-
