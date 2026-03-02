@@ -1,0 +1,42 @@
+.rdb-search {
+	&.ant-input-search {
+		.ant-input-group {
+			.ant-input-affix-wrapper {
+				height: 2rem;
+				background: transparent;
+				border-radius: 0;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				border: 0;
+
+				.ant-input {
+					border-radius: 0;
+					border: 0;
+					color: var(--coo-dark);
+					background: rgba(var(--coo-rgb-white), .15) !important;
+					padding-left: 1rem;
+					cursor: pointer !important;
+
+					&[value=""] {
+						+ span {
+							.ant-input-search-icon {
+								display: block !important;
+							}
+						}
+					}
+				}
+			}
+
+			.ant-input-group-addon {
+				background-color: transparent;
+				left: 0;
+
+				button {
+					height: 2rem;
+					border: 0;
+					border-radius: 0 !important;
+				}
+			}
+		}
+	}
+}
