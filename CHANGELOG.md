@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.13.1...v2.13.2) (2026-03-02)
+
+
+### Bug Fixes
+
+* &lt;Search /&gt; dark mode ([#119](https://github.com/radicalbit/radicalbit-design-system/issues/119)) ([3c42d22](https://github.com/radicalbit/radicalbit-design-system/commit/3c42d22514c74411c321104186a63255d77e0e83))
+
 ## [2.13.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.13.0...v2.13.1) (2026-02-13)
 
 
