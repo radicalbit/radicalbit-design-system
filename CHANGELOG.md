@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.13.2...v2.13.3) (2026-03-02)
+
+
+### Bug Fixes
+
+* icon ([#121](https://github.com/radicalbit/radicalbit-design-system/issues/121)) ([d35da96](https://github.com/radicalbit/radicalbit-design-system/commit/d35da96b3d84b638a9e1a103a8f77d7b1b1bb30b))
+
 ## [2.13.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.13.1...v2.13.2) (2026-03-02)
 
 
