@@ -40,7 +40,7 @@ const CopyToClipboardInsecure = ({
   return (
     <Tooltip
       placement="top"
-      title="Copy to clipboard disabled because of insecure context"
+      title="Copy to clipboard requires a secure (HTTPS) connection"
       {...tooltip}
     >
       {children ? (
