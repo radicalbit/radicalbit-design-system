@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.14.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.13.3...v2.14.0) (2026-03-03)
+
+
+### Features
+
+* manage copy to clipboard for insicure context ([#123](https://github.com/radicalbit/radicalbit-design-system/issues/123)) ([381dc7b](https://github.com/radicalbit/radicalbit-design-system/commit/381dc7b415c2052aac43acc54f85c6e67dfc9a42))
+
 ## [2.13.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.13.2...v2.13.3) (2026-03-02)
 
 
