@@ -15,4 +15,22 @@
 			color: var(--coo-primary);
 		}
 	}
+
+	&--disabled {
+		cursor: not-allowed;
+
+		label {
+			cursor: not-allowed;
+		}
+
+		&:hover {
+			color: var(--coo-dark);
+
+			span,
+			label,
+			.c-font-awesome-icon {
+				color: var(--coo-dark);
+			}
+		}
+	}
 }

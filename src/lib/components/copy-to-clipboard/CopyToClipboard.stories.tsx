@@ -31,4 +31,11 @@ export const Default: Story = {
   },
 };
 
+export const InsecureContext: Story = {
+  args: {
+    ...commonArgs,
+    isInsecureContext: true,
+  },
+};
+
 export default meta;
