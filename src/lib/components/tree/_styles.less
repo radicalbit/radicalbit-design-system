@@ -1,0 +1,52 @@
+.c-tree {
+  &.ant-tree {
+    background-color: var(--coo-white-bk);
+    color: var(--coo-dark);
+
+    .ant-tree-switcher {
+      color: var(--coo-dark);
+    }
+
+    .ant-tree-node-content-wrapper {
+      color: var(--coo-dark);
+
+      &:hover {
+        background-color: rgba(var(--coo-rgb-secondary-03), 0.2);
+        color: var(--coo-dark);
+      }
+
+      &.ant-tree-node-selected {
+        background-color: var(--coo-primary-04);
+        color: var(--coo-dark);
+      }
+    }
+
+    .ant-tree-checkbox {
+      .ant-tree-checkbox-inner {
+        border-color: var(--coo-secondary-02);
+      }
+    }
+  }
+}
+
+.dark {
+  .c-tree {
+    &.ant-tree {
+      .ant-tree-switcher {
+        color: var(--coo-dark);
+      }
+
+      .ant-tree-node-content-wrapper {
+        &:hover {
+          color: var(--coo-white);
+          background-color: rgba(var(--coo-rgb-secondary-03), 0.1);
+        }
+
+        &.ant-tree-node-selected {
+          color: var(--coo-white);
+          background-color: var(--coo-secondary-04);
+        }
+      }
+    }
+  }
+}
