@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.14.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.14.0...v2.14.1) (2026-03-27)
+
+
+### Bug Fixes
+
+* JSON height, TREE dark mode and BOARD overflow ([#125](https://github.com/radicalbit/radicalbit-design-system/issues/125)) ([ecb0fb5](https://github.com/radicalbit/radicalbit-design-system/commit/ecb0fb5497714eb9dfa8b2f51400c306ef9875a0))
+
 ## [2.14.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.13.3...v2.14.0) (2026-03-03)
 
 
