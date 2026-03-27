@@ -16,6 +16,7 @@ type Props = {
   mode?: 'light' | 'dark';
   modifier?: string;
   noBackground?: boolean;
+  overflow?: 'auto' | 'hidden' | 'scroll' | 'visible';
   onClick?: () => void;
   primaryColor?: string;
   secondary?: ReactNode;
@@ -54,6 +55,7 @@ function Board({
   type,
   width = undefined,
   noBackground = false,
+  overflow,
   hoverType,
   onClick,
 }: Props) {
@@ -67,6 +69,7 @@ function Board({
     [`l-board--button-position-${buttonPosition}`]: buttonPosition,
     [`l-board--secondary-type-${secondaryType}`]: secondaryType,
     [`l-board--border-type-${borderType}`]: borderType,
+    [`l-board--overflow-${overflow}`]: overflow,
     'l-board--no-background': noBackground,
     'l-board--clickable': onClick,
     dark,

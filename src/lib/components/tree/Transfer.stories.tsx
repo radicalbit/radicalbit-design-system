@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Tree } from 'antd';
 import { DataNode } from 'antd/es/tree';
-import { Props as TreeProps } from '@Components/tree';
+import Tree, { Props as TreeProps } from '@Components/tree';
 
 const mockData: DataNode[] = [
   {
@@ -42,7 +41,7 @@ const meta: Meta<typeof Tree> = {
   argTypes: {},
 };
 
-type Story = StoryObj<TreeProps>;
+type Story = StoryObj<typeof Tree>;
 
 export const Default: Story = {
   parameters: {
