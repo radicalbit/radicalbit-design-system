@@ -2,7 +2,7 @@ import AntdButton from 'antd/es/button';
 import ButtonGroup from 'antd/es/button/button-group';
 import { ButtonProps } from 'antd/es/button/button';
 import classNames from 'classnames';
-import { ReactElement, ReactNode } from 'react';
+import { forwardRef, ReactNode, Ref } from 'react';
 
 export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
   type?:
@@ -22,7 +22,7 @@ export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
   modifier?: string;
 }
 
-const Button = (props: Props): ReactElement<typeof AntdButton> => {
+const Button = forwardRef((props: Props, ref: Ref<HTMLButtonElement | HTMLAnchorElement>) => {
   const {
     className = '', // Needed when <Button /> is used as other Antd component child.
     prefix,
@@ -43,6 +43,7 @@ const Button = (props: Props): ReactElement<typeof AntdButton> => {
 
   return (
     <AntdButton
+      ref={ref}
       className={`m-button ${css} ${modifier} ${className}`}
       // TODO Miguel: other types such as secondary-light does not exist on Antd button
       type={type as ButtonProps['type']}
@@ -55,7 +56,7 @@ const Button = (props: Props): ReactElement<typeof AntdButton> => {
       {suffix && <span className="m-button--suffix">{suffix}</span>}
     </AntdButton>
   );
-};
+});
 
 Button.displayName = 'Button';
 
