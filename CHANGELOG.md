@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.14.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.14.2...v2.14.3) (2026-04-01)
+
+
+### Bug Fixes
+
+* forward ref ([#129](https://github.com/radicalbit/radicalbit-design-system/issues/129)) ([c409206](https://github.com/radicalbit/radicalbit-design-system/commit/c4092067f0ea58d6d9c0af50a3e94e154e7aed92))
+
 ## [2.14.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.14.1...v2.14.2) (2026-03-30)
 
 
