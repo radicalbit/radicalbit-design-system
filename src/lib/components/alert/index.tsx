@@ -9,12 +9,12 @@ export interface Props extends AlertPropsOmitted {
   modifier?: string;
   mode?: 'light' | 'dark';
   alignment?: 'vertical-centered';
-  type?: 'text';
+  type?: AlertProps['type'] | 'text';
 }
 
 const Alert = ({
   className = '',
-  modifier,
+  modifier = '',
   mode,
   alignment,
   type = 'text',
@@ -26,7 +26,7 @@ const Alert = ({
     [`${mode}`]: mode,
   });
 
-  return <AntdAlert className={`c-alert ${modifier} ${css} ${className}`} {...other} />;
+  return <AntdAlert className={`c-alert ${modifier} ${css} ${className}`} type={type as AlertProps['type']} {...other} />;
 };
 
 Alert.displayName = 'Alert';
