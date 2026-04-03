@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.14.4](https://github.com/radicalbit/radicalbit-design-system/compare/v2.14.3...v2.14.4) (2026-04-03)
+
+
+### Bug Fixes
+
+* &lt;Alert /&gt; type ([#131](https://github.com/radicalbit/radicalbit-design-system/issues/131)) ([cf5a669](https://github.com/radicalbit/radicalbit-design-system/commit/cf5a669ada342313f2a95af018857c5125b108be))
+
 ## [2.14.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.14.2...v2.14.3) (2026-04-01)
 
 
