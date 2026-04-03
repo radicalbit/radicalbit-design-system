@@ -8,7 +8,6 @@ import type { Props as TooltipProps } from '@Components/tooltip';
 import Tooltip from '@Components/tooltip';
 interface Props extends FontAwesomeIconProps {
   className?: string;
-  disabled?: boolean;
   enableColorMode?: boolean;
   modifier?: string;
   onClick?: MouseEventHandler<SVGElement>;
@@ -24,7 +23,6 @@ const FontAwesomeIcon = ({
   type,
   icon,
   tooltip,
-  disabled,
   ...others
 }: Props) => {
   const css = classNames({
@@ -32,26 +30,28 @@ const FontAwesomeIcon = ({
     'c-font-awesome-icon--clickable': !!onClick,
     [`c-font-awesome-icon--${type}`]: type,
   });
+  
+  if (tooltip) {
+    return (
+      <Tooltip {...tooltip}>
+        <LibraryIcon
+          icon={icon}
+          className={`c-font-awesome-icon ${css} ${modifier} ${className}`}
+          onClick={onClick}
+          {...others}
+        />
+      </Tooltip>
+    );
+  }
 
-  const iconElement = (
+  return (
     <LibraryIcon
       icon={icon}
       className={`c-font-awesome-icon ${css} ${modifier} ${className}`}
       onClick={onClick}
-      disabled={disabled}
       {...others}
     />
   );
-
-  const wrappedIcon = disabled
-    ? <span style={{ display: 'inline-flex' }}>{iconElement}</span>
-    : iconElement;
-
-  if (tooltip) {
-    return <Tooltip {...tooltip}>{wrappedIcon}</Tooltip>;
-  }
-
-  return wrappedIcon;
 };
 
 FontAwesomeIcon.displayName = 'FontAwesomeIcon';
