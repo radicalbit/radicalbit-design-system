@@ -11,7 +11,7 @@ export type Props = {
   padding?: boolean;
   prefix?: ReactNode[];
   reverse?: boolean;
-  type?: 'red' | 'error' | 'warning' | 'secondary' | 'primary' | 'dark';
+  type?: 'red' | 'error' | 'success' | 'warning' | 'secondary' | 'primary' | 'dark';
   value: number;
   width?: number;
   /** @deprecated Deprecated */
