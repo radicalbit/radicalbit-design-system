@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.14.4...v2.15.0) (2026-04-09)
+
+
+### Features
+
+* add status success ([#133](https://github.com/radicalbit/radicalbit-design-system/issues/133)) ([00eb300](https://github.com/radicalbit/radicalbit-design-system/commit/00eb3003c2b83057c80214924270896e7b452481))
+
 ## [2.14.4](https://github.com/radicalbit/radicalbit-design-system/compare/v2.14.3...v2.14.4) (2026-04-03)
 
 
