@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.16.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.15.0...v2.16.0) (2026-05-07)
+
+
+### Features
+
+* add secondary-light ([#135](https://github.com/radicalbit/radicalbit-design-system/issues/135)) ([2b696e2](https://github.com/radicalbit/radicalbit-design-system/commit/2b696e249f4b30896be88f3ae06db59260708a1c))
+
 ## [2.15.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.14.4...v2.15.0) (2026-04-09)
 
 
