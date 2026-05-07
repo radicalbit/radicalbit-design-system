@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import { ReactNode, useState } from 'react';
+import { HTMLAttributes, ReactNode, useState } from 'react';
 
-type Props = {
+type Props = HTMLAttributes<HTMLDivElement> & {
   backgroundImage?: string;
   borderType?: 'light' | 'none';
   buttonPosition?: 'vertical' | 'adaptive';
@@ -30,7 +30,7 @@ type Props = {
     | 'unactive'
     | 'disabled'
     | 'in-evidence';
-  type?: 'primary' | 'primary-light' | 'secondary' | 'secondary-medium' | 'error' | 'rounded' | 'add-new';
+  type?: 'primary' | 'primary-light' | 'secondary' | 'secondary-light' | 'secondary-medium' | 'error' | 'rounded' | 'add-new';
   width?: string;
 };
 
@@ -58,6 +58,7 @@ function Board({
   overflow,
   hoverType,
   onClick,
+  ...rest
 }: Props) {
   const [isHover, setIsHover] = useState(false);
 
@@ -111,6 +112,7 @@ function Board({
 
   return (
     <div
+      {...rest}
       style={boardStyle}
       className={`l-board ${presetModifiers} ${modifier} ${cssMode} ${className}`}
       onClick={onClick}
