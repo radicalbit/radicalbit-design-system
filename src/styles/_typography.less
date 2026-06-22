@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
-
 :root,
 html body,
 .ant-layout {
-	--coo-body-font: 'Montserrat', sans-serif;
-	--coo-header-font: 'Montserrat', sans-serif;
-	--coo-monospace-font: Monaco, Menlo, "Ubuntu Mono", Consolas, source-code-pro, monospace;
-	--coo-font-weight-lighter: 200;
-	--coo-font-weight-light: 300;
+	--coo-body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--coo-header-font: var(--coo-body-font);
+	--coo-monospace-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	--coo-font-weight-lighter: 400;
+	--coo-font-weight-light: 400;
 	--coo-font-weight-normal: 500;
 	--coo-font-weight-bold: 600;
 	--coo-font-weight-bolder: 700;
@@ -115,6 +113,6 @@ body {
 
 pre {
 	font-family: var(--coo-monospace-font);
-	font-weight: var(--coo-font-weight-lighter);
+	font-weight: var(--coo-font-weight-light);
 	font-size: .8rem;
 }
