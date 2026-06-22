@@ -40,7 +40,7 @@
 
 	&.tag-new {
 		border-style: dashed;
-		background-color: var(--coo-white);
+		background-color: var(--coo-bk-lv1);
 	}
 
 	&--uppercase {
@@ -65,7 +65,7 @@
 			opacity: 1;
 			transition: all .8s linear;
 			background: var(--coo-highlight);
-			color: rgb(var(--coo-rgb-primary-dark));
+			color: rgb(var(--coo-rgb-primary));
 
 			.c-tag__suffix {
 				opacity: 1;
@@ -87,14 +87,12 @@
 	}
 
 	&--highlighted {
-		.highlight();
-
 		border: var(--coo-highlight);
 	}
 
 	&--full {
 		background: var(--coo-primary);
-		color: var(--coo-white);
+		color: var(--coo-fg-black);
 		border: 0;
 	}
 
@@ -220,7 +218,7 @@
 			&:hover {
 				transition: all .8s linear;
 				background: var(--coo-highlight);
-				color: rgb(var(--coo-rgb-primary-dark));
+				color: rgb(var(--coo-rgb-primary));
 
 				.c-tag--error {
 					border-color: var(--coo-highlight);

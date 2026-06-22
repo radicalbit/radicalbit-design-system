@@ -3,12 +3,11 @@
 	flex-direction: column;
 	border-radius: var(--coo-border-radius-small);
 	background-color: var(--coo-bk-lv1);
-	color: var(--coo-dark);
+	color: var(--coo-fg-black);
 	padding: 1.5rem;
 	gap: 1.5rem;
 	line-height: 1.2;
 	position: relative;
-	border: 1px solid var(--coo-secondary-03);
 	min-height: 0;
 
 	&:hover {
@@ -137,7 +136,7 @@
 
 	&--border-type {
 		&-light {
-			border: 1px solid rgba(var(--coo-rgb-secondary-04), .1);
+			border: none;
 		}
 
 		&-none {
@@ -217,7 +216,7 @@
 	}
 
 	.base-status-active(@direction: top, @transparency: 65%) {
-		background: linear-gradient(var(--coo-white), var(--coo-white)) padding-box, linear-gradient(to @direction, var(--coo-primary), transparent @transparency) border-box;
+		background: linear-gradient(var(--coo-bk-lv1), var(--coo-bk-lv1)) padding-box, linear-gradient(to @direction, var(--coo-primary), transparent @transparency) border-box;
 		border-width: .25rem;
 		border-style: solid;
 		border-color: transparent;
@@ -255,7 +254,7 @@
 	}
 
 	&--status-unactive {
-		background: (var(--coo-white));
+		background: (var(--coo-bk-lv1));
 		border: .12rem dashed var(--coo-secondary-02);
 	}
 
@@ -279,7 +278,6 @@
 
 	&--status-in-evidence {
 		background: (var(--coo-bk-lv1));
-		border: .07rem solid var(--coo-secondary-03);
 		.shadow--z-5();
 	}
 

@@ -1,9 +1,10 @@
 .ant-table-wrapper.l-data-table {
+	background-color: var(--coo-bk-lv1);
+
 	tr {
 		td,
 		th {
-			color: var(--coo-dark);
-			border-bottom: 1px solid var(--coo-secondary-03);
+			color: var(--coo-fg-black);
 		}
 	}
 
@@ -24,7 +25,7 @@
 	.ant-table-cell {
 		.ant-empty {
 			.ant-empty-description {
-				color: var(--coo-dark);
+				color: var(--coo-fg-black);
 			}
 		}
 
@@ -66,7 +67,6 @@
 				font-weight: var(--coo-font-weight-light);
 				font-size: var(--coo-font-size-s);
 				background-color: transparent;
-				border-bottom: 1px solid var(--coo-secondary-03);
 				padding: .5rem;
 
 				&::before {
@@ -251,8 +251,7 @@
 					th,
 					td {
 						background-color: rgba(var(--coo-rgb-error), .05) !important;
-						color: var(--coo-dark);
-						border-bottom: 1px solid var(--coo-secondary-03);
+						color: var(--coo-fg-black);
 					}
 
 					&:hover {
@@ -267,14 +266,14 @@
 					background-color: rgba(var(--coo-rgb-primary), .1);
 
 					td {
-						color: var(--coo-dark);
+						color: var(--coo-fg-black);
 					}
 				}
 
 				&--selected {
 					&-highlighted {
 						border-left-color: var(--coo-primary) !important;
-						background-color: var(--coo-white) !important;
+						background-color: var(--coo-bk-lv1) !important;
 
 						td {
 							color: rgb(var(--coo-rgb-primary));
@@ -374,7 +373,7 @@
 		}
 
 		.ant-table-thead {
-			border-bottom: 1px solid var(--coo-secondary-03);
+			border-bottom: 0;
 		}
 
 		.ant-table-placeholder {
@@ -391,7 +390,6 @@
 	.ant-table-fixed-header .ant-table-scroll .ant-table-header {
 		margin-bottom: 0;
 		padding-bottom: 0;
-		border-bottom: 1px solid var(--coo-secondary);
 	}
 
 	&--draggable {

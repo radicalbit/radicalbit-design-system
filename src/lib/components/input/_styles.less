@@ -1,10 +1,11 @@
 .c-input {
 	border-color: var(--coo-secondary-03);
-	color: var(--coo-dark);
+	color: var(--coo-fg-black);
+	background: var(--coo-bk-lv1);
 	height: 2rem;
 
 	&&--readonly {
-		color: var(--coo-dark);
+		color: var(--coo-fg-black);
 		cursor: default;
 		padding-left: 0;
 		border: 0;
@@ -29,13 +30,15 @@
 
 .c-search {
 	&.ant-input-search {
+		background: var(--coo-bk-lv1);
+		
 		.ant-input-wrapper {
 			input {
-				color: var(--coo-dark);
+				color: var(--coo-fg-black);
 			}
 
 			.anticon {
-				color: var(--coo-dark);
+				color: var(--coo-fg-black);
 
 				&:hover {
 					opacity: var(--coo-primary);
@@ -72,7 +75,9 @@
 	}
 }
 
-.c-text-area {
+.ant-input.c-text-area {
+	background: var(--coo-bk-lv1);
+
 	&--readonly {
 		cursor: default;
 		padding-left: 0;
