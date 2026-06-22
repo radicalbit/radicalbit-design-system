@@ -4,12 +4,14 @@
 .light {
 	// to use for color effects and less-antd variables es: rgba(var(--coo-white), .8)
 	//254, 254, 251; // #fefefb
-	--coo-rgb-white: 254, 254, 251; // #fcfcf9 x
+	--coo-rgb-white-lv0: 248, 248, 251; // #f8f8fb x
+	--coo-rgb-white-lv1: 253, 253, 254; // #fdfdfe x
+	--coo-rgb-white-lv2: 255, 255, 255; // #fff x
 	--coo-rgb-black: 0, 0, 0; // #000000
 	--coo-rgb-dark: 19, 52, 59; // #13343B x
 	// primaries
 	--coo-rgb-primary-dark: 0, 93, 110; // #005D6E x
-	--coo-rgb-primary: 32, 128, 141; //#22808d
+	--coo-rgb-primary: 0, 0, 0; //#22808d
 	--coo-rgb-primary-01: 52, 154, 167; // #349AA7
 	--coo-rgb-primary-02: 138, 229, 255; // #8AE5FF
 	--coo-rgb-primary-03: 223, 248, 255; // #DFF8FF
@@ -51,7 +53,7 @@
 
 	// * * * * LIGHT MODE COLORS BASE - to use as color variable * * * *
 
-	--coo-white: rgb(var(--coo-rgb-white));
+	--coo-white: rgb(var(--coo-rgb-white-lv2));
 	--coo-dark: rgb(var(--coo-rgb-dark));
 	--coo-black: rgb(var(--coo-rgb-black)); //x
 	// primaries
@@ -85,13 +87,15 @@
 	--coo-error-bk-light: rgb(var(--coo-rgb-error-bk-light));
 	--coo-alert-bk: rgb(var(--coo-rgb-alert-bk));
 	--coo-highlight-bk: rgb(var(--coo-rgb-highlight-bk));
-	--coo-white-bk: rgb(var(--coo-rgb-white)); // #fefefb;
+	// background levels
+	--coo-bk-lv0: rgb(var(--coo-rgb-white-lv0)); // page background
+	--coo-bk-lv1: rgb(var(--coo-rgb-white-lv1)); // components resting on the page
+	--coo-bk-lv2: rgb(var(--coo-rgb-white-lv2)); // floating/overlay surfaces
 
 	.dark {
 		--coo-primary: rgb(var(--coo-rgb-primary));
 		--coo-secondary: rgb(var(--coo-rgb-secondary-03));
 		--coo-dark: rgb(var(--coo-rgb-white));
-		--coo-white-bk: rgb(var(--coo-rgb-secondary-dark));
 		--coo-secondary-03: rgb(var(--coo-rgb-secondary), .5);
 		--coo-secondary-04: rgb(var(--coo-rgb-black));
 		--coo-error: rgb(var(--coo-rgb-error-dark));

@@ -67,15 +67,21 @@ html body {
 		color: var(--coo-dark);
 	}
 
+	.ant-modal .ant-modal-content {
+		background-color: var(--coo-bk-lv0);
+	}
+
 	.ant-dropdown .ant-dropdown-menu,
 	.ant-dropdown-menu-submenu .ant-dropdown-menu,
-	.ant-input-outlined,
-	.ant-input-outlined:hover,
 	.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-disabled:hover,
 	.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-item-disabled:hover,
 	.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover,
-	.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover,
-	.ant-modal .ant-modal-content,
+	.ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title-disabled:hover {
+		background-color: var(--coo-bk-lv2);
+	}
+
+	.ant-input-outlined,
+	.ant-input-outlined:hover,
 	.ant-menu-light,
 	.ant-menu-light > .ant-menu,
 	.ant-menu-light.ant-menu-submenu-popup > .ant-menu,
@@ -84,7 +90,7 @@ html body {
 	.ant-input-outlined:focus-within,
 	.ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active,
 	.ant-menu-light > .ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active .ant-card {
-		background-color: var(--coo-white-bk);
+		background-color: var(--coo-bk-lv1);
 	}
 
 	[class^="ant-input"],
@@ -179,7 +185,7 @@ html body {
 		background-color: var(--coo-primary-01);
 
 		> .ant-transfer-list-content-item-text {
-			color: var(--coo-white-bk);
+			color: var(--coo-white);
 		}
 	}
 
