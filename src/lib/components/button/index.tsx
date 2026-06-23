@@ -7,6 +7,7 @@ import { forwardRef, ReactNode, Ref } from 'react';
 export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
   type?:
     | ButtonProps['type']
+    | 'ghost'
     | 'secondary-light'
     | 'secondary'
     | 'success'
