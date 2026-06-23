@@ -105,10 +105,13 @@
 
 
 	&.ant-btn-default {
+		color: var(--coo-text-primary);
+		border-color: var(--coo-primary);
+		background-color: var(--coo-primary-07); // 5%
+
 		&:hover {
-			color: var(--coo-primary-dark);
-			border-color: var(--coo-highlight-border);
-			background: var(--coo-highlight-bk);
+			border-color: var(--coo-primary-02); // #00E6C7
+			background-color: var(--coo-primary-06); // 10%
 		}
 	}
 
@@ -118,6 +121,11 @@
 		border-color: var(--coo-primary);
 		background-color: var(--coo-primary);
 		box-shadow: none;
+
+		&:hover {
+			border-color: var(--coo-primary-03); // 50%
+			background-color: var(--coo-primary-03); // 50%
+		}
 
 		&.is-active {
 			&:hover {
@@ -189,13 +197,33 @@
 	}
 
 	&.ant-btn-text {
-		color: var(--coo-secondary-01);
+		color: var(--coo-text-primary); // testo+icona, niente sottolineatura
 		border-color: transparent;
 
 		&:hover {
 			border-color: transparent;
 			background: transparent;
-			color: var(--coo-primary);
+			color: var(--coo-primary-01); // #00AF98
+			box-shadow: none;
+		}
+	}
+
+	// Ghost: type='ghost' non genera classi antd → uso m-button--ghost (vedi index.tsx)
+	&.m-button--ghost {
+		color: var(--coo-text-primary); // testo+icona #14141A
+		border-color: transparent;
+		background: transparent;
+		text-decoration: underline; // SOLO il testo
+
+		.anticon,
+		svg {
+			text-decoration: none; // icona non sottolineata
+		}
+
+		&:hover {
+			border-color: transparent;
+			background: transparent;
+			color: var(--coo-primary-01); // #00AF98
 			box-shadow: none;
 		}
 	}

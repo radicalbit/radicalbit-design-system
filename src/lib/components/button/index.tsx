@@ -39,6 +39,7 @@ const Button = forwardRef((props: Props, ref: Ref<HTMLButtonElement | HTMLAnchor
   const css = classNames({
     'm-button--filled': filled,
     'm-button--not-clickable': !onClick && !href,
+    'm-button--ghost': type === 'ghost',
   });
 
   return (
