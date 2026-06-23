@@ -18,19 +18,24 @@
 	--coo-rgb-neutral-10: 20, 20, 26;     // #14141A  text primary
 
 	// * SURFACE LEVELS *
-	--coo-rgb-bk-lv0: 248, 248, 251; // #f8f8fb x
+	--coo-rgb-bk-lv0: var(--coo-rgb-neutral-01); // #f8f8fb x
+	// --coo-rgb-bk-lv1: 253, 253, 254; // FDFDFE
 	--coo-rgb-bk-lv1: rgba(var(--coo-rgb-neutral-00), 0.7); // #white 70% x
 	--coo-rgb-bk-lv2: var(--coo-rgb-neutral-00); // #fff x
 
 	// BRAND COLORS
 	// primary
-	--coo-rgb-primary-dark: 0, 93, 110; // #005D6E x
-	--coo-rgb-primary: 0, 255, 222; //#00ffd5
-	--coo-rgb-primary-01: 52, 154, 167; // #349AA7
-	--coo-rgb-primary-02: 138, 229, 255; // #8AE5FF
-	--coo-rgb-primary-03: 223, 248, 255; // #DFF8FF
-	--coo-rgb-primary-04: 245, 253, 255; // #F5FDFF
-
+	--coo-rgb-primary: 0, 255, 222; // #00FFDE buttons, focus ring, border menu item selected - not used for text in light mode - button primary background and border, button default border
+	--coo-rgb-primary-dark: var(--coo-rgb-primary); // #00FFDE 
+	--coo-rgb-primary-01: 0, 175, 152; // #00AF98 Accessible brand text color in light mode
+	--coo-rgb-primary-02: 0, 230, 199; // #00E6C7 button primary pressed, button default hover/pressed border
+	--coo-rgb-primary-text-pressed: 0, 125, 112; // #007D70 teal più scuro - ghost pressed text
+	--coo-rgb-primary-03: rgba(var(--coo-rgb-primary), 0.5); // #00FFDE 50%  button primary Hover background/border
+	--coo-rgb-primary-04: rgba(var(--coo-rgb-primary), 0.3); // #00FFDE 30%  border segmented control item - button bkg default pressed
+	--coo-rgb-primary-05: rgba(var(--coo-rgb-primary), 0.2); // #00FFDE 20%
+	--coo-rgb-primary-06: rgba(var(--coo-rgb-primary), 0.1); // #00FFDE 10% background selected items: menu, segmented control  - button default background hover
+	--coo-rgb-primary-07: rgba(var(--coo-rgb-primary), 0.05); // #00FFDE 5% selected table row, button default background 
+	
 	// secondary - TBD
 	--coo-rgb-secondary-dark: 34, 32, 32; //#303741 x
 	--coo-rgb-secondary: 78, 75, 85; 	//#444B55 x
@@ -127,10 +132,14 @@
 	// primaries
 	--coo-primary-dark: rgb(var(--coo-rgb-primary-dark));
 	--coo-primary: rgb(var(--coo-rgb-primary));
-	--coo-primary-01: rgb(var(--coo-rgb-primary-01));
-	--coo-primary-02: rgb(var(--coo-rgb-primary-02));
-	--coo-primary-03: rgb(var(--coo-rgb-primary-03));
-	--coo-primary-04: rgb(var(--coo-rgb-primary-04));
+	--coo-primary-01: rgb(var(--coo-rgb-primary-01)); // #00AF98 solido
+	--coo-primary-02: rgb(var(--coo-rgb-primary-02)); // #00E6C7 solido
+	--coo-primary-text-pressed: rgb(var(--coo-rgb-primary-text-pressed)); // #007D70 solido
+	--coo-primary-03: var(--coo-rgb-primary-03); // primary 50% → no wrap
+	--coo-primary-04: var(--coo-rgb-primary-04); // primary 30% → no wrap
+	--coo-primary-05: var(--coo-rgb-primary-05); // primary 20% → no wrap
+	--coo-primary-06: var(--coo-rgb-primary-06); // primary 10% → no wrap
+	--coo-primary-07: var(--coo-rgb-primary-07); // primary 5% → no wrap
 
 	// secondaries
 	--coo-secondary-dark: rgb(var(--coo-rgb-secondary-dark));
@@ -167,7 +176,7 @@
 
 	// background levels
 	--coo-bk-lv0: rgb(var(--coo-rgb-bk-lv0)); // page background
-	--coo-bk-lv1: rgb(var(--coo-rgb-bk-lv1)); // components resting on the page
+	--coo-bk-lv1: var(--coo-rgb-bk-lv1); // grezza già rgba (white 70%) → no wrap
 	--coo-bk-lv2: rgb(var(--coo-rgb-bk-lv2)); // floating/overlay surfaces
 
 	.dark {
