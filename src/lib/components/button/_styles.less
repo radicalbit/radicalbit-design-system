@@ -229,19 +229,12 @@
 	}
 
 
-	&[disabled] {
-		background: transparent;
-		border: 1.25px dashed var(--coo-secondary-03);
-		color: var(--coo-secondary-01);
-		box-sizing: border-box;
-		font-style: italic;
-
-		&:hover {
-			border-color: var(--coo-secondary-03);
-			background: inherit;
-			color: var(--coo-secondary-03);
-			box-shadow: none;
-		}
+	// Disabled: ogni tipo mantiene i suoi colori normali, renderizzato al 30% di opacità
+	&[disabled],
+	&[disabled]:hover {
+		opacity: .3;
+		box-shadow: none;
+		pointer-events: none; // niente hover: resta lo stato normale al 30%
 	}
 
 	.ant-btn-circle {
