@@ -106,7 +106,6 @@
 
 	&.ant-btn-default {
 		color: var(--coo-text-primary);
-		border-color: var(--coo-primary);
 		background-color: var(--coo-primary-07); // 5%
 
 		&:hover {
@@ -117,7 +116,7 @@
 
 	&.ant-btn-primary,
 	.ant-btn-color-primary {
-		color: var(--coo-fg-black);
+		color: var(--coo-rgb-on-primary);
 		border-color: var(--coo-primary);
 		background-color: var(--coo-primary);
 		box-shadow: none;
@@ -132,6 +131,10 @@
 				.shadow--z-1();
 			}
 		}
+	}
+
+	&.ant-btn-primary-light {
+		color: var(--coo-text-primary);
 	}
 
 	&.ant-btn-success {
