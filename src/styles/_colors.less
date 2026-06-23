@@ -3,11 +3,36 @@
 :root,
 .light {
 	// to use for color effects and less-antd variables es: rgba(var(--coo-white), .8)
-	//254, 254, 251; // #fefefb
+
+	// * NEUTRALS * (scala numerica: chiaro → scuro)
+	--coo-rgb-neutral-01: 248, 248, 251;  // #F8F8FB  bg level 0 / più chiaro
+	--coo-rgb-neutral-02: 243, 243, 246;  // #F3F3F6  border secondary, table row borders
+	--coo-rgb-neutral-03: 233, 233, 240;  // #E9E9F0  border primary
+	--coo-rgb-neutral-04: 227, 227, 234;  // #E3E3EA
+	--coo-rgb-neutral-05: 215, 215, 226;  // #D7D7E2  disabled (button primary/default)
+	--coo-rgb-neutral-06: 184, 184, 197;  // #B8B8C5  icone tertiary / placeholder icone
+	--coo-rgb-neutral-07: 112, 112, 126;  // #70707E  text tertiary / input placeholder
+	--coo-rgb-neutral-08: 84, 84, 94;     // #54545E  text secondary / help text
+	--coo-rgb-neutral-09: 55, 55, 68;     // #373744  icone default
+	--coo-rgb-neutral-10: 20, 20, 26;     // #14141A  text primary
+	--coo-rgb-neutral-100: 255, 255, 255; // #FFFFFF
+
+	// neutrals semantici (referenziano la scala)
+	--coo-rgb-text-primary:     var(--coo-rgb-neutral-10);
+	--coo-rgb-text-secondary:   var(--coo-rgb-neutral-08);
+	--coo-rgb-text-tertiary:    var(--coo-rgb-neutral-07);
+	--coo-rgb-icon-default:     var(--coo-rgb-neutral-09);
+	--coo-rgb-icon-tertiary:    var(--coo-rgb-neutral-06);
+	--coo-rgb-border-primary:   var(--coo-rgb-neutral-03);
+	--coo-rgb-border-secondary: var(--coo-rgb-neutral-02);
+	--coo-rgb-disabled:         var(--coo-rgb-neutral-05);
+
+	// surface (invariate in questo stadio — vedi STADIO 3)
 	--coo-rgb-bk-lv0: 248, 248, 251; // #f8f8fb x
 	--coo-rgb-bk-lv1: 253, 253, 254; // #fdfdfe x
 	--coo-rgb-bk-lv2: 255, 255, 255; // #fff x
-	--coo-rgb-fg-black: 20, 20, 26; // #14141a
+	// alias retro-compatibilità: il testo (--coo-fg-black, 128 usi) ora punta a text-primary
+	--coo-rgb-fg-black: var(--coo-rgb-text-primary); // #14141A
 	// primaries
 	--coo-rgb-primary-dark: 0, 93, 110; // #005D6E x
 	--coo-rgb-primary: 0, 255, 222; //#00ffd5
@@ -53,7 +78,16 @@
 	// * * * * LIGHT MODE COLORS BASE - to use as color variable * * * *
 
 	--coo-white: rgb(var(--coo-rgb-bk-lv2));
-	--coo-fg-black: rgb(var(--coo-rgb-fg-black));
+	--coo-fg-black: rgb(var(--coo-rgb-fg-black)); // alias → text-primary
+	// neutrals (pronte all'uso)
+	--coo-text-primary:      rgb(var(--coo-rgb-text-primary));
+	--coo-text-secondary:    rgb(var(--coo-rgb-text-secondary));
+	--coo-text-tertiary:     rgb(var(--coo-rgb-text-tertiary));
+	--coo-icon-default:      rgb(var(--coo-rgb-icon-default));
+	--coo-icon-tertiary:     rgb(var(--coo-rgb-icon-tertiary));
+	--coo-border-primary:    rgb(var(--coo-rgb-border-primary));
+	--coo-border-secondary:  rgb(var(--coo-rgb-border-secondary));
+	--coo-disabled:          rgb(var(--coo-rgb-disabled));
 	// primaries
 	--coo-primary-dark: rgb(var(--coo-rgb-primary-dark));
 	--coo-primary: rgb(var(--coo-rgb-primary));
