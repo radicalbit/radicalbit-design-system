@@ -4,64 +4,98 @@
 .light {
 	// to use for color effects and less-antd variables es: rgba(var(--coo-white), .8)
 
-	// * NEUTRALS * (scala numerica: chiaro → scuro)
+	// * NEUTRALS * (numeric scale: light → dark)
+	--coo-rgb-neutral-00: 255, 255, 255;  // #FFFFFF  full white
 	--coo-rgb-neutral-01: 248, 248, 251;  // #F8F8FB  bg level 0 / più chiaro
 	--coo-rgb-neutral-02: 243, 243, 246;  // #F3F3F6  border secondary, table row borders
 	--coo-rgb-neutral-03: 233, 233, 240;  // #E9E9F0  border primary
 	--coo-rgb-neutral-04: 227, 227, 234;  // #E3E3EA
 	--coo-rgb-neutral-05: 215, 215, 226;  // #D7D7E2  disabled (button primary/default)
-	--coo-rgb-neutral-06: 184, 184, 197;  // #B8B8C5  icone tertiary / placeholder icone
+	--coo-rgb-neutral-06: 184, 184, 197;  // #B8B8C5  icon tertiary / placeholder icone
 	--coo-rgb-neutral-07: 112, 112, 126;  // #70707E  text tertiary / input placeholder
 	--coo-rgb-neutral-08: 84, 84, 94;     // #54545E  text secondary / help text
-	--coo-rgb-neutral-09: 55, 55, 68;     // #373744  icone default
+	--coo-rgb-neutral-09: 55, 55, 68;     // #373744  icon default
 	--coo-rgb-neutral-10: 20, 20, 26;     // #14141A  text primary
-	--coo-rgb-neutral-100: 255, 255, 255; // #FFFFFF
 
-	// neutrals semantici (referenziano la scala)
-	--coo-rgb-text-primary:     var(--coo-rgb-neutral-10);
-	--coo-rgb-text-secondary:   var(--coo-rgb-neutral-08);
-	--coo-rgb-text-tertiary:    var(--coo-rgb-neutral-07);
-	--coo-rgb-icon-default:     var(--coo-rgb-neutral-09);
-	--coo-rgb-icon-tertiary:    var(--coo-rgb-neutral-06);
-	--coo-rgb-border-primary:   var(--coo-rgb-neutral-03);
-	--coo-rgb-border-secondary: var(--coo-rgb-neutral-02);
-	--coo-rgb-disabled:         var(--coo-rgb-neutral-05);
-
-	// surface (invariate in questo stadio — vedi STADIO 3)
+	// * SURFACE LEVELS *
 	--coo-rgb-bk-lv0: 248, 248, 251; // #f8f8fb x
-	--coo-rgb-bk-lv1: 253, 253, 254; // #fdfdfe x
-	--coo-rgb-bk-lv2: 255, 255, 255; // #fff x
-	// alias retro-compatibilità: il testo (--coo-fg-black, 128 usi) ora punta a text-primary
-	--coo-rgb-fg-black: var(--coo-rgb-text-primary); // #14141A
-	// primaries
+	--coo-rgb-bk-lv1: rgba(var(--coo-rgb-neutral-00), 0.7); // #white 70% x
+	--coo-rgb-bk-lv2: var(--coo-rgb-neutral-00); // #fff x
+
+	// BRAND COLORS
+	// primary
 	--coo-rgb-primary-dark: 0, 93, 110; // #005D6E x
 	--coo-rgb-primary: 0, 255, 222; //#00ffd5
 	--coo-rgb-primary-01: 52, 154, 167; // #349AA7
 	--coo-rgb-primary-02: 138, 229, 255; // #8AE5FF
 	--coo-rgb-primary-03: 223, 248, 255; // #DFF8FF
 	--coo-rgb-primary-04: 245, 253, 255; // #F5FDFF
-	// secondaries
+
+	// secondary - TBD
 	--coo-rgb-secondary-dark: 34, 32, 32; //#303741 x
 	--coo-rgb-secondary: 78, 75, 85; 	//#444B55 x
 	--coo-rgb-secondary-01: 137, 137, 132; 	//#898984 x
 	--coo-rgb-secondary-02: 236, 236, 231; //#ecece7 x
 	--coo-rgb-secondary-03: 228, 228, 221; //#E4E4DD x
 	--coo-rgb-secondary-04: 254, 254, 251; //#fefefb x
-	// colors
+
+	// colors ? 
 	--coo-rgb-color-01: 77, 182, 148;  // #4DB694
 	--coo-rgb-color-02: 0, 169, 170; // #00A9AA
 	--coo-rgb-color-03: 119, 126, 188; // #777EBC
 	--coo-rgb-color-04: 95, 132, 95; // #5F84C3
 	--coo-rgb-color-05: 50, 141, 205; // #328DCD
-	// semantics
-	--coo-rgb-highlight: 147, 255, 241; // # x
-	--coo-rgb-error: 246, 0, 0; // #f60000
-	--coo-rgb-warning: 255, 122, 0; // #ff7a00
-	--coo-rgb-success: 77, 182, 148; // #4db694
-	--coo-rgb-success-bk: 246, 255, 252; // #F6FFFC
-	--coo-rgb-error-bk-dark: 67, 39, 39; // #432727
-	--coo-rgb-error-bk-light: 255, 239, 239; // #ffefef
-	--coo-rgb-alert-bk: 255, 239, 239; // #ffefef
+
+	// * SELECTION COLORS *
+	--coo-rgb-highlight: rgba(var(--coo-rgb-neutral-10), 1); // #14141A selected item text color
+	--coo-rgb-highlight-bk: rgba(var(--coo-rgb-primary), 0.1); // #00FFDE 10% opacity selected item background
+	--coo-rgb-highlight-border: rgba(var(--coo-rgb-primary), 1); // #00FFDE  selected item menu border
+	
+	// * FEEDBACK COLORS *
+	// info
+	--coo-rgb-info: 0, 111, 170; // #006FA
+	--coo-rgb-info-border2: rgba(var(--coo-rgb-info), 0.5); // #008844 50% opacity
+	--coo-rgb-info-bk: rgba(var(--coo-rgb-info), 0.1); // #008844 10% opacity
+	--coo-rgb-info-border: rgba(var(--coo-rgb-info), 0.15); // #008844 15% opacity
+	// success
+	--coo-rgb-success: 0, 136, 68; // #008844
+	--coo-rgb-success-border2: rgba(var(--coo-rgb-success), 0.5); // #008844 50% opacity
+	--coo-rgb-success-bk: rgba(var(--coo-rgb-success), 0.1); // #008844 10% opacity
+	--coo-rgb-success-border: rgba(var(--coo-rgb-success), 0.15); // #008844 15% opacity
+	// error
+	--coo-rgb-error: 194, 37, 62; // #C2253E
+	--coo-rgb-error-border2: rgba(var(--coo-rgb-error), 0.5); // #C2253E 50% opacity
+	--coo-rgb-error-bk: rgba(var(--coo-rgb-error), 0.1); // #C2253E 10% 
+	--coo-rgb-error-bk-light: var(--coo-rgb-error-bk); // #C2253E 10% 
+	--coo-rgb-error-bk-dark: var(--coo-rgb-error-bk); // #C2253E 10%
+	--coo-rgb-error-border: rgba(var(--coo-rgb-error), 0.15); // #C2253E 15% opacity
+	--coo-rgb-error-bk-2: rgba(var(--coo-rgb-error), 0.15); // #C2253E 15% default button
+	--coo-rgb-error-bk-3: rgba(var(--coo-rgb-error), 0.5); // #C2253E 50% pressed button
+	--coo-rgb-alert-bk: var(--coo-rgb-error-bk); // #C2253E 10%
+	// warning
+	--coo-rgb-warning: 189, 89, 0; // #BD5900
+	--coo-rgb-warning-border2: rgba(var(--coo-rgb-warning), 0.5); // #BD5900 50% 
+	--coo-rgb-warning-bk: rgba(var(--coo-rgb-warning), 0.1); // #BD5900 10% 
+	--coo-rgb-warning-border: rgba(var(--coo-rgb-warning), 0.15); // #BD5900 15% 
+
+	
+	// text
+	--coo-rgb-text-primary:     var(--coo-rgb-neutral-10);
+	--coo-rgb-text-secondary:   var(--coo-rgb-neutral-08);
+	--coo-rgb-text-tertiary:    var(--coo-rgb-neutral-07);
+	--coo-rgb-fg-black: var(--coo-rgb-text-primary); // #14141A
+	--coo-rgb-white: var(--coo-rgb-neutral-00); // #fff x
+	--coo-rgb-dark: var(--coo-rgb-neutral-10); // #14141A x
+	--coo-rgb-black: var(--coo-rgb-neutral-10); // #14141A x
+
+	// icons
+	--coo-rgb-icon-default:     var(--coo-rgb-neutral-09);
+	--coo-rgb-icon-tertiary:    var(--coo-rgb-neutral-06);
+	// borders
+	--coo-rgb-border-primary:   var(--coo-rgb-neutral-03);
+	--coo-rgb-border-secondary: var(--coo-rgb-neutral-02);
+	// muted
+	--coo-rgb-disabled:         var(--coo-rgb-neutral-05);
 
 	// full
 	--coo-rgb-full-black: 0, 0, 0; // #000000
@@ -76,10 +110,11 @@
 
 
 	// * * * * LIGHT MODE COLORS BASE - to use as color variable * * * *
-
-	--coo-white: rgb(var(--coo-rgb-bk-lv2));
-	--coo-fg-black: rgb(var(--coo-rgb-fg-black)); // alias → text-primary
-	// neutrals (pronte all'uso)
+	--coo-white: rgb(var(--coo-rgb-white));
+	--coo-dark: rgb(var(--coo-rgb-dark));
+	--coo-black: rgb(var(--coo-rgb-black)); //x
+	
+	// neutrals
 	--coo-text-primary:      rgb(var(--coo-rgb-text-primary));
 	--coo-text-secondary:    rgb(var(--coo-rgb-text-secondary));
 	--coo-text-tertiary:     rgb(var(--coo-rgb-text-tertiary));
@@ -88,6 +123,7 @@
 	--coo-border-primary:    rgb(var(--coo-rgb-border-primary));
 	--coo-border-secondary:  rgb(var(--coo-rgb-border-secondary));
 	--coo-disabled:          rgb(var(--coo-rgb-disabled));
+
 	// primaries
 	--coo-primary-dark: rgb(var(--coo-rgb-primary-dark));
 	--coo-primary: rgb(var(--coo-rgb-primary));
@@ -95,6 +131,7 @@
 	--coo-primary-02: rgb(var(--coo-rgb-primary-02));
 	--coo-primary-03: rgb(var(--coo-rgb-primary-03));
 	--coo-primary-04: rgb(var(--coo-rgb-primary-04));
+
 	// secondaries
 	--coo-secondary-dark: rgb(var(--coo-rgb-secondary-dark));
 	--coo-secondary: rgb(var(--coo-rgb-secondary));
@@ -102,6 +139,7 @@
 	--coo-secondary-02: rgb(var(--coo-rgb-secondary-02));
 	--coo-secondary-03: rgb(var(--coo-rgb-secondary-03));
 	--coo-secondary-04: rgb(var(--coo-rgb-secondary-04));
+
 	// colors
 	--coo-color-01: rgb(var(--coo-rgb-color-01));
 	--coo-color-02: rgb(var(--coo-rgb-color-02));
@@ -110,15 +148,23 @@
 	--coo-color-05: rgb(var(--coo-rgb-color-05));
 	--color-active: rgb(var(--coo-rgb-secondary-01));
 	// semantics
-	--coo-highlight: rgb(var(--coo-rgb-highlight));
+	--coo-highlight: var(--coo-rgb-highlight); // grezza già rgba → no wrap
+	--coo-highlight-bk: var(--coo-rgb-highlight-bk); // grezza già rgba → no wrap
+	--coo-highlight-border: var(--coo-rgb-highlight-border); // grezza già rgba → no wrap
 	--coo-error: rgb(var(--coo-rgb-error));
 	--coo-warning: rgb(var(--coo-rgb-warning));
 	--coo-success: rgb(var(--coo-rgb-success));
-	--coo-success-bk: rgb(var(--coo-rgb-success-bk));
-	--coo-error-bk-dark: rgb(var(--coo-rgb-error-bk-dark));
-	--coo-error-bk-light: rgb(var(--coo-rgb-error-bk-light));
-	--coo-alert-bk: rgb(var(--coo-rgb-alert-bk));
-	--coo-highlight-bk: rgb(var(--coo-rgb-highlight-bk));
+	--coo-success-bk: var(--coo-rgb-success-bk); // grezza già rgba → no wrap
+	--coo-error-bk-dark: var(--coo-rgb-error-bk-dark); // grezza già rgba → no wrap
+	--coo-error-bk-light: var(--coo-rgb-error-bk-light); // grezza già rgba → no wrap
+	--coo-alert-bk: var(--coo-rgb-alert-bk); // grezza già rgba → no wrap
+	// info
+	--coo-info: rgb(var(--coo-rgb-info)); // solido → wrap
+	--coo-info-bk: var(--coo-rgb-info-bk); // grezza già rgba → no wrap
+	--coo-info-border: var(--coo-rgb-info-border); // grezza già rgba → no wrap
+	--coo-info-border2: var(--coo-rgb-info-border2); // grezza già rgba → no wrap
+	--coo-white-bk: rgb(var(--coo-rgb-white)); // #fefefb;
+
 	// background levels
 	--coo-bk-lv0: rgb(var(--coo-rgb-bk-lv0)); // page background
 	--coo-bk-lv1: rgb(var(--coo-rgb-bk-lv1)); // components resting on the page
