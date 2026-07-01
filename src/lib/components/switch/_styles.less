@@ -1,11 +1,11 @@
 .c-switch {
-	.ant-switch {
+	&.ant-switch {
 		background-color: var(--coo-fg-black);
-	}
 
-	button {
-		&.ant-switch {
-			&.ant-switch-checked {
+		&.ant-switch-checked {
+			background-color: var(--coo-primary);
+
+			&:hover:not(.ant-switch-disabled) {
 				background-color: var(--coo-primary);
 			}
 		}

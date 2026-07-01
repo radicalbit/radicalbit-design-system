@@ -1,0 +1,76 @@
+html body {
+	font-family: var(--coo-body-font);
+
+	.ant-breadcrumb li:last-child {
+		color: var(--coo-primary);
+	}
+
+	.ant-steps,
+	.ant-input,
+	.ant-select,
+	.ant-popover,
+	.ant-dropdown,
+	.ant-dropdown-menu-submenu,
+	.ant-layout-sider,
+	.ant-collapse,
+	.ant-drawer,
+	[class*=" ant-avatar"],
+	[class^="ant-avatar"],
+	[class^="ant-breadcrumb"],
+	[class*="ant-breadcrumb"] [class^="ant-dropdown"],
+	[class*="ant-dropdown"] [class^="ant-modal"],
+	[class^="ant-modal"],
+	[class*=" ant-modal"],
+	[class^="ant-menu"],
+	[class*=" ant-menu"],
+	[class^="ant-table"],
+	[class*=" ant-table"],
+	[class^="ant-radio"],
+	[class*=" ant-radio"] {
+		font-family: var(--coo-body-font);
+	}
+
+	.ant-breadcrumb,
+	.ant-breadcrumb .ant-breadcrumb-separator {
+		color: var(--coo-fg-black);
+	}
+
+	[class^="ant-input"],
+	[class*="ant-input"] {
+		background-color: transparent;
+		border-color: var(--coo-secondary-03);
+	}
+
+	// Beat antd 5 defaults that force #fff bg on hover/focused outlined inputs
+	.ant-input-outlined:hover,
+	.ant-input-outlined:focus,
+	.ant-input-outlined:focus-within,
+	.ant-input-outlined.ant-input-affix-wrapper-focused,
+	.ant-input-affix-wrapper-focused.ant-input-outlined {
+		background-color: transparent;
+	}
+
+	// Antd hardcodes clear-icon color to rgba(0, 0, 0, .25/.45) — swap to
+	// tokens so it stays visible on the dark surface.
+	.ant-input-affix-wrapper .ant-input-clear-icon {
+		color: var(--coo-fg-tertiary);
+
+		&:hover {
+			color: var(--coo-fg-secondary);
+		}
+	}
+
+	ul {
+		color: var(--coo-fg-black);
+	}
+
+
+	::selection {
+		color: var(--coo-fg-black) !important;
+	}
+
+	input::placeholder {
+		color: var(--coo-fg-black) !important;
+		opacity: .25;
+	}
+}

@@ -2,195 +2,341 @@
 // * * * * COLORS SETUP * * * *
 :root,
 .light {
-	// to use for color effects and less-antd variables es: rgba(var(--coo-white), .8)
 
 	// * NEUTRALS * (numeric scale: light → dark)
 	--coo-rgb-neutral-00: 255, 255, 255;  // #FFFFFF  full white
-	--coo-rgb-neutral-01: 248, 248, 251;  // #F8F8FB  bg level 0 / più chiaro
-	--coo-rgb-neutral-02: 243, 243, 246;  // #F3F3F6  border secondary, table row borders
+	--coo-rgb-neutral-01: 248, 248, 251;  // #F8F8FB  background L (page)
+	--coo-rgb-neutral-02: 243, 243, 246;  // #F3F3F6  muted L
 	--coo-rgb-neutral-03: 233, 233, 240;  // #E9E9F0  border primary
 	--coo-rgb-neutral-04: 227, 227, 234;  // #E3E3EA
-	--coo-rgb-neutral-05: 215, 215, 226;  // #D7D7E2  disabled (button primary/default)
-	--coo-rgb-neutral-06: 184, 184, 197;  // #B8B8C5  icon tertiary / placeholder icone
-	--coo-rgb-neutral-07: 112, 112, 126;  // #70707E  text tertiary / input placeholder
-	--coo-rgb-neutral-08: 84, 84, 94;     // #54545E  text secondary / help text
-	--coo-rgb-neutral-09: 55, 55, 68;     // #373744  icon default
-	--coo-rgb-neutral-10: 20, 20, 26;     // #14141A  text primary
+	--coo-rgb-neutral-05: 215, 215, 226;  // #D7D7E2  disabled
+	--coo-rgb-neutral-06: 184, 184, 197;  // #B8B8C5  icon tertiary
+	--coo-rgb-neutral-07: 147, 147, 161;  // #9393A1  text tertiary L
+	--coo-rgb-neutral-08: 107, 107, 122;  // #6B6B7A  text secondary L
+	--coo-rgb-neutral-09: 55, 56, 68;     // #373844  muted D
+	--coo-rgb-neutral-10: 20, 20, 26;     // #14141A  text primary L / background D
 
 	// * SURFACE LEVELS *
-	--coo-rgb-bk-lv0: var(--coo-rgb-neutral-01); // #f8f8fb x
-	// --coo-rgb-bk-lv1: 253, 253, 254; // FDFDFE
-	--coo-rgb-bk-lv1: rgba(var(--coo-rgb-neutral-00), .7); // #white 70% x
-	--coo-rgb-bk-lv2: var(--coo-rgb-neutral-00); // #fff x
+	--coo-rgb-bk-lv0: var(--coo-rgb-neutral-01); // #F8F8FB page background
+	--coo-rgb-bk-lv1: var(--coo-rgb-neutral-02); // #F3F3F6 components on the page
+	--coo-rgb-bk-lv2: var(--coo-rgb-neutral-00); // #FFFFFF floating/overlay surfaces
 
-	// BRAND COLORS
-	// primary
-	--coo-rgb-primary: 0, 255, 222; // #00FFDE buttons, focus ring, border menu item selected - not used for text in light mode - button primary background and border, button default border
-	--coo-rgb-primary-dark: var(--coo-rgb-primary); // #00FFDE
-	--coo-rgb-primary-01: 0, 175, 152; // #00AF98 Accessible brand text color in light mode
-	--coo-rgb-primary-02: 0, 230, 199; // #00E6C7 button primary pressed, button default hover/pressed border
-	--coo-rgb-primary-text-pressed: 0, 125, 112; // #007D70 teal più scuro - ghost pressed text
-	--coo-rgb-primary-03: rgba(var(--coo-rgb-primary), .5); // #00FFDE 50%  button primary Hover background/border
-	--coo-rgb-primary-04: rgba(var(--coo-rgb-primary), .3); // #00FFDE 30%  border segmented control item - button bkg default pressed
-	--coo-rgb-primary-05: rgba(var(--coo-rgb-primary), .2); // #00FFDE 20%
-	--coo-rgb-primary-06: rgba(var(--coo-rgb-primary), .1); // #00FFDE 10% background selected items: menu, segmented control  - button default background hover
-	--coo-rgb-primary-07: rgba(var(--coo-rgb-primary), .05); // #00FFDE 5% selected table row, button default background
-	--coo-rgb-on-primary: var(--coo-rgb-neutral-10);
+	// * BRAND COLORS *
+	// primary (Figma teal scale)
+	--coo-rgb-primary: 0, 209, 182;              // #00D1B6 primary L base
+	--coo-rgb-primary-hover: 0, 184, 159;        // #00B89F hover L
+	--coo-rgb-primary-active: 0, 159, 137;       // #009F89 active L
+	--coo-rgb-primary-dark: 0, 125, 112;         // #007D70 primary L darker
+	--coo-rgb-primary-dark-hover: 0, 103, 96;    // #006760 hover L darker
+	--coo-rgb-primary-dark-active: 0, 82, 76;    // #00524C active L darker
+	--coo-rgb-primary-glow: 0, 255, 222;         // #00FFDE primary D (dark mode)
+	--coo-rgb-primary-glow-hover: 91, 255, 233;  // #5BFFE9 hover D
+	--coo-rgb-primary-glow-active: 0, 230, 199;  // #00E6C7 active D
+	// alpha tints of the base primary — the value below is the alpha itself;
+	// wrap at the usage site as rgba(var(--coo-rgb-primary), <alpha>) OR use
+	// the wrapped alias below (--coo-primary-03..07).
+	// text/icon color on top of a primary-filled surface (constant across modes)
+	--coo-rgb-on-primary: var(--coo-rgb-neutral-10); // #14141A
 
-	// secondary - TBD
-	--coo-rgb-secondary-dark: 34, 32, 32; //#303741 x
-	--coo-rgb-secondary: 78, 75, 85; 	//#444B55 x
-	--coo-rgb-secondary-01: 137, 137, 132; 	//#898984 x
-	--coo-rgb-secondary-02: 236, 236, 231; //#ecece7 x
-	--coo-rgb-secondary-03: 228, 228, 221; //#E4E4DD x
-	--coo-rgb-secondary-04: 254, 254, 251; //#fefefb x
-
-	// colors ?
-	--coo-rgb-color-01: 77, 182, 148;  // #4DB694
-	--coo-rgb-color-02: 0, 169, 170; // #00A9AA
-	--coo-rgb-color-03: 119, 126, 188; // #777EBC
-	--coo-rgb-color-04: 95, 132, 95; // #5F84C3
-	--coo-rgb-color-05: 50, 141, 205; // #328DCD
-
-	// * SELECTION COLORS *
-	--coo-rgb-highlight-darker: var(--coo-rgb-primary-01); // #00AF98 selected item text color
-	--coo-rgb-highlight: rgba(var(--coo-rgb-neutral-10), 1); // #14141A selected item text color
-	--coo-rgb-highlight-bk: rgba(var(--coo-rgb-primary), .1); // #00FFDE 10% opacity selected item background
-	--coo-rgb-highlight-border: rgba(var(--coo-rgb-primary), 1); // #00FFDE  selected item menu border
+	// secondary (Figma magenta scale)
+	--coo-rgb-secondary: 167, 69, 176;      // #A745B0 base L
+	--coo-rgb-secondary-hover: 131, 50, 139; // #83328B
+	--coo-rgb-secondary-active: 106, 40, 114; // #6A2872
+	--coo-rgb-secondary-dark: 216, 115, 224;  // #D873E0 dark mode base
+	--coo-rgb-secondary-dark-hover: 229, 166, 236; // #E5A6EC
+	--coo-rgb-secondary-dark-active: 204, 93, 213; // #CC5DD5
+	// legacy secondary-01..04 kept for backwards-compat (map onto neutrals)
+	--coo-rgb-secondary-01: var(--coo-rgb-neutral-07); // text tertiary
+	--coo-rgb-secondary-02: var(--coo-rgb-neutral-02); // muted
+	--coo-rgb-secondary-03: var(--coo-rgb-neutral-03); // border primary
+	--coo-rgb-secondary-04: var(--coo-rgb-neutral-02); // muted
 
 	// * FEEDBACK COLORS *
-	// info
-	--coo-rgb-info: 0, 111, 170; // #006FA
-	--coo-rgb-info-border2: rgba(var(--coo-rgb-info), .5); // #008844 50% opacity
-	--coo-rgb-info-bk: rgba(var(--coo-rgb-info), .1); // #008844 10% opacity
-	--coo-rgb-info-border: rgba(var(--coo-rgb-info), .15); // #008844 15% opacity
 	// success
-	--coo-rgb-success: 0, 136, 68; // #008844
-	--coo-rgb-success-border2: rgba(var(--coo-rgb-success), .5); // #008844 50% opacity
-	--coo-rgb-success-bk: rgba(var(--coo-rgb-success), .1); // #008844 10% opacity
-	--coo-rgb-success-border: rgba(var(--coo-rgb-success), .15); // #008844 15% opacity
-	// error
-	--coo-rgb-error: 194, 37, 62; // #C2253E
-	--coo-rgb-error-border2: rgba(var(--coo-rgb-error), .5); // #C2253E 50% opacity
-	--coo-rgb-error-bk: rgba(var(--coo-rgb-error), .1); // #C2253E 10%
-	--coo-rgb-error-bk-light: var(--coo-rgb-error-bk); // #C2253E 10%
-	--coo-rgb-error-bk-dark: var(--coo-rgb-error-bk); // #C2253E 10%
-	--coo-rgb-error-border: rgba(var(--coo-rgb-error), .15); // #C2253E 15% opacity
-	--coo-rgb-error-bk-2: rgba(var(--coo-rgb-error), .15); // #C2253E 15% default button
-	--coo-rgb-error-bk-3: rgba(var(--coo-rgb-error), .5); // #C2253E 50% pressed button
-	--coo-rgb-alert-bk: var(--coo-rgb-error-bk); // #C2253E 10%
+	--coo-rgb-success: 30, 138, 90;             // #1E8A5A base L
+	--coo-rgb-success-hover: 22, 115, 74;       // #16734A
+	--coo-rgb-success-active: 15, 92, 58;       // #0F5C3A
+	--coo-rgb-success-dark: 82, 227, 158;       // #52E39E dark mode base
+	--coo-rgb-success-dark-hover: 126, 236, 186; // #7EECBA
+	--coo-rgb-success-dark-active: 69, 214, 143; // #45D68F
 	// warning
-	--coo-rgb-warning: 189, 89, 0; // #BD5900
-	--coo-rgb-warning-border2: rgba(var(--coo-rgb-warning), .5); // #BD5900 50%
-	--coo-rgb-warning-bk: rgba(var(--coo-rgb-warning), .1); // #BD5900 10%
-	--coo-rgb-warning-border: rgba(var(--coo-rgb-warning), .15); // #BD5900 15%
+	--coo-rgb-warning: 166, 103, 0;             // #A66700
+	--coo-rgb-warning-hover: 133, 83, 2;        // #855302
+	--coo-rgb-warning-active: 106, 66, 0;       // #6A4200
+	--coo-rgb-warning-dark: 244, 182, 92;       // #F4B65C
+	--coo-rgb-warning-dark-hover: 250, 208, 140; // #FAD08C
+	--coo-rgb-warning-dark-active: 237, 168, 72; // #EDA848
+	// error
+	--coo-rgb-error: 194, 37, 62;               // #C2253E
+	--coo-rgb-error-hover: 164, 28, 50;         // #A41C32
+	--coo-rgb-error-active: 132, 21, 38;        // #841526
+	--coo-rgb-error-dark: 234, 107, 126;        // #EA6B7E
+	--coo-rgb-error-dark-hover: 245, 160, 172;  // #F5A0AC
+	--coo-rgb-error-dark-active: 227, 87, 108;  // #E3576C
+	// info
+	--coo-rgb-info: 42, 96, 192;                // #2A60C0
+	--coo-rgb-info-hover: 31, 77, 160;          // #1F4DA0
+	--coo-rgb-info-active: 23, 59, 128;         // #173B80
+	--coo-rgb-info-dark: 123, 163, 232;         // #7BA3E8
+	--coo-rgb-info-dark-hover: 166, 194, 241;   // #A6C2F1
+	--coo-rgb-info-dark-active: 103, 145, 222;  // #6791DE
 
+	// alpha tints of feedback colors
+	--coo-rgb-info-bk: rgba(var(--coo-rgb-info), .1);
+	--coo-rgb-info-border: rgba(var(--coo-rgb-info), .15);
+	--coo-rgb-info-border2: rgba(var(--coo-rgb-info), .5);
+	--coo-rgb-success-bk: rgba(var(--coo-rgb-success), .1);
+	--coo-rgb-success-border: rgba(var(--coo-rgb-success), .15);
+	--coo-rgb-success-border2: rgba(var(--coo-rgb-success), .5);
+	--coo-rgb-error-bk: rgba(var(--coo-rgb-error), .1);
+	--coo-rgb-error-border: rgba(var(--coo-rgb-error), .15);
+	--coo-rgb-error-border2: rgba(var(--coo-rgb-error), .5);
+	--coo-rgb-error-bk-2: rgba(var(--coo-rgb-error), .15);
+	--coo-rgb-error-bk-3: rgba(var(--coo-rgb-error), .5);
+	--coo-rgb-error-bk-light: var(--coo-rgb-error-bk);
+	--coo-rgb-error-bk-dark: var(--coo-rgb-error-bk);
+	--coo-rgb-alert-bk: var(--coo-rgb-error-bk);
+	--coo-rgb-warning-bk: rgba(var(--coo-rgb-warning), .1);
+	--coo-rgb-warning-border: rgba(var(--coo-rgb-warning), .15);
+	--coo-rgb-warning-border2: rgba(var(--coo-rgb-warning), .5);
 
-	// text
-	--coo-rgb-text-primary: var(--coo-rgb-neutral-10);
-	--coo-rgb-text-secondary: var(--coo-rgb-neutral-08);
-	--coo-rgb-text-tertiary: var(--coo-rgb-neutral-07);
-	--coo-rgb-fg-black: var(--coo-rgb-text-primary); // #14141A
-	--coo-rgb-white: var(--coo-rgb-neutral-00); // #fff x
-	--coo-rgb-dark: var(--coo-rgb-neutral-10); // #14141A x
-	--coo-rgb-black: var(--coo-rgb-neutral-10); // #14141A x
+	// * SELECTION / HIGHLIGHT *
+	--coo-rgb-highlight: var(--coo-rgb-neutral-10);              // #14141A selected text
+	--coo-rgb-highlight-bk: rgba(var(--coo-rgb-primary), .1);    // primary 10% bg
+	--coo-rgb-highlight-border: var(--coo-rgb-primary);
+	--coo-rgb-highlight-darker: var(--coo-rgb-primary-dark);     // #007D70
 
-	// icons
+	// * FOREGROUND / TEXT / ICON / BORDER *
+	--coo-rgb-fg-primary: var(--coo-rgb-neutral-10);   // #14141A body text
+	--coo-rgb-fg-secondary: var(--coo-rgb-neutral-08); // #6B6B7A help text
+	--coo-rgb-fg-tertiary: var(--coo-rgb-neutral-07);  // #9393A1 placeholder
+	--coo-rgb-fg-black: var(--coo-rgb-fg-primary);     // legacy alias
+	--coo-rgb-text-primary: var(--coo-rgb-fg-primary);
+	--coo-rgb-text-secondary: var(--coo-rgb-fg-secondary);
+	--coo-rgb-text-tertiary: var(--coo-rgb-fg-tertiary);
 	--coo-rgb-icon-default: var(--coo-rgb-neutral-09);
 	--coo-rgb-icon-tertiary: var(--coo-rgb-neutral-06);
-	// borders
 	--coo-rgb-border-primary: var(--coo-rgb-neutral-03);
 	--coo-rgb-border-secondary: var(--coo-rgb-neutral-02);
-	// muted
 	--coo-rgb-disabled: var(--coo-rgb-neutral-05);
+	--coo-rgb-white: var(--coo-rgb-neutral-00);
+	--coo-rgb-black: var(--coo-rgb-neutral-10);
 
-	// full
-	--coo-rgb-full-black: 0, 0, 0; // #000000
-	--coo-rgb-full-red: 255, 0, 0; // #ff0000
-	--coo-rgb-full-green: 0, 255, 0; // #00ff00
-	--coo-rgb-full-blue: 0, 0, 255; // #0000ff
-	// specials
-	--coo-rgb-special-blue: 0, 30, 255; // #001eff
-	--coo-rgb-special-green: 94, 255, 0; // #5eff00
-	--coo-rgb-special-dark-grey: 18, 16, 16;// #121010
-	--coo-rgb-error-dark: 255, 56, 56;  // #FF3838
+	// * DATA VISUALIZATION (charts + tags) *
+	// light variants (higher saturation)
+	--coo-rgb-chart-1-light: 0, 230, 199;   // #00E6C7
+	--coo-rgb-chart-2-light: 182, 28, 212;  // #B61CD4
+	--coo-rgb-chart-3-light: 0, 163, 92;    // #00A35C
+	--coo-rgb-chart-4-light: 209, 105, 0;   // #D16900
+	--coo-rgb-chart-5-light: 0, 111, 250;   // #006FFA
+	--coo-rgb-chart-6-light: 243, 61, 35;   // #F33D23
+	--coo-rgb-chart-7-light: 237, 50, 137;  // #ED3289
+	--coo-rgb-chart-8-light: 255, 140, 0;   // #FF8C00
+	// dark variants (lighter, less saturated)
+	--coo-rgb-chart-1: 0, 255, 222;         // #00FFDE
+	--coo-rgb-chart-2: 216, 115, 224;       // #D873E0
+	--coo-rgb-chart-3: 82, 227, 158;        // #52E39E
+	--coo-rgb-chart-4: 251, 183, 116;       // #FBB774
+	--coo-rgb-chart-5: 123, 163, 232;       // #7BA3E8
+	--coo-rgb-chart-6: 255, 126, 104;       // #FF7E68
+	--coo-rgb-chart-7: 255, 138, 183;       // #FF8AB7
+	--coo-rgb-chart-8: 242, 161, 63;        // #F2A13F
+
+	// legacy color-01..05 (kept as chart aliases)
+	--coo-rgb-color-01: var(--coo-rgb-chart-3-light);
+	--coo-rgb-color-02: var(--coo-rgb-chart-1-light);
+	--coo-rgb-color-03: var(--coo-rgb-chart-2-light);
+	--coo-rgb-color-04: var(--coo-rgb-chart-4-light);
+	--coo-rgb-color-05: var(--coo-rgb-chart-5-light);
+
+	// full & special
+	--coo-rgb-full-black: 0, 0, 0;
+	--coo-rgb-full-red: 255, 0, 0;
+	--coo-rgb-full-green: 0, 255, 0;
+	--coo-rgb-full-blue: 0, 0, 255;
+	--coo-rgb-special-blue: 0, 30, 255;
+	--coo-rgb-special-green: 94, 255, 0;
+	--coo-rgb-special-dark-grey: 18, 16, 16;
 
 
-	// * * * * LIGHT MODE COLORS BASE - to use as color variable * * * *
-	--coo-white: rgb(var(--coo-rgb-white));
-	--coo-dark: rgb(var(--coo-rgb-dark));
-	--coo-black: rgb(var(--coo-rgb-black)); //x
+	// * * * * COLOR VARIABLES (rgb() wrapped, use as `var(--coo-...)`) * * * *
 
-	// neutrals
-	--coo-text-primary: rgb(var(--coo-rgb-text-primary));
-	--coo-text-secondary: rgb(var(--coo-rgb-text-secondary));
-	--coo-text-tertiary: rgb(var(--coo-rgb-text-tertiary));
+	// surfaces
+	--coo-bk-lv0: rgb(var(--coo-rgb-bk-lv0));
+	--coo-bk-lv1: rgb(var(--coo-rgb-bk-lv1));
+	--coo-bk-lv2: rgb(var(--coo-rgb-bk-lv2));
+
+	// foreground
+	--coo-fg-primary: rgb(var(--coo-rgb-fg-primary));
+	--coo-fg-secondary: rgb(var(--coo-rgb-fg-secondary));
+	--coo-fg-tertiary: rgb(var(--coo-rgb-fg-tertiary));
+	--coo-fg-black: var(--coo-fg-primary); // legacy alias
+	--coo-text-primary: var(--coo-fg-primary);
+	--coo-text-secondary: var(--coo-fg-secondary);
+	--coo-text-tertiary: var(--coo-fg-tertiary);
 	--coo-icon-default: rgb(var(--coo-rgb-icon-default));
 	--coo-icon-tertiary: rgb(var(--coo-rgb-icon-tertiary));
 	--coo-border-primary: rgb(var(--coo-rgb-border-primary));
 	--coo-border-secondary: rgb(var(--coo-rgb-border-secondary));
 	--coo-disabled: rgb(var(--coo-rgb-disabled));
+	--coo-white: rgb(var(--coo-rgb-white));
+	--coo-black: rgb(var(--coo-rgb-black));
+	--coo-dark: var(--coo-fg-primary); // legacy alias
+	--coo-white-bk: rgb(var(--coo-rgb-white)); // legacy alias
 
-	// primaries
-	--coo-primary-dark: rgb(var(--coo-rgb-primary-dark));
+	// brand
 	--coo-primary: rgb(var(--coo-rgb-primary));
-	--coo-primary-01: rgb(var(--coo-rgb-primary-01)); // #00AF98 solido
-	--coo-primary-02: rgb(var(--coo-rgb-primary-02)); // #00E6C7 solido
-	--coo-primary-text-pressed: rgb(var(--coo-rgb-primary-text-pressed)); // #007D70 solido
-	--coo-primary-03: var(--coo-rgb-primary-03); // primary 50% → no wrap
-	--coo-primary-04: var(--coo-rgb-primary-04); // primary 30% → no wrap
-	--coo-primary-05: var(--coo-rgb-primary-05); // primary 20% → no wrap
-	--coo-primary-06: var(--coo-rgb-primary-06); // primary 10% → no wrap
-	--coo-primary-07: var(--coo-rgb-primary-07); // primary 5% → no wrap
-
-	// secondaries
-	--coo-secondary-dark: rgb(var(--coo-rgb-secondary-dark));
+	--coo-primary-hover: rgb(var(--coo-rgb-primary-hover));
+	--coo-primary-active: rgb(var(--coo-rgb-primary-active));
+	--coo-primary-dark: rgb(var(--coo-rgb-primary-dark));
+	--coo-primary-glow: rgb(var(--coo-rgb-primary-glow));
+	--coo-primary-01: var(--coo-primary-active);        // legacy: was #00AF98, now closest active tone
+	--coo-primary-02: var(--coo-primary-glow-active);   // legacy
+	--coo-primary-text-pressed: var(--coo-primary-dark-active);
+	--coo-primary-03: rgba(var(--coo-rgb-primary), .5);
+	--coo-primary-04: rgba(var(--coo-rgb-primary), .3);
+	--coo-primary-05: rgba(var(--coo-rgb-primary), .2);
+	--coo-primary-06: rgba(var(--coo-rgb-primary), .1);
+	--coo-primary-07: rgba(var(--coo-rgb-primary), .05);
+	--coo-on-primary: rgb(var(--coo-rgb-on-primary));
 	--coo-secondary: rgb(var(--coo-rgb-secondary));
+	--coo-secondary-hover: rgb(var(--coo-rgb-secondary-hover));
+	--coo-secondary-active: rgb(var(--coo-rgb-secondary-active));
+	--coo-secondary-dark: rgb(var(--coo-rgb-secondary-dark));
 	--coo-secondary-01: rgb(var(--coo-rgb-secondary-01));
 	--coo-secondary-02: rgb(var(--coo-rgb-secondary-02));
 	--coo-secondary-03: rgb(var(--coo-rgb-secondary-03));
 	--coo-secondary-04: rgb(var(--coo-rgb-secondary-04));
 
-	// colors
+	// legacy colors
 	--coo-color-01: rgb(var(--coo-rgb-color-01));
 	--coo-color-02: rgb(var(--coo-rgb-color-02));
 	--coo-color-03: rgb(var(--coo-rgb-color-03));
 	--coo-color-04: rgb(var(--coo-rgb-color-04));
 	--coo-color-05: rgb(var(--coo-rgb-color-05));
-	--color-active: rgb(var(--coo-rgb-secondary-01));
-	// semantics
-	--coo-highlight-darker: rgb(var(--coo-rgb-highlight-darker)); // #00AF98
-	--coo-highlight: var(--coo-rgb-highlight); // grezza già rgba → no wrap
-	--coo-highlight-bk: var(--coo-rgb-highlight-bk); // grezza già rgba → no wrap
-	--coo-highlight-border: var(--coo-rgb-highlight-border); // grezza già rgba → no wrap
+
+	// chart tokens (context-aware: swap in dark mode)
+	--coo-chart-1: rgb(var(--coo-rgb-chart-1-light));
+	--coo-chart-2: rgb(var(--coo-rgb-chart-2-light));
+	--coo-chart-3: rgb(var(--coo-rgb-chart-3-light));
+	--coo-chart-4: rgb(var(--coo-rgb-chart-4-light));
+	--coo-chart-5: rgb(var(--coo-rgb-chart-5-light));
+	--coo-chart-6: rgb(var(--coo-rgb-chart-6-light));
+	--coo-chart-7: rgb(var(--coo-rgb-chart-7-light));
+	--coo-chart-8: rgb(var(--coo-rgb-chart-8-light));
+
+	// selection / highlight
+	--coo-highlight: rgb(var(--coo-rgb-highlight));
+	--coo-highlight-bk: var(--coo-rgb-highlight-bk); // alpha
+	--coo-highlight-border: rgb(var(--coo-rgb-highlight-border));
+	--coo-highlight-darker: rgb(var(--coo-rgb-highlight-darker));
+
+	// feedback
 	--coo-error: rgb(var(--coo-rgb-error));
 	--coo-warning: rgb(var(--coo-rgb-warning));
 	--coo-success: rgb(var(--coo-rgb-success));
-	--coo-success-bk: var(--coo-rgb-success-bk); // grezza già rgba → no wrap
-	--coo-error-bk-dark: var(--coo-rgb-error-bk-dark); // grezza già rgba → no wrap
-	--coo-error-bk-light: var(--coo-rgb-error-bk-light); // grezza già rgba → no wrap
-	--coo-alert-bk: var(--coo-rgb-alert-bk); // grezza già rgba → no wrap
-	// info
-	--coo-info: rgb(var(--coo-rgb-info)); // solido → wrap
-	--coo-info-bk: var(--coo-rgb-info-bk); // grezza già rgba → no wrap
-	--coo-info-border: var(--coo-rgb-info-border); // grezza già rgba → no wrap
-	--coo-info-border2: var(--coo-rgb-info-border2); // grezza già rgba → no wrap
-	--coo-white-bk: rgb(var(--coo-rgb-white)); // #fefefb;
+	--coo-info: rgb(var(--coo-rgb-info));
+	--coo-success-bk: var(--coo-rgb-success-bk);
+	--coo-error-bk-dark: var(--coo-rgb-error-bk-dark);
+	--coo-error-bk-light: var(--coo-rgb-error-bk-light);
+	--coo-alert-bk: var(--coo-rgb-alert-bk);
+	--coo-info-bk: var(--coo-rgb-info-bk);
+	--coo-info-border: var(--coo-rgb-info-border);
+	--coo-info-border2: var(--coo-rgb-info-border2);
+}
 
-	// background levels
-	--coo-bk-lv0: rgb(var(--coo-rgb-bk-lv0)); // page background
-	--coo-bk-lv1: var(--coo-rgb-bk-lv1); // grezza già rgba (white 70%) → no wrap
-	--coo-bk-lv2: rgb(var(--coo-rgb-bk-lv2)); // floating/overlay surfaces
 
-	.dark {
-		--coo-primary: rgb(var(--coo-rgb-primary));
-		--coo-secondary: rgb(var(--coo-rgb-secondary-03));
-		--coo-fg-black: rgb(var(--coo-rgb-white));
-		--coo-secondary-03: rgb(var(--coo-rgb-secondary), .5);
-		--coo-secondary-04: rgb(var(--coo-rgb-black));
-		--coo-error: rgb(var(--coo-rgb-error-dark));
-		--coo-bk-lv0: rgb(var(--coo-rgb-neutral-10));
-		--coo-bk-lv1: rgba(var(--coo-rgb-neutral-00), .03); // #white 3% x
-		--coo-bk-lv2: rgb(38, 38, 46); //#26262E
-	}
+// * * * * DARK MODE * * * *
+// Activated by adding class="dark" on <html> (or a parent element).
+.dark {
+	// swap surfaces to dark neutrals
+	--coo-rgb-bk-lv0: 26, 27, 38;     // #1A1B26 background D
+	--coo-rgb-bk-lv1: 36, 37, 46;     // #24252E card D
+	--coo-rgb-bk-lv2: 55, 56, 68;     // #373844 muted D
+	--coo-bk-lv0: rgb(var(--coo-rgb-bk-lv0));
+	--coo-bk-lv1: rgb(var(--coo-rgb-bk-lv1));
+	--coo-bk-lv2: rgb(var(--coo-rgb-bk-lv2));
+
+	// invert foreground
+	--coo-rgb-fg-primary: var(--coo-rgb-neutral-00);   // #FFFFFF
+	--coo-rgb-fg-secondary: 147, 147, 161;             // #9393A1
+	--coo-rgb-fg-tertiary: 138, 138, 145;              // #8A8A91
+	--coo-rgb-text-primary: var(--coo-rgb-fg-primary);
+	--coo-rgb-text-secondary: var(--coo-rgb-fg-secondary);
+	--coo-rgb-text-tertiary: var(--coo-rgb-fg-tertiary);
+	--coo-rgb-fg-black: var(--coo-rgb-fg-primary);
+	--coo-rgb-black: var(--coo-rgb-fg-primary);
+	--coo-fg-primary: rgb(var(--coo-rgb-fg-primary));
+	--coo-fg-secondary: rgb(var(--coo-rgb-fg-secondary));
+	--coo-fg-tertiary: rgb(var(--coo-rgb-fg-tertiary));
+	--coo-fg-black: var(--coo-fg-primary);
+	--coo-text-primary: var(--coo-fg-primary);
+	--coo-text-secondary: var(--coo-fg-secondary);
+	--coo-text-tertiary: var(--coo-fg-tertiary);
+	--coo-black: var(--coo-fg-primary);
+	--coo-dark: var(--coo-fg-primary);
+	--coo-white-bk: var(--coo-bk-lv1);
+
+	// icons and borders adapt to darker surfaces
+	--coo-rgb-icon-default: var(--coo-rgb-neutral-06);
+	--coo-rgb-icon-tertiary: var(--coo-rgb-neutral-07);
+	--coo-rgb-border-primary: var(--coo-rgb-neutral-09);
+	--coo-rgb-border-secondary: var(--coo-rgb-neutral-09);
+	--coo-icon-default: rgb(var(--coo-rgb-icon-default));
+	--coo-icon-tertiary: rgb(var(--coo-rgb-icon-tertiary));
+	--coo-border-primary: rgb(var(--coo-rgb-border-primary));
+	--coo-border-secondary: rgb(var(--coo-rgb-border-secondary));
+
+	// re-map legacy secondary-01..04 for the dark backdrop
+	--coo-rgb-secondary-01: var(--coo-rgb-neutral-07);
+	--coo-rgb-secondary-02: var(--coo-rgb-neutral-09);
+	--coo-rgb-secondary-03: var(--coo-rgb-neutral-09);
+	--coo-rgb-secondary-04: var(--coo-rgb-neutral-09);
+	--coo-secondary: rgb(var(--coo-rgb-fg-secondary));
+	--coo-secondary-01: rgb(var(--coo-rgb-secondary-01));
+	--coo-secondary-02: rgb(var(--coo-rgb-secondary-02));
+	--coo-secondary-03: rgb(var(--coo-rgb-secondary-03));
+	--coo-secondary-04: rgb(var(--coo-rgb-secondary-04));
+
+	// primary shifts to the glow variants in dark mode
+	--coo-rgb-primary: var(--coo-rgb-primary-glow);        // #00FFDE
+	--coo-rgb-primary-hover: var(--coo-rgb-primary-glow-hover);
+	--coo-rgb-primary-active: var(--coo-rgb-primary-glow-active);
+	--coo-primary: rgb(var(--coo-rgb-primary));
+	--coo-primary-hover: rgb(var(--coo-rgb-primary-hover));
+	--coo-primary-active: rgb(var(--coo-rgb-primary-active));
+	--coo-primary-dark: var(--coo-primary);
+	--coo-primary-01: var(--coo-primary-active);
+	--coo-primary-02: var(--coo-primary-hover);
+
+	// secondary uses the lighter magenta scale
+	--coo-rgb-secondary: var(--coo-rgb-secondary-dark);
+	--coo-secondary-hover: rgb(var(--coo-rgb-secondary-dark-hover));
+	--coo-secondary-active: rgb(var(--coo-rgb-secondary-dark-active));
+
+	// feedback: switch to the "-dark" variants
+	--coo-rgb-error: var(--coo-rgb-error-dark);
+	--coo-rgb-warning: var(--coo-rgb-warning-dark);
+	--coo-rgb-success: var(--coo-rgb-success-dark);
+	--coo-rgb-info: var(--coo-rgb-info-dark);
+	--coo-error: rgb(var(--coo-rgb-error));
+	--coo-warning: rgb(var(--coo-rgb-warning));
+	--coo-success: rgb(var(--coo-rgb-success));
+	--coo-info: rgb(var(--coo-rgb-info));
+
+	// swap chart palette to dark variants
+	--coo-chart-1: rgb(var(--coo-rgb-chart-1));
+	--coo-chart-2: rgb(var(--coo-rgb-chart-2));
+	--coo-chart-3: rgb(var(--coo-rgb-chart-3));
+	--coo-chart-4: rgb(var(--coo-rgb-chart-4));
+	--coo-chart-5: rgb(var(--coo-rgb-chart-5));
+	--coo-chart-6: rgb(var(--coo-rgb-chart-6));
+	--coo-chart-7: rgb(var(--coo-rgb-chart-7));
+	--coo-chart-8: rgb(var(--coo-rgb-chart-8));
+
+	// highlight tokens follow primary
+	--coo-rgb-highlight: var(--coo-rgb-fg-primary); // #FFFFFF selected text on primary
+	--coo-rgb-highlight-bk: rgba(var(--coo-rgb-primary), .15);
+	--coo-highlight: rgb(var(--coo-rgb-highlight));
+	--coo-highlight-bk: var(--coo-rgb-highlight-bk);
 }
