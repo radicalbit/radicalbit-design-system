@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.18.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.17.0...v2.18.0) (2026-07-01)
+
+
+### Features
+
+* remove comments ([#141](https://github.com/radicalbit/radicalbit-design-system/issues/141)) ([bc55420](https://github.com/radicalbit/radicalbit-design-system/commit/bc5542093ad73800ca4d99baa6c5298f48005da5))
+
 ## [2.17.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.16.0...v2.17.0) (2026-07-01)
 
 
