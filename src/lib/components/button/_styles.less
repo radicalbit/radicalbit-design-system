@@ -122,8 +122,15 @@
 		box-shadow: none;
 
 		&:hover {
-			border-color: var(--coo-primary-03); // 50%
-			background-color: var(--coo-primary-03); // 50%
+			color: var(--coo-on-primary);
+			border-color: var(--coo-primary-hover);
+			background-color: var(--coo-primary-hover);
+		}
+
+		&:active {
+			color: var(--coo-on-primary);
+			border-color: var(--coo-primary-active);
+			background-color: var(--coo-primary-active);
 		}
 
 		&.is-active {

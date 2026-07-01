@@ -32,12 +32,9 @@
 	--coo-rgb-primary-glow: 0, 255, 222;         // #00FFDE primary D (dark mode)
 	--coo-rgb-primary-glow-hover: 91, 255, 233;  // #5BFFE9 hover D
 	--coo-rgb-primary-glow-active: 0, 230, 199;  // #00E6C7 active D
-	// alpha tints of the base primary
-	--coo-rgb-primary-03: rgba(var(--coo-rgb-primary), .5);
-	--coo-rgb-primary-04: rgba(var(--coo-rgb-primary), .3);
-	--coo-rgb-primary-05: rgba(var(--coo-rgb-primary), .2);
-	--coo-rgb-primary-06: rgba(var(--coo-rgb-primary), .1);
-	--coo-rgb-primary-07: rgba(var(--coo-rgb-primary), .05);
+	// alpha tints of the base primary — the value below is the alpha itself;
+	// wrap at the usage site as rgba(var(--coo-rgb-primary), <alpha>) OR use
+	// the wrapped alias below (--coo-primary-03..07).
 	// text/icon color on top of a primary-filled surface (constant across modes)
 	--coo-rgb-on-primary: var(--coo-rgb-neutral-10); // #14141A
 
@@ -196,11 +193,11 @@
 	--coo-primary-01: var(--coo-primary-active);        // legacy: was #00AF98, now closest active tone
 	--coo-primary-02: var(--coo-primary-glow-active);   // legacy
 	--coo-primary-text-pressed: var(--coo-primary-dark-active);
-	--coo-primary-03: var(--coo-rgb-primary-03); // alpha (no wrap)
-	--coo-primary-04: var(--coo-rgb-primary-04);
-	--coo-primary-05: var(--coo-rgb-primary-05);
-	--coo-primary-06: var(--coo-rgb-primary-06);
-	--coo-primary-07: var(--coo-rgb-primary-07);
+	--coo-primary-03: rgba(var(--coo-rgb-primary), .5);
+	--coo-primary-04: rgba(var(--coo-rgb-primary), .3);
+	--coo-primary-05: rgba(var(--coo-rgb-primary), .2);
+	--coo-primary-06: rgba(var(--coo-rgb-primary), .1);
+	--coo-primary-07: rgba(var(--coo-rgb-primary), .05);
 	--coo-on-primary: rgb(var(--coo-rgb-on-primary));
 
 	--coo-secondary: rgb(var(--coo-rgb-secondary));
