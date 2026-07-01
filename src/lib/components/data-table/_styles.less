@@ -89,7 +89,9 @@
 					padding-right: 1rem;
 				}
 
-				&.ant-table-column-has-actions.ant-table-column-has-sorters {
+				&.ant-table-column-has-actions.ant-table-column-has-sorters,
+				&.ant-table-column-has-sorters.ant-table-cell-fix-left,
+				&.ant-table-column-has-sorters.ant-table-cell-fix-right {
 					&:hover {
 						background: transparent;
 					}
@@ -107,7 +109,8 @@
 
 				.ant-table-column-sorter-up,
 				.ant-table-column-sorter-down {
-					&.on {
+					&.on,
+					&.active {
 						color: var(--coo-primary) !important;
 					}
 				}
