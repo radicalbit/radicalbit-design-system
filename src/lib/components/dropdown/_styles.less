@@ -1,33 +1,55 @@
-.c-dropdown.ant-dropdown {
-	.ant-dropdown-menu {
-		background-color: var(--coo-bk-lv2);
+.c-dropdown {
+	&.ant-dropdown {
+		.ant-dropdown-menu {
+			background-color: var(--coo-bk-lv2);
 
-		.ant-dropdown-menu-item {
-			color: var(--coo-secondary);
-			font-weight: var(--coo-font-weight-light);
+			.ant-dropdown-menu-item {
+				color: var(--coo-secondary);
+				font-weight: var(--coo-font-weight-light);
 
-			&.ant-dropdown-menu-item-danger:not(.ant-dropdown-menu-item-disabled) {
-				color: var(--coo-error);
+				&:hover,
+				&-active {
+					background-color: var(--coo-secondary-04);
+				}
 
-				&:hover {
-					background: rgba(var(--coo-rgb-primary), .2);
+				&-disabled {
+					opacity: .4;
+					cursor: not-allowed;
+
+					&:hover {
+						background-color: var(--coo-bk-lv2);
+					}
+				}
+
+				&-danger:not(.ant-dropdown-menu-item-disabled) {
+					color: var(--coo-error);
+
+					&:hover {
+						background: rgba(var(--coo-rgb-primary), .2);
+					}
+				}
+
+				&-divider {
+					background-color: var(--coo-secondary-03);
 				}
 			}
 
-			&-disabled {
-				opacity: .4;
-				cursor: not-allowed;
+			.ant-dropdown-menu-submenu-title {
+				&:hover,
+				&-active {
+					background-color: var(--coo-secondary-04);
+				}
+
+				&-disabled:hover {
+					background-color: var(--coo-bk-lv2);
+				}
 			}
 		}
 
-		.ant-dropdown-menu-item-divider {
-			background-color: var(--coo-secondary-03);
+		.ant-dropdown-trigger {
+			font-weight: var(--coo-font-weight-normal);
+			font-size: .8rem;
 		}
-	}
-
-	.ant-dropdown-trigger {
-		font-weight: var(--coo-font-weight-normal);
-		font-size: .8rem;
 	}
 
 	&__child {
