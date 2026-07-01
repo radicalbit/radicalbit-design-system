@@ -109,13 +109,13 @@
 		border-color: var(--coo-primary);
 		background-color: var(--coo-primary-07); // 5%
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			color: rgb(var(--coo-rgb-text-primary));
 			border-color: var(--coo-primary-hover);
 			background-color: var(--coo-primary-06); // 10%
 		}
 
-		&:active {
+		&:not(:disabled):not(.ant-btn-disabled):active {
 			color: rgb(var(--coo-rgb-text-primary));
 			border-color: var(--coo-primary-active);
 			background-color: var(--coo-primary-05); // 20%
@@ -129,13 +129,13 @@
 		background-color: var(--coo-primary);
 		box-shadow: none;
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			color: var(--coo-on-primary);
 			border-color: var(--coo-primary-hover);
 			background-color: var(--coo-primary-hover);
 		}
 
-		&:active {
+		&:not(:disabled):not(.ant-btn-disabled):active {
 			color: var(--coo-on-primary);
 			border-color: var(--coo-primary-active);
 			background-color: var(--coo-primary-active);
@@ -157,13 +157,13 @@
 		border-color: var(--coo-success);
 		background-color: var(--coo-success);
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			color: var(--coo-white);
 			border-color: rgb(var(--coo-rgb-success-hover));
 			background-color: rgb(var(--coo-rgb-success-hover));
 		}
 
-		&:active {
+		&:not(:disabled):not(.ant-btn-disabled):active {
 			color: var(--coo-white);
 			border-color: rgb(var(--coo-rgb-success-active));
 			background-color: rgb(var(--coo-rgb-success-active));
@@ -175,7 +175,7 @@
 		border-color: var(--coo-success);
 		background-color: transparent;
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			color: var(--coo-success);
 			border-color: var(--coo-success);
 			background-color: var(--coo-success-bk);
@@ -187,13 +187,13 @@
 		border-color: var(--coo-error);
 		background-color: var(--coo-error);
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			color: var(--coo-white);
 			border-color: rgb(var(--coo-rgb-error-hover));
 			background-color: rgb(var(--coo-rgb-error-hover));
 		}
 
-		&:active {
+		&:not(:disabled):not(.ant-btn-disabled):active {
 			color: var(--coo-white);
 			border-color: rgb(var(--coo-rgb-error-active));
 			background-color: rgb(var(--coo-rgb-error-active));
@@ -205,7 +205,7 @@
 		border-color: var(--coo-error);
 		background-color: transparent;
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			color: var(--coo-error);
 			border-color: var(--coo-error);
 			background-color: var(--coo-error-bk);
@@ -217,13 +217,13 @@
 		border-color: var(--coo-warning);
 		background-color: var(--coo-warning);
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			color: var(--coo-white);
 			border-color: rgb(var(--coo-rgb-warning-hover));
 			background-color: rgb(var(--coo-rgb-warning-hover));
 		}
 
-		&:active {
+		&:not(:disabled):not(.ant-btn-disabled):active {
 			color: var(--coo-white);
 			border-color: rgb(var(--coo-rgb-warning-active));
 			background-color: rgb(var(--coo-rgb-warning-active));
@@ -235,7 +235,7 @@
 		border-color: var(--coo-warning);
 		background-color: transparent;
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			color: var(--coo-warning);
 			border-color: var(--coo-warning);
 			background-color: rgba(var(--coo-rgb-warning), .1);
@@ -247,13 +247,13 @@
 		color: var(--coo-white);
 		border-color: var(--coo-secondary);
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			color: var(--coo-white);
 			border-color: rgb(var(--coo-rgb-secondary-hover));
 			background-color: rgb(var(--coo-rgb-secondary-hover));
 		}
 
-		&:active {
+		&:not(:disabled):not(.ant-btn-disabled):active {
 			color: var(--coo-white);
 			border-color: rgb(var(--coo-rgb-secondary-active));
 			background-color: rgb(var(--coo-rgb-secondary-active));
@@ -269,7 +269,7 @@
 		border-color: transparent;
 		background: transparent;
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			border-color: transparent;
 			background: transparent;
 			color: var(--coo-primary-active);
@@ -289,7 +289,7 @@
 			text-decoration: none; // icona non sottolineata
 		}
 
-		&:hover {
+		&:not(:disabled):not(.ant-btn-disabled):hover {
 			border-color: transparent;
 			background: transparent;
 			color: var(--coo-primary-active);
