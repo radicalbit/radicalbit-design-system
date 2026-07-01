@@ -50,6 +50,16 @@ html body {
 		background-color: transparent;
 	}
 
+	// Antd hardcodes clear-icon color to rgba(0, 0, 0, .25/.45) — swap to
+	// tokens so it stays visible on the dark surface.
+	.ant-input-affix-wrapper .ant-input-clear-icon {
+		color: var(--coo-fg-tertiary);
+
+		&:hover {
+			color: var(--coo-fg-secondary);
+		}
+	}
+
 	ul {
 		color: var(--coo-fg-black);
 	}
