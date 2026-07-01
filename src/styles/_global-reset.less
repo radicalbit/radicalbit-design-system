@@ -41,6 +41,14 @@ html body {
 		border-color: var(--coo-secondary-03);
 	}
 
+	// Beat antd 5 default that forces #fff bg on focused outlined inputs
+	.ant-input-outlined:focus,
+	.ant-input-outlined:focus-within,
+	.ant-input-outlined.ant-input-affix-wrapper-focused,
+	.ant-input-affix-wrapper-focused.ant-input-outlined {
+		background-color: transparent;
+	}
+
 	ul {
 		color: var(--coo-fg-black);
 	}
