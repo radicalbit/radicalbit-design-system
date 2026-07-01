@@ -3,7 +3,7 @@
 	flex-direction: column;
 	width: 100%;
 	border-radius: 1rem;
-	color: var(--coo-dark);
+	color: var(--coo-fg-black);
 
 	&__title {
 		display: flex;
@@ -14,7 +14,7 @@
 		font-family: var(--coo-header-font);
 		font-size: 1.5rem;
 		align-items: center;
-		color: var(--title-color, --coo-dark);
+		color: var(--title-color, --coo-fg-black);
 
 		&--weight {
 			&-light {
@@ -41,7 +41,7 @@
 		}
 
 		a {
-			color: var(--coo-dark);
+			color: var(--coo-fg-black);
 
 			&:hover {
 				color: var(--coo-primary);
@@ -123,9 +123,10 @@
 		display: flex;
 		flex-direction: row;
 		gap: .25rem;
-		font-size: var(--coo-font-size-xs);
+		font-size: var(--coo-font-size-s);
 		line-height: 1.5;
 		font-weight: var(--coo-font-weight-light);
+		color: var(--coo-text-secondary);
 	}
 
 	&--reverse {

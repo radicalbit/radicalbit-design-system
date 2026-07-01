@@ -40,7 +40,7 @@
 
 	&.tag-new {
 		border-style: dashed;
-		background-color: var(--coo-white);
+		background-color: var(--coo-bk-lv1);
 	}
 
 	&--uppercase {
@@ -64,8 +64,8 @@
 		&:hover {
 			opacity: 1;
 			transition: all .8s linear;
-			background: var(--coo-highlight);
-			color: rgb(var(--coo-rgb-primary-dark));
+			background: var(--coo-highlight-bk);
+			color: rgb(var(--coo-rgb-primary));
 
 			.c-tag__suffix {
 				opacity: 1;
@@ -74,7 +74,7 @@
 			}
 
 			.c-tag--error {
-				border-color: var(--coo-highlight);
+				border-color: var(--coo-highlight-border);
 			}
 		}
 	}
@@ -87,14 +87,12 @@
 	}
 
 	&--highlighted {
-		.highlight();
-
-		border: var(--coo-highlight);
+		border: var(--coo-highlight-border);
 	}
 
 	&--full {
 		background: var(--coo-primary);
-		color: var(--coo-white);
+		color: var(--coo-fg-black);
 		border: 0;
 	}
 
@@ -219,11 +217,11 @@
 		&-onHover {
 			&:hover {
 				transition: all .8s linear;
-				background: var(--coo-highlight);
-				color: rgb(var(--coo-rgb-primary-dark));
+				background: var(--coo-highlight-bk);
+				color: rgb(var(--coo-rgb-primary));
 
 				.c-tag--error {
-					border-color: var(--coo-highlight);
+					border-color: var(--coo-highlight-border);
 				}
 			}
 		}

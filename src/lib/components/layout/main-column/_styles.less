@@ -12,8 +12,8 @@
 		right: var(--coo-right-sidebar-width);
 		z-index: 1;
 		border-bottom: 0;
-		background-color: var(--coo-white-bk);
-		color: var(--coo-dark);
+		background-color: var(--coo-bk-lv0);
+		color: var(--coo-fg-black);
 		max-height: @rdb-header-height;
 		min-height: @rdb-header-height;
 	}
@@ -21,13 +21,16 @@
 	.ant-layout-content {
 		transition: all .2s;
 		margin-top: @rdb-header-height;
-		padding: 0;
 		height: ~"calc(100vh - @{rdb-header-height})";
 		overflow: auto;
 		margin-left: 0;
 		margin-right: 0;
-		background-color: var(--coo-white-bk);
-		color: var(--coo-dark);
+		background-color: var(--coo-bk-lv0);
+		color: var(--coo-fg-black);
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		padding: 1.5rem;
 
 		&--no-header {
 			margin-top: 0;

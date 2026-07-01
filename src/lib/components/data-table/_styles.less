@@ -1,9 +1,12 @@
 .ant-table-wrapper.l-data-table {
+	background-color: var(--coo-bk-lv1);
+	border-radius: var(--coo-border-radius-small);
+	padding: .5rem 1rem 1rem 1rem;
+
 	tr {
 		td,
 		th {
-			color: var(--coo-dark);
-			border-bottom: 1px solid var(--coo-secondary-03);
+			color: var(--coo-fg-black);
 		}
 	}
 
@@ -24,7 +27,7 @@
 	.ant-table-cell {
 		.ant-empty {
 			.ant-empty-description {
-				color: var(--coo-dark);
+				color: var(--coo-fg-black);
 			}
 		}
 
@@ -65,8 +68,8 @@
 				white-space: nowrap;
 				font-weight: var(--coo-font-weight-light);
 				font-size: var(--coo-font-size-s);
+				color: var(--coo-text-tertiary);
 				background-color: transparent;
-				border-bottom: 1px solid var(--coo-secondary-03);
 				padding: .5rem;
 
 				&::before {
@@ -221,7 +224,7 @@
 						width: 100%;
 
 						sup {
-							background-color: var(--coo-highlight);
+							background-color: var(--coo-primary);
 							color: var(--coo-white);
 							border: 0;
 							box-shadow: 0 0;
@@ -251,8 +254,7 @@
 					th,
 					td {
 						background-color: rgba(var(--coo-rgb-error), .05) !important;
-						color: var(--coo-dark);
-						border-bottom: 1px solid var(--coo-secondary-03);
+						color: var(--coo-fg-black);
 					}
 
 					&:hover {
@@ -267,14 +269,14 @@
 					background-color: rgba(var(--coo-rgb-primary), .1);
 
 					td {
-						color: var(--coo-dark);
+						color: var(--coo-fg-black);
 					}
 				}
 
 				&--selected {
 					&-highlighted {
 						border-left-color: var(--coo-primary) !important;
-						background-color: var(--coo-white) !important;
+						background-color: var(--coo-bk-lv1) !important;
 
 						td {
 							color: rgb(var(--coo-rgb-primary));
@@ -299,7 +301,7 @@
 
 				&--highlighted {
 					border-left-color: var(--coo-primary) !important;
-					background-color: var(--coo-highlight) !important;
+					background-color: var(--coo-highlight-bk) !important;
 
 					td {
 						color: var(--coo-white);
@@ -374,7 +376,7 @@
 		}
 
 		.ant-table-thead {
-			border-bottom: 1px solid var(--coo-secondary-03);
+			border-bottom: 0;
 		}
 
 		.ant-table-placeholder {
@@ -391,7 +393,6 @@
 	.ant-table-fixed-header .ant-table-scroll .ant-table-header {
 		margin-bottom: 0;
 		padding-bottom: 0;
-		border-bottom: 1px solid var(--coo-secondary);
 	}
 
 	&--draggable {

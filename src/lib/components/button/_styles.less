@@ -35,16 +35,13 @@
 	}
 
 	&.is-active {
-		.highlight();
-		.shadow--z-5();
-
 		&:hover {
 			.shadow--z-1();
 		}
 	}
 
 	&--filled {
-		background-color: var(--coo-white);
+		background-color: var(--coo-bk-lv1);
 	}
 
 	&-sm,
@@ -70,8 +67,6 @@
 	}
 
 	&--streaming {
-		.highlight();
-
 		&::after {
 			content: " ";
 			display: block;
@@ -80,7 +75,7 @@
 			left: 0;
 			bottom: 0;
 			right: 0;
-			background: rgba(var(--coo-rgb-dark), .5);
+			background: rgba(var(--coo-rgb-fg-black), .5);
 			opacity: 0;
 			z-index: 2;
 			pointer-events: none;
@@ -110,34 +105,36 @@
 
 
 	&.ant-btn-default {
+		color: var(--coo-text-primary);
+		background-color: var(--coo-primary-07); // 5%
+
 		&:hover {
-			color: var(--coo-primary-dark);
-			border-color: var(--coo-highlight);
-			background: var(--coo-highlight);
-			.shadow--z-5();
+			border-color: var(--coo-primary-02); // #00E6C7
+			background-color: var(--coo-primary-06); // 10%
 		}
 	}
 
 	&.ant-btn-primary,
 	.ant-btn-color-primary {
-		color: var(--coo-white);
+		color: var(--coo-rgb-on-primary);
 		border-color: var(--coo-primary);
 		background-color: var(--coo-primary);
 		box-shadow: none;
 
 		&:hover {
-			.highlight();
-			.shadow--z-5();
+			border-color: var(--coo-primary-03); // 50%
+			background-color: var(--coo-primary-03); // 50%
 		}
 
 		&.is-active {
-			.highlight();
-			.shadow--z-5();
-
 			&:hover {
 				.shadow--z-1();
 			}
 		}
+	}
+
+	&.ant-btn-primary-light {
+		color: var(--coo-text-primary);
 	}
 
 	&.ant-btn-success {
@@ -196,10 +193,6 @@
 		background-color: var(--coo-secondary);
 		color: var(--coo-secondary-04);
 		border-color: var(--coo-secondary);
-
-		&:hover {
-			.highlight();
-		}
 	}
 
 	&.ant-btn-secondary-light {
@@ -207,31 +200,44 @@
 	}
 
 	&.ant-btn-text {
-		color: var(--coo-secondary-01);
+		color: var(--coo-text-primary); // testo+icona, niente sottolineatura
 		border-color: transparent;
 
 		&:hover {
 			border-color: transparent;
 			background: transparent;
-			color: var(--coo-primary);
+			color: var(--coo-primary-01); // #00AF98
+			box-shadow: none;
+		}
+	}
+
+	// Ghost: type='ghost' non genera classi antd → uso m-button--ghost (vedi index.tsx)
+	&.m-button--ghost {
+		color: var(--coo-text-primary); // testo+icona #14141A
+		border-color: transparent;
+		background: transparent;
+		text-decoration: underline; // SOLO il testo
+
+		.anticon,
+		svg {
+			text-decoration: none; // icona non sottolineata
+		}
+
+		&:hover {
+			border-color: transparent;
+			background: transparent;
+			color: var(--coo-primary-01); // #00AF98
 			box-shadow: none;
 		}
 	}
 
 
-	&[disabled] {
-		background: transparent;
-		border: 1.25px dashed var(--coo-secondary-03);
-		color: var(--coo-secondary-01);
-		box-sizing: border-box;
-		font-style: italic;
-
-		&:hover {
-			border-color: var(--coo-secondary-03);
-			background: inherit;
-			color: var(--coo-secondary-03);
-			box-shadow: none;
-		}
+	// Disabled: ogni tipo mantiene i suoi colori normali, renderizzato al 30% di opacità
+	&[disabled],
+	&[disabled]:hover {
+		opacity: .3;
+		box-shadow: none;
+		pointer-events: none; // niente hover: resta lo stato normale al 30%
 	}
 
 	.ant-btn-circle {
