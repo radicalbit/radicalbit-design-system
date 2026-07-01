@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.17.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.16.0...v2.17.0) (2026-07-01)
+
+
+### Features
+
+* new styles ([#138](https://github.com/radicalbit/radicalbit-design-system/issues/138)) ([7cd9025](https://github.com/radicalbit/radicalbit-design-system/commit/7cd9025b3b9ea0d6d506fc8c21a18b51d733f2e7))
+* use system font stack for typography ([#137](https://github.com/radicalbit/radicalbit-design-system/issues/137)) ([f6828da](https://github.com/radicalbit/radicalbit-design-system/commit/f6828da535debafce305a4fc6ff0d108a7b1c841))
+
 ## [2.16.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.15.0...v2.16.0) (2026-05-07)
 
 
