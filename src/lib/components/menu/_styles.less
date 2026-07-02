@@ -16,20 +16,25 @@
 		font-weight: var(--coo-font-weight-light);
 	}
 
-	.ant-menu-item-selected {
-		.ant-menu-title-content {
-			color: var(--coo-fg-black);
-			font-weight: var(--coo-font-weight-normal);
-		}
-	}
-
 	.ant-menu-item-divider {
 		background-color: var(--coo-border-primary);
 	}
 
 	.ant-menu-item {
 		&.ant-menu-item-selected {
-			background-color: var(--coo-highlight-bk);
+			background-color: var(--coo-primary);
+			color: var(--coo-on-primary);
+
+			.ant-menu-title-content {
+				color: var(--coo-on-primary);
+				font-weight: var(--coo-font-weight-normal);
+			}
+
+			.anticon,
+			svg {
+				color: var(--coo-on-primary);
+				fill: var(--coo-on-primary);
+			}
 		}
 
 		&.ant-menu-item-active {
