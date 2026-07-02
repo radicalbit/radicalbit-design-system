@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.18.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.18.0...v2.18.1) (2026-07-02)
+
+
+### Bug Fixes
+
+* **input:** recolor .ant-input-affix-wrapper text so it adapts to dar… ([#143](https://github.com/radicalbit/radicalbit-design-system/issues/143)) ([3724dc5](https://github.com/radicalbit/radicalbit-design-system/commit/3724dc5fb6ff791ebf9e9d005e0b626348cc0cdb))
+
 ## [2.18.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.17.0...v2.18.0) (2026-07-01)
 
 
