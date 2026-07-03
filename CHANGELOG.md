@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.18.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.18.1...v2.18.2) (2026-07-03)
+
+
+### Bug Fixes
+
+* color ([#145](https://github.com/radicalbit/radicalbit-design-system/issues/145)) ([1073555](https://github.com/radicalbit/radicalbit-design-system/commit/1073555c100e9af3821b72154730a4564d92eeee))
+
 ## [2.18.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.18.0...v2.18.1) (2026-07-02)
 
 
