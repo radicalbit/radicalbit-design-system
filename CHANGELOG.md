@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.18.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.18.2...v2.18.3) (2026-07-14)
+
+
+### Bug Fixes
+
+* **input:** recolor .ant-input text so textarea content stays readable in dark ([#147](https://github.com/radicalbit/radicalbit-design-system/issues/147)) ([e7792eb](https://github.com/radicalbit/radicalbit-design-system/commit/e7792ebbef3b4b7d3802b7aa832b67fe9bf9f3c4))
+
 ## [2.18.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.18.1...v2.18.2) (2026-07-03)
 
 
