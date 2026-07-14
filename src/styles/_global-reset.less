@@ -50,7 +50,10 @@ html body {
 		background-color: transparent;
 	}
 
-	// Antd hardcodes .ant-input-affix-wrapper text color to rgba(0,0,0,.88)
+	// Antd hardcodes .ant-input/.ant-input-affix-wrapper text color to
+	// rgba(0,0,0,.88) — swap to a themed token so <input>/<textarea> content
+	// stays readable in dark mode.
+	.ant-input,
 	.ant-input-affix-wrapper {
 		color: var(--coo-fg-black);
 	}
