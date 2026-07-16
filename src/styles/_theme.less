@@ -87,7 +87,9 @@ textarea::placeholder {
 		border-radius: var(--coo-border-radius-small);
 	}
 
-	&:focus {
+	// Focus outline for tonal/outlined buttons — primary button has its own
+	// on-primary label, don't overwrite it here.
+	&:focus:not(.ant-btn-primary):not(.ant-btn-success):not(.ant-btn-error):not(.ant-btn-warning):not(.ant-btn-secondary) {
 		color: rgb(var(--coo-rgb-primary));
 		border-color: rgb(var(--coo-rgb-primary));
 	}
