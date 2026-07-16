@@ -18,7 +18,7 @@
 
 	// * SURFACE LEVELS *
 	--coo-rgb-bk-lv0: var(--coo-rgb-neutral-01); // #F8F8FB page background
-	--coo-rgb-bk-lv1: var(--coo-rgb-neutral-02); // #F3F3F6 components on the page
+	--coo-rgb-bk-lv1: rgba(var(--coo-rgb-neutral-00), .7); // white 70% — components on the page
 	--coo-rgb-bk-lv2: var(--coo-rgb-neutral-00); // #FFFFFF floating/overlay surfaces
 
 	// * BRAND COLORS *
@@ -162,7 +162,7 @@
 	// * * * * COLOR VARIABLES (rgb() wrapped, use as `var(--coo-...)`) * * * *
 	// surfaces
 	--coo-bk-lv0: rgb(var(--coo-rgb-bk-lv0));
-	--coo-bk-lv1: rgb(var(--coo-rgb-bk-lv1));
+	--coo-bk-lv1: var(--coo-rgb-bk-lv1); // already rgba() — no wrap
 	--coo-bk-lv2: rgb(var(--coo-rgb-bk-lv2));
 
 	// foreground
