@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.19.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.18.3...v2.19.0) (2026-07-16)
+
+
+### Features
+
+* add noPadding props ([#149](https://github.com/radicalbit/radicalbit-design-system/issues/149)) ([5aefab4](https://github.com/radicalbit/radicalbit-design-system/commit/5aefab47150ed1a85e6293ec991552af370a190c))
+
+
+### Bug Fixes
+
+* **button:** don't overwrite label color on focus for colored variants ([#151](https://github.com/radicalbit/radicalbit-design-system/issues/151)) ([e0d117d](https://github.com/radicalbit/radicalbit-design-system/commit/e0d117d7f4920b320cb337e3a152347b9a94151d))
+
 ## [2.18.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.18.2...v2.18.3) (2026-07-14)
 
 
