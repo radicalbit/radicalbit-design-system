@@ -8,6 +8,7 @@ type Props = TagProps & {
   fullWidth?: boolean;
   mode?:'text' // will be replace type="text"
   modifier?: string;
+  rounded?: boolean;
   size?: 'small' | 'large' | 'xl' | 'xxl';
   suffix?: string | ReactNode;
   uppercase?: boolean;
@@ -19,13 +20,19 @@ type Props = TagProps & {
     | 'dashed-secondary'
     | 'dashed'
     | 'error-light'
+    | 'error-outlined'
     | 'error'
     | 'full'
     | 'highlighted'
+    | 'primary-outlined'
     | 'secondary-light'
+    | 'secondary-outlined'
     | 'secondary'
+    | 'success-outlined'
+    | 'success'
     | 'text'
     | 'warning-light'
+    | 'warning-outlined'
     | 'warning';
 };
 
@@ -39,6 +46,7 @@ const Tag = ({
   modifier = '',
   onClick,
   prefix,
+  rounded = false,
   size,
   suffix,
   suffixWithLink = false,
@@ -54,6 +62,7 @@ const Tag = ({
     [`c-tag__mode--${mode}`]: mode,
     'c-tag--full-width': fullWidth,
     'c-tag--disabled': disabled,
+    'c-tag--rounded': rounded,
     'c-tag--suffixWithLink': suffixWithLink,
     'c-tag--uppercase': uppercase,
   });
