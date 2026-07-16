@@ -6,7 +6,7 @@
 	color: var(--coo-primary);
 	display: flex;
 	font-size: .8rem;
-	font-weight: var(--coo-font-weight-bold);
+	font-weight: var(--coo-font-weight-normal);
 	font-family: var(--coo-header-font);
 	gap: .3rem;
 	justify-content: center;
@@ -118,6 +118,12 @@
 		color: var(--coo-error);
 	}
 
+	&--error-outlined {
+		background-color: rgba(var(--coo-rgb-error), .1);
+		border-color: var(--coo-error);
+		color: var(--coo-fg-black);
+	}
+
 	&--warning {
 		background-color: var(--coo-warning);
 		border-color: var(--coo-warning);
@@ -129,15 +135,49 @@
 		color: var(--coo-warning);
 	}
 
-	&--secondary {
-		background-color: var(--coo-secondary-01);
-		border-color: var(--coo-secondary-01);
+	&--warning-outlined {
+		background-color: rgba(var(--coo-rgb-warning), .1);
+		border-color: var(--coo-warning);
+		color: var(--coo-fg-black);
+	}
+
+	&--success {
+		background-color: var(--coo-success);
+		border-color: var(--coo-success);
 		color: var(--coo-white);
 	}
 
+	&--success-outlined {
+		background-color: rgba(var(--coo-rgb-success), .1);
+		border-color: var(--coo-success);
+		color: var(--coo-fg-black);
+	}
+
+	&--secondary {
+		background-color: var(--coo-secondary-02);
+		border-color: var(--coo-secondary-02);
+		color: var(--coo-fg-black);
+	}
+
 	&--secondary-light {
-		border-color: var(--coo-secondary-01);
-		color: var(--coo-secondary-01);
+		border-color: var(--coo-secondary-02);
+		color: var(--coo-fg-black);
+	}
+
+	&--secondary-outlined {
+		background-color: rgba(var(--coo-rgb-secondary), .1);
+		border-color: var(--coo-secondary);
+		color: var(--coo-fg-black);
+	}
+
+	&--primary-outlined {
+		background-color: rgba(var(--coo-rgb-primary), .1);
+		border-color: var(--coo-primary);
+		color: var(--coo-fg-black);
+	}
+
+	&--rounded {
+		border-radius: 1rem;
 	}
 
 	&--dashed {
@@ -149,7 +189,7 @@
 	&--dashed-secondary {
 		border-color: var(--coo-secondary-02);
 		border-style: dashed;
-		color: var(--coo-secondary-02);
+		color: var(--coo-fg-black);
 	}
 
 	&--small {
@@ -187,21 +227,18 @@
 
 	&--large {
 		height: 1.5rem;
-		border-radius: 1.5rem;
 		font-size: 1rem !important;
 		font-family: var(--coo-header-font);
 	}
 
 	&--xl {
 		height: 2rem;
-		border-radius: 2rem;
 		font-size: 1rem !important;
 		font-family: var(--coo-header-font);
 	}
 
 	&--xxl {
 		height: 3rem;
-		border-radius: 3rem;
 		font-size: 1.5rem !important;
 		font-family: var(--coo-header-font);
 	}
@@ -234,9 +271,3 @@
 	}
 }
 
-.dark {
-	.c-tag--secondary {
-		background-color: var(--coo-secondary-01);
-		border-color: var(--coo-secondary-01);
-	}
-}
