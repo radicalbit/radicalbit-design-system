@@ -22,6 +22,7 @@ const meta: Meta<typeof Tag> = {
         'secondary',
         'secondary-light',
         'secondary-outlined',
+        'secondary-outlined-light',
         'success',
         'success-outlined',
         'text',
@@ -95,6 +96,17 @@ export const SecondaryOutlinedRounded: Story = {
   },
   args: {
     type: 'secondary-outlined',
+    rounded: true,
+    children: 'Draft',
+  },
+};
+
+export const SecondaryOutlinedLightRounded: Story = {
+  parameters: {
+    layout: 'centered',
+  },
+  args: {
+    type: 'secondary-outlined-light',
     rounded: true,
     children: 'Draft',
   },

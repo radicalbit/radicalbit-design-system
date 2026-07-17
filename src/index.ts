@@ -84,6 +84,7 @@ export { default as Resizable } from './lib/components/resizable';
 export { default as Row } from './lib/components/row';
 export { default as SearchBar } from './lib/components/search';
 export { default as SectionTitle } from './lib/components/section-title';
+export { default as Segmented } from './lib/components/segmented';
 export { default as Select, Option } from './lib/components/select';
 export { default as SelectWithText } from './lib/components/select/select-with-text';
 export { default as SmartImg } from './lib/components/smart-img';

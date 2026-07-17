@@ -26,6 +26,7 @@ type Props = TagProps & {
     | 'highlighted'
     | 'primary-outlined'
     | 'secondary-light'
+    | 'secondary-outlined-light'
     | 'secondary-outlined'
     | 'secondary'
     | 'success-outlined'
