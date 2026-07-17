@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.19.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.0...v2.19.1) (2026-07-17)
+
+
+### Bug Fixes
+
+* background level and secondary color on &lt;Tag /&gt; ([#152](https://github.com/radicalbit/radicalbit-design-system/issues/152)) ([f7dd7cc](https://github.com/radicalbit/radicalbit-design-system/commit/f7dd7cca7654ea77ee9e86e9853faf40db9962f7))
+* background lv1 and secondary types color for Buttons and Tags ([#154](https://github.com/radicalbit/radicalbit-design-system/issues/154)) ([a7977a7](https://github.com/radicalbit/radicalbit-design-system/commit/a7977a7d605df6f93a38927a42ed2e8a14d3ae3f))
+
 ## [2.19.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.18.3...v2.19.0) (2026-07-16)
 
 
