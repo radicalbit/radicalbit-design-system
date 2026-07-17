@@ -8,9 +8,11 @@ export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
   type?:
     | ButtonProps['type']
     | 'ghost'
+    | 'primary-outlined'
     | 'secondary-light'
     | 'secondary'
     | 'success'
+    | 'success-light'
     | 'error'
     | 'error-light'
     | 'warning'
