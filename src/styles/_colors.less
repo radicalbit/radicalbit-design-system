@@ -183,7 +183,10 @@
 	--coo-dark: var(--coo-fg-primary); // legacy alias
 	--coo-white-bk: rgb(var(--coo-rgb-white)); // legacy alias
 
-	// brand
+	// brand — light mode uses the glow variant
+	--coo-rgb-primary: var(--coo-rgb-primary-glow);
+	--coo-rgb-primary-hover: var(--coo-rgb-primary-glow-hover);
+	--coo-rgb-primary-active: var(--coo-rgb-primary-glow-active);
 	--coo-primary: rgb(var(--coo-rgb-primary));
 	--coo-primary-hover: rgb(var(--coo-rgb-primary-hover));
 	--coo-primary-active: rgb(var(--coo-rgb-primary-active));
@@ -297,10 +300,10 @@
 	--coo-secondary-03: rgb(var(--coo-rgb-secondary-03));
 	--coo-secondary-04: rgb(var(--coo-rgb-secondary-04));
 
-	// primary shifts to the glow variants in dark mode
-	--coo-rgb-primary: var(--coo-rgb-primary-glow);        // #00FFDE
-	--coo-rgb-primary-hover: var(--coo-rgb-primary-glow-hover);
-	--coo-rgb-primary-active: var(--coo-rgb-primary-glow-active);
+	// primary in dark mode uses the base teal (#00D1B6)
+	--coo-rgb-primary: 0, 209, 182;
+	--coo-rgb-primary-hover: 0, 184, 159;
+	--coo-rgb-primary-active: 0, 159, 137;
 	--coo-primary: rgb(var(--coo-rgb-primary));
 	--coo-primary-hover: rgb(var(--coo-rgb-primary-hover));
 	--coo-primary-active: rgb(var(--coo-rgb-primary-active));
