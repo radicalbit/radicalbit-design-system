@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.19.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.1...v2.19.2) (2026-07-20)
+
+
+### Bug Fixes
+
+* dark-mode miscellaneous ([#155](https://github.com/radicalbit/radicalbit-design-system/issues/155)) ([10731da](https://github.com/radicalbit/radicalbit-design-system/commit/10731dae426c62d42b0f1165f6321afa9030147b))
+
 ## [2.19.1](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.0...v2.19.1) (2026-07-17)
 
 
