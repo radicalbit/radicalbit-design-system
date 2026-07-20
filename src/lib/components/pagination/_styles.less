@@ -6,7 +6,7 @@ html body .ant-pagination {
 		background: transparent;
 
 		a {
-			color: var(--coo-secondary);
+			color: var(--coo-fg-black);
 		}
 
 		&.ant-pagination-item-active,
@@ -23,6 +23,13 @@ html body .ant-pagination {
 	.ant-pagination-prev .ant-pagination-item-link,
 	.ant-pagination-next .ant-pagination-item-link {
 		border-color: var(--coo-secondary-03);
+		color: var(--coo-fg-black);
+	}
+
+	.ant-pagination-prev:hover .ant-pagination-item-link,
+	.ant-pagination-next:hover .ant-pagination-item-link {
+		border-color: var(--coo-primary);
+		color: var(--coo-primary);
 	}
 
 	.ant-pagination-disabled a,
