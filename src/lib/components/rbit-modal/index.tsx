@@ -12,6 +12,7 @@ type Props = ModalProps & {
   actions?: React.ReactNode;
   actionsLayout?: 'default' | 'wide';
   background?: 'secondary-04';
+  backgroundLevel?: 0 | 1 | 2;
   dark?: boolean;
   defaultMaximize?: boolean;
   header?: React.ReactNode;
@@ -28,6 +29,7 @@ const RbitModal = ({
   actions,
   actionsLayout = 'default',
   background,
+  backgroundLevel,
   children,
   className = '',
   dark,
@@ -54,6 +56,7 @@ const RbitModal = ({
     'c-rbit-modal--maximize': cModalMaximized,
     'c-rbit-modal--no-padding': noPadding,
     [`c-rbit-modal--background-${String(background)}`]: background,
+    [`c-rbit-modal--bg-lv${backgroundLevel}`]: backgroundLevel !== undefined,
   });
 
   const cssHeader = classNames({

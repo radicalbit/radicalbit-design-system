@@ -18,6 +18,14 @@
 	&--highlighted {
 		background-color: transparent;
 
+		// antd renders a floating .ant-segmented-thumb (absolute, itemSelectedBg
+		// background) that overlays the selected item during the sliding animation.
+		// We paint the highlight ourselves, so silence the thumb.
+		.ant-segmented-thumb {
+			background-color: transparent;
+			box-shadow: none;
+		}
+
 		// rc-segmented drops `-item-selected` while its (here transparent) thumb is
 		// animating, which can leave the active item — notably the first — with no
 		// highlight. `aria-selected` always tracks the active item, so key off that.
