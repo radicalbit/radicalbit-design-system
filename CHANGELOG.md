@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.19.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.2...v2.19.3) (2026-07-20)
+
+
+### Bug Fixes
+
+* **styles:** use neutral colors for sort headers and pagination controls ([#157](https://github.com/radicalbit/radicalbit-design-system/issues/157)) ([8800c37](https://github.com/radicalbit/radicalbit-design-system/commit/8800c3769c21f19b9e8e9a581a9498ccb2466058))
+
 ## [2.19.2](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.1...v2.19.2) (2026-07-20)
 
 
