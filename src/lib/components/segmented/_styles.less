@@ -7,28 +7,16 @@
 		&-selected {
 			color: var(--coo-fg-black);
 		}
-
-		// &-label {
-		// 	display: flex;
-		// 	align-items: center;
-		// 	justify-content: center;
-		// }
 	}
 
 	&--highlighted {
 		background-color: transparent;
 
-		// antd renders a floating .ant-segmented-thumb (absolute, itemSelectedBg
-		// background) that overlays the selected item during the sliding animation.
-		// We paint the highlight ourselves, so silence the thumb.
 		.ant-segmented-thumb {
 			background-color: transparent;
 			box-shadow: none;
 		}
 
-		// rc-segmented drops `-item-selected` while its (here transparent) thumb is
-		// animating, which can leave the active item — notably the first — with no
-		// highlight. `aria-selected` always tracks the active item, so key off that.
 		.ant-segmented-item:has(.ant-segmented-item-label[aria-selected='true']) {
 			background-color: rgba(var(--coo-rgb-primary), .1);
 			border-bottom: .125rem solid var(--coo-primary);
