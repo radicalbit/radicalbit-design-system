@@ -1,53 +1,62 @@
 .ant-menu.c-menu {
-	border-inline-end: none; // niente bordo destro nella barra menu
+	border-inline-end: none;
+	background-color: transparent;
+	width: 100%;
 
-	&--background {
-		&-default {
-			background-color: var(--coo-bk-lv1);
+	&--background-default {
+		background-color: var(--coo-bk-lv1);
+	}
+
+	&--background-transparent {
+		background-color: transparent;
+	}
+
+	.ant-menu-item,
+	.ant-menu-submenu-title {
+		color: var(--coo-fg-black);
+		width: 100%;
+		margin: 0;
+		border-radius: 0;
+		border-left: 4px solid transparent;
+		transition: background-color .3s, color .3s;
+
+		.ant-menu-title-content {
+			color: var(--coo-fg-black);
+			font-weight: var(--coo-font-weight-light);
 		}
 
-		&-transparent {
-			background-color: transparent;
+		.anticon,
+		svg {
+			color: var(--coo-fg-black);
+			fill: var(--coo-fg-black);
+		}
+
+		&:hover {
+			background-color: rgba(var(--coo-rgb-fg-black), .05);
+			color: var(--coo-fg-black);
 		}
 	}
 
-	.ant-menu-title-content {
+	.ant-menu-item-selected,
+	.ant-menu-submenu-selected > .ant-menu-submenu-title {
+		background-color: rgba(var(--coo-rgb-primary), .1);
 		color: var(--coo-fg-black);
-		font-weight: var(--coo-font-weight-light);
+		border-left-color: var(--coo-primary);
+
+		.ant-menu-title-content {
+			font-weight: var(--coo-font-weight-normal);
+		}
+
+		&:hover {
+			background-color: rgba(var(--coo-rgb-primary), .15);
+		}
 	}
 
 	.ant-menu-item-divider {
 		background-color: var(--coo-border-primary);
 	}
-
-	.ant-menu-item {
-		&.ant-menu-item-selected {
-			background-color: var(--coo-primary);
-			color: var(--coo-on-primary);
-
-			.ant-menu-title-content {
-				color: var(--coo-on-primary);
-				font-weight: var(--coo-font-weight-normal);
-			}
-
-			.anticon,
-			svg {
-				color: var(--coo-on-primary);
-				fill: var(--coo-on-primary);
-			}
-		}
-
-		&.ant-menu-item-active {
-			background-color: rgba(var(--coo-rgb-secondary-03), .2);
-		}
-
-		&:not(.ant-menu-item-selected).ant-menu-item-active {
-			background-color: rgba(var(--coo-rgb-secondary-03), .2);
-		}
-	}
 }
 
-// Global antd menu-light overrides (sidebar, submenu popups, ecc.)
 .ant-menu-light,
 .ant-menu-light > .ant-menu,
 .ant-menu-light.ant-menu-submenu-popup > .ant-menu,
@@ -58,36 +67,5 @@
 	.ant-menu-item,
 	.ant-menu-submenu-title {
 		color: var(--coo-fg-black);
-	}
-
-	.ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
-		&:hover,
-		> .ant-menu-submenu-title:hover {
-			color: var(--coo-fg-black);
-		}
-	}
-
-	&:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active {
-		background-color: var(--coo-bk-lv1);
-	}
-}
-
-.dark {
-	.c-menu {
-		&.ant-menu {
-			.ant-menu-item {
-				&.ant-menu-item-selected {
-					background-color: var(--coo-secondary-04);
-				}
-
-				&.ant-menu-item-active {
-					background-color: rgba(var(--coo-rgb-secondary-03), .1);
-				}
-
-				&:not(.ant-menu-item-selected).ant-menu-item-active {
-					background-color: rgba(var(--coo-rgb-secondary-03), .1);
-				}
-			}
-		}
 	}
 }

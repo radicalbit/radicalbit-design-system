@@ -1,0 +1,94 @@
+.ant-menu.c-menu {
+	border-inline-end: none;
+
+	&--background {
+		&-default {
+			background-color: var(--coo-bk-lv1);
+		}
+
+		&-transparent {
+			background-color: transparent;
+		}
+	}
+
+	.ant-menu-title-content {
+		color: var(--coo-fg-black);
+		font-weight: var(--coo-font-weight-light);
+	}
+
+	.ant-menu-item-divider {
+		background-color: var(--coo-border-primary);
+	}
+
+	.ant-menu-item {
+		&.ant-menu-item-selected {
+			background-color: rgba(var(--coo-rgb-primary), .1);
+			color: var(--coo-fg-black);
+			border-left: 2px solid var(--coo-primary);
+
+			.ant-menu-title-content {
+				color: var(--coo-fg-black);
+				font-weight: var(--coo-font-weight-normal);
+			}
+
+			.anticon,
+			svg {
+				color: var(--coo-fg-black);
+				fill: var(--coo-fg-black);
+			}
+
+			&:hover {
+				background-color: rgba(var(--coo-rgb-primary), .15);
+			}
+		}
+
+		&.ant-menu-item-active {
+			background-color: rgba(var(--coo-rgb-secondary-03), .2);
+		}
+
+		&:not(.ant-menu-item-selected).ant-menu-item-active {
+			background-color: rgba(var(--coo-rgb-secondary-03), .2);
+		}
+	}
+}
+
+// Global antd menu-light overrides (sidebar, submenu popups, ecc.)
+.ant-menu-light,
+.ant-menu-light > .ant-menu,
+.ant-menu-light.ant-menu-submenu-popup > .ant-menu,
+.ant-menu-light > .ant-menu.ant-menu-submenu-popup > .ant-menu {
+	background-color: var(--coo-bk-lv1);
+	color: var(--coo-fg-black);
+
+	.ant-menu-item,
+	.ant-menu-submenu-title {
+		color: var(--coo-fg-black);
+	}
+
+	.ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected) {
+		&:hover,
+		> .ant-menu-submenu-title:hover {
+			color: var(--coo-fg-black);
+		}
+	}
+
+	&:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):active {
+		background-color: var(--coo-bk-lv1);
+	}
+}
+
+.dark {
+	.c-menu {
+		&.ant-menu {
+			.ant-menu-item {
+				&.ant-menu-item-active {
+					background-color: rgba(var(--coo-rgb-secondary-03), .1);
+				}
+
+				&:not(.ant-menu-item-selected).ant-menu-item-active {
+					background-color: rgba(var(--coo-rgb-secondary-03), .1);
+				}
+			}
+		}
+	}
+}
