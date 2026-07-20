@@ -2,13 +2,25 @@
 	display: flex;
 	flex-direction: column;
 	border-radius: var(--coo-border-radius-small);
-	background-color: var(--coo-bk-lv1);
+	background-color: var(--l-board-background, var(--coo-bk-lv1));
 	color: var(--coo-fg-black);
 	padding: 1.5rem;
 	gap: 1.5rem;
 	line-height: 1.2;
 	position: relative;
 	min-height: 0;
+
+	&--bg-lv0 {
+		background-color: var(--l-board-background, var(--coo-bk-lv0));
+	}
+
+	&--bg-lv1 {
+		background-color: var(--l-board-background, var(--coo-bk-lv1));
+	}
+
+	&--bg-lv2 {
+		background-color: var(--l-board-background, var(--coo-bk-lv2));
+	}
 
 	&:hover {
 		.l-header {

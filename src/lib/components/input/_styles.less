@@ -54,11 +54,20 @@
 					color: var(--coo-secondary-01);
 				}
 
+				button {
+					border-color: transparent;
+				}
+
 				button:focus,
 				button:active {
 					border-color: var(--coo-primary);
 				}
 			}
+		}
+
+		&:hover .ant-input-group-addon button,
+		&:has(.ant-input-affix-wrapper-focused) .ant-input-group-addon button {
+			border-color: var(--coo-primary);
 		}
 	}
 

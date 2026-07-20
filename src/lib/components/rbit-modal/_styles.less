@@ -7,7 +7,7 @@
 
 	> div {
 		.ant-modal-content {
-			background-color: var(--coo-bk-lv2);
+			background-color: var(--c-rbit-modal-background, var(--coo-bk-lv2));
 			height: 100%;
 
 			.ant-modal-body {
@@ -50,6 +50,18 @@
 				}
 			}
 		}
+	}
+
+	&--bg-lv0 > div .ant-modal-content {
+		background-color: var(--c-rbit-modal-background, var(--coo-bk-lv0));
+	}
+
+	&--bg-lv1 > div .ant-modal-content {
+		background-color: var(--c-rbit-modal-background, var(--coo-bk-lv1));
+	}
+
+	&--bg-lv2 > div .ant-modal-content {
+		background-color: var(--c-rbit-modal-background, var(--coo-bk-lv2));
 	}
 
 	&--maximize {

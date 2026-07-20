@@ -3,6 +3,7 @@ import { HTMLAttributes, ReactNode, useState } from 'react';
 
 type Props = HTMLAttributes<HTMLDivElement> & {
   backgroundImage?: string;
+  backgroundLevel?: 0 | 1 | 2;
   borderType?: 'light' | 'none';
   buttonPosition?: 'vertical' | 'adaptive';
   className?: string;
@@ -36,6 +37,7 @@ type Props = HTMLAttributes<HTMLDivElement> & {
 
 function Board({
   backgroundImage = undefined,
+  backgroundLevel,
   borderType,
   buttonPosition,
   className = '',
@@ -71,6 +73,7 @@ function Board({
     [`l-board--secondary-type-${secondaryType}`]: secondaryType,
     [`l-board--border-type-${borderType}`]: borderType,
     [`l-board--overflow-${overflow}`]: overflow,
+    [`l-board--bg-lv${backgroundLevel}`]: backgroundLevel !== undefined,
     'l-board--no-background': noBackground,
     'l-board--clickable': onClick,
     dark,
