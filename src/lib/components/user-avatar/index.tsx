@@ -7,6 +7,7 @@ import { AvatarProps } from 'antd/es/skeleton/Avatar';
 
 type Props = {
   actions?: { one?: ReactNode; two?: ReactNode };
+  avatar?: AvatarProps;
   className?: string;
   content?: ReactNode;
   modifier?: string;
@@ -22,6 +23,7 @@ type Props = {
 };
 
 const UserAvatar = ({
+  avatar = {},
   className = '',
   content,
   modifier = '',
@@ -49,7 +51,7 @@ const UserAvatar = ({
           trigger={trigger}
           {...popoverProps}
         >
-          <Avatar size={size} src={userAvatarPath}>
+          <Avatar size={size} src={userAvatarPath} {...avatar}>
             {userAbbreviation}
           </Avatar>
         </Popover>
