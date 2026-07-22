@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.19.4](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.3...v2.19.4) (2026-07-22)
+
+
+### Bug Fixes
+
+* user avatar secondary type and svg color ([#159](https://github.com/radicalbit/radicalbit-design-system/issues/159)) ([22d391b](https://github.com/radicalbit/radicalbit-design-system/commit/22d391bf77c285986fee40ab8c4a5cde58030c4b))
+
 ## [2.19.3](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.2...v2.19.3) (2026-07-20)
 
 
