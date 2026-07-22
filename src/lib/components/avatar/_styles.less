@@ -1,11 +1,26 @@
 .c-avatar {
-	&.ant-avatar {
-		&.ant-avatar-circle {
-			background-color: var(--coo-primary);
-			color: var(--coo-fg-black);
+	&--type-default {
+		&.ant-avatar {
+			&.ant-avatar-circle {
+				background-color: var(--coo-primary);
+				color: var(--coo-fg-black);
 
-			&.ant-avatar-image {
-				background-color: var(--coo-bk-lv1);
+				&.ant-avatar-image {
+					background-color: var(--coo-bk-lv1);
+				}
+			}
+		}
+	}
+
+	&--type-secondary {
+		&.ant-avatar {
+			&.ant-avatar-circle {
+				background-color: var(--coo-secondary);
+				color: var(--coo-white);
+
+				&.ant-avatar-image {
+					background-color: var(--coo-bk-lv1);
+				}
 			}
 		}
 	}
