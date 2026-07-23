@@ -26,6 +26,18 @@
 	justify-content: center;
 	align-items: center;
 
+	&:not(:disabled):focus {
+		outline: none;
+		outline-offset: 0;
+		box-shadow: 0 0 0 2px rgba(var(--coo-rgb-secondary-01), .15);
+	}
+	
+	&:not(:disabled):focus-visible {
+		outline: none;
+		outline-offset: 0;
+		box-shadow: 0 0 0 2px rgba(var(--coo-rgb-secondary-01), .15);
+	}
+
 	&--not-clickable {
 		pointer-events: none;
 	}
@@ -161,18 +173,6 @@
 			color: var(--coo-fg-black);
 			border-color: var(--coo-primary-hover);
 			background-color: rgba(var(--coo-rgb-primary), .15);
-		}
-
-		&:not(:disabled):not(.ant-btn-disabled):focus {
-			color: var(--coo-fg-black);
-			border-color: var(--coo-primary-hover);
-			box-shadow: 0 0 0 2px var(--coo-secondary-01);
-		}
-
-		&:not(:disabled):not(.ant-btn-disabled):focus-within {
-			color: var(--coo-fg-black);
-			border-color: var(--coo-primary-hover);
-			box-shadow: 0 0 0 2px var(--coo-secondary-01);
 		}
 
 		&:not(:disabled):not(.ant-btn-disabled):active {

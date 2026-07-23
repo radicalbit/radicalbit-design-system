@@ -32,6 +32,10 @@
 	&.ant-input-search {
 		border-radius: 6px;
 
+		&:focus-within {
+			box-shadow: 0 0 0 2px rgba(var(--coo-rgb-secondary-01), .15);
+		}
+
 		.ant-input-wrapper {
 			background: var(--coo-bk-lv1);
 			border-radius: 6px;
@@ -49,6 +53,7 @@
 			}
 
 			.ant-input-affix-wrapper {
+				background: var(--coo-bk-lv1);
 				border: 1px solid transparent;
 				transition:
 				border-color .2s ease,
@@ -65,12 +70,20 @@
 			}
 
 			.ant-input-group-addon {
+				&:hover {
+					border-color: var(--coo-primary-hover);
+				}
+
 				.ant-btn-icon {
 					color: var(--coo-secondary-01);
 				}
 
 				button {
 					background: var(--coo-bk-lv1);
+					border: 1px solid transparent;
+					transition:
+					border-color .2s ease,
+					box-shadow .2s ease;
 				}
 
 				button:focus,
