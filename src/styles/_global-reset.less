@@ -35,21 +35,6 @@ html body {
 		color: var(--coo-fg-black);
 	}
 
-	[class^="ant-input"],
-	[class*="ant-input"] {
-		background-color: transparent;
-		border-color: var(--coo-secondary-03);
-	}
-
-	// Beat antd 5 defaults that force #fff bg on hover/focused outlined inputs
-	.ant-input-outlined:hover,
-	.ant-input-outlined:focus,
-	.ant-input-outlined:focus-within,
-	.ant-input-outlined.ant-input-affix-wrapper-focused,
-	.ant-input-affix-wrapper-focused.ant-input-outlined {
-		background-color: transparent;
-	}
-
 	// Antd hardcodes .ant-input/.ant-input-affix-wrapper text color to
 	// rgba(0,0,0,.88) — swap to a themed token so <input>/<textarea> content
 	// stays readable in dark mode.

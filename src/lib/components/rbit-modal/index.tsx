@@ -85,7 +85,6 @@ const RbitModal = ({
       zIndex={zIndex}
       closeIcon={(
         <FontAwesomeIcon
-          className="c-font-awesome-icon--clickable"
           icon={faClose}
           enableColorMode
         />
