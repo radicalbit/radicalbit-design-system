@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.19.5](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.4...v2.19.5) (2026-07-29)
+
+
+### Bug Fixes
+
+* colors and backgrounds ([#161](https://github.com/radicalbit/radicalbit-design-system/issues/161)) ([db15d6b](https://github.com/radicalbit/radicalbit-design-system/commit/db15d6b442cae0b232fea6d408da7c074206b9a7))
+
 ## [2.19.4](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.3...v2.19.4) (2026-07-22)
 
 
