@@ -1,4 +1,4 @@
-.c-input {
+.c-input&.ant-input {
 	border-color: var(--coo-secondary-03);
 	color: var(--coo-fg-black);
 	background: var(--coo-bk-lv1);
@@ -30,9 +30,16 @@
 
 .c-search {
 	&.ant-input-search {
-		background: var(--coo-bk-lv1);
+		border-radius: 6px;
+
+		&:focus-within {
+			box-shadow: 0 0 0 2px rgba(var(--coo-rgb-secondary-01), .15);
+		}
 
 		.ant-input-wrapper {
+			background: var(--coo-bk-lv1);
+			border-radius: 6px;
+
 			input {
 				color: var(--coo-fg-black);
 			}
@@ -45,17 +52,38 @@
 				}
 			}
 
-			.ant-input-affix-wrapper-focused {
-				border-color: var(--coo-primary);
+			.ant-input-affix-wrapper {
+				background: var(--coo-bk-lv1);
+				border: 1px solid transparent;
+				transition:
+				border-color .2s ease,
+				box-shadow .2s ease;
+
+				&:hover {
+					border-color: var(--coo-primary-hover);
+				}
+
+				&-focused {
+					box-shadow: none;
+					border-color: var(--coo-primary);
+				}
 			}
 
 			.ant-input-group-addon {
+				&:hover {
+					border-color: var(--coo-primary-hover);
+				}
+
 				.ant-btn-icon {
 					color: var(--coo-secondary-01);
 				}
 
 				button {
-					border-color: transparent;
+					background: var(--coo-bk-lv1);
+					border: 1px solid transparent;
+					transition:
+					border-color .2s ease,
+					box-shadow .2s ease;
 				}
 
 				button:focus,
@@ -63,11 +91,11 @@
 					border-color: var(--coo-primary);
 				}
 			}
-		}
 
-		&:hover .ant-input-group-addon button,
-		&:has(.ant-input-affix-wrapper-focused) .ant-input-group-addon button {
-			border-color: var(--coo-primary);
+			&:hover .ant-input-group-addon button,
+			&:has(.ant-input-affix-wrapper-focused) .ant-input-group-addon button {
+				border-color: var(--coo-primary);
+			}
 		}
 	}
 

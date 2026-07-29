@@ -26,6 +26,18 @@
 	justify-content: center;
 	align-items: center;
 
+	&:not(:disabled):focus {
+		outline: none;
+		outline-offset: 0;
+		box-shadow: 0 0 0 2px rgba(var(--coo-rgb-secondary-01), .15);
+	}
+
+	&:not(:disabled):focus-visible {
+		outline: none;
+		outline-offset: 0;
+		box-shadow: 0 0 0 2px rgba(var(--coo-rgb-secondary-01), .15);
+	}
+
 	&--not-clickable {
 		pointer-events: none;
 	}
@@ -155,7 +167,7 @@
 	&.ant-btn-primary-outlined {
 		color: var(--coo-fg-black);
 		border-color: var(--coo-primary);
-		background-color: rgba(var(--coo-rgb-primary), .1);
+		background-color: transparent;
 
 		&:not(:disabled):not(.ant-btn-disabled):hover {
 			color: var(--coo-fg-black);
