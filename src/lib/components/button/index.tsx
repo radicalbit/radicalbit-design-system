@@ -8,6 +8,7 @@ export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
   type?:
     | ButtonProps['type']
     | 'ghost'
+    | 'outlined'
     | 'primary-outlined'
     | 'secondary-light'
     | 'secondary'
@@ -43,6 +44,7 @@ const Button = forwardRef((props: Props, ref: Ref<HTMLButtonElement | HTMLAnchor
     'm-button--filled': filled,
     'm-button--not-clickable': !onClick && !href,
     'm-button--ghost': type === 'ghost',
+    'm-button--outlined': type === 'outlined',
   });
 
   return (

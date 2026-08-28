@@ -327,6 +327,27 @@
 		}
 	}
 
+	&.m-button--outlined {
+		color: var(--coo-fg-black);
+		border-color: transparent;
+		background-color: var(--coo-bk-lv1);
+
+		&:not(:disabled):not(.ant-btn-disabled):hover {
+			color: var(--coo-fg-black);
+			border-color: var(--coo-primary);
+			background-color: var(--coo-bk-lv1);
+		}
+
+		&:not(:disabled):not(.ant-btn-disabled):active,
+		&:not(:disabled):focus,
+		&:not(:disabled):focus-visible {
+			color: var(--coo-fg-black);
+			border-color: var(--coo-primary);
+			background-color: var(--coo-bk-lv1);
+			box-shadow: 0 0 0 2px rgba(var(--coo-rgb-secondary-01), .15);
+		}
+	}
+
 
 	// Disabled: ogni tipo mantiene i suoi colori normali, renderizzato al 30% di opacità
 	&[disabled],
