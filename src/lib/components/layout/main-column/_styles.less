@@ -20,7 +20,8 @@
 
 	.ant-layout-content {
 		transition: all .2s;
-		margin-top: @rdb-header-height;
+		// +1.5rem it was padding-top: moved here to fix scroll on tabs sticky
+		margin-top: ~"calc(@{rdb-header-height} + 1.5rem)";
 		height: ~"calc(100vh - @{rdb-header-height})";
 		overflow: auto;
 		margin-left: 0;
@@ -30,7 +31,8 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
-		padding: 1.5rem;
+		padding: 0 1.5rem;
+		padding-bottom: 3.5rem;
 
 		&--no-header {
 			margin-top: 0;

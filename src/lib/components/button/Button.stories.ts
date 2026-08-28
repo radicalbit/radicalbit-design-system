@@ -28,7 +28,7 @@ const meta: Meta<typeof Button> = {
 
     type: {
       control: 'select',
-      options: ['default', 'primary', 'primary-outlined', 'ghost', 'dashed', 'text', 'secondary-light', 'secondary', 'success', 'success-light', 'error', 'error-light', 'warning', 'warning-light'],
+      options: ['default', 'primary', 'outlined', 'primary-outlined', 'ghost', 'dashed', 'text', 'secondary-light', 'secondary', 'success', 'success-light', 'error', 'error-light', 'warning', 'warning-light'],
     },
 
     loading: {
@@ -68,6 +68,14 @@ export const PrimaryOutlined: Story = {
     ...commonArgs,
     children: 'Request to Publish',
     type: 'primary-outlined',
+  },
+};
+
+export const Outlined: Story = {
+  args: {
+    ...commonArgs,
+    children: 'Tags',
+    type: 'outlined',
   },
 };
 
