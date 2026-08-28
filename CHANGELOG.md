@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.19.6](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.5...v2.19.6) (2026-08-28)
+
+
+### Bug Fixes
+
+* outlined button type and main-column sticky tabs spacing ([#163](https://github.com/radicalbit/radicalbit-design-system/issues/163)) ([c6708ba](https://github.com/radicalbit/radicalbit-design-system/commit/c6708ba109461daea4a1bb80eb12971ea854187d))
+
 ## [2.19.5](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.4...v2.19.5) (2026-07-29)
 
 
