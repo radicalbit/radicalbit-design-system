@@ -13,7 +13,7 @@
   },
   "scripts": {
     "analyze": "webpack --mode=production --env analyze",
-    "prepare": "yarn build",
+    "prepare": "husky && yarn build",
     "build": "webpack --mode=production --config ./config/webpack.prod.js",
     "clean": "rimraf lib dist",
     "code-check": "yarn eslint-check && yarn less-check",
@@ -26,11 +26,6 @@
     "webpack-build:dev": "webpack --config ./config/webpack.dev.js",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "echo 'pre-push hook' && yarn pre-commit-check"
-    }
   },
   "devDependencies": {
     "@babel/cli": "^8.0.4",
