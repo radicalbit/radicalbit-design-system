@@ -27,6 +27,7 @@ const UserAvatar = ({
   className = '',
   content,
   modifier = '',
+  placement = 'rightBottom',
   size,
   userAbbreviation,
   userAvatarPath,
@@ -48,6 +49,7 @@ const UserAvatar = ({
           noPadding
           minWidth={popoverWidth}
           content={popoverContent}
+          placement={placement}
           trigger={trigger}
           {...popoverProps}
         >
@@ -72,10 +74,6 @@ const UserAvatar = ({
       </div>
     </div>
   );
-};
-
-UserAvatar.defaultProps = {
-  placement: 'rightBottom',
 };
 
 UserAvatar.displayName = 'UserAvatar';
