@@ -19,7 +19,7 @@ const Pagination = ({
   modifier = '',
   onChange,
   onShowSizeChange,
-  showSizeChanger,
+  showSizeChanger = true,
   total,
   ...others
 }: Props) => (
@@ -34,10 +34,6 @@ const Pagination = ({
     {...others}
   />
 );
-
-Pagination.defaultProps = {
-  showSizeChanger: true,
-};
 
 Pagination.displayName = 'Pagination';
 

@@ -20,9 +20,11 @@ module.exports = {
         './src/lib/resources/images/products/RNA-orizz-posi.png'
       ),
     }),
-    new CopyWebpackPlugin([
-      { from: './src/lib/resources/images/icons/rna-favicon.ico' },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './src/lib/resources/images/icons/rna-favicon.ico' },
+      ],
+    }),
     new CleanWebpackPlugin(),
     new ProvidePlugin({
       React: 'react',
