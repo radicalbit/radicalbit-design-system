@@ -68,22 +68,7 @@ module.exports = {
           {
             loader: 'style-loader',
             options: {
-              insert: function insertAtTop(element) {
-                const parent = document.querySelector('head');
-                // eslint-disable-next-line no-underscore-dangle
-                const lastInsertedElement = window._lastElementInsertedByStyleLoader;
-
-                if (!lastInsertedElement) {
-                  parent.insertBefore(element, parent.firstChild);
-                } else if (lastInsertedElement.nextSibling) {
-                  parent.insertBefore(element, lastInsertedElement.nextSibling);
-                } else {
-                  parent.appendChild(element);
-                }
-
-                // eslint-disable-next-line no-underscore-dangle
-                window._lastElementInsertedByStyleLoader = element;
-              },
+              insert: require.resolve('./insert-style-at-top.js'),
             },
           },
           'css-loader',
