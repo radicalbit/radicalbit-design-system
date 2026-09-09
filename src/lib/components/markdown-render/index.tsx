@@ -5,6 +5,7 @@ import gfm from 'remark-gfm';
 type OmittedMarkdownOptions = Omit<Options, 'children'>
 
 type Props = OmittedMarkdownOptions & {
+  className?: string;
   modifier?: string;
   value: string;
 };
