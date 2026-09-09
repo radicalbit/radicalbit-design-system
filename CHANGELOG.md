@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.0.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.6...v3.0.0) (2026-09-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* apps that imported any of the four dropped runtime packages without declaring them, relying on them being hoisted into a flat node_modules, must add them to their own package.json.
+
+### Features
+
+* remove unused dependencies and fix Board story ([#171](https://github.com/radicalbit/radicalbit-design-system/issues/171)) ([a270883](https://github.com/radicalbit/radicalbit-design-system/commit/a27088332ea7426fadbfc8ad7edec9a5558fd8cb))
+
+
+### Bug Fixes
+
+* **deps:** bump react-markdown to 10 and style-loader to 4 ([#175](https://github.com/radicalbit/radicalbit-design-system/issues/175)) ([350f116](https://github.com/radicalbit/radicalbit-design-system/commit/350f1162106ebbd6c30c267fcc8e7052f63c0cc3))
+* run CI on Node 22 ([#174](https://github.com/radicalbit/radicalbit-design-system/issues/174)) ([6484b87](https://github.com/radicalbit/radicalbit-design-system/commit/6484b8747e16d882bdc9c2d6f72ce02d53fb70c2))
+
 ## [2.19.6](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.5...v2.19.6) (2026-08-28)
 
 
