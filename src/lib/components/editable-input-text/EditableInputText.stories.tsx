@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import EditableInputText from './index';
+import EditableInputText from ".";
 
 const meta: Meta<typeof EditableInputText> = {
   title: 'Components/EditableInputText',

@@ -2,7 +2,7 @@ import AntdCollapse from 'antd/es/collapse';
 import classNames from 'classnames';
 import { ReactNode } from 'react';
 
-export type PropsPanel = {
+export interface PropsPanel {
   children?: ReactNode;
   className?: string;
   dark?: boolean
@@ -13,16 +13,16 @@ export type PropsPanel = {
   key: string | number
   noBody?: boolean;
   onHover?: () => void;
-};
+}
 
-type PropsHoverable = {
+interface PropsHoverable {
   onHover: PropsPanel['onHover'];
   body?: ReactNode;
-};
+}
 
 const AntdPanel = AntdCollapse.Panel;
 
-const CollapsePanel = ({
+function CollapsePanel({
   children,
   className = '',
   dark = false,
@@ -32,7 +32,7 @@ const CollapsePanel = ({
   noBody,
   onHover,
   ...others
-}: PropsPanel) => {
+}: PropsPanel) {
   const css = classNames({
     'c-collapse__panel--no-body': noBody,
     dark,
@@ -48,12 +48,12 @@ const CollapsePanel = ({
       {onHover ? <Hoverable onHover={onHover} body={children} /> : children}
     </AntdPanel>
   );
-};
+}
 
-const Hoverable = ({ body, onHover }: PropsHoverable) => (
-  <div className="c-collapse__hoverable" {...onHover}>
+function Hoverable({ body, onHover }: PropsHoverable) {
+  return <div className="c-collapse__hoverable" {...onHover}>
     {body}
   </div>
-);
+}
 
 export default CollapsePanel;

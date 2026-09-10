@@ -3,15 +3,15 @@ import Drawer from '@Components/drawer';
 import classNames from 'classnames';
 import { memo } from 'react';
 
-export type List<T extends Record<string, unknown>> = {
+export interface List<T extends Record<string, unknown>> {
   activeRow: (record: T) => void;
   dataSource: T[];
   columns: T[];
   rowKey?: string;
   onRowClick?: (record: T) => void;
-};
+}
 
-type Props<T extends Record<string, unknown>> = {
+interface Props<T extends Record<string, unknown>> {
   className?: string,
   header: React.ReactNode;
   list: List<T>;
@@ -22,9 +22,9 @@ type Props<T extends Record<string, unknown>> = {
   onClose: (e: React.MouseEvent | React.KeyboardEvent) => void;
   open: boolean;
   width?: number;
-};
+}
 
-const DrawerList = <T extends Record<string, unknown>, >({
+function DrawerList<T extends Record<string, unknown>, >({
   className = '',
   header,
   list: { onRowClick, ...dataTableProps },
@@ -36,7 +36,7 @@ const DrawerList = <T extends Record<string, unknown>, >({
   open = false,
   width = 520,
   ...others
-}: Props<T>) => {
+}: Props<T>) {
   const css = classNames({
     [`c-drawer-list__wrapper--${mode}`]: mode,
   });
@@ -63,7 +63,7 @@ const DrawerList = <T extends Record<string, unknown>, >({
       />
     </Drawer>
   );
-};
+}
 
 DrawerList.displayName = 'DrawerList';
 

@@ -15,7 +15,7 @@ import {
 } from '@lucataglia/react-json-tree';
 import React, { CSSProperties, memo } from 'react';
 
-type Props<T> = {
+interface Props<T> {
   className?: string,
   data: T;
   expandCollapseAll?: ExpandCollapseAll;
@@ -23,7 +23,7 @@ type Props<T> = {
   itemStringMaxFields?: number;
   modifier?: string,
   styles?: CSSProperties,
-};
+}
 
 function getItemString<T>(
   _itemStringMaxFields: NonNullable<Props<T>['itemStringMaxFields']>
@@ -69,7 +69,7 @@ function getItemString<T>(
 
           {data.reduce((acc, value, i) => {
             if (i === 0) {
-              return `${getSecondLevelItemString(typeof value, value)}`;
+              return getSecondLevelItemString(typeof value, value);
             }
 
             if (i >= 1 && i <= _itemStringMaxFields - 1) {

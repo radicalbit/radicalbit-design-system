@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Menu } from 'antd';
-import Dropdown from './index';
+import Dropdown from ".";
 
 const menu = () => (
   <Menu>
@@ -29,11 +29,9 @@ type Story = StoryObj<typeof Dropdown>;
 export const Default: Story = {
   args: {},
   render: (props) => (
-    <>
-      <Dropdown {...props} overlay={menu}>
+    <Dropdown {...props} overlay={menu}>
         <a>Hover me</a>
       </Dropdown>
-    </>
   ),
 };
 

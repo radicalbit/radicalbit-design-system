@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import AbbreviatedNumber from './index';
+import AbbreviatedNumber from ".";
 
 const meta: Meta<typeof AbbreviatedNumber> = {
   title: 'Components/AbbreviatedNumber',

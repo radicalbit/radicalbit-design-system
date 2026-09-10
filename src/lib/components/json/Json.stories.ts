@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import JsonTree from './index';
+import JsonTree from ".";
 
 const data = {
   id: 'proj_7f3c9d',

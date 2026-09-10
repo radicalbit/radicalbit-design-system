@@ -30,7 +30,7 @@ export type LeftProps = Omit<LayoutProps, 'content'> &
 
 const { Sider, Header } = AntdLayout;
 
-const LeftColumn = (props: LeftProps) => {
+function LeftColumn(props: LeftProps) {
   const {
     backgroundColor,
     backgroundImage,
@@ -95,6 +95,6 @@ const LeftColumn = (props: LeftProps) => {
       </div>
     </Sider>
   );
-};
+}
 
 export default React.memo(LeftColumn);

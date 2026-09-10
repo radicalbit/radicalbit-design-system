@@ -1,7 +1,7 @@
 import { Input } from '@Components/input';
 import { memo, useEffect, useState } from 'react';
 
-type Props = {
+interface Props {
   className?: string;
   autoFocus?: boolean;
   modifier?: string;
@@ -9,7 +9,7 @@ type Props = {
   onPressEnter?: (v: string) => void;
   placeholder?: string;
   title?: string;
-};
+}
 
 function EditableInputText({
   autoFocus = false,
@@ -23,9 +23,13 @@ function EditableInputText({
   const [value, setValue] = useState(title);
   const [isOnFocus, setOnFocus] = useState(autoFocus);
 
+  /* eslint-disable react-hooks/set-state-in-effect -- pre-existing prop-to-state
+     sync: costs one stale frame plus a double render. Should become a
+     render-phase adjustment; out of scope for the ESLint migration. */
   useEffect(() => {
     setValue(title);
   }, [title]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const handleOnBlur = (e: React.FocusEvent<HTMLInputElement>) => {
     if (onBlur) {

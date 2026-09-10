@@ -5,13 +5,13 @@ interface Props extends SpinProps {
   modifier?: string;
 }
 
-const Spin = ({
+function Spin({
   className = '',
   delay,
   modifier = '',
   spinning,
   ...otherProps
-}: Props) => {
+}: Props) {
   const showSpinner = spinning === undefined ? false : spinning;
 
   return (
@@ -22,7 +22,7 @@ const Spin = ({
       {...otherProps}
     />
   );
-};
+}
 
 Spin.displayName = 'Spin';
 

@@ -6,7 +6,7 @@ import CopyToClipboard, { Props as CopyToClipboardProps } from '@Components/copy
 import FontAwesomeIcon from '@Components/font-awesome-icon';
 import { Props as TooltipProps } from '@Components/tooltip';
 
-type Props = {
+interface Props {
   className?: string,
   data: string,
   label?: ReactNode,
@@ -15,9 +15,9 @@ type Props = {
   tooltipHide?: TooltipProps,
   tooltipReveal?: TooltipProps,
   copyToClipboard?: CopyToClipboardProps,
-};
+}
 
-const DataSecret = ({
+function DataSecret({
   className = '',
   data,
   label,
@@ -26,7 +26,7 @@ const DataSecret = ({
   tooltipReveal,
   tooltipHide,
   copyToClipboard,
-}: Props) => {
+}: Props) {
   const [visible, setVisible] = useState(false);
 
   const copyToClipboardValue: CopyToClipboardProps | undefined = copyToClipboard ? { ...copyToClipboard, link: data } : undefined;
@@ -67,15 +67,15 @@ const DataSecret = ({
         )}
     </div>
   );
-};
+}
 
-type DataProps = {
+interface DataProps {
     data: string,
     icon: IconDefinition,
     onClick?: MouseEventHandler<SVGSVGElement>,
     tooltip?: TooltipProps,
     copyToClipboard?: CopyToClipboardProps,
-};
+}
 
 function Data({
   data, onClick, icon, tooltip, copyToClipboard,

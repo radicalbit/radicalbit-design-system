@@ -1,6 +1,6 @@
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
-import Board from './index';
+import Board from ".";
 import Button from '../button';
 
 const meta: Meta<typeof Board> = {

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import React, { memo } from 'react';
 
-type Props = {
+interface Props {
   className?: string,
   children?: React.ReactNode;
   description?: string;
@@ -19,7 +19,7 @@ type Props = {
   required?: boolean;
   messageColor?: 'warning' | 'success' | 'error';
   width?: number | string;
-};
+}
 
 function formatWidth(width?: number | string): string | undefined {
   if (typeof width === 'number') {
@@ -29,7 +29,7 @@ function formatWidth(width?: number | string): string | undefined {
   return width;
 }
 
-const FormField = ({
+function FormField({
   children,
   className = '',
   flexColumn,
@@ -42,7 +42,7 @@ const FormField = ({
   messageColor = 'error',
   width,
   ...other
-}: Props) => {
+}: Props) {
   const cssContent = classNames({
     'c-form-field__content--flex-column': flexColumn,
   });
@@ -77,7 +77,7 @@ const FormField = ({
       )}
     </div>
   );
-};
+}
 
 FormField.displayName = 'FormField';
 

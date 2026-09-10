@@ -1,7 +1,7 @@
 import { mapSelectArgsTypes } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import ColorPicker, { Props } from './index';
+import ColorPicker, { Props } from ".";
 
 const meta: Meta<typeof ColorPicker> = {
   title: 'Components/ColorPicker',

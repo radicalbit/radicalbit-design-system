@@ -8,10 +8,10 @@ const abbreviateNumber = (number: number, options?: Intl.NumberFormatOptions) =>
   ...options,
 }).format(number);
 
-type Props = {
+interface Props {
   value: number;
   options?: Intl.NumberFormatOptions;
-};
+}
 
 function AbbreviatedNumber({ value, options }: Props) {
   if (value < ONE_THOUSAND) {

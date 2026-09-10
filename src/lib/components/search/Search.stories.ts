@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Search from './index';
+import Search from ".";
 
 const meta: Meta<typeof Search> = {
   title: 'Components/Search',

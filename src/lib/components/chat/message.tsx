@@ -6,7 +6,7 @@ import { faReply } from '@fortawesome/free-solid-svg-icons';
 import { ReactNode } from 'react';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-type Props = {
+interface Props {
   actions?: ReactNode[];
   className?: string;
   isReplied?: boolean;
@@ -20,9 +20,9 @@ type Props = {
   tagContent?: string;
   time?: string;
   type?: 'secondary' | 'primary';
-};
+}
 
-const ChatMessage = ({
+function ChatMessage({
   actions,
   className = '',
   isReplied = false,
@@ -36,7 +36,7 @@ const ChatMessage = ({
   tagContent,
   time,
   type,
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`c-chat-message--type-${type}`]: type,
     'c-chat-message--small': small,
@@ -74,7 +74,7 @@ const ChatMessage = ({
       {actions && <div className="c-chat-message__actions">{actions}</div>}
     </div>
   );
-};
+}
 
 ChatMessage.Quote = Quote;
 

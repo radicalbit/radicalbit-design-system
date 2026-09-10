@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
-import RbitModal from './index';
+import RbitModal from ".";
 import SectionTitle from '../section-title';
 import NewHeader from '../header/newHeader';
 import Button from '../button';

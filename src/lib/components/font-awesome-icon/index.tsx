@@ -15,7 +15,7 @@ interface Props extends FontAwesomeIconProps {
   type?: 'primary' | 'secondary' | 'secondary-light' | 'success' | 'warning' | 'error';
 }
 
-const FontAwesomeIcon = ({
+function FontAwesomeIcon({
   className = '',
   enableColorMode = false,
   modifier = '',
@@ -24,7 +24,7 @@ const FontAwesomeIcon = ({
   icon,
   tooltip,
   ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     'c-font-awesome-icon--enable-color-mode': enableColorMode,
     'c-font-awesome-icon--clickable': !!onClick,
@@ -52,7 +52,7 @@ const FontAwesomeIcon = ({
       {...others}
     />
   );
-};
+}
 
 FontAwesomeIcon.displayName = 'FontAwesomeIcon';
 

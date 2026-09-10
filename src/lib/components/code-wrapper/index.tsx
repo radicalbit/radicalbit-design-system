@@ -1,19 +1,19 @@
-type Props = {
+interface Props {
   className?: string;
   editor?: React.ReactNode;
   header?: React.ReactNode;
   modifier?: string;
   readOnly?: boolean;
-};
+}
 
-const CodeWrapper = ({
+function CodeWrapper({
   className = '',
   editor,
   header,
   modifier = '',
   readOnly = false,
-}: Props) => (
-  <div className={`c-code-wrapper ${modifier} ${className}`}>
+}: Props) {
+  return <div className={`c-code-wrapper ${modifier} ${className}`}>
     {header && <div className="c-code-wrapper__header">{header}</div>}
 
     {editor && (
@@ -22,7 +22,7 @@ const CodeWrapper = ({
       </div>
     )}
   </div>
-);
+}
 
 CodeWrapper.displayName = 'CodeWrapper';
 

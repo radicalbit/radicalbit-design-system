@@ -1,6 +1,8 @@
 import LibDivider, { DividerProps } from 'antd/es/divider';
 
-const Divider = (props: DividerProps) => <LibDivider {...props} />;
+function Divider(props: DividerProps) {
+  return <LibDivider {...props} />;
+}
 
 Divider.displayName = 'Divider';
 

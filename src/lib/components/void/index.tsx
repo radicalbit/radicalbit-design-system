@@ -1,7 +1,7 @@
 import { ReactNode, memo } from 'react';
 import classNames from 'classnames';
 
-type Props = {
+interface Props {
   actions?: ReactNode | ReactNode[];
   actionsModifier?: string;
   className?: string;
@@ -13,9 +13,9 @@ type Props = {
   modifier?: string /** Additional css classes */;
   size?: 'small' | 'xsmall';
   title?: ReactNode;
-};
+}
 
-const Void = ({
+function Void({
   actions,
   actionsModifier = '',
   className = '',
@@ -28,7 +28,7 @@ const Void = ({
   size,
   title,
   ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     'c-void--glitched': glitched,
     [`c-void--${size}`]: size,
@@ -55,7 +55,7 @@ const Void = ({
       )}
     </div>
   );
-};
+}
 
 Void.displayName = 'Void';
 

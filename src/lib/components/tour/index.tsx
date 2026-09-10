@@ -12,12 +12,12 @@ type Props = ReactourProps & {
   mode?: 'light' | 'dark';
 };
 
-const Tour = ({
+function Tour({
   className = '',
   modifier = '',
   mode = 'light',
   ...other
-}: Props) => {
+}: Props) {
   const css = classNames({
     dark: mode === 'dark',
   });
@@ -40,7 +40,7 @@ const Tour = ({
       {...other}
     />
   );
-};
+}
 
 Tour.displayName = 'Tour';
 

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { ReactNode } from 'react';
 import Popover from '@Components/popover';
 
-type Props = {
+interface Props {
   children: ReactNode;
   className?: string;
   highlighted?: boolean;
@@ -11,12 +11,12 @@ type Props = {
   onClick?: () => void;
   width?: number | string;
   withPreview?: boolean;
-};
+}
 
 const MOUSE_ENTER_DELAY = 0.3;
 const MAX_PREVIEW_HEIGHT = 200;
 
-const Thumbnail = ({
+function Thumbnail({
   children,
   className = '',
   highlighted = false,
@@ -26,7 +26,7 @@ const Thumbnail = ({
   width = 80,
   withPreview = false,
   ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     'c-thumbnail--highlighted': highlighted,
     'c-thumbnail--hoverable': hoverable,
@@ -56,7 +56,7 @@ const Thumbnail = ({
   ) : (
     thumbnailBody
   );
-};
+}
 
 Thumbnail.displayName = 'Thumbnail';
 

@@ -5,7 +5,7 @@ import Tooltip from '@Components/tooltip';
 import { PopoverProps } from 'antd';
 import { AvatarProps } from 'antd/es/skeleton/Avatar';
 
-type Props = {
+interface Props {
   actions?: { one?: ReactNode; two?: ReactNode };
   avatar?: AvatarProps;
   className?: string;
@@ -20,9 +20,9 @@ type Props = {
   userClassification?: string;
   userName?: string;
   popoverProps?: PopoverProps
-};
+}
 
-const UserAvatar = ({
+function UserAvatar({
   avatar = {},
   className = '',
   content,
@@ -35,7 +35,7 @@ const UserAvatar = ({
   userName,
   popoverProps,
   popoverWidth = 300,
-}: Props) => {
+}: Props) {
   const trigger = popoverProps?.trigger || 'hover';
 
   const popoverContent = (
@@ -74,7 +74,7 @@ const UserAvatar = ({
       </div>
     </div>
   );
-};
+}
 
 UserAvatar.displayName = 'UserAvatar';
 

@@ -4,11 +4,11 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { InputProps } from 'antd';
 
-type Body = {
+interface Body {
   content: ReactNode;
   key: string;
   suffix: ReactNode;
-};
+}
 
 type Props = InputProps & {
   body?: Body[];
@@ -19,7 +19,7 @@ type Props = InputProps & {
   top?: ReactNode | ReactNode[];
 };
 
-const ToolsBox = ({
+function ToolsBox({
   className = '',
   body,
   footer,
@@ -27,8 +27,8 @@ const ToolsBox = ({
   modifier = '',
   onSearch,
   top,
-}: Props) => (
-  <div className={`c-tools-box ${modifier} ${className}`}>
+}: Props) {
+  return <div className={`c-tools-box ${modifier} ${className}`}>
     {top && <div className="c-tools-box__top dragger-box">{top}</div>}
 
     {onSearch && (
@@ -58,7 +58,7 @@ const ToolsBox = ({
 
     {footer && <div className="c-tools-box__footer">{footer}</div>}
   </div>
-);
+}
 
 ToolsBox.displayName = 'ToolsBox';
 

@@ -5,7 +5,7 @@ type Props = StepsProps & {
   modifier?: string;
 };
 
-const Steps = ({
+function Steps({
   children,
   className = '',
   current,
@@ -14,8 +14,8 @@ const Steps = ({
   modifier = '',
   status,
   ...others
-}: Props) => {
-  const stepStatus: Array<string> = ['wait', 'process', 'finish', 'error'];
+}: Props) {
+  const stepStatus: string[] = ['wait', 'process', 'finish', 'error'];
 
   if (status && !stepStatus.find((s: string): boolean => s === status)) {
     console.warn(
@@ -37,7 +37,7 @@ const Steps = ({
       {children}
     </AntdSteps>
   );
-};
+}
 
 Steps.Step = Step;
 

@@ -1,6 +1,6 @@
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
-import Pin, { Props } from './index';
+import Pin, { Props } from ".";
 
 const meta: Meta<typeof Pin> = {
   title: 'Components/Pin',

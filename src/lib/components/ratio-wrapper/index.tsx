@@ -1,20 +1,20 @@
 import { memo } from 'react';
 
-type Props = {
+interface Props {
   children: React.ReactNode;
   className?: string;
   modifier?: string;
   minWidth?: number;
   maxWidth?: number;
-};
+}
 
-const RatioWrapper = ({
+function RatioWrapper({
   children,
   className = '',
   modifier = '',
   maxWidth,
   minWidth,
-}: Props) => {
+}: Props) {
   const style = {
     minWidth: minWidth || '100%',
     maxWidth: maxWidth || '100%',
@@ -27,7 +27,7 @@ const RatioWrapper = ({
       </div>
     </div>
   );
-};
+}
 
 RatioWrapper.displayName = 'RatioWrapper';
 

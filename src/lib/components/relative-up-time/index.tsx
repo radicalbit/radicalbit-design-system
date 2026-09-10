@@ -2,21 +2,21 @@ import moment from 'moment';
 import Tooltip from '@Components/tooltip';
 import { memo } from 'react';
 
-type Props = {
+interface Props {
   className?: string;
   from?: number;
   modifier?: string;
   timestamp?: string | number | Date;
   withTooltip?: boolean;
-};
+}
 
-const RelativeUpTime = ({
+function RelativeUpTime({
   className = '',
   from,
   modifier = '',
   timestamp,
   withTooltip,
-}: Props) => {
+}: Props) {
   if (!timestamp) {
     return <>--</>;
   }
@@ -67,7 +67,7 @@ const RelativeUpTime = ({
       {lableOrElse}
     </div>
   );
-};
+}
 
 const getLabel = (monthsLabel: string, weeksLabel: string, daysLabel: string, hoursLabel: string, minutesLabel: string): string => {
   if (monthsLabel) {

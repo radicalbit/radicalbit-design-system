@@ -3,7 +3,9 @@ import {
 } from 'antd/es/radio';
 import { RadioButtonProps } from 'antd/es/radio/radioButton';
   
-const Button = (props: RadioButtonProps) => <AntRadioButton {...props} />;
+function Button(props: RadioButtonProps) {
+  return <AntRadioButton {...props} />;
+}
   
 Button.displayName = 'Button';
 

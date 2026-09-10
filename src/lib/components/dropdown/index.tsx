@@ -5,13 +5,13 @@ type Props = DropdownProps & {
   modifier?: string;
 };
 
-const Dropdown = ({
+function Dropdown({
   className = '',
   modifier = '',
   children,
   trigger,
   ...others
-}: Props) => {
+}: Props) {
   const clickable = Array.isArray(trigger)
     ? trigger.includes('click')
     : trigger === 'click';
@@ -29,7 +29,7 @@ const Dropdown = ({
       <div className={`c-dropdown__child ${cssChild}`}>{children}</div>
     </AntdDropdown>
   );
-};
+}
 
 Dropdown.displayName = 'Dropdown';
 

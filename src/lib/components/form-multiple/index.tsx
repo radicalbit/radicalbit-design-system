@@ -1,23 +1,23 @@
 import classNames from 'classnames';
 import { memo } from 'react';
 
-type Props = {
+interface Props {
   add?: React.ReactNode;
   align?: 'center' | 'flex-start' | 'flex-end';
   children: React.ReactNode;
   className?: string;
   modifier?: string;
   remove?: React.ReactNode;
-};
+}
 
-const FormMultiple = ({
+function FormMultiple({
   add,
   align = 'center',
   children,
   className = '',
   modifier = '',
   remove,
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`c-form-multiple--align-${align}`]: align,
   });
@@ -33,7 +33,7 @@ const FormMultiple = ({
       </div>
     </div>
   );
-};
+}
 
 FormMultiple.displayName = 'FormMultiple';
 

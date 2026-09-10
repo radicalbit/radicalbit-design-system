@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { ReactNode } from 'react';
 
-export type Props = {
+export interface Props {
   animated?: boolean;
   className?: string;
   content?: ReactNode;
@@ -18,9 +18,9 @@ export type Props = {
   contentType?: 'fixed' | 'none';
   /** @deprecated Deprecated */
   contentFixed?: boolean;
-};
+}
 
-const BarChart = ({
+function BarChart({
   animated = false,
   className = '',
   content,
@@ -35,7 +35,7 @@ const BarChart = ({
   type,
   value,
   width,
-}: Props) => {
+}: Props) {
   const css = classNames({
     'c-bar-chart--padding': padding,
     'c-bar-chart--reverse': reverse,
@@ -85,7 +85,7 @@ const BarChart = ({
       )}
     </div>
   );
-};
+}
 
 BarChart.displayName = 'BarChart';
 

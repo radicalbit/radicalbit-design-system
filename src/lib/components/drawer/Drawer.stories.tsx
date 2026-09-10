@@ -1,7 +1,7 @@
 import { mapSelectArgsTypes } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import Drawer from './index';
+import Drawer from ".";
 import Button from '../button';
 
 const meta: Meta<typeof Drawer> = {

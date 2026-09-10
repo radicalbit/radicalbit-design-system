@@ -14,7 +14,7 @@ export type GroupProps = RadioGroupProps &
     tabsLook?: boolean;
   };
 
-const Group = ({
+function Group({
   className = '',
   disabled,
   groupJustify,
@@ -24,7 +24,7 @@ const Group = ({
   reverse,
   tabsLook = false,
   ...others
-}: GroupProps) => {
+}: GroupProps) {
   const css = classNames({
     'c-radio-wrapper--tabs-look': tabsLook,
     'c-radio-wrapper--reverse': reverse,
@@ -40,7 +40,7 @@ const Group = ({
       {...others}
     />
   );
-};
+}
 
 Group.displayName = 'Group';
 

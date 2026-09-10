@@ -1,27 +1,27 @@
 import { memo } from 'react';
 
-type Props = {
+interface Props {
   className?: string;
   modifier?: string;
   onChange: (value: string) => void;
   options: Option[];
   value: string;
-};
+}
 
-type Option = {
+interface Option {
   value: string;
   title?: string;
   card: React.ReactNode;
-};
+}
 
-const RadioCards = ({
+function RadioCards({
   className = '',
   modifier = '',
   onChange,
   options,
   value,
-}: Props) => (
-  <div className={`c-radio-cards ${modifier} ${className}`}>
+}: Props) {
+  return <div className={`c-radio-cards ${modifier} ${className}`}>
     {options.map((option: Option, i: number) => {
       const handleOnChange = () => {
         if (onChange) {
@@ -47,7 +47,7 @@ const RadioCards = ({
       );
     })}
   </div>
-);
+}
 
 RadioCards.displayName = 'RadioCards';
 

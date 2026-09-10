@@ -2,17 +2,17 @@ import { faExpand, faMinimize } from '@fortawesome/free-solid-svg-icons';
 import { MouseEventHandler, memo, useState } from 'react';
 import FontAwesomeIcon from '@Components/font-awesome-icon';
 
-type Props = {
+interface Props {
   className?: string;
   modifier?: string;
   toggleFullScreen?: MouseEventHandler<SVGElement>;
-};
+}
 
-const IcoFullScreen = ({
+function IcoFullScreen({
   className = '',
   modifier = '',
   toggleFullScreen,
-}: Props) => {
+}: Props) {
   const [isFullScreen, setIsFullScreen] = useState(false);
 
   const handleOnFullScreen: MouseEventHandler<SVGElement> = (e) => {
@@ -31,6 +31,6 @@ const IcoFullScreen = ({
       onClick={handleOnFullScreen}
     />
   );
-};
+}
 
 export default memo(IcoFullScreen);

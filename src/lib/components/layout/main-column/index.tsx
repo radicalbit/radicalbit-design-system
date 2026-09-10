@@ -2,7 +2,7 @@ import { ReactNode, memo, useState } from 'react';
 import AntdLayout from 'antd/es/layout';
 import Drawer from '@Components/drawer/index';
 
-type MainProps = {
+interface MainProps {
   bottomDrawerContent?: ReactNode;
   bottomDrawerTitle?: ReactNode;
   content?: ReactNode;
@@ -12,7 +12,7 @@ type MainProps = {
   headerContentDark?: ReactNode;
   showBottomDrawerOnHover?: ReactNode;
   mainClassName?: string;
-};
+}
 
 const { Header, Content } = AntdLayout;
 
@@ -20,7 +20,7 @@ const MemoLayout = memo(AntdLayout);
 const MemoHeader = memo(Header);
 const MemoContent = memo(Content);
 
-const MainColumn = (props: MainProps) => {
+function MainColumn(props: MainProps) {
   const {
     bottomDrawerContent,
     bottomDrawerTitle,
@@ -93,6 +93,6 @@ const MainColumn = (props: MainProps) => {
       )}
     </MemoLayout>
   );
-};
+}
 
 export default MainColumn;

@@ -6,7 +6,7 @@ type Props = SegmentedProps & {
   type?: 'highlighted';
 };
 
-const Segmented = (props: Props) => {
+function Segmented(props: Props) {
   const {
     className = '',
     modifier = '',
@@ -19,7 +19,7 @@ const Segmented = (props: Props) => {
   });
 
   return <AntdSegmented className={css} {...others} />;
-};
+}
 
 Segmented.displayName = 'Segmented';
 

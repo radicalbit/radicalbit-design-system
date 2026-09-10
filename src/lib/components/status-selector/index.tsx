@@ -4,17 +4,17 @@ import { CSSProperties, memo } from 'react';
 
 export type Value = string | number | boolean;
 
-type Item = {
+interface Item {
   text: string;
   value: Value;
-};
+}
 
-export type Status = {
+export interface Status {
   current: string;
-  items?: Array<Item>;
-};
+  items?: Item[];
+}
 
-type Props = {
+interface Props {
   align?: 'center' | 'right';
   badge?: React.ReactNode;
   className?: string;
@@ -29,15 +29,15 @@ type Props = {
   title: string;
   whiteSpace?: string;
   withBackground?: string;
-};
+}
 
-type SelectStatusProps = {
+interface SelectStatusProps {
   current: string;
-  items?: Array<Item>;
+  items?: Item[];
   onChange?: (value: Value) => void;
-};
+}
 
-const StatusSelector = ({
+function StatusSelector({
   align,
   badge,
   className = '',
@@ -53,7 +53,7 @@ const StatusSelector = ({
   whiteSpace = '',
   withBackground,
   ...others
-}: Props) => {
+}: Props) {
   const hasOption = items && items.length;
 
   const css = classNames({
@@ -96,9 +96,10 @@ const StatusSelector = ({
       </div>
     </div>
   );
-};
+}
 
-const SelectStatus = ({ current, items, onChange }: SelectStatusProps) => current ? (
+function SelectStatus({ current, items, onChange }: SelectStatusProps) {
+  return current ? (
   <Select defaultValue={current} key={current} onChange={onChange}>
     {items
       ? items.map((item: Item, index: number) => (
@@ -108,9 +109,8 @@ const SelectStatus = ({ current, items, onChange }: SelectStatusProps) => curren
       ))
       : []}
   </Select>
-) : (
-  <></>
-);
+) : null
+}
 
 StatusSelector.displayName = 'StatusSelector';
 

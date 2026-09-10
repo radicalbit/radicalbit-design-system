@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import Switchbox from './index';
+import Switchbox from ".";
 
 const meta: Meta<typeof Switchbox> = {
   title: 'Components/Switchbox',

@@ -3,7 +3,7 @@ import {
   memo, useEffect, useRef, useState,
 } from 'react';
 
-type Props = {
+interface Props {
   children: React.ReactNode;
   className?: string,
   containerClassName?: string;
@@ -11,7 +11,7 @@ type Props = {
   modifier?: string,
   onBlur?: (e: React.FocusEvent<HTMLDivElement>) => void;
   onMouseDown?: (e: React.MouseEvent<HTMLDivElement>) => void;
-};
+}
 
 const handleDragStart: React.DragEventHandler = (event) => {
   const style = window.getComputedStyle(event.target as Element, null);
@@ -45,7 +45,7 @@ const handleDragOver = (event: Event) => {
   return false;
 };
 
-const Draggable = ({
+function Draggable({
   children,
   className = '',
   containerClassName,
@@ -54,7 +54,7 @@ const Draggable = ({
   onBlur,
   onMouseDown,
   ...others
-}: Props) => {
+}: Props) {
   const [onFocus, setOnFocus] = useState(false);
 
   const css = classNames({
@@ -65,6 +65,8 @@ const Draggable = ({
     
   useEffect(() => {
     const target = containerRef && containerRef.current ? containerRef.current : window.document;
+    /* eslint-disable react-hooks/immutability -- assigns handlers on a DOM
+       node inside an effect; the containerRef prop itself is never reassigned. */
     target.ondrop = (e: DragEvent) => handleDrop(e, ref as React.RefObject<HTMLDivElement>);
 
     target.ondragover = handleDragOver;
@@ -103,7 +105,7 @@ const Draggable = ({
       {children}
     </div>
   );
-};
+}
 
 Draggable.displayName = 'Draggable';
 

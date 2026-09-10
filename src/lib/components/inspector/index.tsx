@@ -1,6 +1,6 @@
 import { ReactNode, memo } from 'react';
 
-type Props = {
+interface Props {
   className?: string;
   footer?: ReactNode;
   header?: ReactNode;
@@ -8,9 +8,9 @@ type Props = {
   main?: ReactNode;
   modifier?: string;
   right?: ReactNode;
-};
+}
 
-const Inspector = ({
+function Inspector({
   className = '',
   footer,
   header,
@@ -18,8 +18,8 @@ const Inspector = ({
   main,
   modifier = '',
   right,
-}: Props) => (
-  <div className={`l-inspector ${modifier} ${className}`}>
+}: Props) {
+  return <div className={`l-inspector ${modifier} ${className}`}>
     {header && <div className="l-inspector__header">{header}</div>}
 
     <div className="l-inspector__body">
@@ -30,7 +30,7 @@ const Inspector = ({
 
     {footer && <div className="l-inspector__footer">{footer}</div>}
   </div>
-);
+}
 
 Inspector.displayName = 'Inspector';
 

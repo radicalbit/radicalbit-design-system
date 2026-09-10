@@ -11,14 +11,14 @@ type Props = UploadProps & {
   type?: UploadType;
 };
 
-const Upload = ({
+function Upload({
   behavior,
   children,
   className = '',
   modifier = '',
   type,
   ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`c-upload--${type}`]: type,
     [`c-upload--${behavior}`]: behavior,
@@ -32,7 +32,7 @@ const Upload = ({
       {children}
     </AntdUpload>
   );
-};
+}
 
 Upload.Dragger = Dragger;
 

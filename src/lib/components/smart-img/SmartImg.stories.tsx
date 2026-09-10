@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import SmartImg from './index';
+import SmartImg from ".";
 
 const meta: Meta<typeof SmartImg> = {
   title: 'Components/SmartImg',

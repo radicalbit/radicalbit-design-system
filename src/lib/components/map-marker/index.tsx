@@ -1,23 +1,23 @@
 import classNames from 'classnames';
 import { ReactNode } from 'react';
 
-export type Props = {
+export interface Props {
   children?: ReactNode;
   className?: string;
   height?: string | null;
   modifier?: string;
   type?: 'cluster';
   width?: string | null;
-};
+}
 
-const MapMarker = ({
+function MapMarker({
   children,
   className = '',
   height = null,
   modifier = '',
   type,
   width = null,
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`c-map-marker--type-${type}`]: type,
   });
@@ -35,5 +35,5 @@ const MapMarker = ({
       <div className="c-map-marker__content">{children}</div>
     </div>
   );
-};
+}
 export default MapMarker;

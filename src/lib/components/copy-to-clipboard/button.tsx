@@ -1,7 +1,7 @@
 import Button, { Props as ButtonProps } from '@Components/button';
 import { memo, useState } from 'react';
 
-type Props = {
+interface Props {
   className?: string;
   icon?: React.ReactNode;
   link: string;
@@ -10,11 +10,11 @@ type Props = {
   successText?: string;
   text?: string;
   type?: ButtonProps['type'];
-};
+}
 
 const COPIED = 'Copied!';
 
-const CopyToClipboardButton = ({
+function CopyToClipboardButton({
   className = '',
   link,
   modifier = '',
@@ -23,7 +23,7 @@ const CopyToClipboardButton = ({
   text = 'Click to Copy',
   type,
   ...others
-}: Props) => {
+}: Props) {
   const [buttonText, setButtonText] = useState(text);
 
   const handleOnCopy = async () => {
@@ -46,6 +46,6 @@ const CopyToClipboardButton = ({
       {buttonText}
     </Button>
   );
-};
+}
 
 export default memo<Props>(CopyToClipboardButton);

@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import { memo } from 'react';
 
-export type Counter = {
+export interface Counter {
   active: number | string;
   title: string;
   total: number;
-};
+}
 
-type Props = {
+interface Props {
   align?: 'center' | 'right';
   className?: string,
   hoverable?: boolean;
@@ -26,9 +26,9 @@ type Props = {
   titleWeight?: 'light' | 'normal' | 'bold';
   type?: 'one-line';
   wrapTitle?: boolean;
-};
+}
 
-const SectionTitle = (props: Props) => {
+function SectionTitle(props: Props) {
   const {
     align,
     className = '',
@@ -114,7 +114,7 @@ const SectionTitle = (props: Props) => {
       )}
     </div>
   );
-};
+}
 
 SectionTitle.displayName = 'SectionTitle';
 

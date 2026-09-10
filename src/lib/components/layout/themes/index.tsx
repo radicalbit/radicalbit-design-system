@@ -5,7 +5,7 @@ import { MainProps } from '../main-nav';
 import RightColumn, { RightProps } from '../right-column';
 import SecondaryColumn, { SecondaryProps } from '../secondary-column';
 
-export type ThemeProps = {
+export interface ThemeProps {
   hasHeader?: boolean;
   hasLeftColumn?: boolean;
   hasSecondaryColumn?: boolean;
@@ -15,9 +15,9 @@ export type ThemeProps = {
   secondary?: SecondaryProps;
   right?: RightProps;
   main?: MainProps;
-};
+}
 
-export default ({
+export default function({
   hasHeader,
   hasLeftColumn,
   hasSecondaryColumn,
@@ -27,7 +27,7 @@ export default ({
   secondary = {},
   right = {},
   main = {},
-}: ThemeProps) => {
+}: ThemeProps) {
   const {
     backgroundColor: leftColumnBackgroundColor,
     backgroundImage: leftColumnBackgroundImage,

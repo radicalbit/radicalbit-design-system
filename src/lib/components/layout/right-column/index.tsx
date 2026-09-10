@@ -2,7 +2,7 @@ import AntdLayout from 'antd/es/layout';
 import classNames from 'classnames';
 import { CSSProperties, ReactNode, memo } from 'react';
 
-export type RightProps = {
+export interface RightProps {
   backgroundColor?: string;
   backgroundImage?: string;
   collapsed?: boolean;
@@ -20,11 +20,11 @@ export type RightProps = {
   rightColumnHeaderAltContent?: ReactNode;
   rightContent?: ReactNode;
   styles?: CSSProperties;
-};
+}
 
 const { Sider, Header } = AntdLayout;
 
-const RightColumn = (props: RightProps) => {
+function RightColumn(props: RightProps) {
   const {
     backgroundColor,
     backgroundImage,
@@ -78,6 +78,6 @@ const RightColumn = (props: RightProps) => {
       <div className={cssDiv}>{content}</div>
     </Sider>
   );
-};
+}
 
 export default memo(RightColumn);

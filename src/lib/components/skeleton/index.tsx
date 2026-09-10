@@ -2,7 +2,9 @@ import AntdSkeleton, { SkeletonProps } from 'antd/es/skeleton';
 const {
   Button, Avatar, Input, Image, Node,
 } = AntdSkeleton;
-const Skeleton = (props: SkeletonProps) => <AntdSkeleton {...props} />;
+function Skeleton(props: SkeletonProps) {
+  return <AntdSkeleton {...props} />;
+}
 
 Skeleton.displayName = 'Skeleton';
 Skeleton.Button = Button;

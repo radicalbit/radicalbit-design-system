@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { AffixProps } from 'antd';
 import { useRef } from 'react';
-import Affix from './index';
+import Affix from ".";
 import Button from '../button';
 
 const meta: Meta<typeof Affix> = {

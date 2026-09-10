@@ -6,14 +6,14 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   noHide?: boolean;
   noClickable?: boolean;
 }
-const DataTableAction = ({
+function DataTableAction({
   className = '',
   children,
   modifier = '',
   noHide,
   noClickable,
   ...other
-}: Props) => {
+}: Props) {
   const css = classNames({
     'l-data-table__action--no-hide': noHide,
     'l-data-table__action--no-clickable': noClickable,
@@ -34,7 +34,7 @@ const DataTableAction = ({
       {children}
     </div>
   );
-};
+}
 
 DataTableAction.displayName = 'DataTableAction';
 

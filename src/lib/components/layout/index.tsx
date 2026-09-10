@@ -14,9 +14,9 @@ type Props = ThemeProps & {
   hasOverallTop?: boolean;
 };
 
-const Layout = ({
+function Layout({
   overallTop, hasOverallTop, configProviderOptions, ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     'rdb-layout': true,
     'has-overall-top': hasOverallTop,
@@ -59,6 +59,6 @@ const Layout = ({
       </AntdLayout>
     </ConfigProvider>
   );
-};
+}
 
 export default memo(Layout);

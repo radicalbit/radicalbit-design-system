@@ -1,6 +1,6 @@
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
 import { Meta } from '@storybook/react';
-import Alert, { Props } from './index';
+import Alert, { Props } from ".";
 
 const meta: Meta<typeof Alert> = {
   title: 'Components/Alert',
@@ -18,6 +18,8 @@ const meta: Meta<typeof Alert> = {
   },
 };
 
-export const Default = (props: Props) => <Alert {...props} message="Alert" />;
+export function Default(props: Props) {
+  return <Alert {...props} message="Alert" />;
+}
 
 export default meta;

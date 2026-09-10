@@ -4,16 +4,16 @@ export interface Props extends AutoCompleteProps {
   modifier?: string;
 }
 
-const AutoComplete = ({
+function AutoComplete({
   className = '',
   modifier = '',
   ...other
-}: Props) => (
-  <LibAutocomplete
+}: Props) {
+  return <LibAutocomplete
     className={`c-autocomplete ${modifier} ${className}`}
     {...other}
   />
-);
+}
 
 AutoComplete.displayName = 'AutoComplete';
 

@@ -25,7 +25,7 @@ type Props = ModalProps & {
   onMaximize?: (p: boolean) => void;
 };
 
-const RbitModal = ({
+function RbitModal({
   actions,
   actionsLayout = 'default',
   background,
@@ -45,7 +45,7 @@ const RbitModal = ({
   width,
   zIndex = 1000,
   ...others
-}: Props) => {
+}: Props) {
   const [isMaximize, setIsMaximize] = useState(defaultMaximize);
 
   // Controlled if maximize is not undefined, Uncontroller otherwise
@@ -126,7 +126,7 @@ const RbitModal = ({
       </>
     </AntdModal>
   );
-};
+}
 
 RbitModal.displayName = 'RbitModal';
 

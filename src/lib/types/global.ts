@@ -2,7 +2,7 @@ import type { RightProps } from '@Components/layout/right-column';
 import Search from '@Components/search';
 import { ReactNode, SyntheticEvent } from 'react';
 
-export type LogosType = {
+export interface LogosType {
     expanded: {
         light: string | ReactNode,
         dark: string | ReactNode
@@ -11,23 +11,23 @@ export type LogosType = {
         light: string | ReactNode,
         dark: string | ReactNode
     }
-};
+}
 
-export type ApplicationType = {
+export interface ApplicationType {
     key: string,
     onChange: ()=> void,
     component: ReactNode
-};
+}
 
-export type MenuType = {
-    items: Array<MenuItem>,
+export interface MenuType {
+    items: MenuItem[],
     onSelect: (item: MenuItem) => void,
     selectedItem?: number | string,
     openMenuItem?: number,
     search?: typeof Search
-};
+}
 
-export type MenuItem = {
+export interface MenuItem {
     isLimitedToPremium?: boolean,
     icon?: string,
     title: string,
@@ -37,10 +37,10 @@ export type MenuItem = {
     disabled?: boolean,
     iconRotate?: number,
     link?: string | ReactNode,
-    children?: Array<MenuItem>
-};
+    children?: MenuItem[]
+}
 
-export type LayoutProps = {
+export interface LayoutProps {
     bottomDrawerContent?: ReactNode | null,
     bottomDrawerTitle?: string | null,
     hasHeaderContentDark?: boolean | null,
@@ -74,7 +74,7 @@ export type LayoutProps = {
     rightColumnHeaderAltContent: ReactNode,
     rightColumnListBox: RightProps,
     rightContent: ReactNode | null,
-    secondaryColumnBreadcrumbs: Array<string | ReactNode>,
+    secondaryColumnBreadcrumbs: (string | ReactNode)[],
     secondaryColumnTitle: string,
     secondaryLogoCallback?: () => void,
     secondaryLogos: LogosType,
@@ -86,4 +86,4 @@ export type LayoutProps = {
     userAvatarPath: string,
     userClassification: string,
     userName: string
-};
+}

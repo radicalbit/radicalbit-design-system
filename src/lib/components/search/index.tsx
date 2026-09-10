@@ -11,7 +11,7 @@ type Props = SearchProps & {
   onChange?: ChangeEventHandler<HTMLInputElement>
 }
 
-const Search = ({
+function Search({
   className = '',
   modifier = '',
   placeholder,
@@ -19,8 +19,8 @@ const Search = ({
   onChange,
   allowClear,
   ...otherProps
-}: Props) => (
-  <InputSearch
+}: Props) {
+  return <InputSearch
     placeholder={placeholder || 'Search'}
     onSearch={onSearch}
     onChange={onChange}
@@ -28,7 +28,7 @@ const Search = ({
     allowClear={allowClear === true ? { clearIcon: <FontAwesomeIcon icon={faSearch} /> } : allowClear}
     {...otherProps}
   />
-);
+}
 
 Search.displayName = 'Search';
 

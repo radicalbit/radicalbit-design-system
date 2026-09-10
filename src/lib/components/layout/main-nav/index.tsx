@@ -2,7 +2,7 @@ import Menu from '@Components/menu';
 import type { MenuItem, MenuType } from '@Src/lib/types/global';
 import { Fragment } from 'react';
 
-export type MainProps = {
+export interface MainProps {
   content?: React.ReactNode;
   contentDark?: boolean | null;
   hasLeftColumnCollapsed?: boolean | null;
@@ -19,7 +19,7 @@ export type MainProps = {
   hasHeaderContentDark?: boolean;
   hasMainContentDark?: boolean;
   showBottomDrawerOnHover?: string;
-};
+}
 
 const createMenuItem = (route: MenuItem, index: number) => {
   const className = `${route.className || ''}${

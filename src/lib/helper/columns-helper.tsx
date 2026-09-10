@@ -28,7 +28,7 @@ const standardColumn = (
   activeSort: Record<string, SortOrder | undefined> = {},
   activeFilters: Record<string, FilterValue | null | undefined> = {},
   sorter = false,
-  filters: Array<ColumnFilterItem> = [],
+  filters: ColumnFilterItem[] = [],
 ) => {
   const { dataIndex, key = dataIndex } = keyDataIndex;
   return ({
@@ -134,10 +134,12 @@ export const COLUMNS = {
       }
     ),
 
+  // No defaults here on purpose: they would sit before a non-default
+  // parameter, and standardColumn already defaults both to {}.
   generic: (title: string,
     keyDataIndex: { key?: string, dataIndex: string },
-    activeSort: Record<string, SortOrder | undefined> = {},
-    activeFilters: Record<string, FilterValue | null | undefined> = {},
+    activeSort: Record<string, SortOrder | undefined> | undefined,
+    activeFilters: Record<string, FilterValue | null | undefined> | undefined,
     custom: Record<string, unknown>) => (
     {
       ...standardColumn(keyDataIndex, title, activeSort, activeFilters),
