@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/radicalbit/radicalbit-design-system/compare/v3.0.0...v3.0.1) (2026-09-10)
+
+
+### Bug Fixes
+
+* restore types field and dist declaration layout ([#176](https://github.com/radicalbit/radicalbit-design-system/issues/176)) ([82ca7d7](https://github.com/radicalbit/radicalbit-design-system/commit/82ca7d712bd5751430abfe517eaf205f1522707c))
+
 ## [3.0.0](https://github.com/radicalbit/radicalbit-design-system/compare/v2.19.6...v3.0.0) (2026-09-09)
 
 
