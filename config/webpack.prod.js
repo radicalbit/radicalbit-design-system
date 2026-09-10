@@ -30,7 +30,10 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(js|ts)x?$/,
-        exclude: /node_modules/,
+        // `config/` holds build-time helpers (e.g. the style-loader `insert`
+        // module). They are outside `rootDir`, so letting ts-loader pick them
+        // up as root files breaks the declaration emit with TS6059.
+        exclude: [/node_modules/, path.resolve(__dirname)],
         use: ['babel-loader', {
           loader: 'ts-loader',
           options: {

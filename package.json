@@ -2,6 +2,7 @@
   "name": "@radicalbit/radicalbit-design-system",
   "version": "3.0.0",
   "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/radicalbit/radicalbit-design-system.git"
