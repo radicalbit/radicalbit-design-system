@@ -13,39 +13,8 @@ const config = {
 
   addons: [
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
+    '@storybook/addon-docs',
     '@storybook/addon-onboarding',
-    '@storybook/addon-interactions',
-    '@storybook/addon-styling-webpack',
-    ({
-      name: '@storybook/addon-styling-webpack',
-
-      options: {
-        rules: [{
-          test: /\.(less)$/,
-          sideEffects: true,
-          use: [
-            'style-loader',
-            {
-              loader: 'css-loader',
-              options: {},
-            },
-            {
-              loader: 'less-loader',
-              options: {
-                lessOptions: {
-                  javascriptEnabled: true,
-                  paths: [
-                    path.resolve(dirname, './node_modules'),
-                    path.resolve('./src/lib/components'),
-                  ],
-                },
-              },
-            },
-          ],
-        }],
-      },
-    }),
   ],
 
   swc: () => ({
@@ -80,6 +49,20 @@ const config = {
   },
 
   webpackFinal: async (config) => {
+    // webpack 5.110 turns on experiments.typescript, which handles .ts but
+    // not .tsx/JSX and grabs the files before swc-loader sees them. Every
+    // story here is .tsx, so it has to be off.
+    config.experiments = { ...config.experiments, typescript: false };
+
+    // With experiments.typescript off nothing compiles .ts/.tsx any more:
+    // the builder relied on it. babel-loader is already what the library
+    // build uses for these files, and @swc/core is not even installed.
+    config.module.rules.push({
+      test: /\.[jt]sx?$/,
+      exclude: /node_modules/,
+      use: [{ loader: 'babel-loader' }],
+    });
+
     config.resolve.alias = {
       ...config.resolve.alias,
       '@Src': path.resolve(dirname, '../src/'),
@@ -90,6 +73,29 @@ const config = {
       '@Styles': path.resolve(dirname, '../src/styles/'),
       '@Images': path.resolve(dirname, '../src/lib/resources/images/'),
     };
+
+    // Was handled by @storybook/addon-styling-webpack, which supports
+    // storybook <= 10.4 and replaces the builder's own style rules.
+    config.module.rules.push({
+      test: /\.less$/,
+      sideEffects: true,
+      use: [
+        'style-loader',
+        { loader: 'css-loader', options: {} },
+        {
+          loader: 'less-loader',
+          options: {
+            lessOptions: {
+              javascriptEnabled: true,
+              paths: [
+                path.resolve(dirname, './node_modules'),
+                path.resolve('./src/lib/components'),
+              ],
+            },
+          },
+        },
+      ],
+    });
 
     const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
     fileLoaderRule.exclude = /\.svg$/;

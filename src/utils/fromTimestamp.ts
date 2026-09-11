@@ -1,5 +1,5 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 export function fromTimestamp(timestamp: number) {
-  return moment(new Date(timestamp)).format('YYYY-MM-DD HH:mm').toString();
+  return dayjs(new Date(timestamp)).format('YYYY-MM-DD HH:mm').toString();
 }

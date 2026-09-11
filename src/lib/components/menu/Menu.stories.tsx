@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { faAbacus } from '@fortawesome/free-solid-svg-icons';
+import { faTable } from '@fortawesome/free-solid-svg-icons';
 import Menu from ".";
 import FontAwesomeIcon from '../font-awesome-icon';
 
@@ -27,7 +27,7 @@ export const Default: Story = {
       title: 'Menu',
       label: 'Menu',
       key: 'menu',
-      icon: <FontAwesomeIcon icon={faAbacus} />,
+      icon: <FontAwesomeIcon icon={faTable} />,
     }],
   },
 

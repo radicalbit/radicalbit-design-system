@@ -31,15 +31,13 @@
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.12.9",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/plugin-transform-class-properties": "^7.29.7",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
-    "@babel/preset-typescript": "7.23.3",
+    "@babel/preset-typescript": "^7.29.7",
     "@babel/runtime": "^7.12.5",
-    "@storybook/addon-essentials": "^8.6.14",
-    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-docs": "^10.6.0",
     "@storybook/addon-links": "^10.6.0",
     "@storybook/addon-onboarding": "^10.6.0",
     "@storybook/addon-styling-webpack": "^3.0.2",
@@ -59,7 +57,6 @@
     "ace-builds": "^1.44.0",
     "babel-jest": "^30.5.1",
     "babel-loader": "^10.1.1",
-    "babel-plugin-webpack-alias": "^2.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "14.0.0",
     "css-loader": "^7.1.5",
@@ -102,9 +99,9 @@
     "antd": "5.23.2",
     "classnames": "^2.2.6",
     "codemirror": "^6.0.2",
+    "dayjs": "^1.11.13",
     "immutability-helper": "^3.1.1",
     "lodash": "^4.18.1",
-    "moment": "^2.24.0",
     "postcss-custom-properties": "^15.0.1",
     "react": "^19.2.8",
     "react-codemirror2": "^9.0.1",
@@ -120,9 +117,6 @@
     "styled-components": "^6.5.3",
     "ts-loader": "9.6.2",
     "typescript": "5.9.3"
-  },
-  "resolutions": {
-    "babel-loader": "8.1.0"
   },
   "files": [
     "dist"

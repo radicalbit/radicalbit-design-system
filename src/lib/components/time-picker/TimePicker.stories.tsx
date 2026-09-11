@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import TimePicker from '.';
 
 const meta: Meta<typeof TimePicker> = {
@@ -17,7 +17,7 @@ export const Default: Story = {
     layout: 'centered',
   },
   args: {
-    value: moment(),
+    value: dayjs(),
   },
 };
 

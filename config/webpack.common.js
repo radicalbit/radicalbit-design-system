@@ -52,7 +52,7 @@ module.exports = {
             cacheDirectory: true,
             plugins: [
               'react-hot-loader/babel',
-              '@babel/plugin-proposal-class-properties',
+              '@babel/plugin-transform-class-properties',
             ],
           },
         },
