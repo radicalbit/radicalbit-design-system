@@ -1,33 +1,30 @@
+// antd v6: `.ant-select-selector` no longer exists. Border, background, radius
+// and padding now live on the `.ant-select` root, and the placeholder moved
+// from `.ant-select-selection-placeholder` to `.ant-select-placeholder`.
 .ant-select.c-select {
 	vertical-align: top;
 	background: var(--coo-bk-lv1);
 	border-radius: 6px;
+	color: var(--coo-fg-black);
 
-	.ant-select-selector {
-		.ant-select-selection-item {
-			color: var(--coo-fg-black);
-		}
-
-		&:not(.ant-select-customize-input) {
-			color: var(--coo-fg-black);
-			background-color: transparent;
-		}
+	.ant-select-selection-item {
+		color: var(--coo-fg-black);
 	}
 
-	.ant-select-selection-placeholder {
+	.ant-select-placeholder {
 		color: var(--coo-fg-black);
 		opacity: .25;
 	}
 
 	&:hover {
-		&.ant-select-outlined:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+		&.ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input) {
 			border-color: var(--coo-primary);
 		}
 	}
 
-	&.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector,
-	.ant-select-selector:focus,
-	.ant-select-selector:active {
+	&.ant-select-focused:not(.ant-select-disabled):not(.ant-select-customize-input),
+	&:focus,
+	&:active {
 		border-color: var(--coo-primary);
 		box-shadow: 0 0 0 2px rgba(var(--coo-rgb-secondary-01), .15);
 	}
@@ -37,10 +34,8 @@
 	}
 
 	&--no-border {
-		.ant-select-selector {
-			border: 0;
-			background: transparent;
-		}
+		border: 0;
+		background: transparent;
 
 		&:hover {
 			.ant-select-arrow {
@@ -51,30 +46,26 @@
 
 	&--as-tag {
 		&.ant-select {
-			.ant-select-selector {
-				border-radius: 2rem;
-				border-color: var(--coo-primary);
-				border-style: dashed;
-				font-family: var(--coo-header-font);
-				font-weight: var(--coo-font-weight-bold);
+			border-radius: 2rem;
+			border-color: var(--coo-primary);
+			border-style: dashed;
+			font-family: var(--coo-header-font);
+			font-weight: var(--coo-font-weight-bold);
 
-				.ant-select-selection-placeholder {
-					color: var(--coo-primary);
-					opacity: 1;
-					display: flex !important;
-					justify-content: center;
-					gap: .5rem;
-					align-items: center;
-				}
+			.ant-select-placeholder {
+				color: var(--coo-primary);
+				opacity: 1;
+				display: flex !important;
+				justify-content: center;
+				gap: .5rem;
+				align-items: center;
 			}
 
 			&:hover {
-				.ant-select-selector {
-					border-color: var(--coo-highlight-border);
+				border-color: var(--coo-highlight-border);
 
-					.ant-select-selection-placeholder {
-						color: var(--coo-primary);
-					}
+				.ant-select-placeholder {
+					color: var(--coo-primary);
 				}
 			}
 		}
@@ -87,12 +78,9 @@
 	&&--readonly {
 		cursor: default;
 		pointer-events: none;
-
-		.ant-select-selector {
-			border: 0;
-			background-color: transparent;
-			padding: 0;
-		}
+		border: 0;
+		background-color: transparent;
+		padding: 0;
 
 		.ant-select-arrow {
 			display: none;
@@ -100,7 +88,7 @@
 	}
 }
 
-.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+.ant-select:not(.ant-select-customize-input) {
 	border-color: transparent;
 }
 

@@ -1,3 +1,5 @@
+// antd v6: popover inner -> container, inner-content -> content;
+// popconfirm message-title -> title.
 .c-popconfirm {
 	color: var(--coo-fg-black);
 
@@ -6,11 +8,11 @@
 		pointer-events: none;
 	}
 
-	.ant-popover-inner {
+	.ant-popover-container {
 		background-color: var(--coo-bk-lv2);
 	}
 
-	.ant-popover-inner-content {
+	.ant-popover-content {
 		max-width: 16rem;
 		line-height: var(--coo-line-height-s);
 		font-weight: var(--coo-font-weight-light) !important;
@@ -19,7 +21,7 @@
 	.ant-popconfirm-message {
 		font-weight: var(--coo-font-weight-light);
 
-		.ant-popconfirm-message-title {
+		.ant-popconfirm-title {
 			font-size: var(--coo-font-size-s);
 			display: block;
 			max-width: 25rem;
@@ -48,7 +50,7 @@
 			max-width: inherit;
 		}
 
-		.ant-popconfirm-message-title {
+		.ant-popconfirm-title {
 			max-height: inherit;
 			max-width: inherit;
 		}
@@ -74,7 +76,7 @@
 
 	&--wrap-title {
 		.ant-popconfirm-message {
-			.ant-popconfirm-message-title {
+			.ant-popconfirm-title {
 				display: -webkit-box;
 			}
 		}

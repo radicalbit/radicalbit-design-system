@@ -172,10 +172,9 @@ textarea::placeholder {
 }
 
 .ant-select {
+	// antd v6: the border lives on the `.ant-select` root, not on a child.
 	&:not(.ant-select-disabled):hover {
-		.ant-select-selector {
-			border-color: var(--coo-primary);
-		}
+		border-color: var(--coo-primary);
 	}
 }
 

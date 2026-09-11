@@ -1,3 +1,4 @@
+// antd v6: `.ant-modal-content` is now `.ant-modal-container`.
 .c-rbit-modal {
 	&.ant-modal  {
 		font-weight: normal;
@@ -6,7 +7,7 @@
 	}
 
 	> div {
-		.ant-modal-content {
+		.ant-modal-container {
 			background-color: var(--c-rbit-modal-background, var(--coo-bk-lv0));
 			height: 100%;
 
@@ -52,15 +53,15 @@
 		}
 	}
 
-	&--bg-lv0 > div .ant-modal-content {
+	&--bg-lv0 > div .ant-modal-container {
 		background-color: var(--c-rbit-modal-background, var(--coo-bk-lv0));
 	}
 
-	&--bg-lv1 > div .ant-modal-content {
+	&--bg-lv1 > div .ant-modal-container {
 		background-color: var(--c-rbit-modal-background, var(--coo-bk-lv1));
 	}
 
-	&--bg-lv2 > div .ant-modal-content {
+	&--bg-lv2 > div .ant-modal-container {
 		background-color: var(--c-rbit-modal-background, var(--coo-bk-lv2));
 	}
 
@@ -74,7 +75,7 @@
 		> div {
 			height: 100vh;
 
-			.ant-modal-content {
+			.ant-modal-container {
 				border-radius: 0;
 
 				.ant-modal-body {

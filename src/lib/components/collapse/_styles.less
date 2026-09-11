@@ -1,12 +1,16 @@
+// antd v6 renamed the Collapse internals:
+//   v5 content     -> panel
+//   v5 content-box -> body
+//   v5 icon-position-* -> icon-placement-* ('left' is now 'start')
 .c-collapse {
 	&--horizontal__scroll {
-		.ant-collapse .ant-collapse-item .ant-collapse-content .ant-collapse-content-box {
+		.ant-collapse .ant-collapse-item .ant-collapse-panel .ant-collapse-body {
 			overflow-x: auto;
 		}
 	}
 
 	&--vertical__scroll {
-		.ant-collapse .ant-collapse-item .ant-collapse-content .ant-collapse-content-box {
+		.ant-collapse .ant-collapse-item .ant-collapse-panel .ant-collapse-body {
 			overflow-y: auto;
 		}
 	}
@@ -34,13 +38,13 @@
 				}
 			}
 
-			.ant-collapse-content {
+			.ant-collapse-panel {
 				border-top: none;
 				color: var(--coo-fg-black);
 				font-weight: var(--coo-font-weight-light);
 				background: transparent;
 
-				.ant-collapse-content-box {
+				.ant-collapse-body {
 					overflow-x: auto;
 					padding: 0 1rem 1rem 1rem;
 				}
@@ -82,7 +86,7 @@
 			}
 		}
 
-		&-position-end > .ant-collapse-item > .ant-collapse-header {
+		&-icon-placement-end > .ant-collapse-item > .ant-collapse-header {
 			padding: 1rem;
 		}
 	}
@@ -108,8 +112,8 @@
 					}
 				}
 
-				.ant-collapse-content {
-					.ant-collapse-content-box {
+				.ant-collapse-panel {
+					.ant-collapse-body {
 						padding: .75rem 0;
 					}
 				}
@@ -117,7 +121,7 @@
 		}
 
 
-		&.ant-collapse-icon-position-end {
+		&.ant-collapse-icon-placement-end {
 			.ant-collapse-item {
 				.ant-collapse-header {
 					padding: .5rem 0 .5rem 0;
@@ -125,7 +129,7 @@
 			}
 		}
 
-		&.ant-collapse-icon-position-left {
+		&.ant-collapse-icon-placement-start {
 			.ant-collapse-header {
 				.ant-collapse-arrow {
 					left: 0;
@@ -168,7 +172,7 @@
 					font-weight: var(--coo-font-weight-light);
 				}
 
-				.ant-collapse-content {
+				.ant-collapse-panel {
 					color: var(--coo-error);
 					background-color: var(--coo-alert-bk);
 				}
@@ -190,7 +194,7 @@
 					background-color: rgba(var(--coo-rgb-secondary), .1);
 				}
 
-				.ant-collapse-content {
+				.ant-collapse-panel {
 					background-color: rgba(var(--coo-rgb-secondary), .1);
 				}
 			}
@@ -204,7 +208,7 @@
 					background-color: rgba(var(--coo-rgb-primary), .1);
 				}
 
-				.ant-collapse-content {
+				.ant-collapse-panel {
 					background-color: rgba(var(--coo-rgb-primary), .1);
 				}
 			}

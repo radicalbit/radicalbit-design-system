@@ -1,11 +1,13 @@
+// antd v6 flattened the popover DOM: `content > inner > inner-content`
+// became `container > content`. Background/padding live on `-container`.
 .c-popover {
 	color: var(--coo-fg-black);
 
-	.ant-popover-inner {
+	.ant-popover-container {
 		background-color: var(--coo-bk-lv2);
 		color: var(--coo-fg-black);
 
-		.ant-popover-inner-content {
+		.ant-popover-content {
 			width: 100%;
 			color: var(--coo-fg-black);
 		}
@@ -16,7 +18,7 @@
 	}
 
 	&--noPadding {
-		.ant-popover-inner-content {
+		.ant-popover-content {
 			padding: 0;
 		}
 	}
@@ -41,7 +43,7 @@
 			font-weight: var(--coo-font-weight-normal);
 		}
 
-		.ant-popover-inner-content {
+		.ant-popover-content {
 			font-weight: var(--coo-font-weight-light);
 		}
 	}
@@ -50,11 +52,9 @@
 		font-size: var(--coo-font-size-s);
 		min-width: 12rem;
 
-		.ant-popover-content {
-			.ant-popover-inner {
-				.ant-popover-title {
-					color: var(--coo-fg-black);
-				}
+		.ant-popover-container {
+			.ant-popover-title {
+				color: var(--coo-fg-black);
 			}
 		}
 

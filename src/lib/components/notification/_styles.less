@@ -1,145 +1,134 @@
-.ant-notification {
-	.ant-notification-notice-wrapper {
+// antd v6 restructured the notification DOM and inverted the nesting relative
+// to v5: our `c-notification` className now lands on the outer node, above
+// `.ant-notification-notice`, and inside it:
+//   notice-wrapper > notice-icon + notice-section > notice-title/description
+// v5 `notice-content` is gone, and `notice-message` is now `notice-title`.
+.c-notification {
+	border-radius: 1rem;
+
+	.ant-notification-notice {
 		border-radius: 1rem;
+		padding: 1rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 
-		.c-notification {
-			border-radius: 1rem;
-			padding: 1rem;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
+	.ant-notification-notice-wrapper {
+		flex: 1 1 auto;
+		display: flex;
+	}
 
-			&--type-running {
-				background-color: var(--coo-primary-dark);
+	.ant-notification-notice-icon {
+		height: 2rem;
+		width: 2rem;
+		border-radius: 50%;
+		margin-left: 0;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-				.ant-notification-notice-icon {
-					border-color: var(--coo-white);
-					background: transparent;
+	.ant-notification-notice-section {
+		margin-left: .5rem;
+	}
 
-					> svg {
-						color: var(--coo-white);
-					}
-				}
+	.ant-notification-notice-description {
+		font-size: .75rem;
+		padding: 0;
+	}
 
-				.ant-notification-notice-message {
-					color: var(--coo-white);
-				}
+	.ant-notification-notice-title {
+		margin-bottom: 0;
+		font-size: 1rem;
+		font-weight: var(--coo-font-weight-bold);
+		padding: 0;
+	}
 
-				.ant-notification-notice-description {
-					color: var(--coo-white);
-				}
+	.ant-notification-notice-close {
+		position: relative;
+		right: 0;
+		top: 0;
+	}
 
-				.ant-notification-notice-close {
-					svg {
-						fill: var(--coo-white);
-					}
-				}
+	&--type-running {
+		background-color: var(--coo-primary-dark);
+
+		.ant-notification-notice-icon {
+			border-color: var(--coo-white);
+			background: transparent;
+
+			> svg {
+				color: var(--coo-white);
 			}
+		}
 
-			&--type-success,
-			&--type-completed {
-				border: 1px solid rgba(var(--coo-rgb-success), .5);
-				background: var(--coo-success-bk);
+		.ant-notification-notice-title,
+		.ant-notification-notice-description {
+			color: var(--coo-white);
+		}
 
-				.ant-notification-notice-icon {
-					border-color: var(--coo-success);
-					background: transparent;
+		.ant-notification-notice-close svg {
+			fill: var(--coo-white);
+		}
+	}
 
-					> svg {
-						color: var(--coo-success);
-					}
-				}
+	&--type-success,
+	&--type-completed {
+		border: 1px solid rgba(var(--coo-rgb-success), .5);
+		background: var(--coo-success-bk);
 
-				.ant-notification-notice-message {
-					color: var(--coo-fg-black);
-				}
+		.ant-notification-notice-icon {
+			border-color: var(--coo-success);
+			background: transparent;
 
-				.ant-notification-notice-description {
-					color: var(--coo-fg-black);
-				}
-
-				.ant-notification-notice-close {
-					svg {
-						fill: var(--coo-fg-black);
-					}
-				}
+			> svg {
+				color: var(--coo-success);
 			}
+		}
 
-			&--type-error {
-				border: 1px solid rgba(var(--coo-rgb-error), .5);
-				background: var(--coo-error-bk-light);
+		.ant-notification-notice-title,
+		.ant-notification-notice-description {
+			color: var(--coo-fg-black);
+		}
 
-				.ant-notification-notice-icon {
-					border-color: var(--coo-error);
-					background: transparent;
+		.ant-notification-notice-close svg {
+			fill: var(--coo-fg-black);
+		}
+	}
 
-					> svg {
-						color: var(--coo-error);
-					}
-				}
+	&--type-error {
+		border: 1px solid rgba(var(--coo-rgb-error), .5);
+		background: var(--coo-error-bk-light);
 
-				.ant-notification-notice-message {
-					color: var(--coo-fg-black);
-				}
+		.ant-notification-notice-icon {
+			border-color: var(--coo-error);
+			background: transparent;
 
-				.ant-notification-notice-description {
-					color: var(--coo-fg-black);
-				}
-
-				.ant-notification-notice-close {
-					svg {
-						fill: var(--coo-fg-black);
-					}
-				}
+			> svg {
+				color: var(--coo-error);
 			}
+		}
 
-			&--clickable {
-				cursor: pointer;
-			}
+		.ant-notification-notice-title,
+		.ant-notification-notice-description {
+			color: var(--coo-fg-black);
+		}
 
-			.ant-notification-notice-content {
-				flex: 1 1 auto;
+		.ant-notification-notice-close svg {
+			fill: var(--coo-fg-black);
+		}
+	}
 
-				.ant-notification-notice-description {
-					margin-left: 2.5rem;
-					font-size: .75rem;
-					padding: 0;
-				}
+	&--clickable {
+		cursor: pointer;
+	}
 
-				.ant-notification-notice-message {
-					margin-left: 2.5rem;
-					margin-bottom: 0;
-					font-size: 1rem;
-					font-weight: var(--coo-font-weight-bold);
-					padding: 0;
-				}
-
-				.ant-notification-notice-icon {
-					height: 2rem;
-					width: 2rem;
-					border-radius: 50%;
-					margin-left: 0;
-					text-align: center;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				}
-			}
-
-			&--icon-with-border {
-				.ant-notification-notice-content {
-					.ant-notification-notice-icon {
-						border-width: 1px;
-						border-style: solid;
-					}
-				}
-			}
-
-			.ant-notification-notice-close {
-				position: relative;
-				right: 0;
-				top: 0;
-			}
+	&--icon-with-border {
+		.ant-notification-notice-icon {
+			border-width: 1px;
+			border-style: solid;
 		}
 	}
 }

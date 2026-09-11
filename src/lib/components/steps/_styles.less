@@ -1,3 +1,9 @@
+// antd v6 restructured the Steps item DOM:
+//   v5 item-container        -> item-wrapper
+//   v5 item-content (box)    -> item-section
+//   v5 item-description      -> item-content
+//   v5 steps-icon            -> item-icon-number / item-icon-finish
+// The connector line moved from `item-title::after` to its own `item-rail`.
 .c-steps {
 	&.ant-steps {
 		.ant-steps-item {
@@ -7,17 +13,19 @@
 					border-color: var(--coo-primary);
 				}
 
-				> .ant-steps-item-container {
-					> .ant-steps-item-content {
-						> .ant-steps-item-title {
-							color: var(--coo-fg-black);
+				> .ant-steps-item-wrapper {
+					> .ant-steps-item-section {
+						> .ant-steps-item-header {
+							> .ant-steps-item-title {
+								color: var(--coo-fg-black);
+							}
 
-							&::after {
+							> .ant-steps-item-rail {
 								background-color: var(--coo-secondary-02);
 							}
 						}
 
-						> .ant-steps-item-description {
+						> .ant-steps-item-content {
 							color: var(--coo-fg-black);
 						}
 					}
@@ -29,22 +37,25 @@
 					background-color: var(--coo-bk-lv1);
 					border: 1px solid var(--coo-secondary-03);
 
-					.ant-steps-icon {
+					.ant-steps-item-icon-number,
+					.ant-steps-item-icon-finish {
 						color: var(--coo-fg-black);
 					}
 				}
 
-				> .ant-steps-item-container {
-					> .ant-steps-item-content {
-						> .ant-steps-item-title {
-							color: var(--coo-fg-black);
+				> .ant-steps-item-wrapper {
+					> .ant-steps-item-section {
+						> .ant-steps-item-header {
+							> .ant-steps-item-title {
+								color: var(--coo-fg-black);
+							}
 
-							&::after {
+							> .ant-steps-item-rail {
 								background-color: var(--coo-secondary-02);
 							}
 						}
 
-						> .ant-steps-item-description {
+						> .ant-steps-item-content {
 							color: var(--coo-fg-black);
 						}
 					}
@@ -56,22 +67,25 @@
 					background-color: var(--coo-primary-04);
 					border-color: var(--coo-primary-04);
 
-					> .ant-steps-icon {
+					> .ant-steps-item-icon-number,
+					> .ant-steps-item-icon-finish {
 						color: var(--coo-primary);
 					}
 				}
 
-				> .ant-steps-item-container {
-					> .ant-steps-item-content {
-						> .ant-steps-item-title {
-							color: var(--coo-fg-black);
+				> .ant-steps-item-wrapper {
+					> .ant-steps-item-section {
+						> .ant-steps-item-header {
+							> .ant-steps-item-title {
+								color: var(--coo-fg-black);
+							}
 
-							&::after {
+							> .ant-steps-item-rail {
 								background-color: var(--coo-primary);
 							}
 						}
 
-						> .ant-steps-item-description {
+						> .ant-steps-item-content {
 							color: var(--coo-fg-black);
 						}
 					}
@@ -83,31 +97,33 @@
 					background-color: var(--coo-error);
 					border-color: var(--coo-error);
 
-					.ant-steps-icon {
+					.ant-steps-item-icon-number,
+					.ant-steps-item-icon-finish {
 						color: var(--coo-white);
 					}
 				}
 			}
 
 			&:not(.ant-steps-item-active):not(.ant-steps-item-process) {
-				> .ant-steps-item-container[role='button']:hover {
+				> .ant-steps-item-wrapper[role='button']:hover {
 					.ant-steps-item-icon {
 						border-color: var(--coo-primary);
 
-						.ant-steps-icon {
+						.ant-steps-item-icon-number,
+						.ant-steps-item-icon-finish {
 							color: var(--coo-primary);
 						}
 					}
 
 					.ant-steps-item-title,
 					.ant-steps-item-subtitle,
-					.ant-steps-item-description {
+					.ant-steps-item-content {
 						color: var(--coo-primary);
 					}
 				}
 			}
 
-			&-container {
+			&-wrapper {
 				display: flex;
 				align-items: center;
 
@@ -116,7 +132,7 @@
 					font-weight: var(--coo-font-weight-bold);
 				}
 
-				.ant-steps-item-description {
+				.ant-steps-item-content {
 					font-size: var(--coo-font-size-xs);
 					font-weight: var(--coo-font-weight-normal);
 					white-space: nowrap;

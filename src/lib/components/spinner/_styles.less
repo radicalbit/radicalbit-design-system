@@ -37,11 +37,13 @@
 		}
 	}
 
-	&.ant-spin-nested-loading {
-		div {
-			.ant-spin {
-				max-height: 100%;
-			}
+	// antd v6: `.ant-spin-nested-loading` is gone; the root is `.ant-spin`
+	// itself and `.ant-spin-section` holds the indicator.
+	&.ant-spin {
+		max-height: 100%;
+
+		> .ant-spin-section {
+			max-height: 100%;
 		}
 	}
 }

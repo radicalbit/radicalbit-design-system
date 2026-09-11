@@ -12,26 +12,22 @@
 		}
 	}
 
+	// antd v6: `.ant-radio-inner` is gone; `.ant-radio` is the dot itself.
 	.ant-radio-wrapper:hover .ant-radio,
-	.ant-radio:hover .ant-radio-inner,
-	.ant-radio-input:focus + .ant-radio-inner,
+	.ant-radio:has(.ant-radio-input:focus-visible),
 	.ant-radio-checked::after {
 		border-color: var(--coo-primary);
 	}
 
-	.ant-radio-inner {
-		&::after {
-			background-color: var(--coo-primary);
-		}
+	.ant-radio::after {
+		background-color: var(--coo-primary);
 	}
 
 	.ant-radio-checked {
-		.ant-radio-inner {
-			border-color: var(--coo-primary);
+		border-color: var(--coo-primary);
 
-			&::after {
-				background-color: var(--coo-primary);
-			}
+		&::after {
+			background-color: var(--coo-primary);
 		}
 	}
 

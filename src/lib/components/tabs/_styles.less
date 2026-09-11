@@ -50,8 +50,10 @@
 
 
 	&.ant-tabs {
-		.ant-tabs-content,
-		.ant-tabs-tabpane-active {
+		// antd v6: the pane is `.ant-tabs-content` (active: `-content-active`),
+		// wrapped by `.ant-tabs-body` inside `.ant-tabs-body-holder`.
+		.ant-tabs-body,
+		.ant-tabs-content-active {
 			height: 100%;
 		}
 	}
@@ -61,11 +63,11 @@
 		display: flex;
 		flex-direction: column;
 
-		> .ant-tabs-content {
+		> .ant-tabs-body-holder {
 			overflow: auto;
 			flex: 1;
 
-			.ant-tabs-tabpane-active {
+			.ant-tabs-content-active {
 				height: 100%;
 			}
 		}
@@ -126,7 +128,7 @@
 	}
 
 	&--padded-content {
-		> .ant-tabs-content-holder {
+		> .ant-tabs-body-holder {
 			padding: 1rem;
 		}
 	}
