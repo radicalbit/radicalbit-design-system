@@ -19,7 +19,7 @@ interface Props<T extends Record<string, unknown>> {
   mask: boolean;
   mode?: 'light' | 'dark';
   modifier?: string;
-  onClose: (e: React.MouseEvent | React.KeyboardEvent) => void;
+  onClose: (e: React.MouseEvent | KeyboardEvent | React.KeyboardEvent) => void;
   open: boolean;
   width?: number;
 }

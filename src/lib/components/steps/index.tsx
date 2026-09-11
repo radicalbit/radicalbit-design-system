@@ -1,16 +1,14 @@
 import AntdSteps, { StepsProps } from 'antd/es/steps';
 
-const { Step } = AntdSteps;
 type Props = StepsProps & {
   modifier?: string;
 };
 
 function Steps({
-  children,
   className = '',
   current,
   direction,
-  labelPlacement,
+  titlePlacement,
   modifier = '',
   status,
   ...others
@@ -29,17 +27,13 @@ function Steps({
     <AntdSteps
       direction={direction || 'vertical'}
       current={current}
-      labelPlacement={labelPlacement}
+      titlePlacement={titlePlacement}
       status={status}
       className={`c-steps ${className} ${modifier}`}
       {...others}
-    >
-      {children}
-    </AntdSteps>
+    />
   );
 }
-
-Steps.Step = Step;
 
 Steps.displayName = 'Steps';
 export default Steps;

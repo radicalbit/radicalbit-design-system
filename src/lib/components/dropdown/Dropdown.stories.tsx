@@ -1,16 +1,15 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Menu } from 'antd';
 import Dropdown from '.';
 
-const menu = () => (
-  <Menu>
-    <Menu.Item>Save Layout</Menu.Item>
-    <Menu.Item>Delete Dashboard</Menu.Item>
-    <Menu.Divider />
-    <Menu.Item>Add Widget</Menu.Item>
-    <Menu.Item danger>Danger Item</Menu.Item>
-  </Menu>
-);
+const menu = {
+  items: [
+    { key: '1', label: 'Save Layout' },
+    { key: '2', label: 'Delete Dashboard' },
+    { type: 'divider' as const },
+    { key: '3', label: 'Add Widget' },
+    { key: '4', label: 'Danger Item', danger: true },
+  ],
+};
 
 const meta: Meta<typeof Dropdown> = {
   title: 'Components/Dropdown',
@@ -29,7 +28,7 @@ type Story = StoryObj<typeof Dropdown>;
 export const Default: Story = {
   args: {},
   render: (props) => (
-    <Dropdown {...props} overlay={menu}>
+    <Dropdown {...props} menu={menu}>
       <a>Hover me</a>
     </Dropdown>
   ),

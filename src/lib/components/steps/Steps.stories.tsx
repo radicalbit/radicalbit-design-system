@@ -1,8 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Steps from '.';
 
-const { Step } = Steps;
-
 const meta: Meta<typeof Steps> = {
   title: 'Components/Steps',
   component: Steps,
@@ -18,14 +16,16 @@ const meta: Meta<typeof Steps> = {
 type Story = StoryObj<typeof Steps>;
 
 export const Default: Story = {
-  args: { current: 1, type: 'navigation' },
-  render: (props) => (
-    <Steps {...props}>
-      <Step title="Finished" description="This is a description." />
-      <Step title="In Progress" description="This is a description." />
-      <Step title="Waiting" description="This is a description." />
-    </Steps>
-  ),
+  args: {
+    current: 1,
+    type: 'navigation',
+    items: [
+      { title: 'Finished', content: 'This is a description.' },
+      { title: 'In Progress', content: 'This is a description.' },
+      { title: 'Waiting', content: 'This is a description.' },
+    ],
+  },
+  render: (props) => <Steps {...props} />,
 };
 
 export default meta;

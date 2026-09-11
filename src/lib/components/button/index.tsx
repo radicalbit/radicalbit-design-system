@@ -1,8 +1,9 @@
 import AntdButton from 'antd/es/button';
-import ButtonGroup from 'antd/es/button/button-group';
-import { ButtonProps } from 'antd/es/button/button';
+import { ButtonProps } from 'antd/es/button/Button';
 import classNames from 'classnames';
 import { forwardRef, ReactNode, Ref } from 'react';
+
+const ButtonGroup = AntdButton.Group;
 
 export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
   type?:
