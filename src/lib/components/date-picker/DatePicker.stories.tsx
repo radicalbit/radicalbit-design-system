@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import DatePicker from ".";
 
 const meta: Meta<typeof DatePicker> = {
@@ -19,7 +19,7 @@ type Story = StoryObj<typeof DatePicker>;
 
 export const Default: Story = {
   args: {
-    defaultValue: moment('2024-01-01'),
+    defaultValue: dayjs('2024-01-01'),
     readOnly: false,
   },
 };

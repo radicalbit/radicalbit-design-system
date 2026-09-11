@@ -1,8 +1,11 @@
 import * as React from 'react';
-import moment from 'moment';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import Tooltip from '@Components/tooltip';
 import { ColumnFilterItem, FilterValue, SortOrder } from 'antd/es/table/interface';
 import { fromTimestamp } from '@Src/utils/fromTimestamp';
+
+dayjs.extend(relativeTime);
 
 const numberOfDaysToUseRelativeDate = 3;
 const STANDARD_COLUMNS = {
@@ -11,9 +14,9 @@ const STANDARD_COLUMNS = {
 };
 
 export const renderDateTime = (timestamp: number) => {
-  const difference = moment().diff(timestamp, 'days');
+  const difference = dayjs().diff(timestamp, 'day');
   const tooltipDate = fromTimestamp(timestamp);
-  const dateToShow = difference <= numberOfDaysToUseRelativeDate ? moment(timestamp).fromNow() : fromTimestamp(timestamp).substring(0, 10);
+  const dateToShow = difference <= numberOfDaysToUseRelativeDate ? dayjs(timestamp).fromNow() : fromTimestamp(timestamp).substring(0, 10);
 
   return (
     <Tooltip title={tooltipDate}>

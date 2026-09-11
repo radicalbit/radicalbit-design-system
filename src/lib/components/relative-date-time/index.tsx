@@ -1,6 +1,9 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import Tooltip from '@Components/tooltip';
 import { memo } from 'react';
+
+dayjs.extend(relativeTime);
 
 type Granularity = 'seconds' | 'days';
 
@@ -16,35 +19,35 @@ interface Props {
   withTooltip?: boolean;
 }
 
-const dateFormatter = (dateFormat: string, timestamp: string | number | Date) => moment(new Date(timestamp)).format(dateFormat).toString();
+const dateFormatter = (dateFormat: string, timestamp: string | number | Date) => dayjs(new Date(timestamp)).format(dateFormat).toString();
 
 const getRelativeDate = (timestamp: string | number | Date, minGranularity: Granularity) => {
   switch (minGranularity) {
     case 'seconds':
-      return moment(timestamp).fromNow();
+      return dayjs(timestamp).fromNow();
 
     case 'days':
-      if (moment().diff(timestamp, 'hours') < 22) {
-        const date = moment(timestamp);
-        const endOfYesterday = moment().add(-1, 'day').endOf('day');
-        const endOfToday = moment().endOf('day');
-        const endOfTomorrow = moment().add(1, 'day').endOf('day');
+      if (dayjs().diff(timestamp, 'hour') < 22) {
+        const date = dayjs(timestamp);
+        const endOfYesterday = dayjs().add(-1, 'day').endOf('day');
+        const endOfToday = dayjs().endOf('day');
+        const endOfTomorrow = dayjs().add(1, 'day').endOf('day');
 
-        if (date < endOfYesterday) {
+        if (date.isBefore(endOfYesterday)) {
           return 'Yesterday';
         }
-        if (date < endOfToday) {
+        if (date.isBefore(endOfToday)) {
           return 'Today';
         }
-        if (date < endOfTomorrow) {
+        if (date.isBefore(endOfTomorrow)) {
           return 'Tomorrow';
         }
       }
 
-      return moment(timestamp).fromNow();
+      return dayjs(timestamp).fromNow();
 
     default:
-      return moment(timestamp).fromNow();
+      return dayjs(timestamp).fromNow();
   }
 };
 
@@ -59,7 +62,7 @@ function RelativeDateTime({
   timestamp,
   withTooltip,
 }: Props) {
-  const difference = moment().diff(timestamp, 'days');
+  const difference = dayjs().diff(timestamp, 'day');
   const tooltipDate = dateFormatter(formatTooltip, timestamp);
 
   const dateToShow = difference <= threshold
