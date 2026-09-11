@@ -47,7 +47,7 @@
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@types/jest": "30.0.0",
-    "@types/node": "26.4.1",
+    "@types/node": "26.5.0",
     "@types/react": "19.2.18",
     "@types/react-color": "3.0.13",
     "@types/react-dom": "19.2.7",
@@ -70,7 +70,7 @@
     "eslint-plugin-storybook": "10.6.0",
     "eslint-webpack-plugin": "6.0.0",
     "file-loader": "^6.2.0",
-    "globals": "17.8.0",
+    "globals": "17.12.0",
     "husky": "^9.1.7",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.5.1",
@@ -89,7 +89,7 @@
     "webpack": "^5.110.3",
     "webpack-cli": "^7.2.3",
     "webpack-merge": "^6.0.1",
-    "webpack-notifier": "^1.8.0"
+    "webpack-notifier": "^1.17.0"
   },
   "resolutions": {
     "eslint-plugin-n": "17.24.0"
