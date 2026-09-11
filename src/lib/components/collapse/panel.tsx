@@ -5,12 +5,12 @@ import { ReactNode } from 'react';
 export interface PropsPanel {
   children?: ReactNode;
   className?: string;
-  dark?: boolean
+  dark?: boolean;
   extra?: ReactNode;
   header?: ReactNode;
   isActive?: boolean;
   modifier?: string;
-  key: string | number
+  key: string | number;
   noBody?: boolean;
   onHover?: () => void;
 }
@@ -51,9 +51,11 @@ function CollapsePanel({
 }
 
 function Hoverable({ body, onHover }: PropsHoverable) {
-  return <div className="c-collapse__hoverable" {...onHover}>
-    {body}
-  </div>
+  return (
+    <div className="c-collapse__hoverable" {...onHover}>
+      {body}
+    </div>
+  );
 }
 
 export default CollapsePanel;

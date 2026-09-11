@@ -9,7 +9,7 @@ import React, { useState, useRef } from 'react';
 
 type Props = SelectProps & {
   caseSensitive?: boolean;
-  dark?: boolean
+  dark?: boolean;
   items: { label: string; value: string }[];
   modifier?: string;
   notAllowDuplication?: boolean;
@@ -43,9 +43,9 @@ function SelectWithText({
   const [open, setOpen] = useState(false);
   const [visibilityChangeEnabled, setVisibilityChangeEnabled] = useState(true);
 
-  const isDuplicated = items.some(({ label }) => caseSensitive
+  const isDuplicated = items.some(({ label }) => (caseSensitive
     ? label === inputTextValue
-    : label.toLowerCase() === inputTextValue.toLowerCase());
+    : label.toLowerCase() === inputTextValue.toLowerCase()));
 
   const saveDisabled = (notAllowEmptyText && isEmpty(inputTextValue))
     || (notAllowDuplication && isDuplicated);

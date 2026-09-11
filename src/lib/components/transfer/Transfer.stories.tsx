@@ -36,7 +36,7 @@ export const Default: Story = {
   },
   render: (props) => {
     const [targetKeys, setTargetKeys] = useState(
-      mockData.filter((item) => +item.key % 3 > 1).map((item) => item.key)
+      mockData.filter((item) => +item.key % 3 > 1).map((item) => item.key),
     );
     const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
 
@@ -73,7 +73,7 @@ export const TransfertOperationFlexStart: Story = {
   },
   render: (props) => {
     const [targetKeys, setTargetKeys] = useState(
-      mockData.filter((item) => +item.key % 3 > 1).map((item) => item.key)
+      mockData.filter((item) => +item.key % 3 > 1).map((item) => item.key),
     );
     const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
 

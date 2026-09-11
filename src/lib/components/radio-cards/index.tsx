@@ -21,32 +21,34 @@ function RadioCards({
   options,
   value,
 }: Props) {
-  return <div className={`c-radio-cards ${modifier} ${className}`}>
-    {options.map((option: Option, i: number) => {
-      const handleOnChange = () => {
-        if (onChange) {
-          onChange(option.value);
-        }
-      };
+  return (
+    <div className={`c-radio-cards ${modifier} ${className}`}>
+      {options.map((option: Option, i: number) => {
+        const handleOnChange = () => {
+          if (onChange) {
+            onChange(option.value);
+          }
+        };
 
-      return (
-        <div
-          role="presentation"
-          key={i}
-          className={`c-radio-cards__option ${
-            value === option.value ? 'c-radio-cards--active' : ''
-          }`}
-          onClick={handleOnChange}
-        >
-          <div className="c-radio-cards__card">{option.card}</div>
+        return (
+          <div
+            role="presentation"
+            key={i}
+            className={`c-radio-cards__option ${
+              value === option.value ? 'c-radio-cards--active' : ''
+            }`}
+            onClick={handleOnChange}
+          >
+            <div className="c-radio-cards__card">{option.card}</div>
 
-          {option.title && (
-            <p className="c-radio-cards__title">{option.title}</p>
-          )}
-        </div>
-      );
-    })}
-  </div>
+            {option.title && (
+              <p className="c-radio-cards__title">{option.title}</p>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 RadioCards.displayName = 'RadioCards';

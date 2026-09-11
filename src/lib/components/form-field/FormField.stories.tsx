@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
-import FormField from ".";
+import FormField from '.';
 import { Input } from '../input';
 
 const meta: Meta<typeof FormField> = {

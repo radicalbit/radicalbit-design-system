@@ -7,14 +7,14 @@ import FontAwesomeIcon from '@Components/font-awesome-icon';
 import { Props as TooltipProps } from '@Components/tooltip';
 
 interface Props {
-  className?: string,
-  data: string,
-  label?: ReactNode,
-  modifier?: string,
-  show?: boolean
-  tooltipHide?: TooltipProps,
-  tooltipReveal?: TooltipProps,
-  copyToClipboard?: CopyToClipboardProps,
+  className?: string;
+  data: string;
+  label?: ReactNode;
+  modifier?: string;
+  show?: boolean;
+  tooltipHide?: TooltipProps;
+  tooltipReveal?: TooltipProps;
+  copyToClipboard?: CopyToClipboardProps;
 }
 
 function DataSecret({
@@ -70,11 +70,11 @@ function DataSecret({
 }
 
 interface DataProps {
-    data: string,
-    icon: IconDefinition,
-    onClick?: MouseEventHandler<SVGSVGElement>,
-    tooltip?: TooltipProps,
-    copyToClipboard?: CopyToClipboardProps,
+  data: string;
+  icon: IconDefinition;
+  onClick?: MouseEventHandler<SVGSVGElement>;
+  tooltip?: TooltipProps;
+  copyToClipboard?: CopyToClipboardProps;
 }
 
 function Data({

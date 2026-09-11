@@ -26,7 +26,7 @@ export const renderDateTime = (timestamp: number) => {
 };
 
 const standardColumn = (
-  keyDataIndex: { key?: string, dataIndex: string },
+  keyDataIndex: { key?: string; dataIndex: string },
   title: string,
   activeSort: Record<string, SortOrder | undefined> = {},
   activeFilters: Record<string, FilterValue | null | undefined> = {},
@@ -46,12 +46,14 @@ const standardColumn = (
 };
 
 export const COLUMNS = {
-  name: (title: 'Name',
-    keyDataIndex: { key?: string, dataIndex: string },
+  name: (
+    title: 'Name',
+    keyDataIndex: { key?: string; dataIndex: string },
     activeSort: Record<string, SortOrder | undefined> = {},
     custom: Record<string, unknown> = {},
     sorter: boolean | ((a: unknown, b: unknown) => boolean) = true,
-    width = 270) => COLUMNS
+    width = 270,
+  ) => COLUMNS
     .generic(
       title,
       keyDataIndex,
@@ -65,7 +67,7 @@ export const COLUMNS = {
     sorter = true,
     title = 'Created',
     dataIndex: string = STANDARD_COLUMNS.createdAt,
-    key: string = STANDARD_COLUMNS.createdAt
+    key: string = STANDARD_COLUMNS.createdAt,
   ) => COLUMNS
     .generic(
       title,
@@ -77,14 +79,14 @@ export const COLUMNS = {
         sorter,
         width: 150,
         render: renderDateTime,
-      }
+      },
     ),
 
   lastUpdateAt: (
     activeSort: Record<string, SortOrder | undefined> = {},
     activeFilters: Record<string, FilterValue | null | undefined> = {},
     sorter = false,
-    title = 'Updated'
+    title = 'Updated',
   ) => COLUMNS
     .generic(
       title,
@@ -96,15 +98,15 @@ export const COLUMNS = {
         sorter,
         width: 150,
         render: renderDateTime,
-      }
+      },
     ),
 
   version: (
     title: string,
-    keyDataIndex: { key?: string, dataIndex: string },
+    keyDataIndex: { key?: string; dataIndex: string },
     activeSort: Record<string, SortOrder | undefined> = {},
     sorter = false,
-    custom: Record<string, unknown> = {}
+    custom: Record<string, unknown> = {},
   ) => COLUMNS.generic(
     title,
     keyDataIndex,
@@ -115,15 +117,17 @@ export const COLUMNS = {
       width: 60,
       sorter,
       ...custom,
-    }
+    },
   ),
 
-  badge: (title: string,
-    keyDataIndex: { key?: string, dataIndex: string },
+  badge: (
+    title: string,
+    keyDataIndex: { key?: string; dataIndex: string },
     activeSort: Record<string, SortOrder | undefined> = {},
     activeFilters: Record<string, FilterValue | null | undefined> = {},
     sorter = false,
-    custom: Record<string, unknown> = {}) => COLUMNS
+    custom: Record<string, unknown> = {},
+  ) => COLUMNS
     .generic(
       title,
       keyDataIndex,
@@ -134,16 +138,18 @@ export const COLUMNS = {
         width: 60,
         sorter,
         ...custom,
-      }
+      },
     ),
 
   // No defaults here on purpose: they would sit before a non-default
   // parameter, and standardColumn already defaults both to {}.
-  generic: (title: string,
-    keyDataIndex: { key?: string, dataIndex: string },
+  generic: (
+    title: string,
+    keyDataIndex: { key?: string; dataIndex: string },
     activeSort: Record<string, SortOrder | undefined> | undefined,
     activeFilters: Record<string, FilterValue | null | undefined> | undefined,
-    custom: Record<string, unknown>) => (
+    custom: Record<string, unknown>,
+  ) => (
     {
       ...standardColumn(keyDataIndex, title, activeSort, activeFilters),
       ...custom,

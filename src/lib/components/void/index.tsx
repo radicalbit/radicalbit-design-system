@@ -10,7 +10,7 @@ interface Props {
   glitched?: boolean;
   image?: ReactNode;
   mode?: 'light' | 'dark';
-  modifier?: string /** Additional css classes */;
+  modifier?: string;
   size?: 'small' | 'xsmall';
   title?: ReactNode;
 }

@@ -11,7 +11,7 @@ interface Props {
   modifier?: string;
   onChange?: (value: boolean) => void;
   readOnly?: string;
-  skeleton?: boolean,
+  skeleton?: boolean;
 }
 
 function Switchbox({

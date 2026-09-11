@@ -10,7 +10,7 @@ type Props = RangePickerProps & {
   modifier?: string;
   openOnHover?: boolean;
   readOnly?: boolean;
-  skeleton?: boolean
+  skeleton?: boolean;
 };
 
 function RangePicker({

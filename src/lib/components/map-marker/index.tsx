@@ -27,7 +27,7 @@ function MapMarker({
     { name: 'height', value: height },
   ].reduce(
     (acc, { name, value }) => (value ? { ...acc, [name]: value } : { ...acc }),
-    {}
+    {},
   );
 
   return (

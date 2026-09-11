@@ -38,7 +38,7 @@ export function IconList() {
 
   const handleSearch = (s: string) => {
     setIcons(
-      initialIcons.filter(([key]) => key.toLowerCase().includes(s.toLowerCase()))
+      initialIcons.filter(([key]) => key.toLowerCase().includes(s.toLowerCase())),
     );
   };
 

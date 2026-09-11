@@ -3,9 +3,11 @@ import AntdIcon from 'antd/es/icon';
 import { AntdIconProps } from '@ant-design/icons/lib/components/AntdIcon';
 
 function Icon(props: AntdIconProps): ReactElement<typeof AntdIcon> {
-  return <AntdIcon
-    {...props}
-  />
+  return (
+    <AntdIcon
+      {...props}
+    />
+  );
 }
 
 export default Icon;

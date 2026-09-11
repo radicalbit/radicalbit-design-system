@@ -12,7 +12,7 @@ export interface List<T extends Record<string, unknown>> {
 }
 
 interface Props<T extends Record<string, unknown>> {
-  className?: string,
+  className?: string;
   header: React.ReactNode;
   list: List<T>;
   loading: boolean;

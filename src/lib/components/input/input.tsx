@@ -11,22 +11,24 @@ type Props = InputProps & {
   shape?: 'round';
   bordersStyle?: 'dashed';
   value?: string;
-  skeleton?: boolean,
-}
+  skeleton?: boolean;
+};
 
-const Input = forwardRef(({
-  disabled,
-  className = '',
-  modifier = '',
-  readOnly,
-  blank,
-  shape,
-  bordersStyle,
-  value,
-  skeleton,
-  ...others
-}: Props,
-ref: Ref<InputRef>) => {
+const Input = forwardRef((
+  {
+    disabled,
+    className = '',
+    modifier = '',
+    readOnly,
+    blank,
+    shape,
+    bordersStyle,
+    value,
+    skeleton,
+    ...others
+  }: Props,
+  ref: Ref<InputRef>,
+) => {
   const css = classNames({
     'c-input--readonly': readOnly,
     [`c-input--shape-${shape}`]: shape,

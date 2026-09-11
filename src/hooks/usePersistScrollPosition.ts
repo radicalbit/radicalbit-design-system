@@ -6,9 +6,9 @@ import {
 type PositionRef = MutableRefObject<{
   x: number;
   y: number;
-}>
+}>;
 
-type HTMLElmentRef = MutableRefObject<HTMLElement | null>
+type HTMLElmentRef = MutableRefObject<HTMLElement | null>;
 
 /*
   usePersistScrollPosition takes track of element scroll position,

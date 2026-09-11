@@ -4,8 +4,8 @@ import classNames from 'classnames';
 
 const DEFAULT_DURATION = 12;
 
-export type NotificationConfig = GlobalConfigProps &
-  Omit<ArgsProps, 'type'> & {
+export type NotificationConfig = GlobalConfigProps
+  & Omit<ArgsProps, 'type'> & {
     iconWithBorder?: boolean;
     modifier?: string;
     type?: ArgsProps['type'] | 'running' | 'completed' | 'success' | 'error';

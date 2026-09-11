@@ -15,12 +15,14 @@ function Dragger({
   modifier = '',
   ...others
 }: Props) {
-  return <AntdUpload.Dragger
-    className={`c-upload-drag  ${className} ${modifier}`}
-    {...others}
-  >
-    {children}
-  </AntdUpload.Dragger>
+  return (
+    <AntdUpload.Dragger
+      className={`c-upload-drag  ${className} ${modifier}`}
+      {...others}
+    >
+      {children}
+    </AntdUpload.Dragger>
+  );
 }
 
 Dragger.displayName = 'Dragger';

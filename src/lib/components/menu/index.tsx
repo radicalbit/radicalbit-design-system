@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 export type Props = MenuProps & {
   alignment?: 'centered';
-  dark?: boolean
+  dark?: boolean;
   modifier?: string;
   background?: 'default' | 'transparent';
 };

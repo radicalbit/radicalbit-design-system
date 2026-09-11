@@ -15,13 +15,15 @@ function ClickWithTooltip({
   modifier = '',
   tooltipTitle,
 }: Props) {
-  return <Tooltip title={tooltipTitle}>
-    <span className={`c-click-with-tooltip ${modifier} ${className}`}>
-      <a role="presentation" onClick={handleOnClick}>
-        {children}
-      </a>
-    </span>
-  </Tooltip>
+  return (
+    <Tooltip title={tooltipTitle}>
+      <span className={`c-click-with-tooltip ${modifier} ${className}`}>
+        <a role="presentation" onClick={handleOnClick}>
+          {children}
+        </a>
+      </span>
+    </Tooltip>
+  );
 }
 
 ClickWithTooltip.displayName = 'ClickWithTooltip';

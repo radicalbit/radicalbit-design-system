@@ -9,7 +9,7 @@ export interface Counter {
 
 interface Props {
   align?: 'center' | 'right';
-  className?: string,
+  className?: string;
   hoverable?: boolean;
   icon?: React.ReactNode;
   iconAlign?: 'start' | 'end' | 'center';

@@ -5,7 +5,7 @@ import React from 'react';
 type AlertPropsOmitted = Omit<AlertProps, 'type'>;
 
 export interface Props extends AlertPropsOmitted {
-  className?: string,
+  className?: string;
   modifier?: string;
   mode?: 'light' | 'dark';
   alignment?: 'vertical-centered';

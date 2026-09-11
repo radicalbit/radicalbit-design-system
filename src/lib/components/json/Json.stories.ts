@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import JsonTree from ".";
+import JsonTree from '.';
 
 const data = {
   id: 'proj_7f3c9d',
@@ -70,7 +70,7 @@ const data = {
   },
 };
 
-const meta : Meta<typeof JsonTree> = {
+const meta: Meta<typeof JsonTree> = {
   title: 'Components/JsonTree',
 
   component: JsonTree,

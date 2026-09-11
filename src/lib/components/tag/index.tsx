@@ -3,10 +3,10 @@ import classNames from 'classnames';
 import { ReactNode } from 'react';
 
 type Props = TagProps & {
-  animated?: 'default' | 'onHover',
+  animated?: 'default' | 'onHover';
   disabled?: boolean;
   fullWidth?: boolean;
-  mode?:'text' // will be replace type="text"
+  mode?: 'text'; // will be replace type="text"
   modifier?: string;
   rounded?: boolean;
   size?: 'small' | 'large' | 'xl' | 'xxl';

@@ -11,7 +11,7 @@ import Panel from './panel';
 
 type Props = CollapseProps & {
   className?: string;
-  dark?: boolean
+  dark?: boolean;
   modifier?: string;
   scroll?: 'horizontal' | 'vertical';
   type?: 'minimal' | 'no-border' | 'border-bottom' | 'transparent' | 'error' | 'secondary-medium' | 'primary-light';
@@ -36,7 +36,7 @@ function Collapse({
   return (
     <AntdCollapse
       expandIconPosition={expandIconPosition}
-      expandIcon={({ isActive }) => isActive
+      expandIcon={({ isActive }) => (isActive
         ? ((<FontAwesomeIcon icon={faChevronDown} />) as React.ReactNode)
         : ((
           <FontAwesomeIcon
@@ -46,7 +46,7 @@ function Collapse({
                 : faChevronRight
             }
           />
-            ) as React.ReactNode)}
+        ) as React.ReactNode))}
       className={`c-collapse ${modifier} ${css} ${className}`}
       {...other}
     >

@@ -20,8 +20,8 @@ function Steps({
   if (status && !stepStatus.find((s: string): boolean => s === status)) {
     console.warn(
       `WARN: ${status} is an unknown status for Steps. Standard status are: ${stepStatus.join(
-        ' '
-      )}`
+        ' ',
+      )}`,
     );
   }
 

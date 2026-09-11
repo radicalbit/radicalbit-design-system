@@ -6,7 +6,7 @@ import React, {
 const MIN_WIDTH = 300;
 const MAX_WIDTH = 1000;
 
-function RightColumnResizer(props: React.HTMLAttributes<HTMLDivElement>) : JSX.Element {
+function RightColumnResizer(props: React.HTMLAttributes<HTMLDivElement>): JSX.Element {
   const parentRef = useRef<HTMLDivElement | null>(null);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -24,11 +24,11 @@ function RightColumnResizer(props: React.HTMLAttributes<HTMLDivElement>) : JSX.E
       if (newWidth >= MIN_WIDTH && newWidth <= MAX_WIDTH) {
         document.documentElement.style.setProperty(
           '--coo-right-sidebar-width',
-          `${newWidth}px`
+          `${newWidth}px`,
         );
       }
     },
-    [isDragging]
+    [isDragging],
   );
 
   const stopDragging = useCallback(() => {

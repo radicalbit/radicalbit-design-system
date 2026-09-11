@@ -25,7 +25,7 @@ function getDataSource<T extends Record<string, unknown>>(dataSource: DataTableP
     return [];
   }
 
-  return dataSource.map((row) => typeof row === 'string'
+  return dataSource.map((row) => (typeof row === 'string'
     ? row
     : Object.keys(row).reduce(
       (acc, key) => {
@@ -41,17 +41,17 @@ function getDataSource<T extends Record<string, unknown>>(dataSource: DataTableP
                 : row[key]),
         });
       },
-      {} as T
-    ));
+      {} as T,
+    )));
 }
 
 function DynamicTable<T extends Record<string, unknown>>({
-    className = '',
-    dataSource,
-    modifier = '',
-    pagination,
-    ...otherProps
-  }: DataTableProps<T>) {
+  className = '',
+  dataSource,
+  modifier = '',
+  pagination,
+  ...otherProps
+}: DataTableProps<T>) {
   const items = isArray(dataSource) ? dataSource : [dataSource];
 
   return (

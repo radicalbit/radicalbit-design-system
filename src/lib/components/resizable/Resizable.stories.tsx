@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Resizable from ".";
+import Resizable from '.';
 
 const meta: Meta<typeof Resizable> = {
   title: 'Components/Resizable',
@@ -16,12 +16,14 @@ const meta: Meta<typeof Resizable> = {
 type Story = StoryObj<typeof Resizable>;
 
 function Top() {
-  return <>
-    <h1>lorem</h1>
-    <h2>lorem</h2>
-    <h3>lorem</h3>
-    lorem
-  </>
+  return (
+    <>
+      <h1>lorem</h1>
+      <h2>lorem</h2>
+      <h3>lorem</h3>
+      lorem
+    </>
+  );
 }
 function Bottom() {
   return <>lorem lorem</>;

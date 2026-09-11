@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import RelativeDateTime from ".";
+import RelativeDateTime from '.';
 
 const meta: Meta<typeof RelativeDateTime> = {
   title: 'Components/RelativeDateTime',

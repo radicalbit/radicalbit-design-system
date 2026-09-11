@@ -9,7 +9,7 @@ import {
 } from '@Src/utils/storybook';
 import FormField from '../form-field';
 import { Input } from '../input';
-import FormMultiple from ".";
+import FormMultiple from '.';
 
 const meta: Meta<typeof FormMultiple> = {
   title: 'Components/FormMultiple',

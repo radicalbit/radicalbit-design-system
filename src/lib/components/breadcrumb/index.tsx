@@ -1,7 +1,7 @@
 import AntdBreadcrumb, { BreadcrumbProps } from 'antd/es/breadcrumb';
 
 export interface Props extends BreadcrumbProps {
-  modifier?: string,
+  modifier?: string;
 }
 function Breadcrumb({
   children,

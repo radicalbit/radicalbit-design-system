@@ -4,8 +4,8 @@ import {
 } from 'antd/es/radio';
 import classNames from 'classnames';
   
-export type GroupProps = RadioGroupProps &
-  React.RefAttributes<HTMLDivElement> & {
+export type GroupProps = RadioGroupProps
+  & React.RefAttributes<HTMLDivElement> & {
     groupJustify?: 'center';
     modifier?: string;
     radioAlign?: 'top';

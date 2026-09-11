@@ -91,6 +91,9 @@
     "webpack-merge": "^6.0.1",
     "webpack-notifier": "^1.8.0"
   },
+  "resolutions": {
+    "eslint-plugin-n": "17.24.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",

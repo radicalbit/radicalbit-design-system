@@ -17,7 +17,7 @@ export interface ThemeProps {
   main?: MainProps;
 }
 
-export default function({
+export default function ({
   hasHeader,
   hasLeftColumn,
   hasSecondaryColumn,
@@ -139,4 +139,4 @@ export default function({
       )}
     </>
   );
-};
+}

@@ -3,7 +3,7 @@ import {
   mapReactNodeArgsTypes,
 } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
-import Collapse from ".";
+import Collapse from '.';
 import Panel from './panel';
 
 const meta: Meta<typeof Collapse> = {

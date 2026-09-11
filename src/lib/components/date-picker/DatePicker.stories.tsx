@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import dayjs from 'dayjs';
-import DatePicker from ".";
+import DatePicker from '.';
 
 const meta: Meta<typeof DatePicker> = {
   title: 'Components/DatePicker',

@@ -9,7 +9,7 @@ const { Search: AntdSearch } = AntdInput;
 
 type Props = SearchProps & {
   modifier?: string;
-}
+};
 
 const Search = forwardRef(({
   className = '',

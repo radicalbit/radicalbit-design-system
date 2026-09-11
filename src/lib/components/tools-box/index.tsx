@@ -28,36 +28,38 @@ function ToolsBox({
   onSearch,
   top,
 }: Props) {
-  return <div className={`c-tools-box ${modifier} ${className}`}>
-    {top && <div className="c-tools-box__top dragger-box">{top}</div>}
+  return (
+    <div className={`c-tools-box ${modifier} ${className}`}>
+      {top && <div className="c-tools-box__top dragger-box">{top}</div>}
 
-    {onSearch && (
-      <div className="c-tools-box__search">
-        <Input
-          onChange={onSearch}
-          suffix={<FontAwesomeIcon icon={faSearch} />}
-          placeholder="Search"
-        />
-      </div>
-    )}
+      {onSearch && (
+        <div className="c-tools-box__search">
+          <Input
+            onChange={onSearch}
+            suffix={<FontAwesomeIcon icon={faSearch} />}
+            placeholder="Search"
+          />
+        </div>
+      )}
 
-    {header && (
-      <div className="c-tools-box__header operators-box">{header}</div>
-    )}
+      {header && (
+        <div className="c-tools-box__header operators-box">{header}</div>
+      )}
 
-    {body && (
-      <div className="c-tools-box__body">
-        {body.map((el) => (
-          <div className="c-tools-box__item" key={el.key}>
-            <div className="c-tools-box__content">{el.content}</div>
-            <div className="c-tools-box__suffix">{el.suffix}</div>
-          </div>
-        ))}
-      </div>
-    )}
+      {body && (
+        <div className="c-tools-box__body">
+          {body.map((el) => (
+            <div className="c-tools-box__item" key={el.key}>
+              <div className="c-tools-box__content">{el.content}</div>
+              <div className="c-tools-box__suffix">{el.suffix}</div>
+            </div>
+          ))}
+        </div>
+      )}
 
-    {footer && <div className="c-tools-box__footer">{footer}</div>}
-  </div>
+      {footer && <div className="c-tools-box__footer">{footer}</div>}
+    </div>
+  );
 }
 
 ToolsBox.displayName = 'ToolsBox';

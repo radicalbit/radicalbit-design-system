@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
-import DrawerList from ".";
+import DrawerList from '.';
 
 const mockData = {
   activeRow: (record: Record<string, unknown>) => record.key === '4',
