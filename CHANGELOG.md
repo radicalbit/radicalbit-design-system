@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.2](https://github.com/radicalbit/radicalbit-design-system/compare/v3.0.1...v3.0.2) (2026-09-11)
+
+
+### Bug Fixes
+
+* drop moment for dayjs, repair Storybook and clear the lodash.template advisory ([#179](https://github.com/radicalbit/radicalbit-design-system/issues/179)) ([debdd7f](https://github.com/radicalbit/radicalbit-design-system/commit/debdd7fed68dcedc9449f5658b397f8009d6703e))
+* restore ESLint formatting rules and pin eslint-plugin-n ([#183](https://github.com/radicalbit/radicalbit-design-system/issues/183)) ([e618703](https://github.com/radicalbit/radicalbit-design-system/commit/e6187034df5a2cf5081b8cf9be8c59d28e695878))
+
 ## [3.0.1](https://github.com/radicalbit/radicalbit-design-system/compare/v3.0.0...v3.0.1) (2026-09-10)
 
 
