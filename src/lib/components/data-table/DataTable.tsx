@@ -98,7 +98,7 @@ const useShowActionsWithJS = (hasFixedColumn: boolean, rowCount: number) => {
     }
   
     const rows: NodeListOf<ElementExtended> = window.document.querySelectorAll(
-      '.l-data-table .ant-table-row'
+      '.l-data-table .ant-table-row',
     );
   
     // *** *** *** *** *** *** *** ***
@@ -108,12 +108,12 @@ const useShowActionsWithJS = (hasFixedColumn: boolean, rowCount: number) => {
     rows.forEach((r) => {
       const listener = () => {
         const all: NodeListOf<ElementExtended> = window.document.querySelectorAll(
-          `[data-row-key='${r.dataset.rowKey}']`
+          `[data-row-key='${r.dataset.rowKey}']`,
         );
   
         all.forEach((a) => {
           const elements: NodeListOf<ElementExtended> = a.querySelectorAll(
-            '.l-data-table__action'
+            '.l-data-table__action',
           );
   
           elements.forEach((action) => {
@@ -134,12 +134,12 @@ const useShowActionsWithJS = (hasFixedColumn: boolean, rowCount: number) => {
     rows.forEach((r) => {
       const listener = () => {
         const all: NodeListOf<ElementExtended> = window.document.querySelectorAll(
-          `[data-row-key='${r.dataset.rowKey}']`
+          `[data-row-key='${r.dataset.rowKey}']`,
         );
   
         all.forEach((a) => {
           const el: NodeListOf<ElementExtended> = a.querySelectorAll(
-            '.l-data-table__action'
+            '.l-data-table__action',
           );
           el.forEach((action) => {
             action.style.opacity = 0;

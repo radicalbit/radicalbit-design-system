@@ -1,14 +1,14 @@
 import { MutableRefObject, ReactElement, useEffect } from 'react';
 
 interface DraggableDividerProps {
-    bottom?: ReactElement;
-    bottomRef?: MutableRefObject<HTMLDivElement | null>;
-    className?: string;
-    modifier?: string;
-    resizableRef: MutableRefObject<HTMLDivElement | null>;
-    top?: ReactElement;
-    topRef?: MutableRefObject<HTMLDivElement | null>;
-  }
+  bottom?: ReactElement;
+  bottomRef?: MutableRefObject<HTMLDivElement | null>;
+  className?: string;
+  modifier?: string;
+  resizableRef: MutableRefObject<HTMLDivElement | null>;
+  top?: ReactElement;
+  topRef?: MutableRefObject<HTMLDivElement | null>;
+}
 
 function DraggableDivider({
   bottom,

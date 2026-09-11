@@ -4,7 +4,7 @@ import classNames from 'classnames';
 type Props<T> = ListProps<T> & {
   className?: string;
   modifier?: string;
-  type?: 'smooth'
+  type?: 'smooth';
 };
 
 function List<T>({

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import RangePicker from ".";
+import RangePicker from '.';
 
 const meta: Meta<typeof RangePicker> = {
   title: 'Components/RangePicker',

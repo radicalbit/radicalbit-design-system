@@ -7,7 +7,7 @@ type Props = DatePickerProps & {
   className?: string;
   modifier?: string;
   readOnly?: boolean;
-  skeleton?: boolean,
+  skeleton?: boolean;
 };
 
 function DatePicker({

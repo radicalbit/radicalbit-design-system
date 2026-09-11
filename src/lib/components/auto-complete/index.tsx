@@ -9,10 +9,12 @@ function AutoComplete({
   modifier = '',
   ...other
 }: Props) {
-  return <LibAutocomplete
-    className={`c-autocomplete ${modifier} ${className}`}
-    {...other}
-  />
+  return (
+    <LibAutocomplete
+      className={`c-autocomplete ${modifier} ${className}`}
+      {...other}
+    />
+  );
 }
 
 AutoComplete.displayName = 'AutoComplete';

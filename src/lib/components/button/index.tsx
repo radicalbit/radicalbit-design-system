@@ -18,7 +18,7 @@ export interface Props extends Omit<ButtonProps, 'type' | 'prefix'> {
     | 'error-light'
     | 'warning'
     | 'warning-light'
-    ;
+  ;
   prefix?: ReactNode;
   suffix?: ReactNode;
   filled?: boolean;

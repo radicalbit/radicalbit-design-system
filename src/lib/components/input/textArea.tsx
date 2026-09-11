@@ -8,8 +8,8 @@ const { TextArea: AntdTextArea } = AntdInput;
 
 type Props = TextAreaProps & {
   modifier?: string;
-  skeleton?: boolean
-}
+  skeleton?: boolean;
+};
 
 const TextArea = forwardRef(({
   className = '',

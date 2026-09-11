@@ -2,7 +2,7 @@ import { faBug, faFrown, faSmile } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Meta, StoryObj } from '@storybook/react';
 import Button from '../button';
-import notification, { NotificationConfig } from ".";
+import notification, { NotificationConfig } from '.';
 
 const meta: Meta<NotificationConfig> = {
   title: 'Components/Notification',

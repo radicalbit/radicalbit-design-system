@@ -5,11 +5,11 @@ import { SearchProps } from 'antd/es/input/Search';
 import { ChangeEventHandler } from 'react';
 
 type Props = SearchProps & {
-  modifier?: string,
-  placeholder?: string,
-  onSearch?: (s: string) => void,
-  onChange?: ChangeEventHandler<HTMLInputElement>
-}
+  modifier?: string;
+  placeholder?: string;
+  onSearch?: (s: string) => void;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+};
 
 function Search({
   className = '',
@@ -20,14 +20,16 @@ function Search({
   allowClear,
   ...otherProps
 }: Props) {
-  return <InputSearch
-    placeholder={placeholder || 'Search'}
-    onSearch={onSearch}
-    onChange={onChange}
-    className={`rdb-search ${modifier} ${className}`}
-    allowClear={allowClear === true ? { clearIcon: <FontAwesomeIcon icon={faSearch} /> } : allowClear}
-    {...otherProps}
-  />
+  return (
+    <InputSearch
+      placeholder={placeholder || 'Search'}
+      onSearch={onSearch}
+      onChange={onChange}
+      className={`rdb-search ${modifier} ${className}`}
+      allowClear={allowClear === true ? { clearIcon: <FontAwesomeIcon icon={faSearch} /> } : allowClear}
+      {...otherProps}
+    />
+  );
 }
 
 Search.displayName = 'Search';

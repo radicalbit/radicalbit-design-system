@@ -1,12 +1,12 @@
 import AntdTransfer, { TransferItem, TransferProps } from 'antd/es/transfer';
 import classNames from 'classnames';
 
-export interface Props<T extends TransferItem> extends TransferProps<T>{
-    alignOperation?: 'flex-start'
-    headerType?: 'light'
-    modifier?: string
-    type?: 'right-secondary' | ''
-    wideMode?: boolean
+export interface Props<T extends TransferItem> extends TransferProps<T> {
+  alignOperation?: 'flex-start';
+  headerType?: 'light';
+  modifier?: string;
+  type?: 'right-secondary' | '';
+  wideMode?: boolean;
 }
 
 function Transfer<T extends TransferItem>({

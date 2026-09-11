@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import React, { memo } from 'react';
 
 interface Props {
-  className?: string,
+  className?: string;
   children?: React.ReactNode;
   description?: string;
   flexColumn?: boolean;

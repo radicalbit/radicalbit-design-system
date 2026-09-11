@@ -7,8 +7,8 @@ interface Props {
   modifier?: string;
   suffix: ReactNode;
   tooltip?: TooltipProps;
-  width?: string
-  style?: object
+  width?: string;
+  style?: object;
 }
 
 function Truncate(props: Props) {

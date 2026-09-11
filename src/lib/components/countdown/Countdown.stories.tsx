@@ -22,7 +22,7 @@ const meta: Meta<typeof Countdown> = {
   },
 };
 
-const commonArgs : CountdownProps = {
+const commonArgs: CountdownProps = {
   label: 'sample label',
   date: new Date().getTime() + 6.048e+8,
   type: 'inline',

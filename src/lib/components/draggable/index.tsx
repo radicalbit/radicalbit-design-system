@@ -5,10 +5,10 @@ import {
 
 interface Props {
   children: React.ReactNode;
-  className?: string,
+  className?: string;
   containerClassName?: string;
   containerRef: React.RefObject<HTMLDivElement>;
-  modifier?: string,
+  modifier?: string;
   onBlur?: (e: React.FocusEvent<HTMLDivElement>) => void;
   onMouseDown?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
@@ -21,12 +21,14 @@ const handleDragStart: React.DragEventHandler = (event) => {
 
   event.dataTransfer.setData(
     'text/plain',
-    `${left - event.clientX},${top - event.clientY}`
+    `${left - event.clientX},${top - event.clientY}`,
   );
 };
 
 const handleDrop = (event: DragEvent, ref: React.RefObject<HTMLDivElement>) => {
-  if (!event.dataTransfer) { return false; }
+  if (!event.dataTransfer) {
+    return false;
+  }
 
   const [left, top] = event.dataTransfer.getData('text/plain').split(',');
   const elementToDrag = ref.current;

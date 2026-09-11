@@ -1,8 +1,8 @@
 import AntdTree, { TreeProps } from 'antd/es/tree';
 import { ReactElement } from 'react';
 
-export interface Props extends TreeProps{
-    modifier?: string
+export interface Props extends TreeProps {
+  modifier?: string;
 }
 
 function Tree({

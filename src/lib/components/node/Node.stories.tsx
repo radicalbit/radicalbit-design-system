@@ -1,7 +1,7 @@
 import { faSignInAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Meta, StoryObj } from '@storybook/react';
-import Node, { Props } from ".";
+import Node, { Props } from '.';
 
 const meta: Meta<typeof Node> = {
   title: 'Components/Node',

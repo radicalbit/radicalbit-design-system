@@ -3,15 +3,15 @@ import AntdPopconfirm, { PopconfirmProps } from 'antd/es/popconfirm';
 import classNames from 'classnames';
 
 interface Props extends PopconfirmProps {
-  hideCancel?: boolean,
-  icon?: ReactNode,
-  label: ReactNode,
-  modifier?: string,
-  okText?: string,
-  title: ReactNode,
-  width?: number,
-  withBody?: boolean,
-  wrapTitle?: boolean
+  hideCancel?: boolean;
+  icon?: ReactNode;
+  label: ReactNode;
+  modifier?: string;
+  okText?: string;
+  title: ReactNode;
+  width?: number;
+  withBody?: boolean;
+  wrapTitle?: boolean;
 }
 
 function Popconfirm({

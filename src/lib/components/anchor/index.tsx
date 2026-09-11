@@ -1,7 +1,7 @@
 import AntdAnchor, { AnchorProps } from 'antd/es/anchor';
 
 export interface Props extends AnchorProps {
-  className?: string,
+  className?: string;
   modifier?: string;
 }
 
@@ -10,11 +10,13 @@ function Anchor({
   modifier = '',
   ...others
 }: Props) {
-  return <AntdAnchor
-    className={`c-anchor ${modifier} ${className}`}
-    {...others}
-  >
-  </AntdAnchor>
+  return (
+    <AntdAnchor
+      className={`c-anchor ${modifier} ${className}`}
+      {...others}
+    >
+    </AntdAnchor>
+  );
 }
 
 Anchor.displayName = 'Anchor';

@@ -9,11 +9,11 @@ export type Props = SelectProps & {
   modifier?: string;
   noBorder?: boolean;
   readOnly?: boolean;
-  skeleton?: boolean,
+  skeleton?: boolean;
   suffixIcon?: React.ReactNode;
   value?: string;
   minWidth?: number | string;
-  dark?: boolean
+  dark?: boolean;
 };
 
 function SelectComponent({

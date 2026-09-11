@@ -2,7 +2,7 @@ import AntdAvatar, { AvatarProps } from 'antd/es/avatar';
 import classNames from 'classnames';
 
 export interface Props extends AvatarProps {
-  className?: string,
+  className?: string;
   modifier?: string;
   type?: 'default' | 'secondary';
 }

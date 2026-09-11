@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import React from 'react';
 
 export interface Props {
-  alignItem: boolean,
-  children:React.ReactNode;
+  alignItem: boolean;
+  children: React.ReactNode;
   className?: string;
   modifier?: string;
 }

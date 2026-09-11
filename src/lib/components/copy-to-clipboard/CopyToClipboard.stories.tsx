@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
-import CopyToClipboard from ".";
+import CopyToClipboard from '.';
 
 const meta: Meta<typeof CopyToClipboard> = {
   title: 'Components/CopyToClipboard',

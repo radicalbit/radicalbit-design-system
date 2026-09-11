@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Crunched, { CrunchedProps } from ".";
+import Crunched, { CrunchedProps } from '.';
 
 const meta: Meta<typeof Crunched> = {
   title: 'Components/Crunched',

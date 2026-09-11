@@ -12,10 +12,10 @@ interface Single {
 }
 
 interface Props {
-  className?: string,
+  className?: string;
   gridColumnCount?: number;
   list: Single | Pair[];
-  modifier?: string,
+  modifier?: string;
   noMargin?: boolean;
   withBorder?: boolean;
 }

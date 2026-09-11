@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import StatusSelector from ".";
+import StatusSelector from '.';
 
 const mockStatus = {
   current: 'Published',

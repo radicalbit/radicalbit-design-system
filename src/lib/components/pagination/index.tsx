@@ -5,7 +5,7 @@ export interface Props extends PropsWithChildren<PaginationProps> {
   children?: ReactNode;
   current?: number;
   defaultCurrent?: number;
-  modifier?: string,
+  modifier?: string;
   onChange?: (page: number) => void;
   onShowSizeChange?: (current: number, size: number) => void;
   showSizeChanger?: boolean;
@@ -23,16 +23,18 @@ function Pagination({
   total,
   ...others
 }: Props) {
-  return <AntdPagination
-    showSizeChanger={showSizeChanger}
-    onShowSizeChange={onShowSizeChange}
-    onChange={onChange}
-    current={current}
-    defaultCurrent={defaultCurrent}
-    total={total}
-    className={`rdb-pagination ${modifier} ${className}`}
-    {...others}
-  />
+  return (
+    <AntdPagination
+      showSizeChanger={showSizeChanger}
+      onShowSizeChange={onShowSizeChange}
+      onChange={onChange}
+      current={current}
+      defaultCurrent={defaultCurrent}
+      total={total}
+      className={`rdb-pagination ${modifier} ${className}`}
+      {...others}
+    />
+  );
 }
 
 Pagination.displayName = 'Pagination';

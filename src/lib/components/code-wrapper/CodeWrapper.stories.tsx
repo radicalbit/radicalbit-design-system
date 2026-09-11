@@ -4,7 +4,7 @@ import {
 } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
 import AceEditor from 'react-ace';
-import CodeWrapper from ".";
+import CodeWrapper from '.';
 
 const meta: Meta<typeof CodeWrapper> = {
   title: 'Components/CodeWrapper',

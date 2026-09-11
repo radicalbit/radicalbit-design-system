@@ -13,15 +13,17 @@ function CodeWrapper({
   modifier = '',
   readOnly = false,
 }: Props) {
-  return <div className={`c-code-wrapper ${modifier} ${className}`}>
-    {header && <div className="c-code-wrapper__header">{header}</div>}
+  return (
+    <div className={`c-code-wrapper ${modifier} ${className}`}>
+      {header && <div className="c-code-wrapper__header">{header}</div>}
 
-    {editor && (
-      <div className={`c-code-wrapper__editor ${readOnly && 'readonly'}`}>
-        {editor}
-      </div>
-    )}
-  </div>
+      {editor && (
+        <div className={`c-code-wrapper__editor ${readOnly && 'readonly'}`}>
+          {editor}
+        </div>
+      )}
+    </div>
+  );
 }
 
 CodeWrapper.displayName = 'CodeWrapper';

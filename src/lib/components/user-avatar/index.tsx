@@ -19,7 +19,7 @@ interface Props {
   userAvatarPath: string;
   userClassification?: string;
   userName?: string;
-  popoverProps?: PopoverProps
+  popoverProps?: PopoverProps;
 }
 
 function UserAvatar({

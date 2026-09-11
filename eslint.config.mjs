@@ -1,6 +1,5 @@
 import { configs, plugins } from 'eslint-config-airbnb-extended';
 import storybook from 'eslint-plugin-storybook';
-import prettierConfig from 'eslint-config-prettier';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
@@ -189,6 +188,4 @@ export default [
     ignores: ['styleguide.config.js'],
   },
 
-  // Keep last: turns off every formatting rule that would fight Prettier.
-  prettierConfig,
 ];

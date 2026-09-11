@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Progress from ".";
+import Progress from '.';
 
 const meta: Meta<typeof Progress> = {
   title: 'Components/Progress',

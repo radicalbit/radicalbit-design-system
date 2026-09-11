@@ -35,7 +35,7 @@ function Layout({
   const overallTopContent = overallTop?.overallTopContent;
   const hasContentDark = overallTop?.hasContentDark;
 
-  const defaultConfigProviderOptions : ConfigProviderProps = {
+  const defaultConfigProviderOptions: ConfigProviderProps = {
     theme: {
       hashed: false,
     },

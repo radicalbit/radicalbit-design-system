@@ -25,15 +25,17 @@ function ChatInput({
   textAreaRef,
   ...others
 }: Props) {
-  return <div className={`m-chat-input ${modifier} ${className}`}>
-    <TextArea autoSize={{ minRows, maxRows }} ref={textAreaRef} {...others} />
+  return (
+    <div className={`m-chat-input ${modifier} ${className}`}>
+      <TextArea autoSize={{ minRows, maxRows }} ref={textAreaRef} {...others} />
     
-    <FontAwesomeIcon
-      className="m-chat-input__button"
-      icon={icon}
-      onClick={onSend}
-    />
-  </div>
+      <FontAwesomeIcon
+        className="m-chat-input__button"
+        icon={icon}
+        onClick={onSend}
+      />
+    </div>
+  );
 }
 
 ChatInput.displayName = 'ChatInput';

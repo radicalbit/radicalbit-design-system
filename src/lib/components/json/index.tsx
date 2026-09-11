@@ -16,17 +16,17 @@ import {
 import React, { CSSProperties, memo } from 'react';
 
 interface Props<T> {
-  className?: string,
+  className?: string;
   data: T;
   expandCollapseAll?: ExpandCollapseAll;
   expandUntil?: number;
   itemStringMaxFields?: number;
-  modifier?: string,
-  styles?: CSSProperties,
+  modifier?: string;
+  styles?: CSSProperties;
 }
 
 function getItemString<T>(
-  _itemStringMaxFields: NonNullable<Props<T>['itemStringMaxFields']>
+  _itemStringMaxFields: NonNullable<Props<T>['itemStringMaxFields']>,
 ) {
   const callBack: GetItemString = (type, data, _, __, ___, isExpanded) => {
     if (isExpanded) {
@@ -46,7 +46,7 @@ function getItemString<T>(
             if (i >= 1 && i <= _itemStringMaxFields - 1) {
               return `${acc}, ${key}: ${getSecondLevelItemString(
                 typeof value,
-                value
+                value,
               )}`;
             }
 
@@ -95,7 +95,7 @@ function getItemString<T>(
 
 const getSecondLevelItemString = (
   type: string,
-  data: Record<string, unknown> | unknown[]
+  data: Record<string, unknown> | unknown[],
 ) => {
   switch (type) {
     case 'object':

@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import LayoutMainNav from '@Components/layout/main-nav';
 import { MenuType } from '@Src/lib/types/global';
 
-export type LeftProps = Omit<LayoutProps, 'content'> &
-  Omit<SiderProps, 'content'> & {
+export type LeftProps = Omit<LayoutProps, 'content'>
+  & Omit<SiderProps, 'content'> & {
     content?: React.ReactNode;
     contentDark?: boolean;
     headerAltContent?: React.ReactNode;

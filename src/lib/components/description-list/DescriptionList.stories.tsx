@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import DescriptionList from ".";
+import DescriptionList from '.';
 
 const meta: Meta<typeof DescriptionList> = {
   title: 'Components/DescriptionList',

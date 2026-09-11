@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { AffixProps } from 'antd';
 import { useRef } from 'react';
-import Affix from ".";
+import Affix from '.';
 import Button from '../button';
 
 const meta: Meta<typeof Affix> = {
@@ -19,7 +19,7 @@ const meta: Meta<typeof Affix> = {
 
 type Story = StoryObj<typeof Affix>;
 
-export const Default : Story = {
+export const Default: Story = {
     
   render: (props: AffixProps) => {
     const ref = useRef(null);

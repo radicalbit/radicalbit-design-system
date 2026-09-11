@@ -8,7 +8,7 @@ type Props = HTMLAttributes<HTMLDivElement> & {
   buttonPosition?: 'vertical' | 'adaptive';
   className?: string;
   footer?: ReactNode;
-  dark?: boolean,
+  dark?: boolean;
   header?: ReactNode;
   height?: string;
   hoverType?: 'primary' | 'secondary' | 'rounded' | 'add-new';

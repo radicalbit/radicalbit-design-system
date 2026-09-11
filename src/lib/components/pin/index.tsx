@@ -10,7 +10,7 @@ export interface Props {
   noMargins?: boolean;
   onClick?: () => void;
   size?: 'small' | 'micro';
-  style?: Record<string, unknown>,
+  style?: Record<string, unknown>;
   type?:
     | 'animated'
     | 'error'

@@ -1,6 +1,6 @@
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
 import { Meta } from '@storybook/react';
-import Alert, { Props } from ".";
+import Alert, { Props } from '.';
 
 const meta: Meta<typeof Alert> = {
   title: 'Components/Alert',

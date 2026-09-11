@@ -1,7 +1,7 @@
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
-import Popconfirm from ".";
+import Popconfirm from '.';
 import FontAwesomeIcon from '../font-awesome-icon';
 
 const meta: Meta<typeof Popconfirm> = {

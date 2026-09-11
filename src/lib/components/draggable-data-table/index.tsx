@@ -26,7 +26,7 @@ type Props<T extends Record<string, unknown>> = DataTableProps<T> & {
 };
 
 interface DragObject {
-  index: number
+  index: number;
 }
 
 const rowTarget: DropTargetSpec<RowPropsType, DragObject, void> = {

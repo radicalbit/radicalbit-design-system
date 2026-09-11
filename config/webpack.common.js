@@ -16,7 +16,7 @@ module.exports = {
       title: 'Radicalbit | Design System',
       contentImage: path.join(
         __dirname,
-        './src/lib/resources/images/products/RNA-orizz-posi.png'
+        './src/lib/resources/images/products/RNA-orizz-posi.png',
       ),
     }),
     new CopyWebpackPlugin({

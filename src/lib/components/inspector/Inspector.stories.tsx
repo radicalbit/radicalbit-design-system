@@ -6,35 +6,37 @@ import NewHeader from '../header/newHeader';
 import Inspector from '.';
 
 function Header() {
-  return <NewHeader
-    title={(
-      <>
-        <FontAwesomeIcon icon={faDiceD20} />
-        {' '}
-        <h3> Kafka-Source-XD87 </h3>
-      </>
-    )}
-    details={{
-      one: (
-        <Button
-          type="primary"
-          shape="circle"
-          onClick={() => console.debug('Save')}
-        >
-          <FontAwesomeIcon icon={faSave} />
-        </Button>
-      ),
-      two: (
-        <Popconfirm
-          title="Are you sure ?"
-          onConfirm={() => console.debug('confirm')}
-          onCancel={() => console.debug('cancel')}
-          okText="Delete Node"
-          cancelText="Cancel"
-        />
-      ),
-    }}
-  />
+  return (
+    <NewHeader
+      title={(
+        <>
+          <FontAwesomeIcon icon={faDiceD20} />
+          {' '}
+          <h3> Kafka-Source-XD87 </h3>
+        </>
+      )}
+      details={{
+        one: (
+          <Button
+            type="primary"
+            shape="circle"
+            onClick={() => console.debug('Save')}
+          >
+            <FontAwesomeIcon icon={faSave} />
+          </Button>
+        ),
+        two: (
+          <Popconfirm
+            title="Are you sure ?"
+            onConfirm={() => console.debug('confirm')}
+            onCancel={() => console.debug('cancel')}
+            okText="Delete Node"
+            cancelText="Cancel"
+          />
+        ),
+      }}
+    />
+  );
 }
 
 const meta: Meta<typeof Inspector> = {
