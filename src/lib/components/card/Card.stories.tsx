@@ -1,6 +1,6 @@
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
-import Card from './index';
+import Card from ".";
 
 const meta: Meta<typeof Card> = {
   title: 'Components/Card',

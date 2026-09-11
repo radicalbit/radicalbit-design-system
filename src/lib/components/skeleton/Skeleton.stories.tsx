@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { mapBooleanArgsTypes } from '@Src/utils/storybook';
-import Skeleton from './index';
+import Skeleton from ".";
 
 const meta: Meta<typeof Skeleton> = {
   title: 'Components/Skeleton',

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import RelativeUpTime from './index';
+import RelativeUpTime from ".";
 
 const meta: Meta<typeof RelativeUpTime> = {
   title: 'Components/RelativeUpTime',

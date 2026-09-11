@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import { memo } from 'react';
 
-export type Props = {
+export interface Props {
   className?: string;
   color?: string;
   justify?: 'left' | 'center';
@@ -22,9 +22,9 @@ export type Props = {
     | 'secondary'
     | 'success'
     | 'warning';
-};
+}
 
-const Pin = ({
+function Pin({
   color,
   className = '',
   justify = 'center',
@@ -36,7 +36,7 @@ const Pin = ({
   style = {},
   type,
   ...others
-}: Props) => {
+}: Props) {
   const hoverable = onClick ? 'm-pin__badge--hoverable' : '';
 
   const css = classnames({
@@ -72,7 +72,7 @@ const Pin = ({
   ) : (
     <div className={`m-pin ${css}`}>{pin}</div>
   );
-};
+}
 
 Pin.displayName = 'Pin';
 

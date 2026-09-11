@@ -1,21 +1,21 @@
 import classNames from 'classnames';
 import { ReactNode } from 'react';
 
-type Props = {
+interface Props {
   className?: string;
   message: ReactNode;
   modifier?: string;
   name: ReactNode;
   type?: 'primary';
-};
+}
 
-const Quote = ({
+function Quote({
   className = '',
   message,
   modifier = '',
   name,
   type,
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`m-quote--type-${type}`]: type,
   });
@@ -26,7 +26,7 @@ const Quote = ({
       <div className="m-quote__message">{message}</div>
     </div>
   );
-};
+}
 Quote.displayName = 'Quote';
 
 export default Quote;

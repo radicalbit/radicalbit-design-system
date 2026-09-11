@@ -5,7 +5,7 @@ import { useState } from 'react';
 import classNames from 'classnames';
 import Badge from 'antd/es/badge';
 
-export type Props = {
+export interface Props {
   className?: string;
   color?: string;
   modifier?: string;
@@ -13,9 +13,9 @@ export type Props = {
   onChangeRgba?: (color?: RGBColor) => void;
   placement?: 'top' | 'right' | 'left';
   type?: 'chrome' | 'block';
-};
+}
 
-const ColorPicker = ({
+function ColorPicker({
   className = '',
   color = '',
   modifier = '',
@@ -24,7 +24,7 @@ const ColorPicker = ({
   placement,
   type = 'chrome',
   ...others
-}: Props) => {
+}: Props) {
   const [isPickerVisible, setIsPickerVisible] = useState(false);
 
   const css = classNames({
@@ -87,6 +87,6 @@ const ColorPicker = ({
       )}
     </div>
   );
-};
+}
 
 export default ColorPicker;

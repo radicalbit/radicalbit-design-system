@@ -5,8 +5,8 @@ import { Button, Popconfirm } from 'antd';
 import NewHeader from '../header/newHeader';
 import Inspector from '.';
 
-const Header = () => (
-  <NewHeader
+function Header() {
+  return <NewHeader
     title={(
       <>
         <FontAwesomeIcon icon={faDiceD20} />
@@ -35,7 +35,7 @@ const Header = () => (
       ),
     }}
   />
-);
+}
 
 const meta: Meta<typeof Inspector> = {
   title: 'Components/Inspector',

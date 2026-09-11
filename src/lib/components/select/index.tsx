@@ -16,7 +16,7 @@ export type Props = SelectProps & {
   dark?: boolean
 };
 
-const SelectComponent = ({
+function SelectComponent({
   asTag,
   children,
   className = '',
@@ -33,7 +33,7 @@ const SelectComponent = ({
   skeleton,
   dark = false,
   ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     'c-select--readonly': readOnly,
     'c-select--as-tag': asTag,
@@ -64,7 +64,7 @@ const SelectComponent = ({
       {children}
     </AntdSelect>
   );
-};
+}
 
 const { Option } = AntdSelect;
 

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { ReactNode } from 'react';
 
-export type Props = {
+export interface Props {
   chart?: ReactNode;
   className?: string;
   headerType?: 'bold';
@@ -9,9 +9,9 @@ export type Props = {
   modifier?: string;
   reverse?: boolean;
   right?: ReactNode;
-};
+}
 
-const MiniChart = ({
+function MiniChart({
   chart,
   className = '',
   headerType,
@@ -19,7 +19,7 @@ const MiniChart = ({
   modifier = '',
   reverse = false,
   right,
-}: Props) => {
+}: Props) {
   const css = classNames({
     'l-mini-chart--reverse': reverse,
   });
@@ -38,7 +38,7 @@ const MiniChart = ({
       <div className="l-mini-chart__chart">{chart}</div>
     </div>
   );
-};
+}
 
 MiniChart.displayName = 'MiniChart';
 

@@ -10,14 +10,14 @@ type Props = DatePickerProps & {
   skeleton?: boolean,
 };
 
-const DatePicker = ({
+function DatePicker({
   className = '',
   modifier = '',
   readOnly = false,
   skeleton,
   value,
   ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     'c-datepicker--readonly': readOnly,
   });
@@ -44,7 +44,7 @@ const DatePicker = ({
       {...others}
     />
   );
-};
+}
 
 DatePicker.displayName = 'DatePicker';
 

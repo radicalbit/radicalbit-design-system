@@ -10,7 +10,7 @@ type Props = PopoverProps & {
   childClassName?: string;
 };
 
-const Popover = ({
+function Popover({
   children,
   className = '',
   hideArrow = false,
@@ -23,7 +23,7 @@ const Popover = ({
   placement = 'leftTop',
   trigger,
   ...otherProps
-}: Props) => {
+}: Props) {
   const css = classNames({
     'c-popover--hidden-arrow': hideArrow,
     'c-popover--noPadding': noPadding,
@@ -46,7 +46,7 @@ const Popover = ({
       <div className={`c-popover__child ${cssChild}`}>{children}</div>
     </AntdPopover>
   );
-};
+}
 
 Popover.displayName = 'Popover';
 

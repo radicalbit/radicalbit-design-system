@@ -1,16 +1,16 @@
 import Badge from '@Components/badge';
 import { useState } from 'react';
 
-export type CrunchedProps = {
+export interface CrunchedProps {
   className?: string;
   modifier?: string;
   type: 'success' | 'processing' | 'default' | 'error' | 'warning';
   text?: string;
-};
+}
 
-const Crunched = ({
+function Crunched({
   className = '', modifier = '', type, text,
-}: CrunchedProps) => {
+}: CrunchedProps) {
   const [messageIsVisible, setMessageVisible] = useState(false);
 
   const hideMessage = () => {
@@ -36,7 +36,7 @@ const Crunched = ({
       />
     </div>
   );
-};
+}
 
 Crunched.displayName = 'Crunched';
 

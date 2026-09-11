@@ -4,16 +4,16 @@ import React, { ReactElement, memo, useRef } from 'react';
 import reactIs from 'react-is';
 import DraggableDivider from './DraggableDivider';
 
-type Props = {
+interface Props {
   bottom?: ReactElement<{ children?: React.ReactNode }>;
   className?: string;
   modifier?: string;
   top?: ReactElement;
-};
+}
 
-const Resizable = ({
+function Resizable({
   bottom, className = '', modifier = '', top,
-}: Props) => {
+}: Props) {
   const topRef = useRef(null);
   const bottomRef = useRef(null);
   const resizableRef = useRef(null);
@@ -48,7 +48,7 @@ const Resizable = ({
       )}
     </div>
   );
-};
+}
 
 Resizable.displayName = 'Resizable';
 

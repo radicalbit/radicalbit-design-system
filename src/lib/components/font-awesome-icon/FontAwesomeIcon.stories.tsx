@@ -31,7 +31,7 @@ export const Default: Story = {
   },
 };
 
-export const IconList = () => {
+export function IconList() {
   const initialIcons = Object.entries(icons);
 
   const [filteredIcons, setIcons] = useState<typeof initialIcons>(initialIcons);
@@ -62,6 +62,6 @@ export const IconList = () => {
       </div>
     </>
   );
-};
+}
 
 export default meta;

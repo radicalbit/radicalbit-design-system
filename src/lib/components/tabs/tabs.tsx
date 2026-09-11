@@ -12,7 +12,7 @@ type Props = Omit<TabsProps, 'size'> & {
   size?: 'default' | 'large';
 };
 
-const Tabs = ({
+function Tabs({
   animated = false,
   centered = false,
   children,
@@ -26,7 +26,7 @@ const Tabs = ({
   sticky = false,
   size = 'default',
   ...other
-}: Props) => {
+}: Props) {
   const css = classNames({
     'c-tabs--centered': centered,
     'c-tabs--full-height': fullHeight,
@@ -47,7 +47,7 @@ const Tabs = ({
       {children}
     </AntdTabs>
   );
-};
+}
 
 Tabs.displayName = 'Tabs';
 

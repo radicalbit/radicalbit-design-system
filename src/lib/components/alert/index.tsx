@@ -12,14 +12,14 @@ export interface Props extends AlertPropsOmitted {
   type?: AlertProps['type'] | 'text';
 }
 
-const Alert = ({
+function Alert({
   className = '',
   modifier = '',
   mode,
   alignment,
   type = 'text',
   ...other
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`c-alert--type-${type}`]: type,
     [`c-alert--alignment-${alignment}`]: alignment,
@@ -27,7 +27,7 @@ const Alert = ({
   });
 
   return <AntdAlert className={`c-alert ${modifier} ${css} ${className}`} type={type as AlertProps['type']} {...other} />;
-};
+}
 
 Alert.displayName = 'Alert';
 

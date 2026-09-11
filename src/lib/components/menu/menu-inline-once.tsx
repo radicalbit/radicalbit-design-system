@@ -6,12 +6,12 @@ type Props = Omit<MenuProps, 'mode' | 'selectedKeys' | 'openKeys'> & {
   openKey?: string;
 };
 
-const MenuInlineOnce = ({
+function MenuInlineOnce({
   items = [],
   openKey,
   selectedKey,
   ...others
-}: Props) => {
+}: Props) {
   // *** *** *** *** *** *** *** *** *** *** *
   // *** Handle className for the MenuItem ***
   // *** *** *** *** *** *** *** *** *** *** *
@@ -44,7 +44,7 @@ const MenuInlineOnce = ({
       selectedKeys={[]}
     />
   );
-};
+}
 
 MenuInlineOnce.displayName = 'MenuInlineOnce';
 MenuInlineOnce.HIDE_EXPAND_ICON = 'c-menu__hide-expand-icon';

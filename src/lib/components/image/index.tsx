@@ -1,6 +1,6 @@
 import { CSSProperties, memo, useState } from 'react';
 
-type Props = {
+interface Props {
   alt?: string;
   className?: string;
   error?: string | React.ReactNode;
@@ -8,7 +8,7 @@ type Props = {
   size?: 'small' | 'medium' | 'large';
   src?: string;
   style?: CSSProperties;
-};
+}
 
 const SIZES = {
   small: 'm-image--small',
@@ -16,7 +16,7 @@ const SIZES = {
   large: 'm-image--large',
 };
 
-const Image = ({
+function Image({
   alt,
   className = '',
   error,
@@ -24,7 +24,7 @@ const Image = ({
   size = 'small',
   src,
   style,
-}: Props) => {
+}: Props) {
   const [isError, setIsError] = useState(false);
 
   if (!Object.keys(SIZES).includes(size)) {
@@ -43,7 +43,7 @@ const Image = ({
   ) : (
     <>{error}</> || <span>{alt}</span>
   );
-};
+}
 
 Image.displayName = 'Image';
 

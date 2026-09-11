@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import RatioWrapper from './index';
+import RatioWrapper from ".";
 
 const meta: Meta<typeof RatioWrapper> = {
   title: 'Components/RatioWrapper',

@@ -13,7 +13,7 @@ type Props = RangePickerProps & {
   skeleton?: boolean
 };
 
-const RangePicker = ({
+function RangePicker({
   allowClear = true,
   className = '',
   dateFormat = 'DD-MM-YYYY',
@@ -22,7 +22,7 @@ const RangePicker = ({
   readOnly,
   skeleton,
   ...others
-}: Props) => {
+}: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const checkTarget = (event: Event) => {
@@ -60,7 +60,7 @@ const RangePicker = ({
       {...others}
     />
   );
-};
+}
 
 RangePicker.displayName = 'RangePicker';
 

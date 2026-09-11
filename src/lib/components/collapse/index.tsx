@@ -17,7 +17,7 @@ type Props = CollapseProps & {
   type?: 'minimal' | 'no-border' | 'border-bottom' | 'transparent' | 'error' | 'secondary-medium' | 'primary-light';
 };
 
-const Collapse = ({
+function Collapse({
   children,
   className = '',
   dark = false,
@@ -26,7 +26,7 @@ const Collapse = ({
   scroll,
   type,
   ...other
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`c-collapse--${scroll}_scroll`]: scroll,
     [`c-collapse--${type}`]: type,
@@ -53,7 +53,7 @@ const Collapse = ({
       {children}
     </AntdCollapse>
   );
-};
+}
 
 Collapse.displayName = 'Collapse';
 Collapse.Panel = Panel;

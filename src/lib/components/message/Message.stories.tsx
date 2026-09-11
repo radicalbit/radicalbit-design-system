@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Button from '../button';
-import message from './index';
+import message from ".";
 
 const success = () => {
   message.success('Message Success');

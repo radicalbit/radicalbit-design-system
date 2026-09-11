@@ -1,11 +1,11 @@
 import { memo, useEffect } from 'react';
 
-const Helmet = ({ title }: { title: string }) => {
+function Helmet({ title }: { title: string }) {
   useEffect(() => {
     window.document.title = title;
   }, [title]);
 
-  return <></>;
-};
+  return null;
+}
 
 export default memo(Helmet);

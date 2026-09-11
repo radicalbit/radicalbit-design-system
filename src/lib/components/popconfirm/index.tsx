@@ -14,7 +14,7 @@ interface Props extends PopconfirmProps {
   wrapTitle?: boolean
 }
 
-const Popconfirm = ({
+function Popconfirm({
   cancelText,
   className = '',
   hideCancel = false,
@@ -30,7 +30,7 @@ const Popconfirm = ({
   withBody,
   wrapTitle = true,
   ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     'c-popconfirm--hidden-cancel': hideCancel,
     'c-popconfirm--wrap-title': wrapTitle,
@@ -55,7 +55,7 @@ const Popconfirm = ({
         : (<a>{label}</a>)}
     </AntdPopconfirm>
   );
-};
+}
 
 Popconfirm.displayName = 'Popconfirm';
 

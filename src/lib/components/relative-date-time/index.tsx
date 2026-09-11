@@ -4,7 +4,7 @@ import { memo } from 'react';
 
 type Granularity = 'seconds' | 'days';
 
-type Props = {
+interface Props {
   className?: string;
   format?: string;
   formatTooltip?: string;
@@ -14,7 +14,7 @@ type Props = {
   threshold?: number;
   timestamp: string | number | Date;
   withTooltip?: boolean;
-};
+}
 
 const dateFormatter = (dateFormat: string, timestamp: string | number | Date) => moment(new Date(timestamp)).format(dateFormat).toString();
 
@@ -48,7 +48,7 @@ const getRelativeDate = (timestamp: string | number | Date, minGranularity: Gran
   }
 };
 
-const RelativeDateTime = ({
+function RelativeDateTime({
   className = '',
   format = 'DD MMM YYYY',
   formatTooltip = 'DD MMM YYYY HH:mm',
@@ -58,7 +58,7 @@ const RelativeDateTime = ({
   threshold = 3,
   timestamp,
   withTooltip,
-}: Props) => {
+}: Props) {
   const difference = moment().diff(timestamp, 'days');
   const tooltipDate = dateFormatter(formatTooltip, timestamp);
 
@@ -77,7 +77,7 @@ const RelativeDateTime = ({
       {dateToShow}
     </span>
   );
-};
+}
 
 RelativeDateTime.displayName = 'RelativeDateTime';
 

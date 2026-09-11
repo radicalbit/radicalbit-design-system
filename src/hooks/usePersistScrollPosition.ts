@@ -14,7 +14,7 @@ type HTMLElmentRef = MutableRefObject<HTMLElement | null>
   usePersistScrollPosition takes track of element scroll position,
   whenever deps change, element scroll is set to the last position (in order to avoid scroll reset to zero)
 */
-export default (elementRef: HTMLElmentRef, deps: Array<unknown>) => {
+export default (elementRef: HTMLElmentRef, deps: unknown[]) => {
   const positionRef = useRef({ x: 0, y: 0 });
 
   useSaveScrollPosition(elementRef, positionRef);
@@ -43,7 +43,7 @@ const useSaveScrollPosition = (elementRef: HTMLElmentRef, positionRef: PositionR
 /**
  *  Re-render reset the scroll, that's why we set back the scroll to the previos value
  */
-const useRollbackScrollPosition = (elementRef: HTMLElmentRef, positionRef: PositionRef, deps: Array<unknown>) => {
+const useRollbackScrollPosition = (elementRef: HTMLElmentRef, positionRef: PositionRef, deps: unknown[]) => {
   useLayoutEffect(() => {
     if (!elementRef.current) {
       return;

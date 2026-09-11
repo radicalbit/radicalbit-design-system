@@ -8,14 +8,14 @@ export type Props = MenuProps & {
   background?: 'default' | 'transparent';
 };
 
-const Menu = ({
+function Menu({
   alignment,
   background = 'default',
   className = '',
   dark = false,
   modifier = '',
   ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`c-menu--alignment-${alignment}`]: alignment,
     [`c-menu--background-${background}`]: background,
@@ -28,7 +28,7 @@ const Menu = ({
       {...others}
     />
   );
-};
+}
 
 Menu.displayName = 'Menu';
 

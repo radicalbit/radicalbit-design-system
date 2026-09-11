@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const { Sider } = AntdLayout;
 
-export type SecondaryProps = {
+export interface SecondaryProps {
   collapsed?: boolean;
   content?: React.ReactNode;
   contentDark?: boolean | null;
@@ -16,9 +16,9 @@ export type SecondaryProps = {
   hasSecondaryContentDark?: boolean;
   mainContent?: React.ReactNode;
   onSecondaryColumnCollapse?: () => void;
-};
+}
 
-const SecondaryColumn = (props: SecondaryProps) => {
+function SecondaryColumn(props: SecondaryProps) {
   const {
     collapsed,
     contentDark,
@@ -53,6 +53,6 @@ const SecondaryColumn = (props: SecondaryProps) => {
       </div>
     </Sider>
   );
-};
+}
 
 export default SecondaryColumn;

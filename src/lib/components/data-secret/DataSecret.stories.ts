@@ -1,6 +1,6 @@
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
-import DataSecret from './index';
+import DataSecret from ".";
 
 const meta: Meta<typeof DataSecret> = {
   title: 'Components/DataSecret',

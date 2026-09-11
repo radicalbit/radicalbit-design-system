@@ -6,13 +6,13 @@ export interface Props extends BadgeProps {
   onMouseEnter?: () => void
 }
 
-const Badge = (
-  {
+function Badge({
     className = '',
     modifier = '',
     ...other
-  }: Props
-) => <AntBadge className={`c-badge ${modifier} ${className}`} {...other} />;
+  }: Props) {
+  return <AntBadge className={`c-badge ${modifier} ${className}`} {...other} />;
+}
 
 Badge.displayName = 'Badge';
 

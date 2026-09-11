@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import BarChart from '../bar-chart';
-import MiniChart, { Props } from './index';
+import MiniChart, { Props } from ".";
 
 const meta: Meta<typeof MiniChart> = {
   title: 'Components/MiniChart',

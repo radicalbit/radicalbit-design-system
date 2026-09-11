@@ -9,7 +9,7 @@ export interface Props<T extends TransferItem> extends TransferProps<T>{
     wideMode?: boolean
 }
 
-const Transfer = <T extends TransferItem>({
+function Transfer<T extends TransferItem>({
   alignOperation,
   className = '',
   headerType,
@@ -17,7 +17,7 @@ const Transfer = <T extends TransferItem>({
   type,
   wideMode = true,
   ...otherProps
-}: Props<T>) => {
+}: Props<T>) {
   const cssClass = classNames({
     [`c-transfert__${type}`]: type,
     [`c-transfert--alignOperation-${alignOperation}`]: alignOperation,
@@ -31,7 +31,7 @@ const Transfer = <T extends TransferItem>({
       {...otherProps}
     />
   );
-};
+}
 
 Transfer.displayName = 'Transfer';
 

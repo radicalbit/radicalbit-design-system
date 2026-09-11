@@ -1,15 +1,15 @@
 import classNames from 'classnames';
 import { ReactNode, memo } from 'react';
 
-type Props = {
+interface Props {
   badge?: ReactNode;
   modifier?: string;
   subtitle?: string;
   title?: string;
   onClick?: () => void;
-};
+}
 
-const RbitAvatar = (props: Props) => {
+function RbitAvatar(props: Props) {
   const {
     badge, modifier = '', subtitle, title, onClick,
   } = props;
@@ -32,6 +32,6 @@ const RbitAvatar = (props: Props) => {
       </div>
     </div>
   );
-};
+}
 
 export default memo<Props>(RbitAvatar);

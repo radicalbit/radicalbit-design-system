@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Skeleton from '@Components/skeleton';
 import { memo } from 'react';
 
-type Props = {
+interface Props {
   checked?: boolean;
   className?: string;
   disabled?: boolean;
@@ -12,9 +12,9 @@ type Props = {
   onChange?: (value: boolean) => void;
   readOnly?: string;
   skeleton?: boolean,
-};
+}
 
-const Switchbox = ({
+function Switchbox({
   checked = false,
   className = '',
   disabled,
@@ -24,7 +24,7 @@ const Switchbox = ({
   readOnly,
   skeleton,
   ...others
-}: Props) => {
+}: Props) {
   const handleOnClick = () => {
     if (!disabled && onChange) {
       onChange(!checked);
@@ -58,7 +58,7 @@ const Switchbox = ({
       />
     </div>
   );
-};
+}
 
 Switchbox.displayName = 'Switchbox';
 

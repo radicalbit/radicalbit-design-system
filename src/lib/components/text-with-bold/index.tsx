@@ -1,24 +1,24 @@
 import React from 'react';
 
-type Props = {
+interface Props {
   bold: string;
   className?: string,
   isQuestion?: boolean;
   modifier?: string,
   text: string;
-};
+}
 
-const TextWithBold = ({
+function TextWithBold({
   className = '', modifier = '', text, bold, isQuestion,
-}: Props) => (
-  <div className={`m-text-with-bold ${modifier} ${className}`}>
+}: Props) {
+  return <div className={`m-text-with-bold ${modifier} ${className}`}>
     <span>{`${text} `}</span>
     
     <strong>{bold}</strong>
     
     {isQuestion && <span>{isQuestion && isQuestion === true ? '?' : ''}</span>}
   </div>
-);
+}
 
 TextWithBold.displayName = 'TextWithBold';
 

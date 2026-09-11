@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
-import List from './index';
+import List from ".";
 
 const meta: Meta<typeof List> = {
   title: 'Components/List',

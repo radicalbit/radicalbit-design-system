@@ -6,7 +6,7 @@ type Props = DrawerProps & {
   noPadding?: boolean;
 };
 
-const Drawer = (props: Props): React.ReactElement<typeof AntDrawer> => {
+function Drawer(props: Props): React.ReactElement<typeof AntDrawer> {
   const {
     children,
     className = '',
@@ -31,7 +31,7 @@ const Drawer = (props: Props): React.ReactElement<typeof AntDrawer> => {
       {children}
     </AntDrawer>
   );
-};
+}
 
 Drawer.displayName = 'Drawer';
 

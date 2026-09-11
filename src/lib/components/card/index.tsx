@@ -26,7 +26,7 @@ interface Props{
     /** Card cover */
     cover?: ReactNode,
     /** The action list, shows at the bottom of the Card */
-    actions?: Array<ReactNode>,
+    actions?: ReactNode[],
     /** List of TabPane's head */
     tabList?: CardTabListType[],
     /** Callback when tab is switched */
@@ -41,7 +41,7 @@ interface Props{
     modifier?: string
 }
 
-const Card = ({
+function Card({
   actions,
   activeTabKey,
   bodyStyle,
@@ -62,8 +62,8 @@ const Card = ({
   title,
   type,
   ...others
-}: Props) => (
-  <AntdCard
+}: Props) {
+  return <AntdCard
     className={`m-card ${modifier} ${className}`}
     prefixCls={prefixCls}
     title={title}
@@ -85,7 +85,7 @@ const Card = ({
   >
     {children}
   </AntdCard>
-);
+}
 
 Card.displayName = 'Card';
 

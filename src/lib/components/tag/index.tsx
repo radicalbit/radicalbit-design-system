@@ -37,7 +37,7 @@ type Props = TagProps & {
     | 'warning';
 };
 
-const Tag = ({
+function Tag({
   animated,
   children,
   className = '',
@@ -54,7 +54,7 @@ const Tag = ({
   type,
   uppercase = false,
   ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`c-tag--animated-${animated}`]: animated,
     'c-tag--clickable': onClick,
@@ -86,7 +86,7 @@ const Tag = ({
       {suffix && <div className="c-tag__suffix">{suffix}</div>}
     </AntdTag>
   );
-};
+}
 
 Tag.displayName = 'Tag';
 

@@ -1,7 +1,7 @@
 import { ReactNode, memo } from 'react';
 import Tooltip, { Props as TooltipProps } from '@Components/tooltip';
 
-type Props = {
+interface Props {
   children: ReactNode;
   className?: string;
   modifier?: string;
@@ -9,7 +9,7 @@ type Props = {
   tooltip?: TooltipProps;
   width?: string
   style?: object
-};
+}
 
 function Truncate(props: Props) {
   if (props.tooltip) {

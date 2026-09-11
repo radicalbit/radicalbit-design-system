@@ -5,19 +5,17 @@ export interface Props extends AnchorProps {
   modifier?: string;
 }
 
-const Anchor = ({
+function Anchor({
   className = '',
   modifier = '',
   ...others
-}: Props) => (
-
-  <AntdAnchor
+}: Props) {
+  return <AntdAnchor
     className={`c-anchor ${modifier} ${className}`}
     {...others}
   >
   </AntdAnchor>
-
-);
+}
 
 Anchor.displayName = 'Anchor';
 

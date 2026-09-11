@@ -12,7 +12,7 @@ export interface Props extends PropsWithChildren<PaginationProps> {
   total?: number;
 }
 
-const Pagination = ({
+function Pagination({
   className = '',
   current,
   defaultCurrent,
@@ -22,8 +22,8 @@ const Pagination = ({
   showSizeChanger = true,
   total,
   ...others
-}: Props) => (
-  <AntdPagination
+}: Props) {
+  return <AntdPagination
     showSizeChanger={showSizeChanger}
     onShowSizeChange={onShowSizeChange}
     onChange={onChange}
@@ -33,7 +33,7 @@ const Pagination = ({
     className={`rdb-pagination ${modifier} ${className}`}
     {...others}
   />
-);
+}
 
 Pagination.displayName = 'Pagination';
 

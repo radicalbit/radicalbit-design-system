@@ -14,7 +14,7 @@ type Props = SpinProps & {
   modifier?: string;
 };
 
-const Spinner = ({
+function Spinner({
   children,
   className = '',
   error,
@@ -28,7 +28,7 @@ const Spinner = ({
   fullHeight = true,
   fullWidth = true,
   ...otherProps
-}: Props) => {
+}: Props) {
   const isSpinning = spinning === undefined ? false : spinning;
 
   const css = classNames({
@@ -55,7 +55,7 @@ const Spinner = ({
       )}
     </AntdSpin>
   );
-};
+}
 
 Spinner.displayName = 'Spinner';
 

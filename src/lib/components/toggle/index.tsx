@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { ReactNode, useState } from 'react';
 
-type Props = {
+interface Props {
   checked?: boolean;
   children?: ReactNode;
   className?: string;
@@ -9,7 +9,7 @@ type Props = {
   mode?: string;
   modifier?: string;
   onClick?: (value?: boolean) => void;
-};
+}
 
 function Toggle({
   checked: controlled,

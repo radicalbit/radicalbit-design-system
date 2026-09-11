@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { memo } from 'react';
 
-export type Props = {
+export interface Props {
   actions?: string;
   bottomLeft?: React.ReactNode;
   bottomRight?: React.ReactNode;
@@ -13,9 +13,9 @@ export type Props = {
   topLeft?: React.ReactNode;
   topRight?: React.ReactNode;
   type?: 'error' | 'highlight-default' | 'highlight-error' | 'spotlighted';
-};
+}
 
-const Node = ({
+function Node({
   bottomLeft,
   bottomRight,
   className = '',
@@ -26,7 +26,7 @@ const Node = ({
   topLeft,
   topRight,
   type,
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`m-node--type-${type}`]: type,
   });
@@ -62,7 +62,7 @@ const Node = ({
       {label && <div className="m-node__label">{label}</div>}
     </div>
   );
-};
+}
 
 Node.displayName = 'Node';
 

@@ -9,19 +9,19 @@ type Props = UploadProps & {
   type?: UploadType;
 };
 
-const Dragger = ({
+function Dragger({
   children,
   className = '',
   modifier = '',
   ...others
-}: Props) => (
-  <AntdUpload.Dragger
+}: Props) {
+  return <AntdUpload.Dragger
     className={`c-upload-drag  ${className} ${modifier}`}
     {...others}
   >
     {children}
   </AntdUpload.Dragger>
-);
+}
 
 Dragger.displayName = 'Dragger';
 

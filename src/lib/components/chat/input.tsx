@@ -5,7 +5,7 @@ import { MouseEventHandler, Ref, memo } from 'react';
 import { TextAreaRef } from 'antd/es/input/TextArea';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-type Props = {
+export interface Props {
   className?: string;
   icon?: IconProp;
   minRows?: number;
@@ -13,9 +13,9 @@ type Props = {
   modifier?: string;
   onSend?: MouseEventHandler<SVGSVGElement>;
   textAreaRef?: Ref<TextAreaRef>;
-};
+}
 
-const ChatInput = ({
+function ChatInput({
   className = '',
   icon = faPaperPlane,
   minRows = 1,
@@ -24,8 +24,8 @@ const ChatInput = ({
   onSend,
   textAreaRef,
   ...others
-}: Props) => (
-  <div className={`m-chat-input ${modifier} ${className}`}>
+}: Props) {
+  return <div className={`m-chat-input ${modifier} ${className}`}>
     <TextArea autoSize={{ minRows, maxRows }} ref={textAreaRef} {...others} />
     
     <FontAwesomeIcon
@@ -34,7 +34,7 @@ const ChatInput = ({
       onClick={onSend}
     />
   </div>
-);
+}
 
 ChatInput.displayName = 'ChatInput';
 

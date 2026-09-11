@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Meta } from '@storybook/react';
-import Pagination, { Props } from './index';
+import Pagination, { Props } from ".";
 
 const meta: Meta<typeof Pagination> = {
   title: 'Components/Pagination',
@@ -13,7 +13,7 @@ const meta: Meta<typeof Pagination> = {
 
 };
 
-export const Default = (props: Props) => {
+export function Default(props: Props) {
   const [page, setPage] = useState(1);
   return (
     <Pagination
@@ -26,6 +26,6 @@ export const Default = (props: Props) => {
 
     />
   );
-};
+}
 
 export default meta;

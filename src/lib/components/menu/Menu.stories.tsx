@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { faAbacus } from '@fortawesome/free-solid-svg-icons';
-import Menu from './index';
+import Menu from ".";
 import FontAwesomeIcon from '../font-awesome-icon';
 
 const meta: Meta<typeof Menu> = {

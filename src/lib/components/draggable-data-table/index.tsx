@@ -25,7 +25,7 @@ type Props<T extends Record<string, unknown>> = DataTableProps<T> & {
   onMoveRowCallback: (data: T[]) => void;
 };
 
-type DragObject = {
+interface DragObject {
   index: number
 }
 
@@ -44,13 +44,13 @@ const rowTarget: DropTargetSpec<RowPropsType, DragObject, void> = {
   },
 };
 
-const DraggableDataTable = <T extends Record<string, unknown>>({
+function DraggableDataTable<T extends Record<string, unknown>>({
   className = '',
   dataSource,
   modifier = '',
   onMoveRowCallback,
   ...otherProps
-}: Props<T>) => {
+}: Props<T>) {
   const draggingIndex = useRef(-1);
   const BodyRow = ({
     isOver, connectDragSource, connectDropTarget, ...restProps
@@ -84,6 +84,10 @@ const DraggableDataTable = <T extends Record<string, unknown>>({
     },
   };
 
+  /* eslint-disable react-hooks/refs -- rowSource.beginDrag is called by the
+     react-dnd backend on drag start, not during render, and BodyRow is
+     re-rendered by react-dnd on every isOver change, so the ref it reads is
+     always current. */
   const dropTarget = DropTarget('row', rowTarget, (connect, monitor) => ({
     connectDropTarget: connect.dropTarget(),
     isOver: monitor.isOver(),
@@ -132,6 +136,6 @@ const DraggableDataTable = <T extends Record<string, unknown>>({
       />
     </DndProvider>
   );
-};
+}
 
 export default memo(DraggableDataTable);

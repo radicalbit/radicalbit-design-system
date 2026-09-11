@@ -1,6 +1,6 @@
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
 import { Meta } from '@storybook/react';
-import BarChart, { Props } from './index';
+import BarChart, { Props } from ".";
 
 const meta: Meta<typeof BarChart> = {
   title: 'Components/BarChart',
@@ -19,14 +19,14 @@ const meta: Meta<typeof BarChart> = {
   },
 };
 
-export const Default = ({
+export function Default({
   value = 75,
   content = 75,
   labels = ['min', 'max'], ...args
-}: Props) => (
-  <div style={{ width: '500px' }}>
+}: Props) {
+  return <div style={{ width: '500px' }}>
     <BarChart value={value} content={content} labels={labels} {...args} />
   </div>
-);
+}
 
 export default meta;

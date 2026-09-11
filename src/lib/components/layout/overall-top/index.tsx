@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import { ReactNode } from 'react';
 
-export type OverallTopProps = {
+export interface OverallTopProps {
   content?: ReactNode;
   contentDark?: boolean;
-};
+}
 
 function OverallTop({ content, contentDark }: OverallTopProps) {
   const css = classNames({ dark: contentDark });

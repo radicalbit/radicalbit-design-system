@@ -1,26 +1,26 @@
 import classNames from 'classnames';
 import { Fragment, memo } from 'react';
 
-type Pair = {
+interface Pair {
   title: string;
   value: string | number | boolean;
-};
+}
 
-type Single = {
+interface Single {
   title: string;
-  value: Array<string | number | boolean>;
-};
+  value: (string | number | boolean)[];
+}
 
-type Props = {
+interface Props {
   className?: string,
   gridColumnCount?: number;
-  list: Single | Array<Pair>;
+  list: Single | Pair[];
   modifier?: string,
   noMargin?: boolean;
   withBorder?: boolean;
-};
+}
 
-const DescriptionList = ({
+function DescriptionList({
   className = '',
   gridColumnCount = 3,
   list,
@@ -28,7 +28,7 @@ const DescriptionList = ({
   noMargin,
   withBorder = true,
   ...others
-}: Props) => {
+}: Props) {
   const type = Array.isArray(list) ? 'pair' : 'single';
 
   const css = classNames({
@@ -62,7 +62,7 @@ const DescriptionList = ({
       </dl>
     </div>
   );
-};
+}
 
 DescriptionList.displayName = 'DescriptionList';
 

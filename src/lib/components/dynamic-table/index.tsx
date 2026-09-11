@@ -45,14 +45,13 @@ function getDataSource<T extends Record<string, unknown>>(dataSource: DataTableP
     ));
 }
 
-const DynamicTable = <T extends Record<string, unknown>>(
-  {
+function DynamicTable<T extends Record<string, unknown>>({
     className = '',
     dataSource,
     modifier = '',
     pagination,
     ...otherProps
-  }: DataTableProps<T>) => {
+  }: DataTableProps<T>) {
   const items = isArray(dataSource) ? dataSource : [dataSource];
 
   return (
@@ -66,7 +65,7 @@ const DynamicTable = <T extends Record<string, unknown>>(
       {...otherProps}
     />
   );
-};
+}
 
 DynamicTable.displayName = 'DynamicTable';
 

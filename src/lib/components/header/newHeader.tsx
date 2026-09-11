@@ -1,20 +1,20 @@
 import classNames from 'classnames';
 import { ReactNode, memo } from 'react';
 
-export type Actions = {
+export interface Actions {
   one?: ReactNode;
   two?: ReactNode;
-};
+}
 
-export type Details = {
+export interface Details {
   one?: ReactNode;
   two?: ReactNode;
   three?: ReactNode;
   four?: ReactNode;
   five?: ReactNode;
-};
+}
 
-type Props = {
+interface Props {
   className?: string;
   actionsPosition?: 'start' | 'end';
   actions?: Actions;
@@ -28,9 +28,9 @@ type Props = {
   title: ReactNode;
   titleMaxWidth?: string;
   alignment?: 'left-centered' | 'default-centered' | 'flex-start';
-};
+}
 
-const NewHeader = ({
+function NewHeader({
   actionsPosition = 'end',
   actions,
   className = '',
@@ -43,7 +43,7 @@ const NewHeader = ({
   titleMaxWidth = '100%',
   prefix,
   alignment,
-}: Props) => {
+}: Props) {
   const css = classNames({
     [`l-header--alignment-${alignment}`]: alignment,
     'l-header--no-padding': noPadding,
@@ -94,7 +94,7 @@ const NewHeader = ({
       )}
     </div>
   );
-};
+}
 
 NewHeader.displayName = 'NewHeader';
 

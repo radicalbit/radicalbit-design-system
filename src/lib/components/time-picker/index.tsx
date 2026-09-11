@@ -7,13 +7,13 @@ type Props = TimePickerProps & {
   readOnly?: boolean;
 };
 
-const TimePicker = ({
+function TimePicker({
   className = '',
   modifier = '',
   readOnly,
   value,
   ...others
-}: Props) => {
+}: Props) {
   const css = classNames({
     'c-input--readonly': readOnly,
   });
@@ -27,7 +27,7 @@ const TimePicker = ({
       {...others}
     />
   );
-};
+}
 
 TimePicker.displayName = 'TimePicker';
 

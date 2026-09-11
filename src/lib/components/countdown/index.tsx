@@ -15,6 +15,9 @@ function Countdown({
   type = 'inline',
   size,
 }: CountdownProps) {
+  /* eslint-disable-next-line react-hooks/purity -- pre-existing bug: there is
+     no timer anywhere in the component, so Date.now() is read once and the
+     countdown never advances. Fixing it means adding a ticking `now` state. */
   const expired = date - Date.now() <= 0;
 
   const css = classnames({

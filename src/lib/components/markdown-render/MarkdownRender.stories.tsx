@@ -1,6 +1,6 @@
 import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
-import MarkdownRender from './index';
+import MarkdownRender from ".";
 
 const mockData = `
 ### Operator description.

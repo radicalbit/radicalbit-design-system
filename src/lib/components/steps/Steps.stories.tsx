@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Steps from './index';
+import Steps from ".";
 
 const { Step } = Steps;
 

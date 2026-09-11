@@ -24,13 +24,13 @@ type ElementExtended = Element & {
   style: Record<string, number>;
 };
 
-type Listener = {
+interface Listener {
   element: ElementExtended;
   event: string;
   listener: () => void;
-};
+}
 
-const DataTable = <T extends Record<string, unknown>>({
+function DataTable<T extends Record<string, unknown>>({
   className = '',
   columns,
   dataSource = [],
@@ -41,7 +41,7 @@ const DataTable = <T extends Record<string, unknown>>({
   dark = false,
   hasFixedColumn,
   ...otherProps
-}: DataTableProps<T>) => {
+}: DataTableProps<T>) {
   const enrichedColumns = columns?.map((c, i) => {
     const dataIndex = 'dataIndex' in c ? c.dataIndex : null;
     const enrichedRender: Render<T> = c.render
@@ -87,7 +87,7 @@ const DataTable = <T extends Record<string, unknown>>({
       {...otherProps}
     />
   );
-};
+}
 
 const useShowActionsWithJS = (hasFixedColumn: boolean, rowCount: number) => {
   const listeners = useRef<Listener[]>([]);

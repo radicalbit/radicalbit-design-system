@@ -4,7 +4,7 @@ import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
-export type Props = {
+export interface Props {
   className?: string;
   actionHint?: string;
   actionDoneHint?: string;
@@ -15,26 +15,26 @@ export type Props = {
   modifier?: string;
   onCopied?: () => void;
   tooltip?: TooltipProps;
-};
+}
 
-const CopyToClipboard = ({
+function CopyToClipboard({
   isInsecureContext = !window.isSecureContext,
   ...props
-}: Props) => {
+}: Props) {
   if (isInsecureContext) {
     return <CopyToClipboardInsecure {...props} />;
   }
 
   return <CopyToClipboardInner {...props} />;
-};
+}
 
-const CopyToClipboardInsecure = ({
+function CopyToClipboardInsecure({
   children,
   icon = faCopy,
   modifier = '',
   className = '',
   tooltip = {},
-}: Pick<Props, 'children' | 'icon' | 'modifier' | 'className' | 'tooltip'>) => {
+}: Pick<Props, 'children' | 'icon' | 'modifier' | 'className' | 'tooltip'>) {
   const cssClasses = `m-copy-to-clipboard m-copy-to-clipboard--disabled ${modifier} ${className}`;
 
   return (
@@ -58,9 +58,9 @@ const CopyToClipboardInsecure = ({
       )}
     </Tooltip>
   );
-};
+}
 
-const CopyToClipboardInner = ({
+function CopyToClipboardInner({
   children,
   icon = faCopy,
   link,
@@ -70,7 +70,7 @@ const CopyToClipboardInner = ({
   actionDoneHint = 'Copied!',
   onCopied,
   tooltip = {},
-}: Omit<Props, 'isInsecureContext'>) => {
+}: Omit<Props, 'isInsecureContext'>) {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleOnCopy = async () => {
@@ -114,6 +114,6 @@ const CopyToClipboardInner = ({
       )}
     </Tooltip>
   );
-};
+}
 
 export default CopyToClipboard;

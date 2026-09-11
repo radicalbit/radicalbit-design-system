@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import MapMarker, { Props } from './index';
+import MapMarker, { Props } from ".";
 
 const meta: Meta<typeof MapMarker> = {
   title: 'Components/MapMarker',
