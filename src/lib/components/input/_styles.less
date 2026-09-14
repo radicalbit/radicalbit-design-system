@@ -28,79 +28,81 @@
 	}
 }
 
+// antd v6 rebuilt Input.Search on top of Space.Compact: the
+// `.ant-input-group-wrapper > .ant-input-wrapper.ant-input-group` nesting is
+// gone, and so is the `.ant-input-group-addon` around the button. The affix
+// wrapper and the button are now DIRECT children of the root, and the button
+// carries `.ant-input-search-btn` (v5 called it `.ant-input-search-button`).
 .c-search {
 	&.ant-input-search {
+		background: var(--coo-bk-lv1);
 		border-radius: 6px;
 
 		&:focus-within {
 			box-shadow: 0 0 0 2px rgba(var(--coo-rgb-secondary-01), .15);
 		}
 
-		.ant-input-wrapper {
+		input {
+			color: var(--coo-fg-black);
+		}
+
+		.anticon {
+			color: var(--coo-fg-black);
+
+			&:hover {
+				opacity: var(--coo-primary);
+			}
+		}
+
+		// v6 renders the input bare when there is no prefix/suffix, and wrapped in
+		// `.ant-input-affix-wrapper` when there is one — style both shapes.
+		.ant-input-affix-wrapper,
+		> input.ant-input {
 			background: var(--coo-bk-lv1);
-			border-radius: 6px;
+			border: 1px solid transparent;
+			transition:
+			border-color .2s ease,
+			box-shadow .2s ease;
 
-			input {
-				color: var(--coo-fg-black);
+			&:hover {
+				border-color: var(--coo-primary-hover);
 			}
 
-			.anticon {
-				color: var(--coo-fg-black);
-
-				&:hover {
-					opacity: var(--coo-primary);
-				}
-			}
-
-			.ant-input-affix-wrapper {
-				background: var(--coo-bk-lv1);
-				border: 1px solid transparent;
-				transition:
-				border-color .2s ease,
-				box-shadow .2s ease;
-
-				&:hover {
-					border-color: var(--coo-primary-hover);
-				}
-
-				&-focused {
-					box-shadow: none;
-					border-color: var(--coo-primary);
-				}
-			}
-
-			.ant-input-group-addon {
-				&:hover {
-					border-color: var(--coo-primary-hover);
-				}
-
-				.ant-btn-icon {
-					color: var(--coo-secondary-01);
-				}
-
-				button {
-					background: var(--coo-bk-lv1);
-					border: 1px solid transparent;
-					transition:
-					border-color .2s ease,
-					box-shadow .2s ease;
-				}
-
-				button:focus,
-				button:active {
-					border-color: var(--coo-primary);
-				}
-			}
-
-			&:hover .ant-input-group-addon button,
-			&:has(.ant-input-affix-wrapper-focused) .ant-input-group-addon button {
+			&-focused {
+				box-shadow: none;
 				border-color: var(--coo-primary);
 			}
+		}
+
+		.ant-input-search-btn {
+			background: var(--coo-bk-lv1);
+			border: 1px solid transparent;
+			transition:
+			border-color .2s ease,
+			box-shadow .2s ease;
+
+			.ant-btn-icon {
+				color: var(--coo-secondary-01);
+			}
+
+			&:hover {
+				border-color: var(--coo-primary-hover);
+			}
+
+			&:focus,
+			&:active {
+				border-color: var(--coo-primary);
+			}
+		}
+
+		&:hover .ant-input-search-btn,
+		&:has(.ant-input-affix-wrapper-focused) .ant-input-search-btn {
+			border-color: var(--coo-primary);
 		}
 	}
 
 	&--no-search {
-		.ant-input-group-addon button {
+		.ant-input-search-btn {
 			pointer-events: none;
 
 			&:focus,

@@ -104,8 +104,10 @@
 				}
 			}
 
-			&:not(.ant-steps-item-active):not(.ant-steps-item-process) {
-				> .ant-steps-item-wrapper[role='button']:hover {
+			// antd v6 puts `role="button"` on `.ant-steps-item` itself, not on the
+			// wrapper, so the hover state has to key off the item.
+			&:not(.ant-steps-item-active):not(.ant-steps-item-process)[role='button'] {
+				&:hover {
 					.ant-steps-item-icon {
 						border-color: var(--coo-primary);
 
