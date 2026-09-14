@@ -53,8 +53,44 @@
 	}
 }
 
+// The popup surface is `.ant-picker-panel-container`, not `.ant-picker-panel`:
+// without it the dropdown keeps antd's white default and the date panel
+// stays light in dark mode (only year/month panels were themed below).
 .ant-picker-dropdown {
+	.ant-picker-panel-container {
+		background: var(--coo-bk-lv1);
+		color: var(--coo-fg-black);
+	}
+
+	// The header, the weekday row and the selected cell all keep antd's own
+	// colours, which are tuned for a light surface.
+	.ant-picker-header,
+	.ant-picker-header button,
+	.ant-picker-content th {
+		color: var(--coo-fg-black);
+	}
+
+	.ant-picker-cell-in-view .ant-picker-cell-inner {
+		color: var(--coo-fg-black);
+	}
+
+	// antd qualifies the selected cell with `-in-view` as well, so matching on
+	// `-selected` alone loses on specificity and the cell stays antd blue.
+	.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+	.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+	.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+		background: var(--coo-primary);
+		color: var(--coo-on-primary);
+	}
+
+	.ant-picker-today-btn {
+		color: var(--coo-primary);
+	}
+
 	.ant-picker-panel {
+		background: var(--coo-bk-lv1);
+		color: var(--coo-fg-black);
+
 		.ant-picker-year-panel,
 		.ant-picker-month-panel {
 			background: var(--coo-bk-lv1);
