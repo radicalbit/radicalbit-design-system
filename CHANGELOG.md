@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/radicalbit/radicalbit-design-system/compare/v3.0.2...v4.0.0) (2026-09-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **antd:** Steps.Step is removed, use the `items` prop instead. Icon now requires the `icon` prop; previously it rendered null because it wrapped an antd v5 stub.
+
+### Features
+
+* **antd:** migrate to antd v6 ([#184](https://github.com/radicalbit/radicalbit-design-system/issues/184)) ([ec00406](https://github.com/radicalbit/radicalbit-design-system/commit/ec00406255f5980de88c4e092ee57caa90eb0d04))
+
 ## [3.0.2](https://github.com/radicalbit/radicalbit-design-system/compare/v3.0.1...v3.0.2) (2026-09-11)
 
 
