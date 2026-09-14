@@ -3,7 +3,7 @@ import {
   FontAwesomeIcon as LibraryIcon,
 } from '@fortawesome/react-fontawesome/';
 import classNames from 'classnames';
-import { MouseEventHandler } from 'react';
+import { forwardRef, MouseEventHandler, Ref } from 'react';
 import type { Props as TooltipProps } from '@Components/tooltip';
 import Tooltip from '@Components/tooltip';
 interface Props extends FontAwesomeIconProps {
@@ -15,7 +15,10 @@ interface Props extends FontAwesomeIconProps {
   type?: 'primary' | 'secondary' | 'secondary-light' | 'success' | 'warning' | 'error';
 }
 
-function FontAwesomeIcon({
+// Overlays (Tooltip, Popconfirm, Dropdown) attach a ref to their child, so this
+// has to forward one — a bare function component makes React warn and the
+// overlay lose its anchor.
+const FontAwesomeIcon = forwardRef(({
   className = '',
   enableColorMode = false,
   modifier = '',
@@ -24,7 +27,7 @@ function FontAwesomeIcon({
   icon,
   tooltip,
   ...others
-}: Props) {
+}: Props, ref: Ref<SVGSVGElement>) => {
   const css = classNames({
     'c-font-awesome-icon--enable-color-mode': enableColorMode,
     'c-font-awesome-icon--clickable': !!onClick,
@@ -35,6 +38,7 @@ function FontAwesomeIcon({
     return (
       <Tooltip {...tooltip}>
         <LibraryIcon
+          ref={ref}
           icon={icon}
           className={`c-font-awesome-icon ${css} ${modifier} ${className}`}
           onClick={onClick}
@@ -46,13 +50,14 @@ function FontAwesomeIcon({
 
   return (
     <LibraryIcon
+      ref={ref}
       icon={icon}
       className={`c-font-awesome-icon ${css} ${modifier} ${className}`}
       onClick={onClick}
       {...others}
     />
   );
-}
+});
 
 FontAwesomeIcon.displayName = 'FontAwesomeIcon';
 
