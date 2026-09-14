@@ -25,8 +25,6 @@ function Truncate(props: Props) {
   return <TruncateInner {...props} />;
 }
 
-// Tooltip attaches a ref to its child, so the inner node has to forward one —
-// a bare function component makes React warn and the tooltip lose its anchor.
 const TruncateInner = forwardRef(({
   children,
   className = '',

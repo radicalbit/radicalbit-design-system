@@ -15,9 +15,6 @@ interface Props extends FontAwesomeIconProps {
   type?: 'primary' | 'secondary' | 'secondary-light' | 'success' | 'warning' | 'error';
 }
 
-// Overlays (Tooltip, Popconfirm, Dropdown) attach a ref to their child, so this
-// has to forward one — a bare function component makes React warn and the
-// overlay lose its anchor.
 const FontAwesomeIcon = forwardRef(({
   className = '',
   enableColorMode = false,

@@ -1,9 +1,3 @@
-// antd v6 changes two things here:
-//  - the selected item's background comes from `--ant-segmented-item-selected-bg`,
-//    which is a hard-coded #ffffff and does NOT follow our dark theme, so we
-//    drive that token instead of leaving it to antd;
-//  - the label no longer carries `aria-selected`, so the old
-//    `:has([aria-selected='true'])` selector never matches — use `-selected`.
 .c-segmented {
 	color: var(--coo-fg-black);
 

@@ -1,11 +1,3 @@
-// antd v6: `.ant-select-selector` no longer exists. Border, background, radius
-// and padding now live on the `.ant-select` root, and the placeholder moved
-// from `.ant-select-selection-placeholder` to `.ant-select-placeholder`.
-// `.ant-select-arrow` is gone too: the suffix node it used to wrap,
-// `.ant-select-suffix`, is now the arrow itself.
-// AutoComplete renders a bare `.ant-select` with our `.c-autocomplete` class and
-// never carries `.c-select`, so without it here it keeps antd's light default
-// background and turns white in dark mode.
 .ant-select.c-select,
 .ant-select.c-autocomplete {
 	vertical-align: top;
@@ -103,9 +95,6 @@
 	border: 1px solid transparent;
 }
 
-// The option states are defined once, inside `.ant-select-dropdown` below —
-// options only ever render in that popup, and a second set of rules here just
-// contradicted them (`--coo-secondary-04` vs `--coo-bk-lv1`).
 .ant-select-item-option {
 	&-active:not(.ant-select-item-option-disabled) {
 		color: var(--coo-fg-black);
@@ -130,10 +119,6 @@
 		color: var(--coo-fg-black);
 	}
 
-	// antd v6 added a dedicated rule for "selected AND hovered" whose specificity
-	// (0,4,0) beats both of ours, so the option fell back to antd blue. Match that
-	// specificity and keep the three states distinguishable: selected reads as a
-	// surface, hover tints it, and the two together tint it a little more.
 	.ant-select-item-option-selected.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
 		background-color: rgba(var(--coo-rgb-primary), .3);
 		color: var(--coo-fg-black);

@@ -1,9 +1,3 @@
-// antd v6 restructured the Steps item DOM:
-//   v5 item-container        -> item-wrapper
-//   v5 item-content (box)    -> item-section
-//   v5 item-description      -> item-content
-//   v5 steps-icon            -> item-icon-number / item-icon-finish
-// The connector line moved from `item-title::after` to its own `item-rail`.
 .c-steps {
 	&.ant-steps {
 		.ant-steps-item {
@@ -104,8 +98,6 @@
 				}
 			}
 
-			// antd v6 puts `role="button"` on `.ant-steps-item` itself, not on the
-			// wrapper, so the hover state has to key off the item.
 			&:not(.ant-steps-item-active):not(.ant-steps-item-process)[role='button'] {
 				&:hover {
 					.ant-steps-item-icon {
