@@ -103,14 +103,12 @@
 	border: 1px solid transparent;
 }
 
+// The option states are defined once, inside `.ant-select-dropdown` below —
+// options only ever render in that popup, and a second set of rules here just
+// contradicted them (`--coo-secondary-04` vs `--coo-bk-lv1`).
 .ant-select-item-option {
-	&-selected:not(.ant-select-item-option-disabled) {
-		background: var(--coo-secondary-04);
-	}
-
 	&-active:not(.ant-select-item-option-disabled) {
-		background: rgba(var(--coo-rgb-primary), .2);
-		color: var(--coo-primary);
+		color: var(--coo-fg-black);
 	}
 }
 
@@ -129,6 +127,15 @@
 
 	.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
 		background-color: rgba(var(--coo-rgb-primary), .2);
+		color: var(--coo-fg-black);
+	}
+
+	// antd v6 added a dedicated rule for "selected AND hovered" whose specificity
+	// (0,4,0) beats both of ours, so the option fell back to antd blue. Match that
+	// specificity and keep the three states distinguishable: selected reads as a
+	// surface, hover tints it, and the two together tint it a little more.
+	.ant-select-item-option-selected.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+		background-color: rgba(var(--coo-rgb-primary), .3);
 		color: var(--coo-fg-black);
 	}
 }
