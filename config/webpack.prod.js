@@ -18,10 +18,19 @@ module.exports = merge(common, {
     umdNamedDefine: true,
   },
 
-  externals: {
-    react: 'react',
-    'react-dom': 'react-dom',
-  },
+  // The bare names alone are not enough: antd v6 pulls in `@rc-component/util`,
+  // which imports `react-dom/client`. A subpath does not match an exact-name
+  // external, so react-dom would be compiled INTO the bundle and the consuming
+  // app would end up running two copies of it (breaking on the shared
+  // internals, e.g. `ReactSharedInternals.S`). Keep the subpaths external too.
+  externals: [
+    {
+      react: 'react',
+      'react-dom': 'react-dom',
+    },
+    /^react\/.+$/,
+    /^react-dom\/.+$/,
+  ],
   
   devtool: 'source-map',
 
