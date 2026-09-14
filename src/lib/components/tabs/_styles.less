@@ -22,13 +22,11 @@
 		&-nav {
 			margin: 0;
 
-
 			&-more {
 				span {
 					color: var(--coo-fg-black);
 				}
 			}
-
 
 			.ant-tabs-tab {
 				&-active {
@@ -48,10 +46,9 @@
 		}
 	}
 
-
 	&.ant-tabs {
-		.ant-tabs-content,
-		.ant-tabs-tabpane-active {
+		.ant-tabs-body,
+		.ant-tabs-content-active {
 			height: 100%;
 		}
 	}
@@ -61,11 +58,11 @@
 		display: flex;
 		flex-direction: column;
 
-		> .ant-tabs-content {
+		> .ant-tabs-body-holder {
 			overflow: auto;
 			flex: 1;
 
-			.ant-tabs-tabpane-active {
+			.ant-tabs-content-active {
 				height: 100%;
 			}
 		}
@@ -99,7 +96,6 @@
 		}
 	}
 
-
 	&--size-large {
 		> .ant-tabs-nav .ant-tabs-nav-wrap {
 			height: 3rem;
@@ -126,7 +122,7 @@
 	}
 
 	&--padded-content {
-		> .ant-tabs-content-holder {
+		> .ant-tabs-body-holder {
 			padding: 1rem;
 		}
 	}

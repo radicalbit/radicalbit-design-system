@@ -1,42 +1,34 @@
 .rdb-search {
 	&.ant-input-search {
-		.ant-input-group {
-			.ant-input-affix-wrapper {
-				height: 2rem;
-				background: transparent;
-				border-radius: 0;
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;
-				border: 0;
+		// The input is rendered bare when there is no prefix/suffix and wrapped in
+		// `.ant-input-affix-wrapper` when there is one, so the box styling has to
+		// target whichever of the two is the direct child.
+		> .ant-input-affix-wrapper,
+		> input.ant-input {
+			height: 2rem;
+			border-radius: 0;
+			border: 0;
+		}
 
-				.ant-input {
-					border-radius: 0;
-					border: 0;
-					color: var(--coo-fg-black);
-					background: rgba(var(--coo-rgb-bk-lv2), .15) !important;
-					padding-left: 1rem;
-					cursor: pointer !important;
+		// The text field itself: bare input, or the one inside the affix wrapper.
+		input.ant-input {
+			border-radius: 0;
+			border: 0;
+			color: var(--coo-fg-black);
+			background: rgba(var(--coo-rgb-bk-lv2), .15) !important;
+			padding-left: 1rem;
+			cursor: pointer !important;
+		}
 
-					&[value=""] {
-						+ span {
-							.ant-input-search-icon {
-								display: block !important;
-							}
-						}
-					}
-				}
-			}
+		> .ant-input-affix-wrapper {
+			background: rgba(var(--coo-rgb-bk-lv2), .15);
+		}
 
-			.ant-input-group-addon {
-				background-color: transparent;
-				left: 0;
-
-				button {
-					height: 2rem;
-					border: 0;
-					border-radius: 0 !important;
-				}
-			}
+		.ant-input-search-btn {
+			height: 2rem;
+			background-color: transparent;
+			border: 0;
+			border-radius: 0 !important;
 		}
 	}
 }

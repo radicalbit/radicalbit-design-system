@@ -5,29 +5,27 @@
 		color: var(--coo-fg-black);
 	}
 
-	> div {
-		.ant-modal-content {
-			background-color: var(--c-rbit-modal-background, var(--coo-bk-lv0));
+	.ant-modal-container {
+		background-color: var(--c-rbit-modal-background, var(--coo-bk-lv0));
+		height: 100%;
+
+		.ant-modal-body {
 			height: 100%;
+			display: flex;
+			align-items: stretch;
+			flex-direction: column;
 
-			.ant-modal-body {
-				height: 100%;
+			.c-rbit-modal__content {
 				display: flex;
-				align-items: stretch;
 				flex-direction: column;
+				gap: 2rem;
+				flex: 1;
+				max-height: 85vh;
 
-				.c-rbit-modal__content {
-					display: flex;
-					flex-direction: column;
-					gap: 2rem;
+				.c-rbit-modal__body {
 					flex: 1;
-					max-height: 85vh;
-
-					.c-rbit-modal__body {
-						flex: 1;
-						overflow-y: auto;
-						padding: .3rem // To prevent horizontal scroll;
-					}
+					overflow-y: auto;
+					padding: .3rem // To prevent horizontal scroll;
 				}
 			}
 		}
@@ -52,15 +50,15 @@
 		}
 	}
 
-	&--bg-lv0 > div .ant-modal-content {
+	&--bg-lv0 .ant-modal-container {
 		background-color: var(--c-rbit-modal-background, var(--coo-bk-lv0));
 	}
 
-	&--bg-lv1 > div .ant-modal-content {
+	&--bg-lv1 .ant-modal-container {
 		background-color: var(--c-rbit-modal-background, var(--coo-bk-lv1));
 	}
 
-	&--bg-lv2 > div .ant-modal-content {
+	&--bg-lv2 .ant-modal-container {
 		background-color: var(--c-rbit-modal-background, var(--coo-bk-lv2));
 	}
 
@@ -71,17 +69,12 @@
 		height: 100vh;
 		background: var(--coo-fg-black);
 
-		> div {
+		.ant-modal-container {
 			height: 100vh;
+			border-radius: 0;
 
-			.ant-modal-content {
-				border-radius: 0;
-
-				.ant-modal-body {
-					.c-rbit-modal__content {
-						max-height: 100vh;
-					}
-				}
+			.ant-modal-body .c-rbit-modal__content {
+				max-height: 100vh;
 			}
 		}
 	}

@@ -6,6 +6,9 @@
 
 		&-selected {
 			color: var(--coo-fg-black);
+
+			--ant-segmented-item-selected-bg: var(--coo-bk-lv1);
+			--ant-segmented-item-selected-color: var(--coo-fg-black);
 		}
 	}
 
@@ -17,7 +20,9 @@
 			box-shadow: none;
 		}
 
-		.ant-segmented-item:has(.ant-segmented-item-label[aria-selected='true']) {
+		.ant-segmented-item-selected {
+			--ant-segmented-item-selected-bg: transparent;
+
 			background-color: rgba(var(--coo-rgb-primary), .1);
 			border-bottom: .125rem solid var(--coo-primary);
 		}

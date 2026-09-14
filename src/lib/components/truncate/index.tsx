@@ -1,4 +1,6 @@
-import { ReactNode, memo } from 'react';
+import {
+  ReactNode, Ref, forwardRef, memo,
+} from 'react';
 import Tooltip, { Props as TooltipProps } from '@Components/tooltip';
 
 interface Props {
@@ -23,24 +25,26 @@ function Truncate(props: Props) {
   return <TruncateInner {...props} />;
 }
 
-function TruncateInner({
+const TruncateInner = forwardRef(({
   children,
   className = '',
   modifier = '',
   suffix,
   width,
   ...other
-}: Props) {
+}: Props, ref: Ref<HTMLDivElement>) => {
   const style = other.style || {};
 
   return (
-    <div className={`c-truncate ${modifier} ${className}`} {...other} style={{ ...style, width }}>
+    <div ref={ref} className={`c-truncate ${modifier} ${className}`} {...other} style={{ ...style, width }}>
       <div className="c-truncate__body">{children}</div>
   
       {suffix && <div className="c-truncate__suffix">{suffix}</div>}
     </div>
   );
-}
+});
+
+TruncateInner.displayName = 'TruncateInner';
 
 Truncate.displayName = 'Truncate';
 

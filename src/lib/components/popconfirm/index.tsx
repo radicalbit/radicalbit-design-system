@@ -51,7 +51,7 @@ function Popconfirm({
       {...others}
     >
       {isValidElement(label)
-        ? label
+        ? (<span className="c-popconfirm__trigger">{label}</span>)
         : (<a>{label}</a>)}
     </AntdPopconfirm>
   );

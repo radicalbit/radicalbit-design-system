@@ -18,10 +18,14 @@ module.exports = merge(common, {
     umdNamedDefine: true,
   },
 
-  externals: {
-    react: 'react',
-    'react-dom': 'react-dom',
-  },
+  externals: [
+    {
+      react: 'react',
+      'react-dom': 'react-dom',
+    },
+    /^react\/.+$/,
+    /^react-dom\/.+$/,
+  ],
   
   devtool: 'source-map',
 

@@ -21,7 +21,7 @@ function Collapse({
   children,
   className = '',
   dark = false,
-  expandIconPosition = 'start',
+  expandIconPlacement = 'start',
   modifier = '',
   scroll,
   type,
@@ -35,13 +35,13 @@ function Collapse({
 
   return (
     <AntdCollapse
-      expandIconPosition={expandIconPosition}
+      expandIconPlacement={expandIconPlacement}
       expandIcon={({ isActive }) => (isActive
         ? ((<FontAwesomeIcon icon={faChevronDown} />) as React.ReactNode)
         : ((
           <FontAwesomeIcon
             icon={
-              expandIconPosition === 'right'
+              expandIconPlacement === 'end'
                 ? faChevronLeft
                 : faChevronRight
             }

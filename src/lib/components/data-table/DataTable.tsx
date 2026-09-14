@@ -1,7 +1,7 @@
 import Badge from '@Components/badge';
 import AntdTable, { TableProps } from 'antd/es/table';
 import classNames from 'classnames';
-import { ColumnType } from 'rc-table/lib/interface';
+import { ColumnType } from '@rc-component/table/lib/interface';
 import {
   Fragment, ReactNode, isValidElement, useEffect, useRef,
 } from 'react';
