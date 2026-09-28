@@ -5,10 +5,11 @@ import {
   faClose,
 } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
-import { memo, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import AntdModal, { ModalProps } from 'antd/es/modal';
 
-type Props = ModalProps & {
+type Props = Omit<ModalProps, 'panelRef'> & {
+  'aria-label'?: string;
   actions?: React.ReactNode;
   actionsLayout?: 'default' | 'wide';
   background?: 'secondary-04';
@@ -26,6 +27,7 @@ type Props = ModalProps & {
 };
 
 function RbitModal({
+  'aria-label': ariaLabel,
   actions,
   actionsLayout = 'default',
   background,
@@ -77,12 +79,26 @@ function RbitModal({
     [`c-rbit-modal__actions--layout-${actionsLayout}`]: actionsLayout,
   });
 
+  // antd does not forward aria-* props to the role="dialog" element, so set the name through panelRef
+  const handlePanelRef = useCallback((element: HTMLDivElement | null) => {
+    if (!element) {
+      return;
+    }
+
+    if (ariaLabel) {
+      element.setAttribute('aria-label', ariaLabel);
+    } else {
+      element.removeAttribute('aria-label');
+    }
+  }, [ariaLabel]);
+
   return (
     <AntdModal
       footer={null}
       className={`c-rbit-modal ${css} ${className}`}
       width={cModalMaximized ? '100%' : width}
       zIndex={zIndex}
+      panelRef={handlePanelRef}
       closeIcon={(
         <FontAwesomeIcon
           icon={faClose}
