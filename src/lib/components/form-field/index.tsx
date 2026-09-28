@@ -12,6 +12,7 @@ interface Props {
   children?: React.ReactNode;
   description?: string;
   flexColumn?: boolean;
+  htmlFor?: string;
   label?: string | React.ReactNode;
   message?: string | React.ReactNode;
   modifier?: string;
@@ -34,6 +35,7 @@ function FormField({
   className = '',
   flexColumn,
   description,
+  htmlFor,
   label,
   message,
   modifier = '',
@@ -53,7 +55,7 @@ function FormField({
     <div className={`c-form-field ${className} ${modifier}`} {...other} style={{ width: widthStyles }}>
       {label && (
         <div className="c-form-field__label">
-          <label>
+          <label htmlFor={htmlFor}>
             {label}
             {required && '*'}
           </label>
