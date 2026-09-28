@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.0.0...v4.1.0) (2026-09-28)
+
+
+### Features
+
+* **a11y:** add FormField htmlFor and RbitModal aria-label props ([#190](https://github.com/radicalbit/radicalbit-design-system/issues/190)) ([80ad133](https://github.com/radicalbit/radicalbit-design-system/commit/80ad13319e164bcc0d4339a7cd6e0e7b9c138e53))
+
 ## [4.0.0](https://github.com/radicalbit/radicalbit-design-system/compare/v3.0.2...v4.0.0) (2026-09-14)
 
 
