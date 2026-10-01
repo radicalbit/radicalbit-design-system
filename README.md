@@ -16,3 +16,4 @@ Creating a new component
 - Create some Storybook stories in a file named `<component-name>.stories.ts`
 - In `src/lib/index.ts` add a new export line for the component (follow alphabetic order) `export { default as XXX } from './components/XXX';`
 - In `src/styles/components.less` add a new import line for the component (follow alphabetic order) `@import 'XXX/_styles';`
+- Run `yarn lint` before opening a PR
