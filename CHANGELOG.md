@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.2](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.1...v4.2.2) (2026-10-01)
+
+
+### Bug Fixes
+
+* **ci:** publish with npm &gt;= 11.5 for OIDC trusted publishing ([#198](https://github.com/radicalbit/radicalbit-design-system/issues/198)) ([e6b825f](https://github.com/radicalbit/radicalbit-design-system/commit/e6b825f60237c6c8b7f2b82f03af02e31bb878d9))
+
 ## [4.2.1](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.0...v4.2.1) (2026-10-01)
 
 
