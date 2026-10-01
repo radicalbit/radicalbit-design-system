@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/label-has-for */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 
 import Tooltip from '@Components/tooltip';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
