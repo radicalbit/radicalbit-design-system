@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.1.0...v4.2.0) (2026-10-01)
+
+
+### Features
+
+* npm trusted publishing ([#193](https://github.com/radicalbit/radicalbit-design-system/issues/193)) ([c77af86](https://github.com/radicalbit/radicalbit-design-system/commit/c77af86ef73f3ae489c300c3752a06f9284a192a))
+
 ## [4.1.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.0.0...v4.1.0) (2026-09-28)
 
 
