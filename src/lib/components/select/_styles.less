@@ -9,6 +9,20 @@
 		color: var(--coo-fg-black);
 	}
 
+	// Antd hardcodes search input and clear icon colors to rgba(0, 0, 0, .88/.25)
+	// — swap to tokens so they stay visible on the dark surface.
+	.ant-select-input {
+		color: var(--coo-fg-black);
+	}
+
+	.ant-select-clear {
+		color: var(--coo-fg-tertiary);
+
+		&:hover {
+			color: var(--coo-fg-secondary);
+		}
+	}
+
 	.ant-select-placeholder {
 		color: var(--coo-fg-black);
 		opacity: .25;
@@ -123,6 +137,16 @@
 		background-color: rgba(var(--coo-rgb-primary), .3);
 		color: var(--coo-fg-black);
 	}
+
+	.ant-empty .ant-empty-description {
+		color: var(--coo-fg-tertiary);
+	}
+}
+
+// Antd computes the default Empty illustration from the light theme token —
+// dim it so it doesn't glare on the dark dropdown.
+.dark .ant-select-dropdown .ant-empty-image {
+	opacity: .35;
 }
 
 .c-select-with-text__dropdown {
