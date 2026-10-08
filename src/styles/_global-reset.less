@@ -53,6 +53,12 @@ html body {
 		}
 	}
 
+	// Antd paints the loading veil with colorBgContainer (#fff) — swap to the
+	// page background so it doesn't flash light grey in dark mode.
+	.ant-spin .ant-spin-container::after {
+		background: var(--coo-bk-lv0);
+	}
+
 	ul {
 		color: var(--coo-fg-black);
 	}
