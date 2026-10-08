@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.4](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.3...v4.2.4) (2026-10-08)
+
+
+### Bug Fixes
+
+* dark mode message notice background and select tag remove icon ([#204](https://github.com/radicalbit/radicalbit-design-system/issues/204)) ([44ff35e](https://github.com/radicalbit/radicalbit-design-system/commit/44ff35ed530ed8301039d392dc2623a01104de5c))
+
 ## [4.2.3](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.2...v4.2.3) (2026-10-08)
 
 
