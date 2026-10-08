@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.3](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.2...v4.2.3) (2026-10-08)
+
+
+### Bug Fixes
+
+* dark mode contrast for select search, clear icon, empty state and loading veil ([#202](https://github.com/radicalbit/radicalbit-design-system/issues/202)) ([3008587](https://github.com/radicalbit/radicalbit-design-system/commit/30085879602bfae3f5a41bcbdb3b82b36a35c2bc))
+
 ## [4.2.2](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.1...v4.2.2) (2026-10-01)
 
 
