@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.5](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.4...v4.2.5) (2026-10-13)
+
+
+### Bug Fixes
+
+* dark mode switch unchecked track contrast ([#206](https://github.com/radicalbit/radicalbit-design-system/issues/206)) ([7503ae3](https://github.com/radicalbit/radicalbit-design-system/commit/7503ae3da830117f6d05f414bad7c782f109a9fb))
+
 ## [4.2.4](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.3...v4.2.4) (2026-10-08)
 
 
