@@ -22,6 +22,7 @@
 	}
 
 	.ant-radio-checked {
+		background-color: transparent;
 		border-color: var(--coo-primary);
 
 		&::after {
@@ -190,4 +191,15 @@
 [class^="ant-radio-button"],
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
 	background: transparent;
+}
+
+.dark {
+	.ant-radio-wrapper {
+		color: var(--coo-fg-black);
+	}
+
+	.ant-radio:not(.ant-radio-checked) {
+		background-color: transparent;
+		border-color: var(--coo-fg-tertiary);
+	}
 }
