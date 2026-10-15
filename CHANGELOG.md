@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.6](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.5...v4.2.6) (2026-10-15)
+
+
+### Bug Fixes
+
+* dark mode radio and opaque date picker dropdown ([#208](https://github.com/radicalbit/radicalbit-design-system/issues/208)) ([8318d28](https://github.com/radicalbit/radicalbit-design-system/commit/8318d28c658484e93df3ffc0a3fb3991d2fbb07a))
+
 ## [4.2.5](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.4...v4.2.5) (2026-10-13)
 
 
