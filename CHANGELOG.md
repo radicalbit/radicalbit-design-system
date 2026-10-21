@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.7](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.6...v4.2.7) (2026-10-21)
+
+
+### Bug Fixes
+
+* header title shrinks with long text and details do not wrap ([#212](https://github.com/radicalbit/radicalbit-design-system/issues/212)) ([64c608d](https://github.com/radicalbit/radicalbit-design-system/commit/64c608dfa8895bf7abe8aad9bc9f0a55c8e4dc31))
+
 ## [4.2.6](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.5...v4.2.6) (2026-10-15)
 
 
