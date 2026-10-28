@@ -20,6 +20,7 @@ export interface ApplicationType {
 }
 
 export interface MenuType {
+  ariaLabel?: string;
   items: MenuItem[];
   onSelect: (item: MenuItem) => void;
   selectedItem?: number | string;
@@ -29,8 +30,8 @@ export interface MenuType {
 
 export interface MenuItem {
   isLimitedToPremium?: boolean;
-  icon?: string;
-  title: string;
+  icon?: string | ReactNode;
+  title?: ReactNode;
   position: number;
   key: string;
   className?: string;
@@ -38,6 +39,7 @@ export interface MenuItem {
   iconRotate?: number;
   link?: string | ReactNode;
   children?: MenuItem[];
+  type?: 'group' | 'divider';
 }
 
 export interface LayoutProps {
