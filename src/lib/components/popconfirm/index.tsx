@@ -1,4 +1,4 @@
-import { ReactNode, isValidElement } from 'react';
+import { KeyboardEvent, ReactNode, isValidElement } from 'react';
 import AntdPopconfirm, { PopconfirmProps } from 'antd/es/popconfirm';
 import classNames from 'classnames';
 
@@ -36,7 +36,14 @@ function Popconfirm({
     'c-popconfirm--wrap-title': wrapTitle,
     'c-popconfirm--with-body': withBody,
   });
-  
+
+  const handleOnKeyDown = (event: KeyboardEvent<HTMLAnchorElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      event.currentTarget.click();
+    }
+  };
+
   return (
     <AntdPopconfirm
       overlayStyle={{ width }}
@@ -52,7 +59,7 @@ function Popconfirm({
     >
       {isValidElement(label)
         ? (<span className="c-popconfirm__trigger">{label}</span>)
-        : (<a>{label}</a>)}
+        : (<a onKeyDown={handleOnKeyDown} role="button" tabIndex={0}>{label}</a>)}
     </AntdPopconfirm>
   );
 }
