@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.4.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.3.0...v4.4.0) (2026-10-28)
+
+
+### Features
+
+* accessibility follow-ups for toasts, copy target and nav groups ([#216](https://github.com/radicalbit/radicalbit-design-system/issues/216)) ([ac4f305](https://github.com/radicalbit/radicalbit-design-system/commit/ac4f3052deb948a3f2cdc9ebd26006a0309029bb))
+
+
+### Bug Fixes
+
+* date picker uses design system primary instead of antd default blue ([#210](https://github.com/radicalbit/radicalbit-design-system/issues/210)) ([689504c](https://github.com/radicalbit/radicalbit-design-system/commit/689504c38f1da034dde74f80e7ea90434bd3c33d))
+
 ## [4.3.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.7...v4.3.0) (2026-10-28)
 
 
