@@ -125,7 +125,7 @@ function CopyToClipboardInner({
             tabIndex={0}
             className={cssClasses}
           >
-            <FontAwesomeIcon icon={icon} />
+            <FontAwesomeIcon className="m-copy-to-clipboard__icon" icon={icon} />
           </span>
         )}
       </Tooltip>
