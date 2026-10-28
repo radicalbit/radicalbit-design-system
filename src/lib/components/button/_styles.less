@@ -295,7 +295,7 @@
 	}
 
 	&.ant-btn-text {
-		color: rgb(var(--coo-rgb-text-primary)); // testo+icona, niente sottolineatura
+		color: rgb(var(--coo-rgb-text-primary));
 		border-color: transparent;
 		background: transparent;
 
@@ -307,16 +307,15 @@
 		}
 	}
 
-	// Ghost: type='ghost' non genera classi antd → uso m-button--ghost (vedi index.tsx)
 	&.m-button--ghost {
-		color: rgb(var(--coo-rgb-text-primary)); // testo+icona #14141A
+		color: rgb(var(--coo-rgb-text-primary));
 		border-color: transparent;
 		background: transparent;
-		text-decoration: underline; // SOLO il testo
+		text-decoration: underline;
 
 		.anticon,
 		svg {
-			text-decoration: none; // icona non sottolineata
+			text-decoration: none;
 		}
 
 		&:not(:disabled):not(.ant-btn-disabled):hover {
@@ -349,12 +348,11 @@
 	}
 
 
-	// Disabled: ogni tipo mantiene i suoi colori normali, renderizzato al 30% di opacità
 	&[disabled],
 	&[disabled]:hover {
 		opacity: .3;
 		box-shadow: none;
-		pointer-events: none; // niente hover: resta lo stato normale al 30%
+		pointer-events: none;
 	}
 
 	.ant-btn-circle {
