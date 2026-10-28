@@ -97,6 +97,11 @@
 					outline: 0;
 				}
 
+				&:has(input:focus-visible) {
+					outline: .15rem solid var(--coo-fg-black);
+					outline-offset: .125rem;
+				}
+
 				span,
 				a {
 					display: flex;
@@ -138,6 +143,11 @@
 
 				&:focus-within {
 					outline: 0;
+				}
+
+				&:has(input:focus-visible) {
+					outline: .15rem solid var(--coo-fg-black);
+					outline-offset: .125rem;
 				}
 
 				svg {

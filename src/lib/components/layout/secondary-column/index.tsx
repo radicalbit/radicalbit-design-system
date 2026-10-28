@@ -1,5 +1,6 @@
 import AntdLayout from 'antd/es/layout';
 import Header from '@Components/header/newHeader';
+import SiderTrigger from '@Components/layout/sider-trigger';
 import classNames from 'classnames';
 
 const { Sider } = AntdLayout;
@@ -42,6 +43,7 @@ function SecondaryColumn(props: SecondaryProps) {
       collapsible
       collapsed={collapsed}
       onCollapse={onCollapse}
+      trigger={<SiderTrigger collapsed={collapsed} collapseLabel="Collapse panel" expandLabel="Expand panel" />}
       className={`l-secondary-column ${siderCss}`}
     >
       <div className={`l-secondary-column__header ${headerCss}`}>

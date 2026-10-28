@@ -1,5 +1,6 @@
 import Menu from '@Components/menu';
 import type { MenuItem, MenuType } from '@Src/lib/types/global';
+import type { ItemType } from 'antd/es/menu/interface';
 import { Fragment } from 'react';
 
 export interface MainProps {
@@ -21,10 +22,26 @@ export interface MainProps {
   showBottomDrawerOnHover?: string;
 }
 
-const createMenuItem = (route: MenuItem, index: number) => {
+const createMenuItem = (selectedKey: string) => (route: MenuItem, index: number): ItemType => {
+  const key = route.position.toString();
+
   const className = `${route.className || ''}${
     route.isLimitedToPremium ? ' premium' : ''
   }`;
+
+  if (route.type === 'divider') {
+    return { type: 'divider', key, className };
+  }
+
+  if (route.type === 'group') {
+    return {
+      type: 'group',
+      key,
+      className,
+      label: route.title,
+      children: (route.children ?? []).map(createMenuItem(selectedKey)),
+    };
+  }
 
   return {
     label: (
@@ -34,11 +51,12 @@ const createMenuItem = (route: MenuItem, index: number) => {
       </Fragment>
     ),
     icon: route.icon,
-    key: route.position.toString(),
+    key,
     disabled: route.disabled,
-    title: route.title,
+    title: route.title as string,
     className,
-  };
+    'aria-current': key === selectedKey ? 'page' : undefined,
+  } as ItemType;
 };
 
 function MainNav({
@@ -50,6 +68,8 @@ function MainNav({
   menu,
   bottomMenu,
 }: MainProps) {
+  const selectedKey = menu?.selectedItem ? menu.selectedItem.toString() : '';
+
   return (
     <>
       {/* MAIN NAV ALT CONTENT */}
@@ -64,18 +84,16 @@ function MainNav({
 
       {/* MENU */}
       {menu ? (
-        <div className="cona-l-menu cona-l-menu--top">
+        <nav aria-label={menu.ariaLabel ?? 'Main'} className="cona-l-menu cona-l-menu--top">
           <Menu
             background="transparent"
-            selectedKeys={[
-              menu.selectedItem ? menu.selectedItem.toString() : '',
-            ]}
+            selectedKeys={[selectedKey]}
             mode="inline"
             theme={contentDark ? 'dark' : undefined}
             alignment={hasLeftColumnCollapsed ? 'centered' : undefined}
-            items={menu.items.map(createMenuItem)}
+            items={menu.items.map(createMenuItem(selectedKey))}
           />
-        </div>
+        </nav>
       ) : (
         content
       )}

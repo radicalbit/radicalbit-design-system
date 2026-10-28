@@ -16,7 +16,7 @@ interface Props {
 function Truncate(props: Props) {
   if (props.tooltip) {
     return (
-      <Tooltip {...props.tooltip}>
+      <Tooltip trigger={['hover', 'focus']} {...props.tooltip}>
         <TruncateInner {...props} />
       </Tooltip>
     );

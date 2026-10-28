@@ -2,6 +2,7 @@ import * as React from 'react';
 import AntdLayout, { LayoutProps, SiderProps } from 'antd/es/layout';
 import classNames from 'classnames';
 import LayoutMainNav from '@Components/layout/main-nav';
+import SiderTrigger from '@Components/layout/sider-trigger';
 import { MenuType } from '@Src/lib/types/global';
 
 export type LeftProps = Omit<LayoutProps, 'content'>
@@ -75,6 +76,7 @@ function LeftColumn(props: LeftProps) {
       collapsible={collapsible}
       collapsed={collapsed}
       onCollapse={onCollapse}
+      trigger={<SiderTrigger collapsed={collapsed} collapseLabel="Collapse navigation" expandLabel="Expand navigation" />}
       className={cssSider}
       style={customStyles}
     >

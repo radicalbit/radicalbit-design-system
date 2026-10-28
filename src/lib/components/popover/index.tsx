@@ -36,6 +36,7 @@ function Popover({
   return (
     <AntdPopover
       placement={placement}
+      trigger={trigger}
       overlayClassName={`${overlayClassName || ''} c-popover ${css} ${modifier} ${className}`}
       overlayStyle={{
         minWidth: minWidth ? `${minWidth}px` : 'auto',

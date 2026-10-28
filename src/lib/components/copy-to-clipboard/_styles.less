@@ -16,6 +16,23 @@
 		}
 	}
 
+	&:focus-visible {
+		outline: .15rem solid var(--coo-fg-black);
+		outline-offset: .125rem;
+	}
+
+	&__status {
+		position: absolute;
+		width: .0625rem;
+		height: .0625rem;
+		margin: -.0625rem;
+		padding: 0;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
 	&--disabled {
 		cursor: not-allowed;
 

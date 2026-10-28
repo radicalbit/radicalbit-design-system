@@ -4,7 +4,7 @@ import Tooltip from '@Components/tooltip';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
-import React, { memo } from 'react';
+import React, { memo, useId } from 'react';
 
 interface Props {
   className?: string;
@@ -50,13 +50,34 @@ function FormField({
 
   const widthStyles = formatWidth(width);
 
+  const generatedId = useId();
+  const messageId = `${generatedId}-message`;
+  const isError = !!message && messageColor === 'error';
+
+  const isSingleControl = React.Children.count(children) === 1
+    && React.isValidElement(children)
+    && children.type !== React.Fragment;
+  const control = isSingleControl ? (children as React.ReactElement<Record<string, unknown>>) : undefined;
+  const controlProps = control?.props ?? {};
+  const controlId = (controlProps.id as string | undefined) ?? (control ? generatedId : undefined);
+  const labelFor = htmlFor ?? controlId;
+
+  const content = control
+    ? React.cloneElement(control, {
+      id: controlId,
+      'aria-describedby': controlProps['aria-describedby'] ?? (message ? messageId : undefined),
+      'aria-invalid': controlProps['aria-invalid'] ?? (isError || undefined),
+      'aria-required': controlProps['aria-required'] ?? (required || undefined),
+    })
+    : children;
+
   return (
     <div className={`c-form-field ${className} ${modifier}`} {...other} style={{ width: widthStyles }}>
       {label && (
         <div className="c-form-field__label">
-          <label htmlFor={htmlFor}>
+          <label htmlFor={labelFor}>
             {label}
-            {required && '*'}
+            {required && <span aria-hidden="true">*</span>}
           </label>
 
           {description && (
@@ -67,11 +88,13 @@ function FormField({
         </div>
       )}
 
-      <div className={`c-form-field__content ${modifierContent} ${cssContent}`}>{children}</div>
+      <div className={`c-form-field__content ${modifierContent} ${cssContent}`}>{content}</div>
 
       {message && (
         <span
           className={`c-form-field__message c-form-field__message--${messageColor}`}
+          id={messageId}
+          role={isError ? 'alert' : undefined}
         >
           {message}
         </span>

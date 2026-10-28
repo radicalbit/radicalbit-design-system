@@ -517,3 +517,14 @@
 		background: linear-gradient(89.99deg, var(--coo-primary) 0%, var(--coo-primary-dark) 100%);
 	}
 }
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: .001s !important;
+		animation-iteration-count: 1 !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
