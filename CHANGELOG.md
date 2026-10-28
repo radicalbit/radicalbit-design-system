@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.7...v4.3.0) (2026-10-28)
+
+
+### Features
+
+* accessibility fixes from the gateway audit ([#214](https://github.com/radicalbit/radicalbit-design-system/issues/214)) ([63ff05b](https://github.com/radicalbit/radicalbit-design-system/commit/63ff05b0738afdd89aeb599c16380a305aedf5de))
+
 ## [4.2.7](https://github.com/radicalbit/radicalbit-design-system/compare/v4.2.6...v4.2.7) (2026-10-21)
 
 
