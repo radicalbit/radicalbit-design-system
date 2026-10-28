@@ -88,31 +88,52 @@ function CopyToClipboardInner({
     setIsCopied(false);
   };
 
+  const handleOnKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleOnCopy();
+    }
+  };
+
   const cssClasses = `m-copy-to-clipboard ${modifier} ${className}`;
 
   return (
-    <Tooltip
-      placement="top"
-      title={isCopied ? actionDoneHint : actionHint}
-      {...tooltip}
-      onOpenChange={handleOnOpenChange}
-    >
-      {children ? (
-        <div
-          onClick={handleOnCopy}
-          role="presentation"
-          className={cssClasses}
-        >
-          {children}
-        </div>
-      ) : (
-        <FontAwesomeIcon
-          onClick={handleOnCopy}
-          icon={icon}
-          className={cssClasses}
-        />
-      )}
-    </Tooltip>
+    <>
+      <Tooltip
+        placement="top"
+        title={isCopied ? actionDoneHint : actionHint}
+        trigger={['hover', 'focus']}
+        {...tooltip}
+        onOpenChange={handleOnOpenChange}
+      >
+        {children ? (
+          <div
+            onClick={handleOnCopy}
+            onKeyDown={handleOnKeyDown}
+            role="button"
+            tabIndex={0}
+            className={cssClasses}
+          >
+            {children}
+          </div>
+        ) : (
+          <span
+            aria-label={actionHint}
+            onClick={handleOnCopy}
+            onKeyDown={handleOnKeyDown}
+            role="button"
+            tabIndex={0}
+            className={cssClasses}
+          >
+            <FontAwesomeIcon icon={icon} />
+          </span>
+        )}
+      </Tooltip>
+
+      <span aria-live="polite" className="m-copy-to-clipboard__status">
+        {isCopied ? actionDoneHint : ''}
+      </span>
+    </>
   );
 }
 

@@ -31,6 +31,14 @@ export const Default: Story = {
   },
 };
 
+export const Keyboard: Story = {
+  args: {
+    ...commonArgs,
+    actionHint: 'Copy the value',
+    children: <span>Tab here, then press Enter or Space</span>,
+  },
+};
+
 export const InsecureContext: Story = {
   args: {
     ...commonArgs,
