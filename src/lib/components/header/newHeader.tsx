@@ -26,6 +26,7 @@ interface Props {
   mode?: 'light' | 'dark';
   prefix?: ReactNode;
   title: ReactNode;
+  titleLevel?: 1 | 2 | 3 | 4 | 5 | 6;
   titleMaxWidth?: string;
   alignment?: 'left-centered' | 'default-centered' | 'flex-start';
 }
@@ -40,6 +41,7 @@ function NewHeader({
   padding = 'all',
   mode,
   title,
+  titleLevel,
   titleMaxWidth = '100%',
   prefix,
   alignment,
@@ -62,7 +64,12 @@ function NewHeader({
     <div className={`l-header ${modifier} ${css} ${cssMode} ${className}`}>
       {prefix && <div className="l-header__prefix">{prefix}</div>}
 
-      <div className="l-header__title" style={{ maxWidth: titleMaxWidth }}>
+      <div
+        aria-level={titleLevel}
+        className="l-header__title"
+        role={titleLevel ? 'heading' : undefined}
+        style={{ maxWidth: titleMaxWidth }}
+      >
         {title}
       </div>
 

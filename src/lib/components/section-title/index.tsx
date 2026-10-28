@@ -13,6 +13,7 @@ interface Props {
   hoverable?: boolean;
   icon?: React.ReactNode;
   iconAlign?: 'start' | 'end' | 'center';
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
   modifier?: string;
   onClick?: () => void;
   propsEllipsis?: boolean;
@@ -35,6 +36,7 @@ function SectionTitle(props: Props) {
     hoverable = false,
     icon,
     iconAlign,
+    level,
     modifier = '',
     onClick,
     propsEllipsis = false,
@@ -93,7 +95,9 @@ function SectionTitle(props: Props) {
         )}
         
         <div
+          aria-level={level}
           className={`c-section-title__title-text ${cssEllipsis} ${cssText}`}
+          role={level ? 'heading' : undefined}
         >
           {title}
         </div>
