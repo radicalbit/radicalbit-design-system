@@ -123,7 +123,7 @@ function CopyToClipboardInner({
             onKeyDown={handleOnKeyDown}
             role="button"
             tabIndex={0}
-            className={cssClasses}
+            className={`${cssClasses} m-copy-to-clipboard--icon-only`}
           >
             <FontAwesomeIcon className="m-copy-to-clipboard__icon" icon={icon} />
           </span>
