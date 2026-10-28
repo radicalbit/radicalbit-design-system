@@ -19,4 +19,13 @@ export const Default: Story = {
   args: { title: 'LoremIpsum', content: 'Lorem', children: 'hover me' },
 };
 
+export const ClickTrigger: Story = {
+  args: {
+    title: 'LoremIpsum',
+    content: 'Lorem',
+    trigger: 'click',
+    children: <button type="button">click me</button>,
+  },
+};
+
 export default meta;
