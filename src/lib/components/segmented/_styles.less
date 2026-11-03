@@ -28,3 +28,26 @@
 		}
 	}
 }
+
+.dark .c-segmented:not(.c-segmented--highlighted) {
+	background-color: var(--coo-bk-lv1);
+
+	.ant-segmented-item {
+		color: var(--coo-fg-secondary);
+
+		&:hover:not(.ant-segmented-item-selected):not(.ant-segmented-item-disabled) {
+			color: var(--coo-fg-primary);
+		}
+
+		&-selected {
+			--ant-segmented-item-selected-bg: var(--coo-bk-lv2);
+			--ant-segmented-item-selected-color: var(--coo-fg-primary);
+
+			color: var(--coo-fg-primary);
+		}
+	}
+
+	.ant-segmented-thumb {
+		background-color: var(--coo-bk-lv2);
+	}
+}

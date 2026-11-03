@@ -1,3 +1,55 @@
 .ant-input-number {
 	width: 100%;
 }
+
+.dark .ant-input-number {
+	background: var(--coo-bk-lv1);
+	border-color: var(--coo-secondary-03);
+	color: var(--coo-fg-primary);
+
+	&:hover:not(.ant-input-number-disabled) {
+		border-color: var(--coo-primary);
+	}
+
+	&-focused {
+		border-color: var(--coo-primary);
+	}
+
+	.ant-input-number-input {
+		color: var(--coo-fg-primary);
+
+		&::placeholder {
+			color: var(--coo-fg-tertiary) !important;
+			opacity: 1;
+		}
+	}
+
+	.ant-input-number-prefix,
+	.ant-input-number-suffix {
+		color: var(--coo-fg-secondary);
+	}
+
+	.ant-input-number-actions,
+	.ant-input-number-handler-wrap {
+		background: var(--coo-bk-lv2);
+	}
+
+	.ant-input-number-action,
+	.ant-input-number-handler {
+		color: var(--coo-fg-secondary);
+		border-color: var(--coo-secondary-03);
+
+		&:hover {
+			color: var(--coo-primary);
+		}
+	}
+
+	&-disabled {
+		background: var(--coo-bk-lv0);
+		color: var(--coo-fg-tertiary);
+
+		.ant-input-number-input {
+			color: var(--coo-fg-tertiary);
+		}
+	}
+}

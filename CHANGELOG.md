@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.5.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.4.0...v4.5.0) (2026-11-03)
+
+
+### Features
+
+* Storybook toolbar toggle between light and dark theme
+* dark mode for Alert, Segmented, Modal (including antd confirm), Radio (disabled), InputNumber and Skeleton
+
+
+### Bug Fixes
+
+* Select multiple with search no longer truncates the typed text
+* Select: Tab on an open dropdown moves focus to the next field instead of toggling the active option
+
 ## [4.4.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.3.0...v4.4.0) (2026-10-28)
 
 

@@ -212,4 +212,20 @@
 		background-color: transparent;
 		border-color: var(--coo-fg-tertiary);
 	}
+
+	.ant-radio-wrapper-disabled,
+	.ant-radio-wrapper-disabled .ant-radio-label {
+		color: var(--coo-fg-secondary);
+	}
+
+	.ant-radio-disabled {
+		.ant-radio-inner {
+			background-color: transparent;
+			border-color: var(--coo-fg-tertiary);
+		}
+
+		&.ant-radio-checked .ant-radio-inner::after {
+			background-color: var(--coo-fg-secondary);
+		}
+	}
 }

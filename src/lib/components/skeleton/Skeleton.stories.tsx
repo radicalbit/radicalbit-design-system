@@ -32,4 +32,25 @@ export const Default: Story = {
   ),
 };
 
+export const OnSurfacesDark: Story = {
+  globals: { theme: 'dark' },
+  args: {
+    active: true,
+    avatar: true,
+    paragraph: true,
+    loading: true,
+  },
+
+  render: (props) => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      {['var(--coo-bk-lv1)', 'var(--coo-bk-lv2)'].map((background) => (
+        <div key={background} style={{ width: 400, padding: '1rem', background }}>
+          <Skeleton {...props} />
+          <Skeleton.Input active block />
+        </div>
+      ))}
+    </div>
+  ),
+};
+
 export default meta;

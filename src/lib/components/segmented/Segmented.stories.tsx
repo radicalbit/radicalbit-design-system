@@ -35,4 +35,15 @@ export const Highlighted: Story = {
   },
 };
 
+export const SkipOverwriteDark: Story = {
+  globals: { theme: 'dark' },
+  parameters: {
+    layout: 'centered',
+  },
+  args: {
+    options: ['Skip', 'Overwrite'],
+    defaultValue: 'Skip',
+  },
+};
+
 export default meta;

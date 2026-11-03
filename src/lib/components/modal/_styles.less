@@ -48,3 +48,27 @@
 		}
 	}
 }
+
+.dark .ant-modal,
+.ant-modal.dark {
+	color: var(--coo-fg-primary);
+
+	.ant-modal-title,
+	.ant-modal-body,
+	.ant-modal-confirm-title,
+	.ant-modal-confirm-container {
+		color: var(--coo-fg-primary);
+	}
+
+	.ant-modal-close {
+		color: var(--coo-fg-secondary);
+
+		&:hover {
+			color: var(--coo-fg-primary);
+		}
+	}
+
+	&.ant-modal-confirm .ant-modal-container {
+		background-color: var(--coo-bk-lv0);
+	}
+}
