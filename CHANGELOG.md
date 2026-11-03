@@ -5,6 +5,13 @@
 
 ### Features
 
+* dark mode for Alert, Segmented, Modal, Radio, InputNumber, Skeleton; Select fixes; Storybook theme toggle ([#219](https://github.com/radicalbit/radicalbit-design-system/issues/219)) ([ace38a9](https://github.com/radicalbit/radicalbit-design-system/commit/ace38a9409ce03c1589ba9853f3068929af1c6a3))
+
+## [4.5.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.4.0...v4.5.0) (2026-11-03)
+
+
+### Features
+
 * Storybook toolbar toggle between light and dark theme
 * dark mode for Alert, Segmented, Modal (including antd confirm), Radio (disabled), InputNumber and Skeleton
 
