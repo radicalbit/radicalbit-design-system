@@ -45,3 +45,20 @@
 		}
 	}
 }
+
+.dark .ant-skeleton-active {
+	@shimmer: linear-gradient(90deg, rgba(var(--coo-rgb-neutral-00), .04) 25%, rgba(var(--coo-rgb-neutral-00), .14) 37%, rgba(var(--coo-rgb-neutral-00), .04) 63%);
+
+	.ant-skeleton-input,
+	.ant-skeleton-title,
+	.ant-skeleton-paragraph > li,
+	.ant-skeleton-avatar,
+	.ant-skeleton-button,
+	.ant-skeleton-image {
+		background: rgba(var(--coo-rgb-neutral-00), .08);
+
+		&::after {
+			background: @shimmer;
+		}
+	}
+}

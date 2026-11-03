@@ -30,3 +30,42 @@
 		}
 	}
 }
+
+.c-alert-dark-type(@type) {
+	&.ant-alert-@{type} {
+		background-color: rgba(var(~"--coo-rgb-@{type}-dark"), .15);
+		border-color: rgba(var(~"--coo-rgb-@{type}-dark"), .35);
+
+		.ant-alert-icon {
+			color: rgb(var(~"--coo-rgb-@{type}-dark"));
+		}
+	}
+}
+
+.dark .c-alert,
+.c-alert.dark {
+	.c-alert-dark-type(info);
+	.c-alert-dark-type(success);
+	.c-alert-dark-type(warning);
+	.c-alert-dark-type(error);
+
+	.ant-alert-title,
+	.ant-alert-description,
+	.ant-alert-description ul,
+	.ant-alert-description li,
+	.ant-alert-description code {
+		color: var(--coo-fg-primary);
+	}
+
+	.ant-alert-description code {
+		background-color: rgba(var(--coo-rgb-neutral-00), .1);
+	}
+
+	.ant-alert-close-icon .anticon-close {
+		color: var(--coo-fg-secondary);
+
+		&:hover {
+			color: var(--coo-fg-primary);
+		}
+	}
+}

@@ -14,6 +14,7 @@ export type Props = SelectProps & {
   value?: string;
   minWidth?: number | string;
   dark?: boolean;
+  onKeyDownCapture?: React.KeyboardEventHandler<HTMLDivElement>;
 };
 
 function SelectComponent({
@@ -32,6 +33,7 @@ function SelectComponent({
   removeIcon,
   skeleton,
   dark = false,
+  onKeyDownCapture,
   ...others
 }: Props) {
   const css = classNames({
@@ -47,6 +49,16 @@ function SelectComponent({
 
   const style = minWidth ? { minWidth } : {};
 
+  const handleKeyDownCapture: Props['onKeyDownCapture'] = (e) => {
+    const target = e.target as HTMLElement;
+
+    if (e.key === 'Tab' && target.getAttribute('aria-expanded') === 'true') {
+      e.stopPropagation();
+    }
+
+    onKeyDownCapture?.(e);
+  };
+
   if (skeleton) {
     return (<Skeleton.Input active block></Skeleton.Input>);
   }
@@ -60,6 +72,7 @@ function SelectComponent({
       removeIcon={removeIconOrElse}
       style={style}
       {...others}
+      {...{ onKeyDownCapture: handleKeyDownCapture } as SelectProps}
     >
       {children}
     </AntdSelect>
