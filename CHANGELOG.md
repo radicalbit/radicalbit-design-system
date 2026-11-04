@@ -5,6 +5,13 @@
 
 ### Bug Fixes
 
+* dark mode for Spinner text, native scrollbars and pagination size select (AG-1119) ([#221](https://github.com/radicalbit/radicalbit-design-system/issues/221)) ([aabcde6](https://github.com/radicalbit/radicalbit-design-system/commit/aabcde623b249066afa512fc2870119b336df49b))
+
+## [4.5.1](https://github.com/radicalbit/radicalbit-design-system/compare/v4.5.0...v4.5.1) (2026-11-04)
+
+
+### Bug Fixes
+
 * dark mode for Spinner text, native scrollbars and pagination size select (AG-1119)
 
 ## [4.5.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.4.0...v4.5.0) (2026-11-03)
