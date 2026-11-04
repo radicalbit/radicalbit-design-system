@@ -43,6 +43,27 @@ html body .ant-pagination {
 }
 
 .dark {
+	.ant-pagination-options-size-changer.ant-select {
+		background: var(--coo-bk-lv1);
+		border-color: var(--coo-secondary-03);
+		border-radius: 6px;
+		color: var(--coo-fg-primary);
+
+		.ant-select-content,
+		.ant-select-input {
+			color: var(--coo-fg-primary);
+		}
+
+		.ant-select-suffix {
+			color: var(--coo-fg-secondary);
+		}
+
+		&:not(.ant-select-disabled):hover,
+		&.ant-select-focused {
+			border-color: var(--coo-primary);
+		}
+	}
+
 	.ant-pagination-options-quick-jumper input {
 		background-color: var(--coo-secondary-04);
 		border-color: var(--coo-secondary-03);

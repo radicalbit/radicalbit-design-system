@@ -52,4 +52,49 @@ export const Default: Story = {
   },
 };
 
+const rows = Array.from({ length: 42 }, (_, i) => ({
+  key: `${i + 1}`,
+  name: `User ${i + 1}`,
+  age: 20 + (i % 30),
+  address: `${i + 1} Downing Street`,
+}));
+
+const columns = [
+  {
+    title: 'Name',
+    dataIndex: 'name',
+    key: 'name',
+  },
+  {
+    title: 'Age',
+    dataIndex: 'age',
+    key: 'age',
+  },
+  {
+    title: 'Address',
+    dataIndex: 'address',
+    key: 'address',
+  },
+];
+
+export const PaginationDark: Story = {
+  globals: { theme: 'dark' },
+  render: () => (
+    <DataTable
+      dataSource={rows}
+      columns={columns}
+      pagination={{ pageSize: 10, showSizeChanger: true }}
+    />
+  ),
+};
+
+export const ScrollableDark: Story = {
+  globals: { theme: 'dark' },
+  render: () => (
+    <div style={{ width: 480, height: 240, overflow: 'auto' }}>
+      <DataTable dataSource={rows} columns={columns} pagination={false} />
+    </div>
+  ),
+};
+
 export default meta;
