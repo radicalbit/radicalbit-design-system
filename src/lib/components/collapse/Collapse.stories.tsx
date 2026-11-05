@@ -54,4 +54,16 @@ export const Default: Story = {
   render: (props) => <Collapse {...props} />,
 };
 
+export const Card: Story = {
+  args: {
+    ...commonArgs,
+    defaultActiveKey: ['1'],
+    items: [
+      { key: '1', label: 'This is panel header 1', children: <p>Duis</p> },
+    ],
+    type: 'card',
+  },
+  render: (props) => <Collapse {...props} />,
+};
+
 export default meta;
