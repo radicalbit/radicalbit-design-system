@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.6.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.5.1...v4.6.0) (2026-11-09)
+
+
+### Features
+
+* card type for Collapse ([#223](https://github.com/radicalbit/radicalbit-design-system/issues/223)) ([4534d30](https://github.com/radicalbit/radicalbit-design-system/commit/4534d307e747df5ae15e62790fb13c43af21dd66))
+
 ## [4.5.1](https://github.com/radicalbit/radicalbit-design-system/compare/v4.5.0...v4.5.1) (2026-11-04)
 
 
