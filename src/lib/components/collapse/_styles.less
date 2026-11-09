@@ -149,6 +149,26 @@
 		}
 	}
 
+	&--card {
+		&.ant-collapse {
+			.ant-collapse-item,
+			.ant-collapse-item:last-child {
+				border: none;
+				margin-bottom: 0;
+				border-radius: var(--coo-border-radius-small);
+				background-color: var(--coo-bk-lv1);
+
+				.ant-collapse-header {
+					padding: 1rem 1.5rem;
+				}
+
+				.ant-collapse-panel .ant-collapse-body {
+					padding: 0 1.5rem 1.5rem;
+				}
+			}
+		}
+	}
+
 	&--transparent {
 		&.ant-collapse {
 			background-color: transparent;
