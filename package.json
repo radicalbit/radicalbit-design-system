@@ -1,6 +1,6 @@
 {
   "name": "@radicalbit/radicalbit-design-system",
-  "version": "4.5.1",
+  "version": "4.6.0",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": {
