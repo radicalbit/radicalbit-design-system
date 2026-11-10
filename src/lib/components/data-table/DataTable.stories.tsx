@@ -98,3 +98,12 @@ export const ScrollableDark: Story = {
 };
 
 export default meta;
+
+export const NoPadding: Story = {
+  args: {
+    ...Default.args,
+    noHead: true,
+    noPadding: true,
+    size: 'small',
+  },
+};

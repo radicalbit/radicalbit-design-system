@@ -12,6 +12,8 @@ export interface DataTableProps<T extends Record<string, unknown>>
   className?: string;
   modifier?: string;
   noHead?: boolean;
+  /** Removes the wrapper padding and the outer padding of the first and last cells, for a table nested in a padded container. */
+  noPadding?: boolean;
   clickable?: boolean;
   hasFixedColumn?: boolean;
   dark?: boolean;
@@ -36,6 +38,7 @@ function DataTable<T extends Record<string, unknown>>({
   dataSource = [],
   modifier = '',
   noHead = false,
+  noPadding = false,
   onRow,
   clickable,
   dark = false,
@@ -74,6 +77,7 @@ function DataTable<T extends Record<string, unknown>>({
 
   const css = classNames({
     'l-data-table--no-head': noHead,
+    'l-data-table--no-padding': noPadding,
     'l-data-table--clickable': clickable,
     dark,
   });
