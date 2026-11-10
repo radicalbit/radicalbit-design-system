@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.7.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.6.0...v4.7.0) (2026-11-10)
+
+
+### Features
+
+* noPadding prop on DataTable ([#225](https://github.com/radicalbit/radicalbit-design-system/issues/225)) ([04105b9](https://github.com/radicalbit/radicalbit-design-system/commit/04105b91e4152f51b4a2af5bbe3014bdd956506c))
+
 ## [4.6.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.5.1...v4.6.0) (2026-11-09)
 
 
