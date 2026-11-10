@@ -33,6 +33,23 @@
 		}
 	}
 
+	// Declared with the full class so it outranks the first/last cell
+	// padding rules below.
+	&.l-data-table--no-padding {
+		padding: 0;
+
+		thead.ant-table-thead tr th,
+		tbody tr td {
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+
 	.ant-table-cell {
 		.ant-empty {
 			.ant-empty-description {
