@@ -1,0 +1,51 @@
+.c-timeline {
+	&.ant-timeline {
+		.ant-timeline-item {
+			--c-timeline-tone: var(--coo-primary-dark);
+
+			&-icon {
+				width: .75rem;
+				height: .75rem;
+				border: none;
+				background-color: var(--c-timeline-tone);
+			}
+
+			&-rail {
+				border-color: var(--coo-border-primary);
+			}
+
+			&-title {
+				color: var(--coo-fg-secondary);
+				font-family: var(--coo-monospace-font);
+				font-size: .75rem;
+				font-variant-numeric: tabular-nums;
+			}
+
+			&-content {
+				color: var(--coo-fg-black);
+			}
+		}
+
+		.c-timeline__item--tone {
+			&-success {
+				--c-timeline-tone: var(--coo-success);
+			}
+
+			&-warning {
+				--c-timeline-tone: var(--coo-warning);
+			}
+
+			&-error {
+				--c-timeline-tone: var(--coo-error);
+			}
+
+			&-muted {
+				--c-timeline-tone: var(--coo-disabled);
+			}
+
+			&-neutral {
+				--c-timeline-tone: var(--coo-fg-tertiary);
+			}
+		}
+	}
+}

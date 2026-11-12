@@ -19,7 +19,7 @@ type Story = StoryObj<typeof Draggable>;
 export const Default: Story = {
   args: {},
   render: (props) => {
-    const ref = useRef(null);
+    const ref = useRef<HTMLDivElement>(null);
 
     return (
       <div ref={ref} style={{ minHeight: 400, width: 400, border: '1px solid grey' }}>
