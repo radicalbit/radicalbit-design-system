@@ -7,7 +7,7 @@ interface Props {
   children: React.ReactNode;
   className?: string;
   containerClassName?: string;
-  containerRef: React.RefObject<HTMLDivElement>;
+  containerRef: React.RefObject<HTMLDivElement | null>;
   modifier?: string;
   onBlur?: (e: React.FocusEvent<HTMLDivElement>) => void;
   onMouseDown?: (e: React.MouseEvent<HTMLDivElement>) => void;

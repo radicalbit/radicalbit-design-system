@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { TransferProps } from 'antd';
-import { useState } from 'react';
+import { Key, useState } from 'react';
 import Transfer, { Props } from '.';
 
 type CustomProps = Props<TransferProps<Record<string, unknown>>>;
@@ -35,10 +35,10 @@ export const Default: Story = {
     render: (item) => item.title ?? '',
   },
   render: (props) => {
-    const [targetKeys, setTargetKeys] = useState(
+    const [targetKeys, setTargetKeys] = useState<Key[]>(
       mockData.filter((item) => +item.key % 3 > 1).map((item) => item.key),
     );
-    const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
+    const [selectedKeys, setSelectedKeys] = useState<Key[]>([]);
 
     const onChange: CustomProps['onChange'] = (newTargetKeys) => {
       setTargetKeys(newTargetKeys);
@@ -72,10 +72,10 @@ export const TransfertOperationFlexStart: Story = {
     render: (item) => item.title ?? '',
   },
   render: (props) => {
-    const [targetKeys, setTargetKeys] = useState(
+    const [targetKeys, setTargetKeys] = useState<Key[]>(
       mockData.filter((item) => +item.key % 3 > 1).map((item) => item.key),
     );
-    const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
+    const [selectedKeys, setSelectedKeys] = useState<Key[]>([]);
 
     const onChange: CustomProps['onChange'] = (newTargetKeys) => {
       setTargetKeys(newTargetKeys);
