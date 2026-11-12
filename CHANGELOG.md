@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.8.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.7.0...v4.8.0) (2026-11-12)
+
+
+### Features
+
+* Board slot props with noPadding and Timeline component (AG-1138) ([#227](https://github.com/radicalbit/radicalbit-design-system/issues/227)) ([cf337e9](https://github.com/radicalbit/radicalbit-design-system/commit/cf337e9c7f9006cf9d11e77cbed6c10dbc0f808d))
+
 ## [4.7.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.6.0...v4.7.0) (2026-11-10)
 
 
