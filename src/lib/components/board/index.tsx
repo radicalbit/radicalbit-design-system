@@ -1,6 +1,10 @@
 import classNames from 'classnames';
 import { HTMLAttributes, ReactNode, useState } from 'react';
 
+type SlotProps = HTMLAttributes<HTMLDivElement> & {
+  noPadding?: boolean;
+};
+
 type Props = HTMLAttributes<HTMLDivElement> & {
   backgroundImage?: string;
   backgroundLevel?: 0 | 1 | 2;
@@ -10,9 +14,11 @@ type Props = HTMLAttributes<HTMLDivElement> & {
   footer?: ReactNode;
   dark?: boolean;
   header?: ReactNode;
+  headerProps?: SlotProps;
   height?: string;
   hoverType?: 'primary' | 'secondary' | 'rounded' | 'add-new';
   main: string | ReactNode;
+  mainProps?: SlotProps;
   mainType?: 'wide-center';
   mode?: 'light' | 'dark';
   modifier?: string;
@@ -21,6 +27,7 @@ type Props = HTMLAttributes<HTMLDivElement> & {
   onClick?: () => void;
   primaryColor?: string;
   secondary?: ReactNode;
+  secondaryProps?: SlotProps;
   secondaryType?: 'single';
   size?: 'xsmall' | 'small';
   status?:
@@ -35,6 +42,36 @@ type Props = HTMLAttributes<HTMLDivElement> & {
   width?: string;
 };
 
+interface BoardSlotProps {
+  children: ReactNode;
+  className?: string;
+  name: 'header' | 'main' | 'secondary';
+  slotProps?: SlotProps;
+}
+
+function BoardSlot({
+  children, className, name, slotProps = {},
+}: BoardSlotProps) {
+  const { noPadding = false, className: slotClassName, ...rest } = slotProps;
+
+  return (
+    <div
+      {...rest}
+      className={classNames(
+        `l-board__${name}`,
+        {
+          'l-board__slot--no-padding': noPadding,
+          [`l-board__${name}--no-padding`]: noPadding,
+        },
+        className,
+        slotClassName,
+      )}
+    >
+      {children}
+    </div>
+  );
+}
+
 function Board({
   backgroundImage = undefined,
   backgroundLevel,
@@ -43,14 +80,17 @@ function Board({
   className = '',
   footer,
   header,
+  headerProps,
   dark = false,
   height = undefined,
   main,
+  mainProps,
   mainType,
   mode,
   modifier = '',
   primaryColor = undefined,
   secondary,
+  secondaryProps,
   secondaryType,
   size,
   status,
@@ -123,11 +163,11 @@ function Board({
       onMouseEnter={handleOnMouseEnter}
       onMouseLeave={handleOnMouseLeave}
     >
-      {header && <div className="l-board__header">{header}</div>}
+      {header && <BoardSlot name="header" slotProps={headerProps}>{header}</BoardSlot>}
 
-      {main && <div className={`l-board__main ${cssMain}`}>{main}</div>}
+      {main && <BoardSlot className={cssMain} name="main" slotProps={mainProps}>{main}</BoardSlot>}
 
-      {secondary && <div className="l-board__secondary">{secondary}</div>}
+      {secondary && <BoardSlot name="secondary" slotProps={secondaryProps}>{secondary}</BoardSlot>}
 
       {footer && <div className="l-board__footer">{footer}</div>}
     </div>

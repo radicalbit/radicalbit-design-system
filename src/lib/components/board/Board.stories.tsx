@@ -2,6 +2,7 @@ import { mapReactNodeArgsTypes } from '@Src/utils/storybook';
 import { Meta, StoryObj } from '@storybook/react';
 import Board from '.';
 import Button from '../button';
+import DataTable from '../data-table/DataTable';
 
 const meta: Meta<typeof Board> = {
   title: 'Components/Board',
@@ -81,6 +82,76 @@ export const Clickable: Story = {
     ...commonArgs,
     header: 'Hover and click me',
     hoverType: 'primary',
+  },
+};
+
+const noPaddingRows = [
+  { key: '1', route: 'decide-plain', detail: 'Credential jevmisc-key · Duration 14 ms · Cost $0' },
+  { key: '2', route: 'support-chat', detail: 'Credential support-web · Duration 182 ms · Cost <$0.0001' },
+  { key: '3', route: 'faq-bot', detail: 'Credential faq-widget · Duration 14 ms · Cost $0' },
+];
+
+const noPaddingColumns = [
+  {
+    key: 'request',
+    render: (_: unknown, row: typeof noPaddingRows[number]) => (
+      <div
+        style={{
+          display: 'flex', flexDirection: 'column', gap: '.25rem', padding: '.75rem 1rem',
+        }}
+      >
+        <strong>{row.route}</strong>
+        <span>{row.detail}</span>
+      </div>
+    ),
+  },
+];
+
+const noPaddingTable = (
+  <DataTable
+    clickable
+    columns={noPaddingColumns}
+    dataSource={noPaddingRows}
+    noHead
+    noPadding
+    pagination={false}
+    rowClassName={(row: typeof noPaddingRows[number]) => (row.key === '1' ? DataTable.ROW_PRIMARY_LIGHT : '')}
+    size="small"
+  />
+);
+
+export const SecondaryNoPadding: Story = {
+  args: {
+    width: '520px',
+    header: 'Requests',
+    main: 'Triggered on the request',
+    secondaryProps: { noPadding: true },
+    secondary: noPaddingTable,
+  },
+};
+
+export const AllSlotsNoPadding: Story = {
+  args: {
+    width: '520px',
+    headerProps: { noPadding: true },
+    header: (
+      <div
+        style={{
+          display: 'flex', justifyContent: 'space-between', padding: '.875rem 1rem', borderBottom: '1px solid var(--coo-border-primary)',
+        }}
+      >
+        <strong>Requests</strong>
+        <span>3 requests</span>
+      </div>
+    ),
+    mainProps: { noPadding: true },
+    main: (
+      <div style={{ padding: '.625rem 1rem', background: 'var(--coo-bk-lv0)', borderBottom: '1px solid var(--coo-border-primary)' }}>
+        Triggered on the request
+      </div>
+    ),
+    secondaryProps: { noPadding: true },
+    secondary: noPaddingTable,
   },
 };
 
