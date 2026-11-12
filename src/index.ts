@@ -101,6 +101,7 @@ export { default as Tag } from './lib/components/tag';
 export { default as TextWithBold } from './lib/components/text-with-bold';
 export { default as TimePicker } from './lib/components/time-picker';
 export { default as Thumbnail } from './lib/components/thumbnail';
+export { default as Timeline } from './lib/components/timeline';
 export { default as ToolsBox } from './lib/components/tools-box';
 export { default as Tooltip } from './lib/components/tooltip';
 export { default as Toggle } from './lib/components/toggle';
