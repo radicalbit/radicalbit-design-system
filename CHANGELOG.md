@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.9.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.8.0...v4.9.0) (2026-11-12)
+
+
+### Features
+
+* padding, divider and type on Board slots ([#229](https://github.com/radicalbit/radicalbit-design-system/issues/229)) ([a3118bd](https://github.com/radicalbit/radicalbit-design-system/commit/a3118bdd7fff1f1043a0faad3f8c912a5f600722))
+
 ## [4.8.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.7.0...v4.8.0) (2026-11-12)
 
 
