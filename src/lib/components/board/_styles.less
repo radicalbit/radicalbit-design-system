@@ -91,7 +91,7 @@
 		grid-template-columns: repeat(auto-fill, minmax(29%, 1fr));
 		grid-gap: 1rem;
 
-		&--no-padding {
+		&--flush {
 			display: block;
 		}
 
@@ -106,7 +106,7 @@
 	}
 
 
-	&__slot--no-padding {
+	&__slot--flush {
 		margin-inline: calc(-1 * var(--l-board-padding));
 
 		&:first-child {
@@ -126,6 +126,20 @@
 		& + & {
 			margin-top: calc(-1 * var(--l-board-gap));
 		}
+	}
+
+	&__slot--padding-compact {
+		padding: .5rem 1rem;
+	}
+
+	&__slot--divider {
+		border-bottom: 1px solid var(--coo-border-primary);
+	}
+
+	&__slot--type-secondary {
+		background-color: var(--coo-bk-lv0);
+		color: var(--coo-fg-secondary);
+		font-size: .75rem;
 	}
 
 	&__footer {
