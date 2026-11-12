@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.10.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.9.0...v4.10.0) (2026-11-12)
+
+
+### Features
+
+* textProps and boldProps on TextWithBold ([#231](https://github.com/radicalbit/radicalbit-design-system/issues/231)) ([1036c7e](https://github.com/radicalbit/radicalbit-design-system/commit/1036c7e162727d30a45ac49918a21ce0073e296f))
+
 ## [4.9.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.8.0...v4.9.0) (2026-11-12)
 
 
