@@ -2,7 +2,9 @@ import classNames from 'classnames';
 import { HTMLAttributes, ReactNode, useState } from 'react';
 
 type SlotProps = HTMLAttributes<HTMLDivElement> & {
-  noPadding?: boolean;
+  divider?: boolean;
+  padding?: 'none' | 'compact';
+  type?: 'secondary';
 };
 
 type Props = HTMLAttributes<HTMLDivElement> & {
@@ -52,7 +54,9 @@ interface BoardSlotProps {
 function BoardSlot({
   children, className, name, slotProps = {},
 }: BoardSlotProps) {
-  const { noPadding = false, className: slotClassName, ...rest } = slotProps;
+  const {
+    className: slotClassName, divider = false, padding, type, ...rest
+  } = slotProps;
 
   return (
     <div
@@ -60,8 +64,11 @@ function BoardSlot({
       className={classNames(
         `l-board__${name}`,
         {
-          'l-board__slot--no-padding': noPadding,
-          [`l-board__${name}--no-padding`]: noPadding,
+          'l-board__slot--flush': padding,
+          [`l-board__${name}--flush`]: padding,
+          [`l-board__slot--padding-${padding}`]: padding,
+          'l-board__slot--divider': divider,
+          [`l-board__slot--type-${type}`]: type,
         },
         className,
         slotClassName,

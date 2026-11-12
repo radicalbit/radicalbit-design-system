@@ -3,6 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Board from '.';
 import Button from '../button';
 import DataTable from '../data-table/DataTable';
+import SectionTitle from '../section-title';
 
 const meta: Meta<typeof Board> = {
   title: 'Components/Board',
@@ -120,37 +121,24 @@ const noPaddingTable = (
   />
 );
 
-export const SecondaryNoPadding: Story = {
+export const SecondaryPaddingNone: Story = {
   args: {
     width: '520px',
     header: 'Requests',
     main: 'Triggered on the request',
-    secondaryProps: { noPadding: true },
+    secondaryProps: { padding: 'none' },
     secondary: noPaddingTable,
   },
 };
 
-export const AllSlotsNoPadding: Story = {
+export const SlotProps: Story = {
   args: {
     width: '520px',
-    headerProps: { noPadding: true },
-    header: (
-      <div
-        style={{
-          display: 'flex', justifyContent: 'space-between', padding: '.875rem 1rem', borderBottom: '1px solid var(--coo-border-primary)',
-        }}
-      >
-        <strong>Requests</strong>
-        <span>3 requests</span>
-      </div>
-    ),
-    mainProps: { noPadding: true },
-    main: (
-      <div style={{ padding: '.625rem 1rem', background: 'var(--coo-bk-lv0)', borderBottom: '1px solid var(--coo-border-primary)' }}>
-        Triggered on the request
-      </div>
-    ),
-    secondaryProps: { noPadding: true },
+    headerProps: { padding: 'compact', divider: true },
+    header: <SectionTitle title="Requests" titleSuffix="3 requests" />,
+    mainProps: { padding: 'compact', divider: true, type: 'secondary' },
+    main: <strong>Triggered on the request</strong>,
+    secondaryProps: { padding: 'none' },
     secondary: noPaddingTable,
   },
 };
