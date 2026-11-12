@@ -11,18 +11,19 @@ interface Props {
   className?: string;
   isQuestion?: boolean;
   modifier?: string;
+  size?: 'xsmall' | 'small' | 'large';
   text: ReactNode;
   textProps?: PartProps;
 }
 
 function TextWithBold({
-  bold, boldProps = {}, className = '', isQuestion, modifier = '', text, textProps = {},
+  bold, boldProps = {}, className = '', isQuestion, modifier = '', size, text, textProps = {},
 }: Props) {
   const { className: textClassName, type: textType, ...textRest } = textProps;
   const { className: boldClassName, type: boldType, ...boldRest } = boldProps;
 
   return (
-    <div className={`m-text-with-bold ${modifier} ${className}`}>
+    <div className={classNames('m-text-with-bold', { [`m-text-with-bold--size-${size}`]: size }, modifier, className)}>
       <span
         {...textRest}
         className={classNames({ [`m-text-with-bold__text--type-${textType}`]: textType }, textClassName)}
