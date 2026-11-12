@@ -1,23 +1,44 @@
-import React from 'react';
+import classNames from 'classnames';
+import React, { HTMLAttributes, ReactNode } from 'react';
+
+type PartProps = HTMLAttributes<HTMLElement> & {
+  type?: 'secondary' | 'success' | 'warning' | 'error';
+};
 
 interface Props {
-  bold: string;
+  bold: ReactNode;
+  boldProps?: PartProps;
   className?: string;
   isQuestion?: boolean;
   modifier?: string;
-  text: string;
+  text: ReactNode;
+  textProps?: PartProps;
 }
 
 function TextWithBold({
-  className = '', modifier = '', text, bold, isQuestion,
+  bold, boldProps = {}, className = '', isQuestion, modifier = '', text, textProps = {},
 }: Props) {
+  const { className: textClassName, type: textType, ...textRest } = textProps;
+  const { className: boldClassName, type: boldType, ...boldRest } = boldProps;
+
   return (
     <div className={`m-text-with-bold ${modifier} ${className}`}>
-      <span>{`${text} `}</span>
-    
-      <strong>{bold}</strong>
-    
-      {isQuestion && <span>{isQuestion && isQuestion === true ? '?' : ''}</span>}
+      <span
+        {...textRest}
+        className={classNames({ [`m-text-with-bold__text--type-${textType}`]: textType }, textClassName)}
+      >
+        {text}
+        {' '}
+      </span>
+
+      <strong
+        {...boldRest}
+        className={classNames({ [`m-text-with-bold__bold--type-${boldType}`]: boldType }, boldClassName)}
+      >
+        {bold}
+      </strong>
+
+      {isQuestion && <span>?</span>}
     </div>
   );
 }
