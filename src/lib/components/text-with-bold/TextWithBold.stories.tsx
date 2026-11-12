@@ -37,4 +37,17 @@ export const Types: Story = {
   ),
 };
 
+export const Sizes: Story = {
+  parameters: {
+    layout: 'centered',
+  },
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '.5rem' }}>
+      {(['xsmall', 'small', undefined, 'large'] as const).map((size) => (
+        <TextWithBold key={size ?? 'default'} bold="lucataglia-key" size={size} text={size ?? 'default'} textProps={{ type: 'secondary' }} />
+      ))}
+    </div>
+  ),
+};
+
 export default meta;
