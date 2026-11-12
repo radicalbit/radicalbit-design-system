@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.11.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.10.0...v4.11.0) (2026-11-12)
+
+
+### Features
+
+* size on TextWithBold ([#234](https://github.com/radicalbit/radicalbit-design-system/issues/234)) ([f4096e2](https://github.com/radicalbit/radicalbit-design-system/commit/f4096e2b0549a2626ee21da1158561a5d27eb78e))
+
+
+### Bug Fixes
+
+* Select arrow and Timeline muted tone in dark mode ([#233](https://github.com/radicalbit/radicalbit-design-system/issues/233)) ([529c0fc](https://github.com/radicalbit/radicalbit-design-system/commit/529c0fcc468dd989bd667879a572865a69ca17fe))
+
 ## [4.10.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.9.0...v4.10.0) (2026-11-12)
 
 
