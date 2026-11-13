@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.11.1](https://github.com/radicalbit/radicalbit-design-system/compare/v4.11.0...v4.11.1) (2026-11-13)
+
+
+### Bug Fixes
+
+* TextWithBold sets its own text colour ([#236](https://github.com/radicalbit/radicalbit-design-system/issues/236)) ([2bc212b](https://github.com/radicalbit/radicalbit-design-system/commit/2bc212bb160538614d14055972c3e8fe608e8f2d))
+
 ## [4.11.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.10.0...v4.11.0) (2026-11-12)
 
 
