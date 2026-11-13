@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.15.2](https://github.com/radicalbit/radicalbit-design-system/compare/v4.15.1...v4.15.2) (2026-11-13)
+
+
+### Bug Fixes
+
+* Tabs use the theme colours instead of antd blue ([#248](https://github.com/radicalbit/radicalbit-design-system/issues/248)) ([e8f9873](https://github.com/radicalbit/radicalbit-design-system/commit/e8f987380941f78b407162990954ca726a448e67))
+
 ## [4.15.1](https://github.com/radicalbit/radicalbit-design-system/compare/v4.15.0...v4.15.1) (2026-11-13)
 
 
