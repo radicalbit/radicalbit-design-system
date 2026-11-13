@@ -1,20 +1,18 @@
 import classNames from 'classnames';
-import { Fragment, memo } from 'react';
+import {
+  CSSProperties, HTMLAttributes, ReactNode, memo,
+} from 'react';
 
-interface Pair {
-  title: string;
-  value: string | number | boolean;
+export interface DescriptionListItem {
+  title: ReactNode;
+  value: ReactNode;
 }
 
-interface Single {
-  title: string;
-  value: (string | number | boolean)[];
-}
-
-interface Props {
+interface Props extends HTMLAttributes<HTMLDListElement> {
   className?: string;
-  gridColumnCount?: number;
-  list: Single | Pair[];
+  columns?: number;
+  items: DescriptionListItem[];
+  layout?: 'inline' | 'stacked';
   modifier?: string;
   noMargin?: boolean;
   withBorder?: boolean;
@@ -22,45 +20,33 @@ interface Props {
 
 function DescriptionList({
   className = '',
-  gridColumnCount = 3,
-  list,
+  columns = 1,
+  items,
+  layout = 'inline',
   modifier = '',
-  noMargin,
-  withBorder = true,
+  noMargin = false,
+  style,
+  withBorder = false,
   ...others
 }: Props) {
-  const type = Array.isArray(list) ? 'pair' : 'single';
-
   const css = classNames({
-    [`dl--type-${type}`]: type,
-    'dl--border': withBorder,
-    'dl--no-margin': noMargin,
+    [`c-description-list--layout-${layout}`]: layout,
+    'c-description-list--border': withBorder,
+    'c-description-list--no-margin': noMargin,
   });
 
-  return (
-    <div className={`c-description-list ${modifier} ${className}`} {...others}>
-      {!Array.isArray(list) && (
-        <dl className={css}>
-          <dt>{list.title}</dt>
-          {list.value.map((value: string | number | boolean, index: number) => (
-            <dd key={index}>{value}</dd>
-          ))}
-        </dl>
-      )}
+  const cssStyle = { '--c-description-list-columns': columns, ...style } as CSSProperties;
 
-      <dl
-        className={css}
-        style={{ gridTemplateColumns: `repeat(${gridColumnCount}, 1fr)` }}
-      >
-        {Array.isArray(list)
-          && list.map((pair: Pair, index: number) => (
-            <Fragment key={index}>
-              <dt>{pair.title}</dt>
-              <dd>{pair.value}</dd>
-            </Fragment>
-          ))}
-      </dl>
-    </div>
+  return (
+    <dl className={`c-description-list ${css} ${modifier} ${className}`} style={cssStyle} {...others}>
+      {items.map((item: DescriptionListItem, index: number) => (
+        <div className="c-description-list__item" key={index}>
+          <dt className="c-description-list__title">{item.title}</dt>
+
+          <dd className="c-description-list__value">{item.value}</dd>
+        </div>
+      ))}
+    </dl>
   );
 }
 

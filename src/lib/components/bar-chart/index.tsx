@@ -8,6 +8,7 @@ export interface Props {
   labels?: ReactNode[];
   large?: boolean;
   modifier?: string;
+  offset?: number;
   padding?: boolean;
   prefix?: ReactNode[];
   reverse?: boolean;
@@ -29,6 +30,7 @@ function BarChart({
   labels,
   large = false,
   modifier = '',
+  offset = 0,
   padding = false,
   prefix,
   reverse = false,
@@ -65,7 +67,7 @@ function BarChart({
       )}
 
       <div className={`c-bar-chart__bar ${modifier} ${cssBar}`}>
-        <div className="c-bar-chart__value" style={{ width: `${value}%` }}>
+        <div className="c-bar-chart__value" style={{ marginLeft: `${offset}%`, width: `${value}%` }}>
           {content && (
             <div className={`c-bar-chart__content ${cssContent}`}>
               {content}
