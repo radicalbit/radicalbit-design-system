@@ -24,4 +24,12 @@ export const Group: Story = {
   },
 };
 
+export const Refresh: Story = {
+  args: {
+    refreshInterval: 5,
+    timestamp: Date.now(),
+    withTooltip: true,
+  },
+};
+
 export default meta;

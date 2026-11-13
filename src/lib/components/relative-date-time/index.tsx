@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import Tooltip from '@Components/tooltip';
-import { memo } from 'react';
+import { memo, useEffect, useState } from 'react';
 
 dayjs.extend(relativeTime);
 
@@ -14,10 +14,25 @@ interface Props {
   minGranularity?: Granularity;
   modifier?: string;
   mouseEnterDelay?: number;
+  refreshInterval?: number;
   threshold?: number;
   timestamp: string | number | Date;
   withTooltip?: boolean;
 }
+
+const useRefresh = (refreshInterval?: number) => {
+  const [, setTick] = useState(0);
+
+  useEffect(() => {
+    if (!refreshInterval) {
+      return undefined;
+    }
+
+    const interval = setInterval(() => setTick((tick) => tick + 1), refreshInterval * 1000);
+
+    return () => clearInterval(interval);
+  }, [refreshInterval]);
+};
 
 const dateFormatter = (dateFormat: string, timestamp: string | number | Date) => dayjs(new Date(timestamp)).format(dateFormat).toString();
 
@@ -58,10 +73,13 @@ function RelativeDateTime({
   minGranularity = 'seconds',
   modifier = '',
   mouseEnterDelay,
+  refreshInterval,
   threshold = 3,
   timestamp,
   withTooltip,
 }: Props) {
+  useRefresh(refreshInterval);
+
   const difference = dayjs().diff(timestamp, 'day');
   const tooltipDate = dateFormatter(formatTooltip, timestamp);
 
