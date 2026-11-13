@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.15.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.14.0...v4.15.0) (2026-11-13)
+
+
+### Features
+
+* DescriptionList size, value type and stacked spacing ([#244](https://github.com/radicalbit/radicalbit-design-system/issues/244)) ([a21be3f](https://github.com/radicalbit/radicalbit-design-system/commit/a21be3ff3fdf161c6f050fa3c90655d68a3853d2))
+
 ## [4.14.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.13.0...v4.14.0) (2026-11-13)
 
 
