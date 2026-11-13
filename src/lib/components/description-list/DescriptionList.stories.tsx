@@ -48,6 +48,34 @@ export const WithBorder: Story = {
   },
 };
 
+export const Sizes: Story = {
+  render: (args) => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+      <DescriptionList {...args} size="small" />
+
+      <DescriptionList {...args} size="medium" />
+
+      <DescriptionList {...args} size="large" />
+    </div>
+  ),
+  args: {
+    ...Stacked.args,
+  },
+};
+
+export const Types: Story = {
+  args: {
+    columns: 4,
+    items: [
+      { title: 'Status', type: 'success', value: '200' },
+      { title: 'Retries', type: 'warning', value: 2 },
+      { title: 'Errors', type: 'error', value: 1 },
+      { title: 'Region', type: 'secondary', value: 'eu-west-1' },
+    ],
+    layout: 'stacked',
+  },
+};
+
 export const NestedJson: Story = {
   args: {
     items: [
