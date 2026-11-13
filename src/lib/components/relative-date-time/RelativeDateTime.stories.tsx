@@ -32,4 +32,15 @@ export const Refresh: Story = {
   },
 };
 
+export const ThresholdDuration: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '.5rem' }}>
+      <RelativeDateTime threshold={{ hours: 1 }} timestamp={Date.now() - 30 * 60 * 1000} withTooltip />
+      <RelativeDateTime threshold={{ hours: 1 }} timestamp={Date.now() - 2 * 60 * 60 * 1000} withTooltip />
+      <RelativeDateTime threshold={{ hours: 1, minutes: 30 }} timestamp={Date.now() - 80 * 60 * 1000} withTooltip />
+      <RelativeDateTime threshold={{ weeks: 1 }} timestamp={Date.now() - 5 * 24 * 60 * 60 * 1000} withTooltip />
+    </div>
+  ),
+};
+
 export default meta;
