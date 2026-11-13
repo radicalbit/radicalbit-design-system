@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.12.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.11.1...v4.12.0) (2026-11-13)
+
+
+### Features
+
+* RelativeDateTime refreshInterval, Select check in the theme colour (AG-1136) ([#238](https://github.com/radicalbit/radicalbit-design-system/issues/238)) ([a08b943](https://github.com/radicalbit/radicalbit-design-system/commit/a08b94340eb2dfb137ea9353fee0fe9178c51d48))
+
 ## [4.11.1](https://github.com/radicalbit/radicalbit-design-system/compare/v4.11.0...v4.11.1) (2026-11-13)
 
 
