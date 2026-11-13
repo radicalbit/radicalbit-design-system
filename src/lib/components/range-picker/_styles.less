@@ -33,11 +33,23 @@
 
 	.ant-picker-suffix {
 		pointer-events: auto;
-		color: var(--coo-fg-black);
+		color: var(--coo-fg-tertiary);
 	}
 
 	.ant-picker-clear {
-		color: var(--coo-fg-black);
+		color: var(--coo-fg-tertiary);
+
+		&:hover {
+			color: var(--coo-fg-secondary);
+		}
+	}
+}
+
+.dark .c-range-picker.ant-picker {
+	background: var(--coo-bk-lv1);
+
+	&:not(:hover):not(.ant-picker-focused) {
+		border-color: transparent;
 	}
 }
 
