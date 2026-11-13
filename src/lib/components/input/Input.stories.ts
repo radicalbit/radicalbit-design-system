@@ -25,4 +25,12 @@ export const Default: Story = {
   },
 };
 
+export const WithPrefix: Story = {
+  args: {
+    ...commonArgs,
+    placeholder: 'Paste your credential',
+    prefix: '#',
+  },
+};
+
 export default meta;
