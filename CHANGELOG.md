@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.13.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.12.0...v4.13.0) (2026-11-13)
+
+
+### Features
+
+* Duration threshold on RelativeDateTime ([#240](https://github.com/radicalbit/radicalbit-design-system/issues/240)) ([90bb537](https://github.com/radicalbit/radicalbit-design-system/commit/90bb537107a5aa9de4ae48cd5e19f6686207a627))
+
 ## [4.12.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.11.1...v4.12.0) (2026-11-13)
 
 
