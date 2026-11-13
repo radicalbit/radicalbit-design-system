@@ -5,6 +5,7 @@ import {
 
 export interface DescriptionListItem {
   title: ReactNode;
+  type?: 'secondary' | 'success' | 'warning' | 'error';
   value: ReactNode;
 }
 
@@ -15,6 +16,7 @@ interface Props extends HTMLAttributes<HTMLDListElement> {
   layout?: 'inline' | 'stacked';
   modifier?: string;
   noMargin?: boolean;
+  size?: 'small' | 'medium' | 'large';
   withBorder?: boolean;
 }
 
@@ -25,12 +27,14 @@ function DescriptionList({
   layout = 'inline',
   modifier = '',
   noMargin = false,
+  size = 'medium',
   style,
   withBorder = false,
   ...others
 }: Props) {
   const css = classNames({
     [`c-description-list--layout-${layout}`]: layout,
+    [`c-description-list--size-${size}`]: size,
     'c-description-list--border': withBorder,
     'c-description-list--no-margin': noMargin,
   });
@@ -43,7 +47,9 @@ function DescriptionList({
         <div className="c-description-list__item" key={index}>
           <dt className="c-description-list__title">{item.title}</dt>
 
-          <dd className="c-description-list__value">{item.value}</dd>
+          <dd className={classNames('c-description-list__value', { [`c-description-list__value--type-${item.type}`]: item.type })}>
+            {item.value}
+          </dd>
         </div>
       ))}
     </dl>
