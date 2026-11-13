@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.14.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.13.0...v4.14.0) (2026-11-13)
+
+
+### Features
+
+* BarChart offset and DescriptionList with ReactNode items (AG-1137) ([#242](https://github.com/radicalbit/radicalbit-design-system/issues/242)) ([f70cbce](https://github.com/radicalbit/radicalbit-design-system/commit/f70cbcef17fc8c5241455989c48c89293b25dd63))
+
 ## [4.13.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.12.0...v4.13.0) (2026-11-13)
 
 
