@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.15.1](https://github.com/radicalbit/radicalbit-design-system/compare/v4.15.0...v4.15.1) (2026-11-13)
+
+
+### Bug Fixes
+
+* dark-mode RangePicker, tab divider and Input focus ([#246](https://github.com/radicalbit/radicalbit-design-system/issues/246)) ([3776a54](https://github.com/radicalbit/radicalbit-design-system/commit/3776a54357fd6b936ee97d4532605fc07d7e0082))
+
 ## [4.15.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.14.0...v4.15.0) (2026-11-13)
 
 
