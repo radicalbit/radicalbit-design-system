@@ -7,6 +7,20 @@ dayjs.extend(relativeTime);
 
 type Granularity = 'seconds' | 'days';
 
+export interface Duration {
+  weeks?: number;
+  days?: number;
+  hours?: number;
+  minutes?: number;
+}
+
+const MILLISECONDS = {
+  weeks: 7 * 24 * 60 * 60 * 1000,
+  days: 24 * 60 * 60 * 1000,
+  hours: 60 * 60 * 1000,
+  minutes: 60 * 1000,
+};
+
 interface Props {
   className?: string;
   format?: string;
@@ -15,7 +29,7 @@ interface Props {
   modifier?: string;
   mouseEnterDelay?: number;
   refreshInterval?: number;
-  threshold?: number;
+  threshold?: number | Duration;
   timestamp: string | number | Date;
   withTooltip?: boolean;
 }
@@ -32,6 +46,23 @@ const useRefresh = (refreshInterval?: number) => {
 
     return () => clearInterval(interval);
   }, [refreshInterval]);
+};
+
+const durationInMilliseconds = ({
+  weeks = 0, days = 0, hours = 0, minutes = 0,
+}: Duration) => (
+  weeks * MILLISECONDS.weeks
+  + days * MILLISECONDS.days
+  + hours * MILLISECONDS.hours
+  + minutes * MILLISECONDS.minutes
+);
+
+const isWithinThreshold = (timestamp: string | number | Date, threshold: number | Duration) => {
+  if (typeof threshold === 'number') {
+    return dayjs().diff(timestamp, 'day') <= threshold;
+  }
+
+  return dayjs().diff(timestamp) <= durationInMilliseconds(threshold);
 };
 
 const dateFormatter = (dateFormat: string, timestamp: string | number | Date) => dayjs(new Date(timestamp)).format(dateFormat).toString();
@@ -80,10 +111,9 @@ function RelativeDateTime({
 }: Props) {
   useRefresh(refreshInterval);
 
-  const difference = dayjs().diff(timestamp, 'day');
   const tooltipDate = dateFormatter(formatTooltip, timestamp);
 
-  const dateToShow = difference <= threshold
+  const dateToShow = isWithinThreshold(timestamp, threshold)
     ? getRelativeDate(timestamp, minGranularity)
     : dateFormatter(format, timestamp);
 
