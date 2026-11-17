@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.15.3](https://github.com/radicalbit/radicalbit-design-system/compare/v4.15.2...v4.15.3) (2026-11-17)
+
+
+### Bug Fixes
+
+* disabled Input and TextArea use the theme colours ([#250](https://github.com/radicalbit/radicalbit-design-system/issues/250)) ([55d8683](https://github.com/radicalbit/radicalbit-design-system/commit/55d8683497ec80c91e23b1801dc7fa103b80df56))
+
 ## [4.15.2](https://github.com/radicalbit/radicalbit-design-system/compare/v4.15.1...v4.15.2) (2026-11-13)
 
 
