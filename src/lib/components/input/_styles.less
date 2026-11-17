@@ -52,6 +52,21 @@
 	}
 }
 
+.c-input.ant-input,
+.c-input.ant-input-affix-wrapper,
+.ant-input.c-text-area {
+	&.ant-input-disabled,
+	&.ant-input-affix-wrapper-disabled,
+	&[disabled] {
+		background: var(--coo-bk-lv0);
+		color: var(--coo-fg-tertiary);
+
+		.ant-input {
+			color: var(--coo-fg-tertiary);
+		}
+	}
+}
+
 .c-search {
 	&.ant-input-search {
 		background: var(--coo-bk-lv1);
