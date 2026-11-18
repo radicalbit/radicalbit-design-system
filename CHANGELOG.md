@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.16.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.15.3...v4.16.0) (2026-11-18)
+
+
+### Features
+
+* UserAvatar badge prop, shown centered on the avatar's bottom edge ([#252](https://github.com/radicalbit/radicalbit-design-system/issues/252)) ([c21767c](https://github.com/radicalbit/radicalbit-design-system/commit/c21767cfc4f0e9af21684ade9a412144f3d24ad2))
+
 ## [4.15.3](https://github.com/radicalbit/radicalbit-design-system/compare/v4.15.2...v4.15.3) (2026-11-17)
 
 
