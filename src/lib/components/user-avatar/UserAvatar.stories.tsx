@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Button from '../button';
+import Tag from '../tag';
 import UserAvatar from '.';
 
 const meta: Meta<typeof UserAvatar> = {
@@ -34,6 +35,23 @@ export const Default: Story = {
     userClassification: 'Tenant',
     userName: 'Mario Rossi',
     popoverWidth: 400,
+  },
+};
+
+export const WithBadge: Story = {
+  parameters: {
+    layout: 'centered',
+  },
+  args: {
+    badge: (
+      <Tag rounded size="small" type="secondary" uppercase>
+        Auditor
+      </Tag>
+    ),
+    size: 'large',
+    userAbbreviation: 'MR',
+    userClassification: 'mario.rossi@radicalbit.ai',
+    userName: 'Mario Rossi',
   },
 };
 
