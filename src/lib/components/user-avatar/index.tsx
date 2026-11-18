@@ -8,6 +8,7 @@ import { AvatarProps } from 'antd/es/skeleton/Avatar';
 interface Props {
   actions?: { one?: ReactNode; two?: ReactNode };
   avatar?: AvatarProps;
+  badge?: ReactNode;
   className?: string;
   content?: ReactNode;
   modifier?: string;
@@ -24,6 +25,7 @@ interface Props {
 
 function UserAvatar({
   avatar = {},
+  badge,
   className = '',
   content,
   modifier = '',
@@ -53,9 +55,13 @@ function UserAvatar({
           trigger={trigger}
           {...popoverProps}
         >
-          <Avatar size={size} src={userAvatarPath} {...avatar}>
-            {userAbbreviation}
-          </Avatar>
+          <AvatarWithBadge
+            avatar={avatar}
+            badge={badge}
+            size={size}
+            userAbbreviation={userAbbreviation}
+            userAvatarPath={userAvatarPath}
+          />
         </Popover>
       </div>
 
@@ -73,6 +79,40 @@ function UserAvatar({
         )}
       </div>
     </div>
+  );
+}
+
+interface AvatarWithBadgeProps {
+  avatar: AvatarProps;
+  badge?: ReactNode;
+  size?: AvatarProps['size'];
+  userAbbreviation: string;
+  userAvatarPath: string;
+}
+
+function AvatarWithBadge({
+  avatar,
+  badge,
+  size,
+  userAbbreviation,
+  userAvatarPath,
+}: AvatarWithBadgeProps) {
+  if (!badge) {
+    return (
+      <Avatar size={size} src={userAvatarPath} {...avatar}>
+        {userAbbreviation}
+      </Avatar>
+    );
+  }
+
+  return (
+    <span className="l-user-avatar__avatar">
+      <Avatar size={size} src={userAvatarPath} {...avatar}>
+        {userAbbreviation}
+      </Avatar>
+
+      <span className="l-user-avatar__avatar__badge">{badge}</span>
+    </span>
   );
 }
 

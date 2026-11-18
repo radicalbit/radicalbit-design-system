@@ -3,6 +3,20 @@
 	flex-direction: row;
 	color: var(--coo-fg-black);
 
+	&__avatar {
+		position: relative;
+		display: inline-flex;
+
+		&__badge {
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translate(-50%, 50%);
+			white-space: nowrap;
+			line-height: 1;
+		}
+	}
+
 	&__name {
 		display: flex;
 		flex-direction: column;
