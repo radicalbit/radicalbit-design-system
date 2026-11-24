@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.16.1](https://github.com/radicalbit/radicalbit-design-system/compare/v4.16.0...v4.16.1) (2026-11-24)
+
+
+### Bug Fixes
+
+* Select option check mark keeps space from the option content ([#256](https://github.com/radicalbit/radicalbit-design-system/issues/256)) ([028cf98](https://github.com/radicalbit/radicalbit-design-system/commit/028cf98a02f26739e312bb6c6c56b5784a9ddbe7))
+
 ## [4.16.0](https://github.com/radicalbit/radicalbit-design-system/compare/v4.15.3...v4.16.0) (2026-11-18)
 
 
